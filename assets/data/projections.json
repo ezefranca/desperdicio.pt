@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "title": "Projeções de Desperdício Alimentar para 2030",
+    "baseline_year": 2020,
+    "baseline_tonnes": 1800000,
+    "target_year": 2030,
+    "unit": "milhões de toneladas"
+  },
+  "targets": {
+    "eu_directive_2025_1892": {
+      "processing": {"reduction_pct": 10, "target_tonnes": 1620000, "deadline": "2030-12-31"},
+      "retail_consumption": {"reduction_pct": 30, "target_tonnes": 1260000, "deadline": "2030-12-31"},
+      "reference_period": "média 2021-2023"
+    },
+    "ods_12_3": {
+      "reduction_pct": 50,
+      "target_tonnes": 900000,
+      "deadline": "2030-12-31"
+    },
+    "portugal_dl_102d": {
+      "foodservice_distribution": {"reduction_pct": 25, "deadline": "2025-12-31"},
+      "overall": {"reduction_pct": 50, "deadline": "2030-12-31"}
+    }
+  },
+  "historical_data": [
+    {"year": 2020, "tonnes": 1.80, "note": "Ano de referência"},
+    {"year": 2021, "tonnes": 1.85, "note": "Recuperação pós-COVID"},
+    {"year": 2022, "tonnes": 1.88, "note": "Inflação alimentar"},
+    {"year": 2023, "tonnes": 1.93, "note": "Pico recente"},
+    {"year": 2024, "tonnes": 1.91, "note": "Estimativa"},
+    {"year": 2025, "tonnes": 1.95, "note": "Projeção"}
+  ],
+  "scenarios": [
+    {
+      "id": "inertia",
+      "name": "Inércia",
+      "name_en": "Business as usual",
+      "probability": "Mais provável",
+      "description": "Políticas actuais mantidas sem reforço de fiscalização ou novos incentivos",
+      "assumptions": [
+        "Crescimento económico moderado (+1.5%/ano)",
+        "Sem campanhas nacionais de sensibilização",
+        "Fiscalização mínima do DL 102-D",
+        "Iniciativas civis mantêm ritmo actual"
+      ],
+      "projections": [
+        {"year": 2025, "tonnes": 1.95},
+        {"year": 2026, "tonnes": 1.98},
+        {"year": 2027, "tonnes": 2.01},
+        {"year": 2028, "tonnes": 2.04},
+        {"year": 2029, "tonnes": 2.07},
+        {"year": 2030, "tonnes": 2.10}
+      ],
+      "outcome": {
+        "final_tonnes": 2.10,
+        "vs_2020_pct": "+17%",
+        "target_30_gap_pct": "+67%",
+        "target_50_gap_pct": "+133%"
+      },
+      "verdict": "Meta falhada por larga margem — aumento em vez de redução"
+    },
+    {
+      "id": "moderate",
+      "name": "Aceleração moderada",
+      "name_en": "Moderate acceleration",
+      "probability": "Possível com vontade política",
+      "description": "Implementação efectiva da legislação existente e campanhas de sensibilização",
+      "assumptions": [
+        "Fiscalização activa do DL 102-D a partir de 2025",
+        "Campanha nacional de sensibilização (€5M/ano)",
+        "Duplicação do apoio a iniciativas civis",
+        "Introdução de literacia alimentar no currículo escolar"
+      ],
+      "projections": [
+        {"year": 2025, "tonnes": 1.90},
+        {"year": 2026, "tonnes": 1.82},
+        {"year": 2027, "tonnes": 1.74},
+        {"year": 2028, "tonnes": 1.66},
+        {"year": 2029, "tonnes": 1.58},
+        {"year": 2030, "tonnes": 1.50}
+      ],
+      "outcome": {
+        "final_tonnes": 1.50,
+        "vs_2020_pct": "-17%",
+        "target_30_gap_pct": "+19%",
+        "target_50_gap_pct": "+67%"
+      },
+      "verdict": "Meta -30% tangível mas não atingida; -50% falhada"
+    },
+    {
+      "id": "transformation",
+      "name": "Transformação sistémica",
+      "name_en": "Systemic transformation",
+      "probability": "Improvável sem choque externo",
+      "description": "Mudança radical de políticas, incentivos e comportamentos",
+      "assumptions": [
+        "Multas significativas por desperdício evitável",
+        "Incentivos fiscais fortes para doação (IVA 0%)",
+        "Obrigatoriedade de separação de biorresíduos com fiscalização",
+        "Literacia alimentar como disciplina curricular obrigatória",
+        "Proibição de destruição de alimentos comestíveis",
+        "Investimento público de €50M/ano em infraestrutura de redistribuição"
+      ],
+      "projections": [
+        {"year": 2025, "tonnes": 1.75},
+        {"year": 2026, "tonnes": 1.58},
+        {"year": 2027, "tonnes": 1.42},
+        {"year": 2028, "tonnes": 1.30},
+        {"year": 2029, "tonnes": 1.20},
+        {"year": 2030, "tonnes": 1.10}
+      ],
+      "outcome": {
+        "final_tonnes": 1.10,
+        "vs_2020_pct": "-39%",
+        "target_30_gap_pct": "-13%",
+        "target_50_gap_pct": "+22%"
+      },
+      "verdict": "Meta -30% cumprida; -50% ao alcance com esforço adicional"
+    }
+  ],
+  "target_lines": {
+    "target_30": {
+      "label": "Meta UE -30%",
+      "values": [
+        {"year": 2020, "tonnes": 1.80},
+        {"year": 2025, "tonnes": 1.53},
+        {"year": 2030, "tonnes": 1.26}
+      ]
+    },
+    "target_50": {
+      "label": "Meta ODS -50%",
+      "values": [
+        {"year": 2020, "tonnes": 1.80},
+        {"year": 2025, "tonnes": 1.35},
+        {"year": 2030, "tonnes": 0.90}
+      ]
+    }
+  },
+  "countdown": {
+    "target_date": "2030-12-31",
+    "days_from_2026_01_23": 1803,
+    "message": "Dias até ao prazo da meta europeia"
+  },
+  "key_insight": "No cenário mais provável, Portugal estará a desperdiçar mais em 2030 do que em 2020. Apenas uma transformação sistémica — improvável nas condições actuais — permite cumprir as metas."
+}

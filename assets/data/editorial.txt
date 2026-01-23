@@ -1,0 +1,476 @@
+DesPerdicio - editorial em texto (rascunho guiado por dados)
+
+Estado
+- Este arquivo substitui a edicao direta do index.html.
+- Objectivo: texto base com claims verificaveis + notas de interatividade.
+- Todas as afirmacoes devem referir fonte local (json/sqlite) e/ou URL Publico/Arquivo.pt.
+
+Cobertura e limites dos dados (o que existe, de facto)
+- Arquivo (Arquivo.pt + Publico): 285 itens total; 261 itens filtrados como relacionados com comida.
+  - Anos com dados: 1999-2005 e 2010-2020 (lacuna 2006-2009).
+  - Top anos (itens filtrados): 2015 (37), 2014 (35), 2020 (34), 2016 (30), 2013 (22), 2019 (22).
+  - Fonte: scripts/out_desperdico/arquivo_publico_desperdico.sqlite
+- Live (Publico live, article_details com relevance_label=core): 128 itens.
+  - Anos com dados: 2011-2026.
+  - Top anos: 2023 (32), 2025 (27), 2024 (24), 2022 (14).
+  - Fonte: scripts/out_site/timeline.json + scripts/out_desperdico/publico_live.sqlite + scripts/out_site/corpus.json
+
+Pergunta editorial principal
+- Como o discurso publico sobre desperdicio alimentar mudou entre 1999-2020 no arquivo, e o que mudou de novo na camada recente (2021-2026)?
+
+Logline (base)
+- "Nao e Bruxelas. Nao e a couve. E o dever de todos." (source: scripts/out_site/storyline_bundled_full.json)
+
+----------------------------------------------------------------
+I. INSIGHTS PRINCIPAIS (estilo paper, mas legivel)
+
+
+
+Insight 0 - A pre-historia (1999-2010) mostra silencio editorial e ruido documental
+- Evidencia: os primeiros resultados do arquivo sao sobretudo dossiers, programas politicos e PDFs com mencoes genericas a "desperdicio" ou "alimentar".
+- Leitura editorial: antes de 2010, o tema e residual e aparece mais por ruido do arquivo do que por cobertura dedicada.
+- Provas curtas (para mostrar o ruido):
+  - 1999 | "DESPERDICIO DE ENERGIA Ninguem consegue perceber porque razao os candeeiros…" (Expo98).
+    URL: https://arquivo.pt/wayback/19991014023636/http://www.publico.pt/dossiers/expo98/expo9806045.html
+  - 2001 | "Garantia de abastecimento publico, em particular dos produtos alimentares…" (programa de governo).
+    URL: https://arquivo.pt/wayback/20010714043148/http://www.publico.pt/servico/proggov/governo1/prog/prog1iiid3.html
+  - 2001 | "Se ficar aberta… os alimentos poderao estragar-se." (conselhos domesticos).
+    URL: https://arquivo.pt/wayback/20010710112635/http://www.publico.pt/ecosfera/salvar-planeta.html
+  - 2003 | "Vou atacar o desperdicio, eliminar o despesismo e combater a corrupcao…" (programa politico).
+    URL: https://arquivo.pt/wayback/20030309134047/http://www.publico.pt/docs/progGov2002/progEleitoralPSD.pdf
+- Primeiro sinal com foco directo em comida (2010):
+  - 2010 | "O reaproveitamento existe em Portugal… como forma de combater o desperdicio…" (saude/hospitais).
+    URL: https://arquivo.pt/wayback/20100524142438/http://www.publico.pt/Sociedade/aproveitamento-de-sobras-pode-aumentar-risco-de-erro_1438588
+- Fonte: scripts/out_desperdico/metadata_export.csv + links de Arquivo.pt.
+
+Insight 1 - A atencao mediatica intensifica-se e concentra-se no fim do ano
+- Evidencia: picos mensais em 2023-12 (7 artigos), 2025-09 (6), 2023-10 (5), 2024-12 (5), 2025-10 (5).
+- Leitura editorial: a cobertura cresce e ganha sazonalidade; o Natal concentra consciencia e culpa.
+- Fonte: scripts/out_site/timeline.json (stats, by_month, peaks).
+
+Insight 2 - O problema esta em casa (67% do desperdicio) e tem tres momentos criticos
+- Dados: total 1.93 Mt/ano; 67% em agregados familiares (1,293,100 t), 12% restauracao, 9% retalho.
+- Momentos criticos em casa: Compras (35%), Armazenamento (40%), Preparacao (25).
+- Leitura editorial: o inimigo nao esta na prateleira; esta na rotina.
+- Fonte: scripts/out_site/waste_breakdown.json.
+
+Insight 3 - Portugal esta no "top 4" europeu do desperdicio per capita
+- Dados: 184 kg per capita (Portugal), media UE 131 kg; ranking 4o.
+- Nota de consistencia: waste_breakdown.json indica 185 kg; eu_comparison.json indica 184 kg.
+- Leitura editorial: a distancia da media europeia e significativa (+40%).
+- Fonte: scripts/out_site/eu_comparison.json e scripts/out_site/waste_breakdown.json.
+
+Insight 4 - Tendencia recente e de subida, nao de descida
+- Dados: 1.80 Mt (2020) -> 1.93 Mt (2023), com estimativa 1.91 Mt (2024).
+- Leitura editorial: a trajectoria vai na direccao oposta a meta 2030.
+- Fonte: scripts/out_site/eu_comparison.json + scripts/out_site/projections.json.
+
+Insight 5 - As metas 2030 estao longe no ritmo actual
+- Cenarios: 
+  - Inercia: 2.10 Mt em 2030 (+17% vs 2020), falha grande das metas.
+  - Aceleracao moderada: 1.50 Mt em 2030 (-17% vs 2020), ainda acima da meta -30%.
+  - Transformacao sistemica: 1.10 Mt em 2030 (-39%), unico caminho para cumprir -30% e aproximar -50%.
+- Leitura editorial: sem mudanca estrutural, a lei vira ficcao.
+- Fonte: scripts/out_site/projections.json.
+
+Insight 6 - A legislacao existe, mas chega tarde e com aplicacao lenta
+- Marcos directos (PT + UE): 2015 (Ano Nacional), 2018 (Estrategia Nacional), 2020 (DL 102-D/2020), 2021 (Lei 62/2021), 2025 (Diretiva UE 2025/1892).
+- Leitura editorial: 15 anos de enquadramento indirecto antes de um quadro directo.
+- Fonte: scripts/out_site/legislation.json.
+
+Insight 7 - A sociedade civil entrega impacto superior a programas publicos isolados
+- Dados: impacto combinado estimado 15.000 t/ano; 6M refeicoes redistribuidas/ano; 10.000 familias/dia; 7.000 voluntarios.
+- Comparacao: valor economico estimado 25M EUR vs 0.5M EUR de orcamento publico (50:1).
+- Leitura editorial: as solucoes mais efectivas nasceram fora do Estado.
+- Fonte: scripts/out_site/initiatives_impact.json.
+
+Insight 8 - A linguagem muda do domestico para o sistema e para o clima
+- Medida: presença de termos em artigos core por periodo (2011-2016 / 2017-2020 / 2021-2026).
+- Resultados (numero de artigos com o termo):
+  - "emissoes": 0 / 6 / 30
+  - "cadeia": 1 / 6 / 15
+  - "circular": 0 / 2 / 9
+  - "economia": 0 / 3 / 13
+  - "validade": 3 / 4 / 13
+  - "supermercados": 3 / 8 / 13
+  - "doacao": 0 / 3 / 7
+  - "sobras": 2 / 2 / 9
+- Leitura editorial: o vocabulário desloca-se para emissoes, cadeia e economia circular.
+- Fonte: scripts/out_site/corpus.json (text_content) + contagem local.
+
+
+Tabela rapida (termos vs periodos)
+- emissões: 0 | 6 | 30
+- cadeia: 1 | 6 | 15
+- circular: 0 | 2 | 9
+- economia: 0 | 3 | 13
+- validade: 3 | 4 | 13
+- supermercados: 3 | 8 | 13
+- doacao: 0 | 3 | 7
+- sobras: 2 | 2 | 9
+(periodos: 2011-2016 | 2017-2020 | 2021-2026)
+
+----------------------------------------------------------------
+II. EVIDENCIAS (12 cartoes curados + excertos curtos)
+
+Fonte curadoria: scripts/out_site/evidence.json
+Nota: excertos extraidos de scripts/out_site/corpus.json (text_content). Cada quote <= 25 palavras.
+
+- 2025-09-29 | Desperdicio alimentar: o que fazer para o evitar
+  URL: https://www.publico.pt/2025/09/29/impar/noticia/desperdicio-alimentar-evitar-2148846
+  Quote: "A maioria do desperdicio alimentar em Portugal e produzido pelas familias."
+  Article_id: 12e83737e2003320438a99970310e30efbbe3a50
+- 2014-12-14 | Ha comida que so nao vai para o lixo porque e doada
+  URL: https://www.publico.pt/2014/12/14/sociedade/noticia/ha-comida-que-so-nao-vai-para-o-lixo-porque-e-doada-1679069
+  Quote: "Evitando que produtos pereciveis percam validade antes de chegar a casa do consumidor."
+  Article_id: e7a42ad6653f0d11a1805d5efa529932a0b5bd84
+- 2022-09-29 | Queres dizer nao ao desperdicio alimentar? Cinco apps e sites que podem ajudar
+  URL: https://www.publico.pt/2022/09/29/p3/noticia/queres-dizer-nao-desperdicio-alimentar-cinco-apps-sites-podem-ajudar-2021983
+  Quote: "Conselhos para pores em pratica de modo que a tua comida nao acabe no lixo."
+  Article_id: 11003356e2e69a8f970fed65990221a082c62766
+- 2020-09-29 | Unidos Contra o Desperdicio junta os que lutam por que a comida nao acabe no lixo
+  URL: https://www.publico.pt/2020/09/29/sociedade/noticia/unidos-desperdicio-junta-lutam-comida-nao-acabe-lixo-1933288
+  Quote: "Combater o absurdo que e o nivel de desperdicio que existe actualmente."
+  Article_id: cb232263088694abb8b5f8fe5d46f26b1e7da01b
+- 2014-12-21 | O que ha no fundo do nosso frigorifico
+  URL: https://www.publico.pt/2014/12/21/sociedade/noticia/o-que-ha-no-fundo-do-nosso-frigorifico-1679718
+  Quote: "Registar o que se consome e perceber o que acontece com as sobras."
+  Article_id: f82f50a219e8dd22ccdf17623bd98fd5ea847249
+- 2025-03-21 | Restaurantes de Espanha obrigados a ter caixas para levar os restos
+  URL: https://www.publico.pt/2025/03/21/azul/noticia/restaurantes-espanha-obrigados-caixas-levar-restos-2126854
+  Quote: "Lei contra o desperdicio alimentar preconiza a doacao de alimentos por supermercados."
+  Article_id: 14950721615de42b92e4e7c9d18b43672eeccec3
+- 2011-04-05 | Britanico que luta contra desperdicio de comida vence premio de Sustentabilidade
+  URL: https://www.publico.pt/2011/04/05/ciencia/noticia/britanico-que-luta-contra-desperdicio-de-comida-vence-premio-de-sustentabilidade-1488363
+  Quote: "Ajudando organizacoes, governos e empresas a reduzir os desperdicios de alimentos."
+  Article_id: 36d3f424f039a289a1b54fb0228f74695e443525
+- 2013-01-10 | Metade da comida produzida todos os anos vai para o lixo
+  URL: https://www.publico.pt/2013/01/10/ecosfera/noticia/metade-da-comida-produzida-todos-os-anos-vai-para-o-lixo-1580254
+  Quote: "Supermercados preferem alimentos perfeitos em formato, cor e tamanho."
+  Article_id: e06eb0d625f4b6471a28897568dc123986ce1405
+- 2016-11-28 | Compostagem em apenas 24 horas? Sim, e possivel
+  URL: https://www.publico.pt/2016/11/28/p3/noticia/compostagem-em-apenas-24-horas-sim-e-possivel-1826995
+  Quote: "Depositar os restos de comida num reservatorio com aditivo de plantas."
+  Article_id: d72ad9c41e2375da97c2b757bbbe9f5035f5e99c
+- 2017-05-26 | Nos paises ricos ja comemos mais do que o que nos faz bem
+  URL: https://www.publico.pt/2017/05/26/sociedade/entrevista/num-mundo-de-abundancia-infinita-nao-teria-importancia-rejeitar-cenouras-tortas-1773472
+  Quote: "Promocoes acabam por empurrar desperdicios para os cestos dos consumidores."
+  Article_id: 59194e1f55540b3bef5bb0f05c38a9dbd9a60cc6
+- 2018-11-02 | E se a tua lista de compras fosse livre de plastico?
+  URL: https://www.publico.pt/2018/11/02/p3/noticia/lista-compras-livre-plastico-1849634
+  Quote: "Olhar para o lixo que produzia com mais atencao."
+  Article_id: d6ee6cf79d728ff9e627c71a4655229d313c6962
+- 2019-02-04 | Saber ler a data de validade ajuda a combater o desperdicio alimentar
+  URL: https://www.publico.pt/2019/02/04/p3/noticia/saber-ler-a-data-de-validade-ajuda-a-combater-o-desperdicio-alimentar-1860587
+  Quote: "As datas de validade nao sao todas iguais e saber distingui-las ajuda."
+  Article_id: c5b42a416cabd176c7b70e8226d97474d212b81a
+
+----------------------------------------------------------------
+III. DADOS ESTRUTURAIS (para sustentar argumentos)
+
+A. Quebra por fase da cadeia (PT)
+- Total: 1,930,000 toneladas/ano
+- Casa: 67% (1,293,100 t)
+- Restauracao: 12% (231,600 t)
+- Retalho: 9% (173,700 t)
+- Producao primaria: 7% (135,100 t)
+- Transformacao: 5% (96,500 t)
+- Fonte: scripts/out_site/waste_breakdown.json
+
+B. Portugal vs UE
+- Portugal: 184 kg per capita (4o lugar na UE)
+- Media UE: 131 kg per capita
+- Tendencia: 1.80 Mt (2020) -> 1.93 Mt (2023)
+- Perda economica: 28 EUR/mes por agregado
+- Fonte: scripts/out_site/eu_comparison.json
+
+C. Metas e trajectorias
+- Meta UE 2025/1892: -30% (retalho/consumo) ate 2030
+- ODS 12.3: -50% ate 2030
+- Cenarios 2030: 2.10 Mt (inercia), 1.50 Mt (moderado), 1.10 Mt (transformacao)
+- Fonte: scripts/out_site/projections.json
+
+D. Legislacao (directa)
+- 2015-06-17: Res. AR 65/2015 (Ano Nacional)
+- 2018-04-27: RCM 46/2018 (Estrategia Nacional)
+- 2018-05-30: Diretiva UE 2018/851 (definicao residuos alimentares)
+- 2020-12-10: DL 102-D/2020 (proibicao de destruir alimentos proprios)
+- 2021-08-19: Lei 62/2021 (doacao e redistribuicao)
+- 2025-09-10: Diretiva UE 2025/1892 (metas vinculativas)
+- Fonte: scripts/out_site/legislation.json
+
+E. Sociedade civil (impacto)
+- Impacto combinado: 15.000 t/ano; 6M refeicoes/ano; 10.000 familias/dia.
+- Valor economico estimado: 25M EUR vs 0.5M EUR orcamento publico (50:1).
+- Fonte: scripts/out_site/initiatives_impact.json
+
+----------------------------------------------------------------
+IV. INTERACTIVIDADE (ideias prontas para transformar em produto)
+
+1) Timeline viva (2011-2026)
+- Interacao: hover com contagem, clique para evidencias do mes.
+- Anotacoes: 2013 (Fruta Feia), 2020 (TGTG chega), 2023 (pico 32 artigos).
+- Fonte: scripts/out_site/timeline.json + scripts/out_site/featured.json.
+
+2) Heatmap sazonal
+- Mostrar concentracao mensal (Q4/Dezembro como pico).
+- Fonte: scripts/out_site/timeline.json.
+
+3) Donut "Onde nasce o desperdicio?"
+- Com toggle para toneladas absolutas.
+- Fonte: scripts/out_site/waste_breakdown.json.
+
+4) Mapa / ranking UE
+- Cartao com Portugal destacado + variacao vs media.
+- Fonte: scripts/out_site/eu_comparison.json.
+
+5) "Tres momentos criticos" (compras/armazenamento/preparacao)
+- Interacao: checklist que calcula impacto teorico se cada etapa melhora 10%.
+- Fonte: scripts/out_site/waste_breakdown.json.
+
+6) Linha de politicas (PT + UE)
+- Duas tracks paralelas, com tags direct/indirect.
+- Fonte: scripts/out_site/legislation.json.
+
+7) Trilhos de solucao (sociedade civil)
+- Cards com Fruta Feia, Too Good To Go, Refood, Zero Desperdicio.
+- Fonte: scripts/out_site/initiatives_impact.json + scripts/out_site/featured.json.
+
+8) Projecao 2030 com slider de cenarios
+- Inercia vs moderado vs transformacao.
+- Fonte: scripts/out_site/projections.json.
+
+9) Sidebar de fontes (estilo paper)
+- Cada secao abre o painel com URLs e referencias.
+- Fonte: scripts/out_site/evidence.json + scripts/out_site/featured.json.
+
+10) "Arquivo profundo" (1999-2005)
+- Interacao: slider de ruido/limpeza mostrando porque pre-2010 e fraco.
+- Fonte: scripts/out_desperdico/metadata_export.csv.
+
+----------------------------------------------------------------
+V. METODOLOGIA E PROVENIENCIA (paper-grade)
+
+A. Origem do corpus e reproducibilidade
+- Corpus exportado de: scripts/out_desperdico/publico_live.sqlite (tabela article_details).
+- Exportacao documentada em: scripts/out_site/provenance_export_corpus.json
+  - Input: out_desperdico/publico_live.sqlite
+  - Output: out_site/corpus.json (sha256 registado no ficheiro de proveniencia)
+
+B. Construção da storyline (pipeline)
+- Step build_storyline: usa corpus.json + timeline.json + evidence.json + legislation.json
+  - Proveniencia: scripts/out_site/provenance_build_storyline.json
+- Step enrich_storyline: adiciona evidencia e ancora texto por heuristica de keywords
+  - Proveniencia: scripts/out_site/provenance_enrich_storyline.json
+- Step build_bundled_storyline: agrega bundles de fontes sem alterar narrativa
+  - Proveniencia: scripts/out_site/provenance_build_bundled_storyline.json
+- Step close_coverage_gap: cobertura total de core=128 (antes 117)
+  - Proveniencia: scripts/out_site/provenance_close_coverage_gap.json
+
+C. Criterios de relevancia
+- Apenas artigos com relevance_label="core" entram nas contagens e quotes.
+- Fonte: scripts/out_site/corpus.json (campo relevance_label).
+
+D. Limites metodologicos
+- Dados do Arquivo.pt possuem lacuna 2006-2009 e snippets ruidosos.
+- Artigos live incluem boilerplate do Forum Publico; limpeza necessaria.
+- Algumas metricas (ex: per_capita) variam 184 vs 185 kg (fontes diferentes no dataset).
+
+
+E. Tabela de metodos (resumo operativo)
+- Contagem anual (arquivo):
+  - Fonte: scripts/out_desperdico/arquivo_publico_desperdico.sqlite (items)
+  - SQL: SELECT year, COUNT(*) FROM items GROUP BY year ORDER BY year;
+  - Filtro: termos relacionados com comida em title+snippet (desperd, aliment, comida, sobras, food waste/loss)
+- Contagem anual (live core):
+  - Fonte: scripts/out_site/timeline.json (core_total=127, by_year)
+  - Regra: apenas relevance_label="core" (corpus.json)
+- Presenca de termos por periodo (linguagem):
+  - Fonte: scripts/out_site/corpus.json (text_content)
+  - Regra: contar artigos com ocorrencia do termo no texto completo (title+text_content)
+  - Periodos: 2011-2016, 2017-2020, 2021-2026
+- Quotes para evidencias:
+  - Fonte: scripts/out_site/evidence.json (lista) + scripts/out_site/corpus.json (text_content)
+  - Regra: extrair frase curta com palavra-chave (<= 25 palavras)
+- Arquivo profundo (1999-2010):
+  - Fonte: scripts/out_desperdico/metadata_export.csv + link_to_extracted_text (Arquivo.pt)
+  - Regra: selecionar 1 item/ano com termo relacionado e extrair frase curta
+- Ranking UE e per capita:
+  - Fonte: scripts/out_site/eu_comparison.json
+  - Regra: usar Portugal per_capita_kg e ranking direto do ficheiro
+- Breakdown por fase:
+  - Fonte: scripts/out_site/waste_breakdown.json
+  - Regra: usar percentagens e toneladas absolutas do ficheiro
+- Projeccoes 2030:
+  - Fonte: scripts/out_site/projections.json
+  - Regra: cenarios inercia/moderado/transformacao e targets definidos no ficheiro
+
+----------------------------------------------------------------
+VI. MAPA DE CLAIMS -> FONTES (para citacao rapida)
+
+
+Mini-matriz Claim -> Evidencia -> Quote (amostra)
+- Claim: 67% do desperdicio e domestico
+  - Evidencia: waste_breakdown.json (Agregados familiares 67%)
+  - Quote apoio: "A maioria do desperdicio alimentar em Portugal e produzido pelas familias." (2025-09-29)
+- Claim: Portugal 4o na UE per capita
+  - Evidencia: eu_comparison.json (ranking + per_capita_kg=184)
+  - Quote apoio: "Se o desperdicio alimentar fosse um Estado-membro, seria o quinto emissor…" (contexto UE, 2023)
+- Claim: Legislação directa so apos 2015
+  - Evidencia: legislation.json (lista de diplomas directos)
+  - Quote apoio: "Lei contra o desperdicio alimentar preconiza a doacao…" (2025-03-21)
+- Claim: Vocabulário migra para emissões/cadeia/circular
+  - Evidencia: corpus.json (contagem de termos por periodo)
+  - Quote apoio: "… desperdicio… emissões…" (usar artigo Azul 2023 para pullquote)
+- Claim: Tendencia 2020->2023 e ascendente
+  - Evidencia: projections.json + eu_comparison.json (1.80 -> 1.93 Mt)
+  - Quote apoio: "Estamos a andar para tras." (narrativo; usar texto editorial, nao quote)
+
+
+Claim: "Cobertura cresce e atinge pico em 2023"
+- Fonte: scripts/out_site/timeline.json (by_year)
+
+Claim: "Cobertura concentra-se em Dezembro"
+- Fonte: scripts/out_site/timeline.json (by_month, peaks)
+
+Claim: "67% do desperdicio e domestico"
+- Fonte: scripts/out_site/waste_breakdown.json
+
+Claim: "Portugal e 4o da UE em kg per capita"
+- Fonte: scripts/out_site/eu_comparison.json
+
+Claim: "Desperdicio subiu de 1.80 Mt (2020) para 1.93 Mt (2023)"
+- Fonte: scripts/out_site/projections.json + scripts/out_site/eu_comparison.json
+
+Claim: "Sem mudanca, 2030 falha metas"
+- Fonte: scripts/out_site/projections.json
+
+Claim: "Legislacao directa so aparece apos 2015"
+- Fonte: scripts/out_site/legislation.json
+
+Claim: "Sociedade civil tem impacto 50:1 vs orcamento publico"
+- Fonte: scripts/out_site/initiatives_impact.json
+
+Claim: "Vocabulário migra para clima/emissoes/circular"
+- Fonte: scripts/out_site/corpus.json (contagem local por periodo)
+
+Claim: "Pre-2010 e residual e ruidoso"
+- Fonte: scripts/out_desperdico/metadata_export.csv
+
+Claim: "Primeiro sinal dedicado surge em 2010 (sobras/hospitais)"
+- Fonte: scripts/out_desperdico/metadata_export.csv + Arquivo.pt link
+
+----------------------------------------------------------------
+VII. RASCUNHO DE NARRATIVA (tom jornalistico, mas com prova)
+
+Abertura
+- "Nao e Bruxelas. Nao e a couve. E o dever de todos." (logline)
+- O tema existe ha decadas, mas a visibilidade explode de 2023 em diante.
+- Prova: 32 artigos em 2023, 27 em 2025, 24 em 2024. (timeline.json)
+
+Capitulo 0 - Antes de existir tema, existia ruido
+- O arquivo pre-2010 mostra sinais dispersos: dossiers, programas politicos, PDFs.
+- A ausencia e o dado: o desperdicio alimentar ainda nao era assunto mediatizado.
+
+Viragem 1 - O problema deixa de ser invisivel
+- Fase: 2011-2014. Do alerta global ao quotidiano domestico.
+- Evidencias: 2011 (premio sustentabilidade), 2013 (metade do lixo), 2014 (frigorifico).
+
+Viragem 2 - A politica entra, mas a casa continua a perder
+- Dados: 67% do desperdicio e domestico.
+- Legislacao directa so aparece com peso a partir de 2015-2021.
+- Conflito: lei cresce, pratica nao acompanha.
+
+Viragem 3 - Solucoes praticas ganham escala
+- Sociedade civil supera o Estado em impacto directo (50:1).
+- Fruta Feia, Too Good To Go, Refood: modelos diferentes, mesmo resultado.
+
+Fecho
+- Se o desperdicio alimentar fosse um Estado-membro, seria 5o emissor na UE.
+- 2030 esta a 1803 dias (a partir de 2026-01-23) e o trajecto actual falha metas.
+- Sem mudanca estrutural, o problema cresce apesar do ruido mediatico.
+
+----------------------------------------------------------------
+VIII. FONTES LOCAIS (para citacao)
+- scripts/out_site/timeline.json
+- scripts/out_site/evidence.json
+- scripts/out_site/featured.json
+- scripts/out_site/waste_breakdown.json
+- scripts/out_site/eu_comparison.json
+- scripts/out_site/projections.json
+- scripts/out_site/legislation.json
+- scripts/out_site/initiatives_impact.json
+- scripts/out_site/editorial_structure.json
+- scripts/out_site/corpus.json
+- scripts/out_site/provenance_export_corpus.json
+- scripts/out_site/provenance_build_storyline.json
+- scripts/out_site/provenance_enrich_storyline.json
+- scripts/out_site/provenance_build_bundled_storyline.json
+- scripts/out_site/provenance_close_coverage_gap.json
+- scripts/out_desperdico/arquivo_publico_desperdico.sqlite
+- scripts/out_desperdico/publico_live.sqlite
+- scripts/out_desperdico/metadata_export.csv
+
+Backlog (para tornar paper-grade)
+- [ ] Substituir excertos ruidosos por excertos limpos do Arquivo.pt quando necessario.
+- [ ] Criar tabela de metodos (queries, filtros, criterios de relevancia).
+- [ ] Validar linguagem por periodo com texto completo do Arquivo.pt.
+- [ ] Adicionar reproducibilidade (SQL e scripts usados).
+
+
+
+----------------------------------------------------------------
+IX. ARQUIVO PROFUNDO 1999-2010
+
+
+Tabela compacta 1999-2010 (ruido vs food-adjacent vs food-focused)
+- year | title | classification | archive_url | quote
+- 1999 | expo | noise | https://arquivo.pt/wayback/19991014023636/http://www.publico.pt/dossiers/expo98/expo9806045.html | "DESPERDÍCIO DE ENERGIA Ninguém consegue perceber porque razão os candeeiros que estão instalados na rua junto à Porta do Mar permanecem acesos durante todo o…"
+- 2000 | expo | noise | https://arquivo.pt/wayback/20001101055306/http://www.publico.pt/dossiers/expo98/expo9806045.html | "DESPERDÍCIO DE ENERGIA Ninguém consegue perceber porque razão os candeeiros que estão instalados na rua junto à Porta do Mar permanecem acesos durante todo o…"
+- 2001 | Programa do I Governo Constitucional | food-adjacent | https://arquivo.pt/wayback/20010714043148/http://www.publico.pt/servico/proggov/governo1/prog/prog1iiid3.html | "Garantia de abastecimento público, em particular dos produtos alimentares e outros bens de primeira necessidade; a)-2."
+- 2003 | (sem titulo) | food-adjacent | https://arquivo.pt/wayback/20030309134047/http://www.publico.pt/docs/progGov2002/progEleitoralPSD.pdf | "Por isso vou atacar o desperdício, eliminar o despesismo e combater a corrupção, com rigor e com autoridade."
+- 2004 | DECRETO N | food-adjacent | https://arquivo.pt/wayback/20041001023339/http://www.publico.pt/docs/economia/oe_plei_2002.pdf | "– Gorduras e óleos comestíveis: 1.5.1 – Óleos directamente comestíveis e suas misturas (óleos alimentares)."
+- 2010 | Aproveitamento de sobras pode "aumentar risco de erro" - Sociedade - PUBLICO.PT | food-focused | https://arquivo.pt/wayback/20100524142438/http://www.publico.pt/Sociedade/aproveitamento-de-sobras-pode-aumentar-risco-de-erro_1438588 | "Assim, ou são gastos no mesmo dia ou vão para o lixo."
+ (appendix - sinais iniciais)
+
+1999 | expo (dossier)
+- Arquivo: https://arquivo.pt/wayback/19991014023636/http://www.publico.pt/dossiers/expo98/expo9806045.html
+- Extraido: https://arquivo.pt/textextracted?m=http%3A%2F%2Fwww.publico.pt%2Fdossiers%2Fexpo98%2Fexpo9806045.html%2F19991014023636
+- Quote: "DESPERDÍCIO DE ENERGIA Ninguém consegue perceber porque razão os candeeiros…"
+- Nota: ruído temático (energia, não comida).
+
+2000 | expo (dossier)
+- Arquivo: https://arquivo.pt/wayback/20001101055306/http://www.publico.pt/dossiers/expo98/expo9806045.html
+- Extraido: https://arquivo.pt/textextracted?m=http%3A%2F%2Fwww.publico.pt%2Fdossiers%2Fexpo98%2Fexpo9806045.html%2F20001101055306
+- Quote: "DESPERDÍCIO DE ENERGIA Ninguém consegue perceber porque razão os candeeiros…"
+- Nota: repetição do ruído (dossier).
+
+2001 | Programa do I Governo Constitucional
+- Arquivo: https://arquivo.pt/wayback/20010714043148/http://www.publico.pt/servico/proggov/governo1/prog/prog1iiid3.html
+- Extraido: https://arquivo.pt/textextracted?m=http%3A%2F%2Fwww.publico.pt%2Fservico%2Fproggov%2Fgoverno1%2Fprog%2Fprog1iiid3.html%2F20010714043148
+- Quote: "Garantia de abastecimento público, em particular dos produtos alimentares…"
+- Nota: menção política, não cobertura jornalística do desperdício.
+
+2001 | O que pode fazer para salvar o planeta
+- Arquivo: https://arquivo.pt/wayback/20010710112635/http://www.publico.pt/ecosfera/salvar-planeta.html
+- Extraido: https://arquivo.pt/textextracted?m=http%3A%2F%2Fwww.publico.pt%2Fecosfera%2Fsalvar-planeta.html%2F20010710112635
+- Quote: "Se ficar aberta… os alimentos poderão estragar-se."
+- Nota: conselhos domésticos; aproxima o tema por via de poupança/energia, não desperdício alimentar explícito.
+
+2003 | (sem titulo) PDF programa politico
+- Arquivo: https://arquivo.pt/wayback/20030309134047/http://www.publico.pt/docs/progGov2002/progEleitoralPSD.pdf
+- Extraido: https://arquivo.pt/textextracted?m=http%3A%2F%2Fwww.publico.pt%2Fdocs%2FprogGov2002%2FprogEleitoralPSD.pdf%2F20030309134047
+- Quote: "Vou atacar o desperdício, eliminar o despesismo e combater a corrupção…"
+- Nota: uso de "desperdício" em sentido financeiro.
+
+2004 | DECRETO N (PDF legislativo)
+- Arquivo: https://arquivo.pt/wayback/20041001023339/http://www.publico.pt/docs/economia/oe_plei_2002.pdf
+- Extraido: https://arquivo.pt/textextracted?m=http%3A%2F%2Fwww.publico.pt%2Fdocs%2Feconomia%2Foe_plei_2002.pdf%2F20041001023339
+- Quote: "Óleos directamente comestíveis… (óleos alimentares)."
+- Nota: contexto regulatório, não desperdício alimentar.
+
+2010 | Aproveitamento de sobras pode "aumentar risco de erro"
+- Arquivo: https://arquivo.pt/wayback/20100524142438/http://www.publico.pt/Sociedade/aproveitamento-de-sobras-pode-aumentar-risco-de-erro_1438588
+- Extraido: https://arquivo.pt/textextracted?m=http%3A%2F%2Fwww.publico.pt%2FSociedade%2Faproveitamento-de-sobras-pode-aumentar-risco-de-erro_1438588%2F20100524142438
+- Quote: "… forma de combater o desperdício…" (contexto hospitalar).
+- Nota: primeiro sinal com foco direto em comida.

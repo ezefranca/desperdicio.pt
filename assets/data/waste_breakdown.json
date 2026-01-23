@@ -1,0 +1,81 @@
+{
+  "metadata": {
+    "title": "Distribuição do Desperdício Alimentar por Fase",
+    "source": "Too Good To Go / INE 2023",
+    "year": 2023,
+    "unit": "percentagem"
+  },
+  "by_phase": [
+    {
+      "id": "households",
+      "label": "Agregados familiares",
+      "label_short": "Casa",
+      "value": 67,
+      "absolute_tonnes": 1293100,
+      "color": "danger",
+      "insight": "Dois terços do desperdício acontece depois de a comida chegar a casa"
+    },
+    {
+      "id": "food_service",
+      "label": "Restauração e catering",
+      "label_short": "Restauração",
+      "value": 12,
+      "absolute_tonnes": 231600,
+      "color": "warning",
+      "insight": "Porções sobredimensionadas e buffets são os principais culpados"
+    },
+    {
+      "id": "retail",
+      "label": "Retalho e distribuição",
+      "label_short": "Retalho",
+      "value": 9,
+      "absolute_tonnes": 173700,
+      "color": "accent",
+      "insight": "Normas estéticas rejeitam produtos perfeitamente comestíveis"
+    },
+    {
+      "id": "primary",
+      "label": "Produção primária",
+      "label_short": "Produção",
+      "value": 7,
+      "absolute_tonnes": 135100,
+      "color": "muted",
+      "insight": "Perdas no campo por condições climáticas e rejeição de calibre"
+    },
+    {
+      "id": "processing",
+      "label": "Transformação industrial",
+      "label_short": "Indústria",
+      "value": 5,
+      "absolute_tonnes": 96500,
+      "color": "muted",
+      "insight": "A fase mais eficiente — incentivos económicos alinham com redução"
+    }
+  ],
+  "total_tonnes": 1930000,
+  "per_capita_kg": 185,
+  "critical_moments": {
+    "title": "Os três momentos críticos em casa",
+    "source": "Rui Catalão, Kitchen Dates, 2025",
+    "moments": [
+      {
+        "id": "shopping",
+        "label": "Compras",
+        "description": "Comprar sem lista, com fome, ou em promoções enganosas",
+        "contribution": 35
+      },
+      {
+        "id": "storage",
+        "label": "Armazenamento",
+        "description": "Má organização do frigorífico, esquecimento no fundo das gavetas",
+        "contribution": 40
+      },
+      {
+        "id": "preparation",
+        "label": "Preparação",
+        "description": "Porções excessivas, restos não reaproveitados",
+        "contribution": 25
+      }
+    ]
+  }
+}

@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Metodologia - desperdicio.pt</title>
+  <meta name="description" content="Metodologia técnica do projecto desperdicio.pt: APIs do Arquivo.pt, pipeline de dados, e estrutura do corpus">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <style>
+    .methodology-hero {
+      padding: 120px 60px 80px;
+      background: linear-gradient(135deg, var(--dark2), var(--black));
+      border-bottom: 1px solid var(--white-08);
+    }
+    .methodology-hero h1 {
+      font-family: var(--serif);
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+    .methodology-hero .lead {
+      font-size: 20px;
+      color: var(--white-70);
+      max-width: 700px;
+      line-height: 1.7;
+    }
+    .methodology-content {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 40px;
+    }
+    .methodology-section {
+      margin-bottom: 80px;
+    }
+    .methodology-section h2 {
+      font-family: var(--serif);
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--white-15);
+    }
+    .methodology-section h3 {
+      font-size: 20px;
+      font-weight: 600;
+      margin: 32px 0 16px;
+      color: var(--accent);
+    }
+    .methodology-section p {
+      font-size: 17px;
+      line-height: 1.8;
+      color: var(--white-90);
+      margin-bottom: 20px;
+    }
+    .methodology-section ul, .methodology-section ol {
+      margin: 20px 0;
+      padding-left: 24px;
+    }
+    .methodology-section li {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--white-70);
+      margin-bottom: 12px;
+    }
+    .code-block {
+      background: var(--dark2);
+      border: 1px solid var(--white-08);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+      overflow-x: auto;
+    }
+    .code-block pre {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--white-90);
+      margin: 0;
+    }
+    .code-block code {
+      font-family: inherit;
+    }
+    .code-block .comment { color: var(--white-50); }
+    .code-block .string { color: #a5d6ff; }
+    .code-block .keyword { color: #ff7b72; }
+    .code-block .function { color: #d2a8ff; }
+    .code-block .number { color: #79c0ff; }
+    .inline-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      background: var(--white-08);
+      padding: 2px 8px;
+      border-radius: 4px;
+      color: var(--accent);
+    }
+    .api-endpoint {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 16px 20px;
+      background: var(--white-04);
+      border: 1px solid var(--white-08);
+      border-radius: 8px;
+      margin: 16px 0;
+    }
+    .api-method {
+      padding: 4px 10px;
+      background: var(--accent);
+      color: var(--black);
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .api-url {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px;
+      color: var(--white-70);
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+    }
+    .data-table th, .data-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--white-08);
+    }
+    .data-table th {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--white-50);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background: var(--white-04);
+    }
+    .data-table td {
+      font-size: 14px;
+      color: var(--white-70);
+    }
+    .data-table td code {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      color: var(--accent);
+    }
+    .pipeline-diagram {
+      padding: 40px;
+      background: var(--dark2);
+      border: 1px solid var(--white-08);
+      border-radius: 16px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .pipeline-step {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 20px;
+      background: var(--white-04);
+      border: 1px solid var(--white-08);
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--white-90);
+      margin: 8px;
+    }
+    .pipeline-step.highlight {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+    .pipeline-arrow {
+      color: var(--white-30);
+      font-size: 20px;
+      margin: 0 8px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .stat-box {
+      padding: 24px;
+      background: var(--white-04);
+      border: 1px solid var(--white-08);
+      border-radius: 12px;
+      text-align: center;
+    }
+    .stat-box .value {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .stat-box .label {
+      font-size: 12px;
+      color: var(--white-50);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 8px;
+    }
+    .file-tree {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      line-height: 1.8;
+      color: var(--white-70);
+      padding: 24px;
+      background: var(--dark2);
+      border-radius: 12px;
+      margin: 24px 0;
+    }
+    .file-tree .folder { color: var(--accent); }
+    .file-tree .file { color: var(--white-70); }
+    .file-tree .comment { color: var(--white-30); font-style: italic; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 24px;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 768px) {
+      .methodology-hero { padding: 100px 24px 60px; }
+      .methodology-content { padding: 48px 24px; }
+      .code-block { padding: 16px; }
+      .pipeline-step { display: block; margin: 12px 0; }
+      .pipeline-arrow { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="../index.html" class="nav-brand">
+      <div class="nav-logo">
+        <img src="../assets/img/desperdicio.pt.png" alt="desperdicio.pt" height="28">
+      </div>
+      <span class="nav-title">desperdicio.pt</span>
+    </a>
+    <div class="nav-badges">
+      <a href="https://arquivo.pt" target="_blank" class="nav-badge">
+        <span class="dot" style="background: #00d4aa"></span>
+        Arquivo.pt
+      </a>
+      <a href="https://github.com/ezefranca/desperdicio.pt" target="_blank" class="nav-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="opacity: 0.7;">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="methodology-hero">
+    <a href="../index.html" class="back-link">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Voltar ao editorial
+    </a>
+    <h1>Metodologia</h1>
+    <p class="lead">
+      Como construímos o desperdicio.pt: das APIs do Arquivo.pt ao editorial final.
+      Uma documentação técnica completa do pipeline de dados, ferramentas utilizadas,
+      e estrutura do corpus jornalístico.
+    </p>
+  </header>
+
+  <!-- Content -->
+  <main class="methodology-content">
+
+    <!-- Overview -->
+    <section class="methodology-section">
+      <h2>Visão Geral</h2>
+      <p>
+        O <strong>desperdicio.pt</strong> é um projecto de jornalismo de dados construído a partir
+        do arquivo do Público preservado pelo Arquivo.pt. Utilizamos uma combinação de APIs,
+        web scraping, e processamento de linguagem natural para construir um corpus de
+        <strong>337 artigos</strong> sobre desperdício alimentar publicados entre 1999 e 2026.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat-box">
+          <div class="value">337</div>
+          <div class="label">Artigos Totais</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">128</div>
+          <div class="label">Artigos Core</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">20</div>
+          <div class="label">Diplomas Legais</div>
+        </div>
+        <div class="stat-box">
+          <div class="value">15</div>
+          <div class="label">Anos de Dados</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Sources -->
+    <section class="methodology-section">
+      <h2>Fontes de Dados</h2>
+
+      <h3>1. Arquivo.pt Text Search API</h3>
+      <p>
+        A principal fonte de dados históricos é a API de pesquisa textual do Arquivo.pt,
+        que permite pesquisar no conteúdo arquivado de websites portugueses.
+      </p>
+
+      <div class="api-endpoint">
+        <span class="api-method">GET</span>
+        <span class="api-url">https://arquivo.pt/textsearch?q={query}&siteSearch=www.publico.pt</span>
+      </div>
+
+      <p><strong>Parâmetros utilizados:</strong></p>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Parâmetro</th>
+            <th>Valor</th>
+            <th>Descrição</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>q</code></td>
+            <td>8 variantes de query</td>
+            <td>Termos de pesquisa em PT-PT, PT-BR</td>
+          </tr>
+          <tr>
+            <td><code>siteSearch</code></td>
+            <td>www.publico.pt</td>
+            <td>Restrição ao domínio do Público</td>
+          </tr>
+          <tr>
+            <td><code>from</code> / <code>to</code></td>
+            <td>1996-2025</td>
+            <td>Intervalo temporal (chunked por ano)</td>
+          </tr>
+          <tr>
+            <td><code>maxItems</code></td>
+            <td>100</td>
+            <td>Itens por página</td>
+          </tr>
+          <tr>
+            <td><code>offset</code></td>
+            <td>0-500</td>
+            <td>Paginação (máx 500 páginas por slice)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Queries de pesquisa:</strong></p>
+      <ul>
+        <li>"desperdício alimentar" (principal)</li>
+        <li>"desperdício de alimentos"</li>
+        <li>"perdas e desperdício alimentar"</li>
+        <li>"combate ao desperdício alimentar"</li>
+        <li>"sobras de comida"</li>
+        <li>"desperdício de comida" (PT-BR)</li>
+        <li>"desperdício de alimentos no varejo" (PT-BR)</li>
+        <li>"food waste" (EN)</li>
+      </ul>
+
+      <h3>2. Público.pt Live API</h3>
+      <p>
+        Para artigos mais recentes (2020-2026), utilizamos a API interna do Público.pt
+        que permite pesquisa no arquivo vivo do jornal.
+      </p>
+
+      <div class="api-endpoint">
+        <span class="api-method">GET</span>
+        <span class="api-url">https://www.publico.pt/api/list/search?query={query}</span>
+      </div>
+
+      <h3>3. HTML Scraping</h3>
+      <p>
+        Para enriquecer os metadados, fizemos scraping das páginas de artigos usando
+        BeautifulSoup para extrair: título completo, data de publicação, secção,
+        autores, contagem de palavras, e detecção de paywall.
+      </p>
+    </section>
+
+    <!-- Pipeline -->
+    <section class="methodology-section">
+      <h2>Pipeline de Processamento</h2>
+
+      <div class="pipeline-diagram">
+        <div class="pipeline-step highlight">Arquivo.pt API</div>
+        <span class="pipeline-arrow">→</span>
+        <div class="pipeline-step">SQLite</div>
+        <span class="pipeline-arrow">→</span>
+        <div class="pipeline-step">HTML Scraping</div>
+        <span class="pipeline-arrow">→</span>
+        <div class="pipeline-step">Classificação</div>
+        <span class="pipeline-arrow">→</span>
+        <div class="pipeline-step highlight">corpus.json</div>
+        <br><br>
+        <div class="pipeline-step highlight">corpus.json</div>
+        <span class="pipeline-arrow">→</span>
+        <div class="pipeline-step">Storyline</div>
+        <span class="pipeline-arrow">→</span>
+        <div class="pipeline-step">Bundles</div>
+        <span class="pipeline-arrow">→</span>
+        <div class="pipeline-step highlight">Editorial</div>
+      </div>
+
+      <h3>Scripts do Pipeline</h3>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Script</th>
+            <th>Função</th>
+            <th>Output</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>fetch_publico_arquivo_metadata.py</code></td>
+            <td>Fetch da API do Arquivo.pt com checkpoint/resume</td>
+            <td>arquivo_publico.sqlite</td>
+          </tr>
+          <tr>
+            <td><code>fetch_publico_json_search.py</code></td>
+            <td>Fetch da API live do Público.pt</td>
+            <td>publico_live.sqlite</td>
+          </tr>
+          <tr>
+            <td><code>enrich_publico_from_html.py</code></td>
+            <td>Scraping HTML para metadados</td>
+            <td>article_details table</td>
+          </tr>
+          <tr>
+            <td><code>relevance_filter.py</code></td>
+            <td>Classificação core vs. noise</td>
+            <td>relevance_label column</td>
+          </tr>
+          <tr>
+            <td><code>export_corpus.py</code></td>
+            <td>Export para JSON normalizado</td>
+            <td>corpus.json</td>
+          </tr>
+          <tr>
+            <td><code>build_storyline.py</code></td>
+            <td>Construção da narrativa editorial</td>
+            <td>storyline.json, timeline.json</td>
+          </tr>
+          <tr>
+            <td><code>build_bundled_storyline.py</code></td>
+            <td>Agrupamento temático</td>
+            <td>storyline_bundled.json</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Classification -->
+    <section class="methodology-section">
+      <h2>Classificação de Relevância</h2>
+      <p>
+        Cada artigo é classificado como <strong>core</strong> (relevante) ou <strong>noise</strong>
+        (ruído) usando um sistema de padrões regex. Artigos com mais padrões positivos
+        que negativos são marcados como "core".
+      </p>
+
+      <h3>Padrões Positivos</h3>
+      <div class="code-block">
+        <pre><code><span class="keyword">POSITIVE_PATTERNS</span> = [
+    <span class="string">r"desperdício\s+(alimentar|de\s+alimentos|de\s+comida)"</span>,
+    <span class="string">r"food\s+waste"</span>,
+    <span class="string">r"doação\s+de\s+(alimentos|géneros)"</span>,
+    <span class="string">r"data\s+de\s+validade"</span>,
+    <span class="string">r"fruta\s+feia"</span>,
+    <span class="string">r"too\s+good\s+to\s+go"</span>,
+    <span class="string">r"sobras\s+de\s+comida"</span>,
+    <span class="string">r"redistribuição\s+alimentar"</span>
+]</code></pre>
+      </div>
+
+      <h3>Padrões Negativos</h3>
+      <div class="code-block">
+        <pre><code><span class="keyword">NEGATIVE_PATTERNS</span> = [
+    <span class="string">r"pesca"</span>,
+    <span class="string">r"futebol"</span>,
+    <span class="string">r"bolsa"</span>,
+    <span class="string">r"política\s+externa"</span>,
+    <span class="string">r"desperdício\s+de\s+energia"</span>,
+    <span class="string">r"desperdício\s+de\s+água"</span>,
+    <span class="string">r"desperdício\s+de\s+dinheiro"</span>
+]</code></pre>
+      </div>
+    </section>
+
+    <!-- Data Schema -->
+    <section class="methodology-section">
+      <h2>Estrutura de Dados</h2>
+
+      <h3>Schema do Corpus (corpus.json)</h3>
+      <div class="code-block">
+        <pre><code>{
+  <span class="string">"article_id"</span>: <span class="string">"sha1_hash_do_url"</span>,
+  <span class="string">"title"</span>: <span class="string">"Título do artigo"</span>,
+  <span class="string">"snippet"</span>: <span class="string">"Excerto do texto..."</span>,
+  <span class="string">"full_text_sample"</span>: <span class="string">"Primeiros 500 caracteres..."</span>,
+  <span class="string">"url"</span>: <span class="string">"https://www.publico.pt/..."</span>,
+  <span class="string">"publication_date"</span>: <span class="string">"2023-12-15T10:30:00Z"</span>,
+  <span class="string">"source"</span>: <span class="string">"Arquivo.pt"</span> | <span class="string">"Público.pt"</span>,
+  <span class="string">"relevance_label"</span>: <span class="string">"core"</span> | <span class="string">"noise"</span>,
+  <span class="string">"relevance_score"</span>: <span class="number">0.85</span>,
+  <span class="string">"word_count"</span>: <span class="number">1250</span>,
+  <span class="string">"search_query"</span>: <span class="string">"desperdício alimentar"</span>,
+  <span class="string">"keywords"</span>: [<span class="string">"desperdício"</span>, <span class="string">"alimentar"</span>, <span class="string">"fruta feia"</span>]
+}</code></pre>
+      </div>
+
+      <h3>Schema de Legislação (legislation.json)</h3>
+      <div class="code-block">
+        <pre><code>{
+  <span class="string">"jurisdiction"</span>: <span class="string">"Portugal"</span> | <span class="string">"EU"</span>,
+  <span class="string">"title"</span>: <span class="string">"Decreto-Lei n.º 102-D/2020"</span>,
+  <span class="string">"type"</span>: <span class="string">"Decreto-Lei"</span> | <span class="string">"Diretiva"</span> | <span class="string">"Regulamento"</span>,
+  <span class="string">"date_enacted"</span>: <span class="string">"2020-12-10"</span>,
+  <span class="string">"official_link"</span>: <span class="string">"https://diariodarepublica.pt/..."</span>,
+  <span class="string">"summary"</span>: <span class="string">"Descrição do diploma..."</span>,
+  <span class="string">"scope"</span>: <span class="string">"direct"</span> | <span class="string">"indirect"</span>
+}</code></pre>
+      </div>
+    </section>
+
+    <!-- File Structure -->
+    <section class="methodology-section">
+      <h2>Estrutura de Ficheiros</h2>
+
+      <div class="file-tree">
+<span class="folder">desperdicio.pt/</span>
+├── <span class="folder">assets/</span>
+│   ├── <span class="folder">css/</span>
+│   │   └── <span class="file">styles.css</span>           <span class="comment"># Estilos globais</span>
+│   ├── <span class="folder">js/</span>
+│   │   └── <span class="file">main.js</span>             <span class="comment"># JavaScript (se aplicável)</span>
+│   └── <span class="folder">data/</span>
+│       ├── <span class="file">corpus.json</span>         <span class="comment"># 337 artigos</span>
+│       ├── <span class="file">storyline_bundled.json</span>
+│       ├── <span class="file">timeline.json</span>       <span class="comment"># Distribuição temporal</span>
+│       ├── <span class="file">legislation.json</span>    <span class="comment"># 20 diplomas legais</span>
+│       ├── <span class="file">featured.json</span>       <span class="comment"># Artigos destacados</span>
+│       ├── <span class="file">waste_breakdown.json</span>
+│       ├── <span class="file">eu_comparison.json</span>
+│       ├── <span class="file">initiatives_impact.json</span>
+│       ├── <span class="file">projections.json</span>
+│       └── <span class="file">deep_archive.json</span>
+├── <span class="folder">metodologia/</span>
+│   └── <span class="file">index.html</span>             <span class="comment"># Esta página</span>
+├── <span class="folder">scripts/</span>
+│   ├── <span class="file">fetch_publico_arquivo_metadata.py</span>
+│   ├── <span class="file">fetch_publico_json_search.py</span>
+│   ├── <span class="file">enrich_publico_from_html.py</span>
+│   ├── <span class="file">relevance_filter.py</span>
+│   ├── <span class="file">export_corpus.py</span>
+│   ├── <span class="file">build_storyline.py</span>
+│   └── <span class="file">build_bundled_storyline.py</span>
+├── <span class="file">index.html</span>                 <span class="comment"># Página principal</span>
+├── <span class="file">README.md</span>
+├── <span class="file">LICENSE</span>
+└── <span class="file">CNAME</span>
+      </div>
+    </section>
+
+    <!-- How to Run -->
+    <section class="methodology-section">
+      <h2>Como Executar</h2>
+
+      <h3>Requisitos</h3>
+      <ul>
+        <li>Python 3.10+</li>
+        <li>requests</li>
+        <li>beautifulsoup4</li>
+        <li>sqlite3 (built-in)</li>
+      </ul>
+
+      <h3>Instalação</h3>
+      <div class="code-block">
+        <pre><code><span class="comment"># Clonar o repositório</span>
+git clone https://github.com/ezefranca/desperdicio.pt.git
+cd desperdicio.pt
+
+<span class="comment"># Criar ambiente virtual</span>
+python -m venv venv
+source venv/bin/activate  <span class="comment"># Linux/Mac</span>
+venv\Scripts\activate     <span class="comment"># Windows</span>
+
+<span class="comment"># Instalar dependências</span>
+pip install requests beautifulsoup4</code></pre>
+      </div>
+
+      <h3>Execução do Pipeline</h3>
+      <div class="code-block">
+        <pre><code><span class="comment"># 1. Fetch dados do Arquivo.pt (pode demorar ~30min)</span>
+python scripts/fetch_publico_arquivo_metadata.py
+
+<span class="comment"># 2. Enriquecer com metadados HTML</span>
+python scripts/enrich_publico_from_html.py
+
+<span class="comment"># 3. Classificar relevância</span>
+python scripts/relevance_filter.py
+
+<span class="comment"># 4. Exportar corpus</span>
+python scripts/export_corpus.py
+
+<span class="comment"># 5. Construir storyline e bundles</span>
+python scripts/build_storyline.py
+python scripts/build_bundled_storyline.py</code></pre>
+      </div>
+
+      <p>
+        <strong>Nota:</strong> O pipeline inclui sistema de checkpoint/resume.
+        Se a execução for interrompida, pode ser retomada do ponto onde parou.
+      </p>
+    </section>
+
+    <!-- Limitations -->
+    <section class="methodology-section">
+      <h2>Limitações</h2>
+      <ul>
+        <li>
+          <strong>Cobertura pré-2010:</strong> O arquivo anterior a 2010 é maioritariamente
+          ruído (PDFs, dossiers políticos). O desperdício alimentar ainda não era tema mediatizado.
+        </li>
+        <li>
+          <strong>Paywall:</strong> Alguns artigos do Público.pt estão atrás de paywall,
+          limitando o acesso ao texto completo.
+        </li>
+        <li>
+          <strong>Deduplicação:</strong> O Arquivo.pt pode conter múltiplas versões do mesmo
+          artigo (snapshots diferentes). Aplicamos deduplicação por URL normalizado.
+        </li>
+        <li>
+          <strong>Discrepâncias numéricas:</strong> Algumas fontes reportam valores ligeiramente
+          diferentes (184kg vs 185kg per capita). O editorial usa valores do Eurostat.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Attribution -->
+    <section class="methodology-section">
+      <h2>Atribuição e Fontes</h2>
+      <p>Este projecto utiliza dados de:</p>
+      <ul>
+        <li>
+          <strong>Arquivo.pt</strong> — Preservação da Web Portuguesa<br>
+          <a href="https://arquivo.pt" target="_blank" style="color: var(--accent);">https://arquivo.pt</a>
+        </li>
+        <li>
+          <strong>Público.pt</strong> — Jornalismo de Referência<br>
+          <a href="https://www.publico.pt" target="_blank" style="color: var(--accent);">https://www.publico.pt</a>
+        </li>
+        <li>
+          <strong>Levantamento de domínios e subdomínios do Público no Arquivo.pt (1996-2019)</strong><br>
+          Base de dados enriquecida com cobertura até 2026.
+        </li>
+        <li>
+          <strong>Eurostat</strong> — Dados estatísticos europeus sobre desperdício alimentar
+        </li>
+        <li>
+          <strong>Diário da República Electrónico</strong> — Legislação portuguesa
+        </li>
+        <li>
+          <strong>EUR-Lex</strong> — Legislação europeia
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="site-footer-brand">
+        <img src="../assets/img/desperdicio.pt.png" alt="desperdicio.pt" class="site-footer-logo">
+        <p>Um projecto de jornalismo de dados sobre desperdício alimentar em Portugal.</p>
+        <nav class="site-footer-nav">
+          <a href="../index.html">Editorial</a>
+          <a href="https://github.com/ezefranca/desperdicio.pt" target="_blank">GitHub</a>
+        </nav>
+      </div>
+      <div class="site-footer-credits">
+        <div class="site-footer-row">
+          <span class="site-footer-label">Parceiros</span>
+          <a href="https://arquivo.pt" target="_blank"><img src="../assets/img/logo_arquivo.png" alt="Arquivo.pt"></a>
+          <a href="https://publico.pt" target="_blank"><img src="../assets/img/logo_publico.svg" alt="Público"></a>
+        </div>
+        <div class="site-footer-row">
+          <span class="site-footer-label">Fontes</span>
+          <a href="https://www.europarl.europa.eu" target="_blank"><img src="../assets/img/flag_eu.svg" alt="UE" class="site-footer-flag"></a>
+          <a href="https://www.parlamento.pt" target="_blank"><img src="../assets/img/flag_pt.svg" alt="PT" class="site-footer-flag"></a>
+          <a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a>
+          <a href="https://dre.pt" target="_blank">DRE</a>
+        </div>
+      </div>
+    </div>
+    <div class="site-footer-bottom">
+      <span>© 2026 desperdicio.pt</span>
+      <a href="https://www.dns.pt" target="_blank">Orgulhosamente <strong>.pt</strong></a>
+    </div>
+  </footer>
+
+  <script>
+    // Nav scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

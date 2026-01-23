@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>desperdicio.pt - Um Editorial Documental sobre Desperdício Alimentar</title>
+  <meta name="description" content="Uma investigação visual sobre o desperdício alimentar em Portugal e na Europa, construída a partir do arquivo do Público no Arquivo.pt">
+  <meta property="og:title" content="desperdicio.pt - Editorial Documental">
+  <meta property="og:description" content="O desperdício alimentar em Portugal e na Europa: uma investigação baseada em 15 anos de cobertura do Público e 20 diplomas legais">
+  <meta property="og:image" content="https://www.europarl.europa.eu/resources/library/images/20240319PHT19475/20240319PHT19475-cl.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-brand">
+      <div class="nav-logo">
+        <img src="assets/img/desperdicio.pt.png" alt="desperdicio.pt" height="28">
+      </div>
+      <span class="nav-title">desperdicio.pt</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <!-- Populated by JS -->
+    </ul>
+
+    <div class="nav-badges">
+      <a href="metodologia/" class="nav-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity: 0.7;">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+        </svg>
+        Metodologia
+      </a>
+      <a href="https://arquivo.pt" target="_blank" class="nav-badge">
+        <span class="dot" style="background: #00d4aa"></span>
+        Arquivo.pt
+      </a>
+      <a href="https://publico.pt" target="_blank" class="nav-badge">
+        <span class="dot" style="background: var(--publico-red)"></span>
+        Público
+      </a>
+      <a href="https://github.com/ezefranca/desperdicio.pt" target="_blank" class="nav-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="opacity: 0.7;">
+          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+        </svg>
+        GitHub
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-image">
+      <img src="https://www.europarl.europa.eu/resources/library/images/20240319PHT19475/20240319PHT19475-cl.jpg"
+           alt="Desperdicio alimentar na Europa" loading="eager">
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        Deitar comida fora<br>
+        nem sempre acontece por descuido.<br>
+        Às vezes é <em>hábito</em>.
+      </h1>
+      <p class="hero-subtitle">
+        Uma investigação baseada em 15 anos de cobertura do Público, preservada no Arquivo.pt,
+        sobre como normalizámos o desperdício alimentar e o que isso revela sobre nós.
+      </p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-value" id="statArticles">127</span>
+          <span class="hero-stat-label">Artigos Core</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value" id="statYears">15</span>
+          <span class="hero-stat-label">Anos de Dados</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value" id="statLaws">20</span>
+          <span class="hero-stat-label">Diplomas Legais</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">~12</span>
+          <span class="hero-stat-label">Min Leitura</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-cta">
+      <span>Explorar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-section">
+        <h2 class="sidebar-title">Dados</h2>
+        <div class="mini-stats" id="miniStats">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <h2 class="sidebar-title">Quadro Legal</h2>
+        <div class="timeline-container">
+          <div class="timeline" id="timeline">
+            <!-- Populated by JS -->
+          </div>
+          <div class="timeline-scroll-hint">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 5v14M5 12l7 7 7-7"/>
+            </svg>
+            20 diplomas
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main" id="main">
+      <!-- Populated by JS -->
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <!-- Left: Brand -->
+      <div class="site-footer-brand">
+        <img src="assets/img/desperdicio.pt.png" alt="desperdicio.pt" class="site-footer-logo">
+        <p>Um projecto de jornalismo de dados sobre desperdício alimentar em Portugal.</p>
+        <nav class="site-footer-nav">
+          <a href="metodologia/">Metodologia</a>
+          <a href="https://github.com/ezefranca/desperdicio.pt" target="_blank">GitHub</a>
+        </nav>
+      </div>
+
+      <!-- Right: Credits -->
+      <div class="site-footer-credits">
+        <div class="site-footer-row">
+          <span class="site-footer-label">Parceiros</span>
+          <a href="https://arquivo.pt" target="_blank"><img src="assets/img/logo_arquivo.png" alt="Arquivo.pt"></a>
+          <a href="https://publico.pt" target="_blank"><img src="assets/img/logo_publico.svg" alt="Público"></a>
+        </div>
+        <div class="site-footer-row">
+          <span class="site-footer-label">Fontes</span>
+          <a href="https://www.europarl.europa.eu" target="_blank"><img src="assets/img/flag_eu.svg" alt="UE" class="site-footer-flag"></a>
+          <a href="https://www.parlamento.pt" target="_blank"><img src="assets/img/flag_pt.svg" alt="PT" class="site-footer-flag"></a>
+          <a href="https://ec.europa.eu/eurostat" target="_blank">Eurostat</a>
+          <a href="https://dre.pt" target="_blank">DRE</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-footer-bottom">
+      <span>© 2026 desperdicio.pt</span>
+      <a href="https://www.dns.pt" target="_blank">Orgulhosamente <strong>.pt</strong></a>
+    </div>
+  </footer>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

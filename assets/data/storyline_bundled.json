@@ -1,0 +1,960 @@
+{
+  "schema": "desperdico.storyline.v1",
+  "created_at": "2026-01-18T17:05:09Z",
+  "inputs": {
+    "corpus_schema": "desperdico.corpus.v1",
+    "timeline_schema": null,
+    "evidence_schema": null,
+    "legislation_schema": null
+  },
+  "logline": "Não é Bruxelas, nem a couve, nem a cozinha: o desperdício é um dever de todos.",
+  "chapters": [
+    {
+      "chapter_id": "ch-prologo",
+      "title": "Não é Bruxelas. Não é a couve. É o dever de todos.",
+      "kind": "prologue",
+      "blocks": [
+        {
+          "block_id": "b-prologo-1",
+          "type": "text",
+          "content": "A cozinha é o palco onde o desperdício se disfarça de hábito. Bruxelas é o lugar onde a responsabilidade se disfarça de processo. Entre os dois, a comida desaparece.",
+          "method": "author_stub:keyword_overlap",
+          "source_article_ids": [
+            "f82f50a219e8dd22ccdf17623bd98fd5ea847249",
+            "57f21e2e00974a4d019cec678530884ff3ccc792",
+            "92047546471c8862ad7920865e504102869b8c91",
+            "2d275d1eb75becd378fd4e7a86bb5aaa7f6aa272",
+            "78b9af1bc7db5c6be02adf558302641dcb40d6b8",
+            "f5f4315e59f765827fb2bf08b681277d8b4a241b"
+          ],
+          "source_law_ids": []
+        },
+        {
+          "block_id": "b-prologo-chart",
+          "type": "chart_ref",
+          "content": {
+            "chart": "timeline.by_year",
+            "note": "Abrir com a curva de atenção mediática e prometer prova clicável."
+          },
+          "method": "timeline_json",
+          "source_article_ids": [],
+          "source_law_ids": []
+        },
+        {
+          "type": "evidence_cards",
+          "title": "Evidências",
+          "subtitle": "Seleção automática (institutional:keyword_match:top_score_diverse)",
+          "source_article_ids": [
+            "f5b0f6a81f056762d48819434d98345d179e0894",
+            "d22813ac0a465f689514cd9bda37b902a62dcb0b",
+            "4fd5e7b28b364713e30f469eb9038a9e133a006b",
+            "ddd7e78e9741324e091b9506c5cba1b01704d87c",
+            "c9fe143f0c40a42e32ffb7f03051912678e783b3",
+            "d1e2dd4379ad2f397b85382d670f53c15b8d0fd1"
+          ],
+          "method": "institutional:keyword_match:top_score_diverse"
+        },
+        {
+          "type": "evidence_bundle",
+          "title": "Fontes (continuação)",
+          "subtitle": "32 links (expandir)",
+          "source_article_ids": [
+            "b9a617c8ed8c044bdbfd7ea61d277f322b0aa153",
+            "f95e9dc4f170184da23f6fb4365f9f2d9305c74d",
+            "c879b938c118963122fd18e68afe06c9ab6082bc",
+            "a88b50f6a1ce021b57a574542a3b9ae04eee6d68",
+            "d8a3db6189d600eed93ecf788fde49c30665f03c",
+            "6a5677286c370c35834ddbf2c5dc23a153bd51e5",
+            "45e572ff846b742bf476b09005d1424c1abc96bd",
+            "08e407f9efd1e2eff6fe209dbe1b6ec1baf4ed62",
+            "5dd0891a693b8a9f3de8c57f624ab9ea268f8970",
+            "f495e2c50f1a72f8aca8d2f7e50e4a229fbec69a",
+            "0a0d5e87c76f2e441c58b0d6d3836f0b56d7bf6c",
+            "e3d2a2f47b31e0109d23cbb12a7194741cd88aa3",
+            "474d6cf418ca4a26d61843274d6d6deb979a5c95",
+            "fb8769bee0790e37aa01b599f26ae6e8c103798d",
+            "53ab7824a39c8484bd5c328d0ab9d5938b3af4b5",
+            "68b3f3b86b9bbdbfe77423a93fd48c777158a7dd",
+            "0de67a83b07ad117e76c55d3fb6262cead7b2749",
+            "59417229890558393a27bfc531b3a37e3f2a46e1",
+            "2c8e280fef543467152e7ab194105e9b6c0f4cd5",
+            "bf8648dec3559d1c0703a711c73a6999208929de",
+            "53f2be8e6f542513101517028ea2791616b04189",
+            "ae258b0c4207df9fbe2afa654f8d876ce02468aa",
+            "778f25413dfcba30752691b99d537a3a4857142e",
+            "24ee09305b2819f5310bb2f6785f8b1923997825",
+            "44e98afbed693a29ccbe9abad994749e0efebeb3",
+            "1b83b23c329b5f64f4b2b76e9e0c67417feb919d",
+            "69ff8c4e537d69138fa8e1062f43536b404b15a7",
+            "ea288ea064ff6de004a6e666742b80946ad67779",
+            "a741361d59ef49dd46c2588fe08e48e154c5ad74",
+            "3a2b827ef8a76f6c462b4ca5179d037459d7b388",
+            "ab4adc74a872162b2844b1ae1d8924957e706be8",
+            "00be412b4eeb6d7effc70de7ceac869a6fefa30f"
+          ],
+          "collapsed": true,
+          "method": "bundle:fallback:remaining"
+        },
+        {
+          "type": "evidence_bundle",
+          "title": "Fontes (continuação)",
+          "subtitle": "32 links (expandir)",
+          "source_article_ids": [
+            "04697ac6f10e1f0a53403d0f1eb36bc075e04fbf",
+            "53291b54cc6dd66c173e9e60d8ecd9792b41ddd9",
+            "512f496bc7d786e6ebe6688790eb7d06ecfd944d",
+            "37ba0f8644ed69f05dcb430135644d673024c09d",
+            "f0333ab398ee0d9e9e55a4141d2b80409cdca3b8",
+            "0b3c00484baeece9a1cd2dc34508aa55cd2aa531",
+            "36622ea672abf1f944149658d192f905784da491",
+            "bbeb86b5c1fcf8fa014e9894f991d3e49e69406e",
+            "61d1ac7bd0773838bf88c1cfa832af8b62c871ab",
+            "23dcdc3ab034c5024aace4ab6ad91b1f45ec0c2a",
+            "74e5fcbbfb5d15a8411a5487d69e997ab671211b",
+            "c7230d68b040cbd9f6277514424759740c59c24f",
+            "03659ea71411296ec8afe020c1400303c19651da",
+            "dca20efe7d04090dd399d9b06d3bee58dbd44134",
+            "df8e3827eb8ad7f270c493d4f84d380786a3723a",
+            "7026fb6c03cc061fe087d8a6b93063a57c0dd683",
+            "bf1b9b4c37fe86ff5e38c33a7585e4406890303f",
+            "d4a295c445e4c3b213886ba73303f7dba8f5b2f7",
+            "55ae31ffb281854a9a77f28093abfabcdd50b397",
+            "7985f7474d9f86f02be99b3528e1c4171dd894c2",
+            "fe9e308f46daad724f0a9ea4db0998480736da54",
+            "2f271ece83572b0456b48a149deef5cb7d0063f6",
+            "01f30cbdec8ca2b71a95a8fa78c95b4971c63880",
+            "43ad54a624920f8714a1fda1bb6b6664054806df",
+            "447d17769049712138b1f59aadb05352fe49010b",
+            "65b479f3da65346673114d9f3e405cccd0e1797b",
+            "14879e8d32ed9d18d5b21744f29b2701b3ca70c9",
+            "782db9244a13be40c77d2ef14201c404c13c7d5b",
+            "cd6861729c789632f13cd552d8a3b8ff65155eac",
+            "7a96e7c410e7e9c6a3a9804e383f6b4ca121e3b2",
+            "e8304b4d375b19817148054a6f7bf19fdf62f893",
+            "a7010fba8df3bebb762ec1038336e7a43b6b1834"
+          ],
+          "collapsed": true,
+          "method": "bundle:fallback:remaining"
+        },
+        {
+          "type": "evidence_bundle",
+          "title": "Fontes (continuação)",
+          "subtitle": "41 links (expandir)",
+          "source_article_ids": [
+            "0ffba9286a2235554272838afb8b58c894b34604",
+            "4adfcb5a9a072571a4929fe70570f4699fcfc7da",
+            "bda8936fcef61bbb36c17f3c6b725cb9294b682e",
+            "a7760062c86b6ce715dd85cfae77f559cde06227",
+            "c64280f86ca1ff3a000da26d854799d619da2ee1",
+            "dc9b40859e79968a3959510b2072685e2c02b8a2",
+            "511dcca42f39fa4b1ebf42f3417580b6d7e17591",
+            "c13c9af700668b9395edaa723ec0494da108b5b5",
+            "2daba20a83687255e71e22729c4f3399c46c9104",
+            "744a57ade784b7cfcc69200b831e3bec73e633bc",
+            "1a13fa2733c57df4317c5f0c90a9bc0352b9bac6",
+            "154fb6c876339d62d94a22a99f5fd0b937879a39",
+            "476183a9ac59e5380da3c2f7178264730af9f63d",
+            "efe34bc5a2e77d1320cd944f65e1c305fb7609ed",
+            "87d9e5ac657626013b373be0210e038ce29dc922",
+            "82a1a29c2643a24ea1c0a302570f5d7284ed46ff",
+            "d1106cd603fc5ffdd8b895750467cd7720e3872b",
+            "e232eeef2e31ed35b420d3e646e91a25581bf990",
+            "29413a12c923c513269aac1cdc1cd02c9ec1dc27",
+            "bc7d1cdab95cdad069d3dc4baf60fae2bb40f0b0",
+            "24ee1bdaa3abb886619c1015f0991e723271f7a9",
+            "dbfcf3bea060dc89b4993dee1931a0f93d4e137a",
+            "127d7191acdc39f254e7861e5cfe440883e0c7ee",
+            "1da87ee62146642097f6cbbc2cc095aacd8836cd",
+            "415d76fb501b04938a64b92dcb01fac5f12f2dda",
+            "4e194e25cc4c480b8188619952aef34c4486874d",
+            "bec1d28fc838c4d93d9fa55c186fc4b9f50433a0",
+            "66ec8d62375322b606e606a1a321cd812f375387",
+            "f0e99a0ae701489f72ab48d0db09f6eacd708c5e",
+            "8c7174afb7d68fe79386d1f77489e330344ff183",
+            "9f8e9ccb90c96b47b50a76a766c82d511021aff0",
+            "8d5bc616d6afe50dd2ce5be1d7f1ef166df8e260",
+            "682e13adc449972df3cbd4dbff42db93a72b4664",
+            "bb6decbc206f6fc8a01a8af86300f1953dc35464",
+            "ed898005045da10cc0c7428b0e82d227e91520b5",
+            "2d96f3effc23a34d0721dde493def4d5e1a75357",
+            "bf661e0984c2979dc7be9d6d8955e45a37f7838f",
+            "d71998a2bcfcc8a7f6d5f5a4c71ca98e805b6cde",
+            "b63da6593f1fa45c73579ce2f1a78ddbfdc9d6e2",
+            "c7a5e73eb76cc102ee1a792e4431b27620108994",
+            "42a91ce6a7a5728f944c8c73f5c149a9c6c8385e"
+          ],
+          "collapsed": true,
+          "method": "bundle:fallback:remaining"
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch-onda-1",
+      "title": "Onda de atenção: 2023-12",
+      "kind": "peak_wave",
+      "meta": {
+        "peak_month": "2023-12"
+      },
+      "blocks": [
+        {
+          "block_id": "b-peak-1-intro",
+          "type": "text",
+          "content": "Em 2023-12, o tema sobe à superfície. O que muda: o vocabulário. O que persiste: o descarte.",
+          "method": "peak_month_intro_stub",
+          "source_article_ids": [],
+          "source_law_ids": []
+        },
+        {
+          "block_id": "b-peak-1-chart",
+          "type": "chart_ref",
+          "content": {
+            "chart": "timeline.by_month",
+            "focus_month": "2023-12"
+          },
+          "method": "timeline_json_peak_focus",
+          "source_article_ids": [],
+          "source_law_ids": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch-onda-2",
+      "title": "Onda de atenção: 2025-09",
+      "kind": "peak_wave",
+      "meta": {
+        "peak_month": "2025-09"
+      },
+      "blocks": [
+        {
+          "block_id": "b-peak-2-intro",
+          "type": "text",
+          "content": "Em 2025-09, o tema sobe à superfície. O que muda: o vocabulário. O que persiste: o descarte.",
+          "method": "peak_month_intro_stub",
+          "source_article_ids": [],
+          "source_law_ids": []
+        },
+        {
+          "block_id": "b-peak-2-chart",
+          "type": "chart_ref",
+          "content": {
+            "chart": "timeline.by_month",
+            "focus_month": "2025-09"
+          },
+          "method": "timeline_json_peak_focus",
+          "source_article_ids": [],
+          "source_law_ids": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch-onda-3",
+      "title": "Onda de atenção: 2023-10",
+      "kind": "peak_wave",
+      "meta": {
+        "peak_month": "2023-10"
+      },
+      "blocks": [
+        {
+          "block_id": "b-peak-3-intro",
+          "type": "text",
+          "content": "Em 2023-10, o tema sobe à superfície. O que muda: o vocabulário. O que persiste: o descarte.",
+          "method": "peak_month_intro_stub",
+          "source_article_ids": [],
+          "source_law_ids": []
+        },
+        {
+          "block_id": "b-peak-3-chart",
+          "type": "chart_ref",
+          "content": {
+            "chart": "timeline.by_month",
+            "focus_month": "2023-10"
+          },
+          "method": "timeline_json_peak_focus",
+          "source_article_ids": [],
+          "source_law_ids": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch-onda-4",
+      "title": "Onda de atenção: 2024-12",
+      "kind": "peak_wave",
+      "meta": {
+        "peak_month": "2024-12"
+      },
+      "blocks": [
+        {
+          "block_id": "b-peak-4-intro",
+          "type": "text",
+          "content": "Em 2024-12, o tema sobe à superfície. O que muda: o vocabulário. O que persiste: o descarte.",
+          "method": "peak_month_intro_stub",
+          "source_article_ids": [],
+          "source_law_ids": []
+        },
+        {
+          "block_id": "b-peak-4-chart",
+          "type": "chart_ref",
+          "content": {
+            "chart": "timeline.by_month",
+            "focus_month": "2024-12"
+          },
+          "method": "timeline_json_peak_focus",
+          "source_article_ids": [],
+          "source_law_ids": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch-onda-5",
+      "title": "Onda de atenção: 2025-10",
+      "kind": "peak_wave",
+      "meta": {
+        "peak_month": "2025-10"
+      },
+      "blocks": [
+        {
+          "block_id": "b-peak-5-intro",
+          "type": "text",
+          "content": "Em 2025-10, o tema sobe à superfície. O que muda: o vocabulário. O que persiste: o descarte.",
+          "method": "peak_month_intro_stub",
+          "source_article_ids": [],
+          "source_law_ids": []
+        },
+        {
+          "block_id": "b-peak-5-chart",
+          "type": "chart_ref",
+          "content": {
+            "chart": "timeline.by_month",
+            "focus_month": "2025-10"
+          },
+          "method": "timeline_json_peak_focus",
+          "source_article_ids": [],
+          "source_law_ids": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch-onda-6",
+      "title": "Onda de atenção: 2023-08",
+      "kind": "peak_wave",
+      "meta": {
+        "peak_month": "2023-08"
+      },
+      "blocks": [
+        {
+          "block_id": "b-peak-6-intro",
+          "type": "text",
+          "content": "Em 2023-08, o tema sobe à superfície. O que muda: o vocabulário. O que persiste: o descarte.",
+          "method": "peak_month_intro_stub",
+          "source_article_ids": [],
+          "source_law_ids": []
+        },
+        {
+          "block_id": "b-peak-6-chart",
+          "type": "chart_ref",
+          "content": {
+            "chart": "timeline.by_month",
+            "focus_month": "2023-08"
+          },
+          "method": "timeline_json_peak_focus",
+          "source_article_ids": [],
+          "source_law_ids": []
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch-portugal-estado",
+      "title": "Quando o tema vira Estado (Portugal)",
+      "kind": "institutional",
+      "blocks": [
+        {
+          "block_id": "b-pt-1",
+          "type": "text",
+          "content": "O desperdício deixa de ser só moral e vira obrigação: metas, planos, execução, sanção.",
+          "method": "author_stub:keyword_overlap",
+          "source_article_ids": [
+            "f5b0f6a81f056762d48819434d98345d179e0894",
+            "d22813ac0a465f689514cd9bda37b902a62dcb0b",
+            "4fd5e7b28b364713e30f469eb9038a9e133a006b",
+            "ddd7e78e9741324e091b9506c5cba1b01704d87c",
+            "c9fe143f0c40a42e32ffb7f03051912678e783b3",
+            "d1e2dd4379ad2f397b85382d670f53c15b8d0fd1"
+          ],
+          "source_law_ids": []
+        },
+        {
+          "block_id": "b-pt-law-1",
+          "type": "law",
+          "content": {
+            "law_id": "1a9283245f6e865dd1874fe3c42dc492dbc7d8ff",
+            "title": "Resolução da Assembleia da República n.º 65/2015",
+            "jurisdiction": "Portugal",
+            "type": "Resolução (Assembleia da República)",
+            "identifier": "n.º 65/2015",
+            "date_enacted": "2015-06-17",
+            "official_link": "https://diariodarepublica.pt/dr/detalhe/resolucao-assembleia-republica/65-2015-67507922",
+            "scope": "direct"
+          },
+          "method": "legislation_json_key_pick",
+          "source_article_ids": [],
+          "source_law_ids": [
+            "1a9283245f6e865dd1874fe3c42dc492dbc7d8ff"
+          ]
+        },
+        {
+          "block_id": "b-pt-law-2",
+          "type": "law",
+          "content": {
+            "law_id": "f00a07ce96072df89c37ae1db15d7a2960d8ddb5",
+            "title": "Resolução do Conselho de Ministros n.º 46/2018",
+            "jurisdiction": "Portugal",
+            "type": "Estratégia/Plano",
+            "identifier": "n.º 46/2018",
+            "date_enacted": "2018-04-27",
+            "official_link": "https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/46-2018-115191272",
+            "scope": "direct"
+          },
+          "method": "legislation_json_key_pick",
+          "source_article_ids": [],
+          "source_law_ids": [
+            "f00a07ce96072df89c37ae1db15d7a2960d8ddb5"
+          ]
+        },
+        {
+          "block_id": "b-pt-law-3",
+          "type": "law",
+          "content": {
+            "law_id": "b3f293244e2869fc69118729fc973e9824e448f0",
+            "title": "Decreto-Lei n.º 102-D/2020",
+            "jurisdiction": "Portugal",
+            "type": "Decreto-Lei",
+            "identifier": "n.º 102-D/2020",
+            "date_enacted": "2020-12-10",
+            "official_link": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/102-d-2020-150908012",
+            "scope": "direct"
+          },
+          "method": "legislation_json_key_pick",
+          "source_article_ids": [],
+          "source_law_ids": [
+            "b3f293244e2869fc69118729fc973e9824e448f0"
+          ]
+        },
+        {
+          "block_id": "b-pt-law-4",
+          "type": "law",
+          "content": {
+            "law_id": "32de86a37f8efa0be9d907e003c00fdc47f06992",
+            "title": "Lei n.º 62/2021",
+            "jurisdiction": "Portugal",
+            "type": "Lei",
+            "identifier": "n.º 62/2021",
+            "date_enacted": "2021-08-19",
+            "official_link": "https://diariodarepublica.pt/dr/detalhe/lei/62-2021-169832469",
+            "scope": "direct"
+          },
+          "method": "legislation_json_key_pick",
+          "source_article_ids": [],
+          "source_law_ids": [
+            "32de86a37f8efa0be9d907e003c00fdc47f06992"
+          ]
+        },
+        {
+          "type": "evidence_cards",
+          "title": "Evidências",
+          "subtitle": "Seleção automática (institutional:keyword_match:top_score_diverse)",
+          "source_article_ids": [
+            "f5b0f6a81f056762d48819434d98345d179e0894",
+            "d22813ac0a465f689514cd9bda37b902a62dcb0b",
+            "4fd5e7b28b364713e30f469eb9038a9e133a006b",
+            "ddd7e78e9741324e091b9506c5cba1b01704d87c",
+            "c9fe143f0c40a42e32ffb7f03051912678e783b3",
+            "d1e2dd4379ad2f397b85382d670f53c15b8d0fd1"
+          ],
+          "method": "institutional:keyword_match:top_score_diverse"
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch-bruxelas-metodo",
+      "title": "Bruxelas: metas e método",
+      "kind": "institutional",
+      "blocks": [
+        {
+          "block_id": "b-eu-1",
+          "type": "text",
+          "content": "Sem método, o problema vira opinião. Com método, vira comparação. Com meta, vira política.",
+          "method": "author_stub",
+          "source_article_ids": [],
+          "source_law_ids": []
+        },
+        {
+          "block_id": "b-eu-law-1",
+          "type": "law",
+          "content": {
+            "law_id": "353843c2615d87832b0a493c8c741364b89cd080",
+            "title": "Diretiva (EU) 2018/851",
+            "jurisdiction": "EU",
+            "type": "Diretiva",
+            "identifier": "2018/851",
+            "date_enacted": "2018-05-30",
+            "official_link": "http://data.europa.eu/eli/dir/2018/851/oj",
+            "scope": "direct"
+          },
+          "method": "legislation_json_key_pick",
+          "source_article_ids": [],
+          "source_law_ids": [
+            "353843c2615d87832b0a493c8c741364b89cd080"
+          ]
+        },
+        {
+          "block_id": "b-eu-law-2",
+          "type": "law",
+          "content": {
+            "law_id": "e9719e9cdde0db8780ea458b877ad6aa85629dcc",
+            "title": "Decisão Delegada (UE) 2019/1597 da Comissão",
+            "jurisdiction": "EU",
+            "type": "Decisão Delegada",
+            "identifier": "2019/1597",
+            "date_enacted": "2019-09-27",
+            "official_link": "http://data.europa.eu/eli/dec_del/2019/1597/oj",
+            "scope": "direct"
+          },
+          "method": "legislation_json_key_pick",
+          "source_article_ids": [],
+          "source_law_ids": [
+            "e9719e9cdde0db8780ea458b877ad6aa85629dcc"
+          ]
+        },
+        {
+          "block_id": "b-eu-law-3",
+          "type": "law",
+          "content": {
+            "law_id": "c03f4fe0020956b42942fc45e6b5a505a737b9ce",
+            "title": "Decisão de Execução (UE) 2019/2000 da Comissão",
+            "jurisdiction": "EU",
+            "type": "Decisão de Execução",
+            "identifier": "2019/2000",
+            "date_enacted": "2019-11-28",
+            "official_link": "http://data.europa.eu/eli/dec_impl/2019/2000/oj",
+            "scope": "direct"
+          },
+          "method": "legislation_json_key_pick",
+          "source_article_ids": [],
+          "source_law_ids": [
+            "c03f4fe0020956b42942fc45e6b5a505a737b9ce"
+          ]
+        },
+        {
+          "block_id": "b-eu-law-4",
+          "type": "law",
+          "content": {
+            "law_id": "0a40d297c45d314fca748dfe4687ae9bd636a506",
+            "title": "Estratégia do Prado ao Prato (Farm to Fork)",
+            "jurisdiction": "EU",
+            "type": "Estratégia/Plano",
+            "identifier": "COM(2020) 381 final",
+            "date_enacted": "2020-05-20",
+            "official_link": "https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:52020DC0381",
+            "scope": "direct"
+          },
+          "method": "legislation_json_key_pick",
+          "source_article_ids": [],
+          "source_law_ids": [
+            "0a40d297c45d314fca748dfe4687ae9bd636a506"
+          ]
+        },
+        {
+          "block_id": "b-eu-law-5",
+          "type": "law",
+          "content": {
+            "law_id": "156e08911a42b895c261027eadc984cda29e468e",
+            "title": "Diretiva (UE) 2025/1892",
+            "jurisdiction": "EU",
+            "type": "Diretiva",
+            "identifier": "2025/1892",
+            "date_enacted": "2025-09-10",
+            "official_link": "http://data.europa.eu/eli/dir/2025/1892/oj",
+            "scope": "direct"
+          },
+          "method": "legislation_json_key_pick",
+          "source_article_ids": [],
+          "source_law_ids": [
+            "156e08911a42b895c261027eadc984cda29e468e"
+          ]
+        },
+        {
+          "type": "evidence_cards",
+          "title": "Evidências",
+          "subtitle": "Seleção automática (institutional:keyword_match:top_score_diverse)",
+          "source_article_ids": [
+            "f5b0f6a81f056762d48819434d98345d179e0894",
+            "d22813ac0a465f689514cd9bda37b902a62dcb0b",
+            "4fd5e7b28b364713e30f469eb9038a9e133a006b",
+            "ddd7e78e9741324e091b9506c5cba1b01704d87c",
+            "c9fe143f0c40a42e32ffb7f03051912678e783b3",
+            "d1e2dd4379ad2f397b85382d670f53c15b8d0fd1"
+          ],
+          "method": "institutional:keyword_match:top_score_diverse"
+        }
+      ]
+    },
+    {
+      "chapter_id": "ch-epilogo",
+      "title": "Fecho: o que mudou (e o que ficou igual)",
+      "kind": "epilogue",
+      "blocks": [
+        {
+          "block_id": "b-ep-1",
+          "type": "text",
+          "content": "O editorial termina quando a prova começa: cada frase aponta para uma fonte. A crítica é coletiva, porque o desperdício também é.",
+          "method": "author_stub",
+          "source_article_ids": [],
+          "source_law_ids": []
+        },
+        {
+          "block_id": "b-ep-chart",
+          "type": "chart_ref",
+          "content": {
+            "chart": "timeline.peaks",
+            "note": "Fechar com picos e uma pergunta: cresce o desperdício ou cresce a conversa?"
+          },
+          "method": "timeline_json",
+          "source_article_ids": [],
+          "source_law_ids": []
+        },
+        {
+          "type": "evidence_cards",
+          "title": "Evidências",
+          "subtitle": "Seleção automática (institutional:keyword_match:top_score_diverse)",
+          "source_article_ids": [
+            "f5b0f6a81f056762d48819434d98345d179e0894",
+            "d22813ac0a465f689514cd9bda37b902a62dcb0b",
+            "4fd5e7b28b364713e30f469eb9038a9e133a006b",
+            "ddd7e78e9741324e091b9506c5cba1b01704d87c",
+            "c9fe143f0c40a42e32ffb7f03051912678e783b3",
+            "d1e2dd4379ad2f397b85382d670f53c15b8d0fd1"
+          ],
+          "method": "institutional:keyword_match:top_score_diverse"
+        }
+      ]
+    }
+  ],
+  "appendix": {
+    "evidence_index": [
+      {
+        "article_id": "12e83737e2003320438a99970310e30efbbe3a50",
+        "title": "Desperdício alimentar: o que fazer para o evitar",
+        "date": "2025-09-29",
+        "url": "https://www.publico.pt/2025/09/29/impar/noticia/desperdicio-alimentar-evitar-2148846",
+        "score": 44,
+        "word_count": 2507
+      },
+      {
+        "article_id": "e7a42ad6653f0d11a1805d5efa529932a0b5bd84",
+        "title": "Há comida que só não vai para o lixo porque é doada",
+        "date": "2014-12-14",
+        "url": "https://www.publico.pt/2014/12/14/sociedade/noticia/ha-comida-que-so-nao-vai-para-o-lixo-porque-e-doada-1679069",
+        "score": 38,
+        "word_count": 2396
+      },
+      {
+        "article_id": "11003356e2e69a8f970fed65990221a082c62766",
+        "title": "Queres dizer não ao desperdício alimentar? Cinco “apps” e “sites” que podem ajudar",
+        "date": "2022-09-29",
+        "url": "https://www.publico.pt/2022/09/29/p3/noticia/queres-dizer-nao-desperdicio-alimentar-cinco-apps-sites-podem-ajudar-2021983",
+        "score": 36,
+        "word_count": 855
+      },
+      {
+        "article_id": "cb232263088694abb8b5f8fe5d46f26b1e7da01b",
+        "title": "Unidos Contra o Desperdício junta os que lutam por que a comida não acabe no lixo",
+        "date": "2020-09-29",
+        "url": "https://www.publico.pt/2020/09/29/sociedade/noticia/unidos-desperdicio-junta-lutam-comida-nao-acabe-lixo-1933288",
+        "score": 36,
+        "word_count": 846
+      },
+      {
+        "article_id": "f82f50a219e8dd22ccdf17623bd98fd5ea847249",
+        "title": "O que há no fundo do nosso frigorífico",
+        "date": "2014-12-21",
+        "url": "https://www.publico.pt/2014/12/21/sociedade/noticia/o-que-ha-no-fundo-do-nosso-frigorifico-1679718",
+        "score": 35,
+        "word_count": 2647
+      },
+      {
+        "article_id": "14950721615de42b92e4e7c9d18b43672eeccec3",
+        "title": "Restaurantes de Espanha obrigados a ter caixas para levar os restos",
+        "date": "2025-03-21",
+        "url": "https://www.publico.pt/2025/03/21/azul/noticia/restaurantes-espanha-obrigados-caixas-levar-restos-2126854",
+        "score": 34,
+        "word_count": 778
+      },
+      {
+        "article_id": "36d3f424f039a289a1b54fb0228f74695e443525",
+        "title": "Britânico que luta contra desperdício de comida vence prémio de Sustentabilidade",
+        "date": "2011-04-05",
+        "url": "https://www.publico.pt/2011/04/05/ciencia/noticia/britanico-que-luta-contra-desperdicio-de-comida-vence-premio-de-sustentabilidade-1488363",
+        "score": 12,
+        "word_count": 439
+      },
+      {
+        "article_id": "e06eb0d625f4b6471a28897568dc123986ce1405",
+        "title": "Metade da comida produzida todos os anos vai para o lixo",
+        "date": "2013-01-10",
+        "url": "https://www.publico.pt/2013/01/10/ecosfera/noticia/metade-da-comida-produzida-todos-os-anos-vai-para-o-lixo-1580254",
+        "score": 19,
+        "word_count": 502
+      },
+      {
+        "article_id": "d72ad9c41e2375da97c2b757bbbe9f5035f5e99c",
+        "title": "Compostagem em apenas 24 horas? Sim, é possível",
+        "date": "2016-11-28",
+        "url": "https://www.publico.pt/2016/11/28/p3/noticia/compostagem-em-apenas-24-horas-sim-e-possivel-1826995",
+        "score": 19,
+        "word_count": 913
+      },
+      {
+        "article_id": "59194e1f55540b3bef5bb0f05c38a9dbd9a60cc6",
+        "title": "“Nos países ricos já comemos mais do que o que nos faz bem”",
+        "date": "2017-05-26",
+        "url": "https://www.publico.pt/2017/05/26/sociedade/entrevista/num-mundo-de-abundancia-infinita-nao-teria-importancia-rejeitar-cenouras-tortas-1773472",
+        "score": 33,
+        "word_count": 1795
+      },
+      {
+        "article_id": "d6ee6cf79d728ff9e627c71a4655229d313c6962",
+        "title": "E se a tua lista de compras fosse livre de plástico?",
+        "date": "2018-11-02",
+        "url": "https://www.publico.pt/2018/11/02/p3/noticia/lista-compras-livre-plastico-1849634",
+        "score": 16,
+        "word_count": 2494
+      },
+      {
+        "article_id": "c5b42a416cabd176c7b70e8226d97474d212b81a",
+        "title": "Saber ler a data de validade ajuda a combater o desperdício alimentar",
+        "date": "2019-02-04",
+        "url": "https://www.publico.pt/2019/02/04/p3/noticia/saber-ler-a-data-de-validade-ajuda-a-combater-o-desperdicio-alimentar-1860587",
+        "score": 27,
+        "word_count": 574
+      }
+    ],
+    "law_index": [
+      {
+        "law_id": "2b7754a7e02ea70b6e673375e00c22edef3f0796",
+        "title": "Decreto-Lei n.º 74/99, de 16 de março (Estatuto do Mecenato)",
+        "jurisdiction": "Portugal",
+        "type": "Decreto-Lei",
+        "identifier": "n.º 74/99",
+        "date_enacted": "1999-03-16",
+        "official_link": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/74-1999-144987",
+        "scope": "indirect"
+      },
+      {
+        "law_id": "0203bc7f2574051ffadbc39bedb110627e2e02df",
+        "title": "Diretiva 1999/31/CE do Conselho, de 26 de abril de 1999, relativa à deposição de resíduos em aterros",
+        "jurisdiction": "EU",
+        "type": "Diretiva",
+        "identifier": "1999/31/CE",
+        "date_enacted": "1999-04-26",
+        "official_link": "https://eur-lex.europa.eu/eli/dir/1999/31/oj?locale=pt",
+        "scope": "indirect"
+      },
+      {
+        "law_id": "3684cfea9c4716f010da5105d51d2f219a76c3c2",
+        "title": "Regulamento (CE) n.º 178/2002 do Parlamento Europeu e do Conselho, de 28 de janeiro de 2002, que estabelece os princípios gerais da legislação alimentar",
+        "jurisdiction": "EU",
+        "type": "Regulamento",
+        "identifier": "178/2002",
+        "date_enacted": "2002-01-28",
+        "official_link": "https://eur-lex.europa.eu/eli/reg/2002/178/oj/eng",
+        "scope": "indirect"
+      },
+      {
+        "law_id": "d67c7400a1b3781697fcb487011e09b271ed5d2a",
+        "title": "Regulamento (CE) n.º 852/2004 do Parlamento Europeu e do Conselho, de 29 de abril de 2004, relativo à higiene dos géneros alimentícios",
+        "jurisdiction": "EU",
+        "type": "Regulamento",
+        "identifier": "852/2004",
+        "date_enacted": "2004-04-29",
+        "official_link": "https://eur-lex.europa.eu/legal-content/PT/ALL/?uri=CELEX:32004R0852",
+        "scope": "indirect"
+      },
+      {
+        "law_id": "b6b26e5e3607d03bfcbd4fa7debeb44ca48cd4fb",
+        "title": "Decreto-Lei n.º 178/2006, de 5 de setembro (Regime geral da gestão de resíduos)",
+        "jurisdiction": "Portugal",
+        "type": "Decreto-Lei",
+        "identifier": "n.º 178/2006",
+        "date_enacted": "2006-09-05",
+        "official_link": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/178-2006-540016",
+        "scope": "indirect"
+      },
+      {
+        "law_id": "dbfea96c0770ffe05db404a2fdf2c650b64973cc",
+        "title": "Diretiva 2008/98/CE do Parlamento Europeu e do Conselho, de 19 de novembro de 2008, relativa aos resíduos (Diretiva-Quadro dos Resíduos)",
+        "jurisdiction": "EU",
+        "type": "Diretiva",
+        "identifier": "2008/98/CE",
+        "date_enacted": "2008-11-19",
+        "official_link": "https://eur-lex.europa.eu/eli/dir/2008/98/oj/eng",
+        "scope": "indirect"
+      },
+      {
+        "law_id": "df522e0876e21efb89c07f9ac462aeae89ed4266",
+        "title": "Regulamento (UE) n.º 1169/2011 do Parlamento Europeu e do Conselho, de 25 de outubro de 2011, relativo à prestação de informação aos consumidores sobre géneros alimentícios",
+        "jurisdiction": "EU",
+        "type": "Regulamento",
+        "identifier": "1169/2011",
+        "date_enacted": "2011-10-25",
+        "official_link": "http://data.europa.eu/eli/reg/2011/1169/oj",
+        "scope": "indirect"
+      },
+      {
+        "law_id": "e651000fc9aa3cf34f70859260ebde802626b969",
+        "title": "Portaria n.º 187-A/2014, de 17 de setembro (Plano Estratégico para os Resíduos Urbanos – PERSU 2020)",
+        "jurisdiction": "Portugal",
+        "type": "Portaria",
+        "identifier": "n.º 187-A/2014",
+        "date_enacted": "2014-09-17",
+        "official_link": "https://diariodarepublica.pt/dr/detalhe/portaria/187-a-2014-56928479",
+        "scope": "indirect"
+      },
+      {
+        "law_id": "1a9283245f6e865dd1874fe3c42dc492dbc7d8ff",
+        "title": "Resolução da Assembleia da República n.º 65/2015",
+        "jurisdiction": "Portugal",
+        "type": "Resolução (Assembleia da República)",
+        "identifier": "n.º 65/2015",
+        "date_enacted": "2015-06-17",
+        "official_link": "https://diariodarepublica.pt/dr/detalhe/resolucao-assembleia-republica/65-2015-67507922",
+        "scope": "direct"
+      },
+      {
+        "law_id": "56602ee89be4e1da29e6d43160ce5aaba8a923da",
+        "title": "Resolução do Conselho de Ministros n.º 190-A/2017",
+        "jurisdiction": "Portugal",
+        "type": "Estratégia/Plano",
+        "identifier": "n.º 190-A/2017",
+        "date_enacted": "2017-12-11",
+        "official_link": "https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/190-a-2017-114337039",
+        "scope": "indirect"
+      },
+      {
+        "law_id": "f00a07ce96072df89c37ae1db15d7a2960d8ddb5",
+        "title": "Resolução do Conselho de Ministros n.º 46/2018",
+        "jurisdiction": "Portugal",
+        "type": "Estratégia/Plano",
+        "identifier": "n.º 46/2018",
+        "date_enacted": "2018-04-27",
+        "official_link": "https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/46-2018-115191272",
+        "scope": "direct"
+      },
+      {
+        "law_id": "353843c2615d87832b0a493c8c741364b89cd080",
+        "title": "Diretiva (EU) 2018/851",
+        "jurisdiction": "EU",
+        "type": "Diretiva",
+        "identifier": "2018/851",
+        "date_enacted": "2018-05-30",
+        "official_link": "http://data.europa.eu/eli/dir/2018/851/oj",
+        "scope": "direct"
+      },
+      {
+        "law_id": "e9719e9cdde0db8780ea458b877ad6aa85629dcc",
+        "title": "Decisão Delegada (UE) 2019/1597 da Comissão",
+        "jurisdiction": "EU",
+        "type": "Decisão Delegada",
+        "identifier": "2019/1597",
+        "date_enacted": "2019-09-27",
+        "official_link": "http://data.europa.eu/eli/dec_del/2019/1597/oj",
+        "scope": "direct"
+      },
+      {
+        "law_id": "c03f4fe0020956b42942fc45e6b5a505a737b9ce",
+        "title": "Decisão de Execução (UE) 2019/2000 da Comissão",
+        "jurisdiction": "EU",
+        "type": "Decisão de Execução",
+        "identifier": "2019/2000",
+        "date_enacted": "2019-11-28",
+        "official_link": "http://data.europa.eu/eli/dec_impl/2019/2000/oj",
+        "scope": "direct"
+      },
+      {
+        "law_id": "0a40d297c45d314fca748dfe4687ae9bd636a506",
+        "title": "Estratégia do Prado ao Prato (Farm to Fork)",
+        "jurisdiction": "EU",
+        "type": "Estratégia/Plano",
+        "identifier": "COM(2020) 381 final",
+        "date_enacted": "2020-05-20",
+        "official_link": "https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:52020DC0381",
+        "scope": "direct"
+      },
+      {
+        "law_id": "b3f293244e2869fc69118729fc973e9824e448f0",
+        "title": "Decreto-Lei n.º 102-D/2020",
+        "jurisdiction": "Portugal",
+        "type": "Decreto-Lei",
+        "identifier": "n.º 102-D/2020",
+        "date_enacted": "2020-12-10",
+        "official_link": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/102-d-2020-150908012",
+        "scope": "direct"
+      },
+      {
+        "law_id": "76ec35c922356a7cc07e155ff26483e5bdcf4126",
+        "title": "Regulamento (UE) 2021/382 da Comissão",
+        "jurisdiction": "EU",
+        "type": "Regulamento",
+        "identifier": "2021/382",
+        "date_enacted": "2021-03-03",
+        "official_link": "http://data.europa.eu/eli/reg/2021/382/oj",
+        "scope": "indirect"
+      },
+      {
+        "law_id": "32de86a37f8efa0be9d907e003c00fdc47f06992",
+        "title": "Lei n.º 62/2021",
+        "jurisdiction": "Portugal",
+        "type": "Lei",
+        "identifier": "n.º 62/2021",
+        "date_enacted": "2021-08-19",
+        "official_link": "https://diariodarepublica.pt/dr/detalhe/lei/62-2021-169832469",
+        "scope": "direct"
+      },
+      {
+        "law_id": "fc9e099efb99b9a762f6395a985e0ed6a6f950d9",
+        "title": "Resolução do Conselho de Ministros n.º 31/2023",
+        "jurisdiction": "Portugal",
+        "type": "Estratégia/Plano",
+        "identifier": "n.º 31/2023",
+        "date_enacted": "2023-03-24",
+        "official_link": "https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/31-2023-210923319",
+        "scope": "indirect"
+      },
+      {
+        "law_id": "156e08911a42b895c261027eadc984cda29e468e",
+        "title": "Diretiva (UE) 2025/1892",
+        "jurisdiction": "EU",
+        "type": "Diretiva",
+        "identifier": "2025/1892",
+        "date_enacted": "2025-09-10",
+        "official_link": "http://data.europa.eu/eli/dir/2025/1892/oj",
+        "scope": "direct"
+      }
+    ]
+  },
+  "enrichment": {
+    "enriched_at": "2026-01-18T17:22:09Z",
+    "params": {
+      "TOP_N_PER_PEAK_MONTH": 10,
+      "TOP_N_PER_INSTITUTIONAL": 12,
+      "MAX_SOURCES_PER_TEXT_BLOCK": 6
+    }
+  },
+  "bundling": {
+    "bundled_at": "2026-01-18T17:35:09Z",
+    "params": {
+      "BUNDLE_TARGET_MIN": 18,
+      "BUNDLE_TARGET_MAX": 32,
+      "MAX_BUNDLES_PER_CHAPTER": 4
+    }
+  }
+}

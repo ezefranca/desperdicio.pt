@@ -1,0 +1,122 @@
+{
+  "metadata": {
+    "title": "Impacto das Iniciativas de Combate ao Desperdício",
+    "description": "Dados agregados de iniciativas da sociedade civil em Portugal",
+    "last_updated": "2024"
+  },
+  "initiatives": [
+    {
+      "id": "fruta_feia",
+      "name": "Fruta Feia",
+      "type": "Cooperativa",
+      "founded": 2013,
+      "founder": "Isabel Soares",
+      "model": "B2C — produtores directamente a consumidores",
+      "website": "https://frutafeia.pt",
+      "description": "Cooperativa que comercializa frutas e legumes rejeitados por calibre ou aparência",
+      "milestones": [
+        {"year": 2013, "event": "Fundação com prémio FAZ (€15.000)", "tonnes_saved": 0, "farmers": 0, "points": 1},
+        {"year": 2014, "event": "Primeiras 50 toneladas", "tonnes_saved": 50, "farmers": 450, "points": 1},
+        {"year": 2015, "event": "Expansão para Porto", "tonnes_saved": 200, "farmers": 50, "points": 3},
+        {"year": 2016, "event": "Matosinhos abre", "tonnes_saved": 330, "farmers": 80, "points": 4},
+        {"year": 2020, "event": "Prémio europeu LIFE (duplo)", "tonnes_saved": 2000, "farmers": 235, "points": 12},
+        {"year": 2022, "event": "15 postos de venda", "tonnes_saved": 3500, "farmers": 280, "points": 15},
+        {"year": 2024, "event": "Estimativa actual", "tonnes_saved": 5000, "farmers": 300, "points": 15}
+      ],
+      "current_stats": {
+        "tonnes_saved_total": 5000,
+        "farmers_partners": 300,
+        "active_consumers": 8000,
+        "distribution_points": 15,
+        "employees": 15,
+        "payment_to_farmers_eur": 1500000
+      },
+      "pricing": {
+        "small_basket": {"name": "Cesta pequena", "price_eur": 3.50, "weight_kg": 3.5},
+        "large_basket": {"name": "Cesta grande", "price_eur": 7.00, "weight_kg": 7.0}
+      },
+      "key_insight": "Prova que o consumidor aceita 'imperfeição' quando há propósito e preço justo"
+    },
+    {
+      "id": "too_good_to_go",
+      "name": "Too Good To Go",
+      "type": "App / Startup",
+      "founded_global": 2016,
+      "arrived_portugal": 2019,
+      "expanded_porto": 2020,
+      "model": "B2C — restauração e retalho a consumidores via app",
+      "website": "https://toogoodtogo.pt",
+      "description": "Aplicação que permite comprar excedentes alimentares a preço reduzido",
+      "stats_portugal": {
+        "meals_saved_total": 500000,
+        "partner_establishments": 2500,
+        "cities_active": 15,
+        "average_discount_pct": 70,
+        "typical_magic_box_price_eur": 3.99
+      },
+      "key_milestones": [
+        {"year": 2019, "event": "Lançamento em Lisboa"},
+        {"year": 2020, "event": "Expansão para Porto — 60 estabelecimentos no primeiro dia, 18.000 refeições em 3 meses"},
+        {"year": 2022, "event": "1.000 parceiros"},
+        {"year": 2024, "event": "2.500 parceiros, 500.000 refeições salvas"}
+      ],
+      "key_insight": "Tecnologia como ponte entre excedente instantâneo e procura flexível"
+    },
+    {
+      "id": "refood",
+      "name": "Refood",
+      "type": "IPSS / Voluntariado",
+      "founded": 2011,
+      "founder": "Hunter Halder",
+      "model": "B2B2C — recolha de excedentes, redistribuição a famílias vulneráveis",
+      "website": "https://refood.pt",
+      "description": "Rede de voluntários que recolhe excedentes e entrega a famílias em insegurança alimentar",
+      "stats": {
+        "nucleos_nacionais": 65,
+        "voluntarios_activos": 5000,
+        "familias_apoiadas_diariamente": 8000,
+        "refeicoes_redistribuidas_diarias": 15000,
+        "parceiros_doadores": 3500
+      },
+      "key_insight": "Solidariedade comunitária como motor de circularidade — zero custo público"
+    },
+    {
+      "id": "zero_desperdicio",
+      "name": "Zero Desperdício",
+      "type": "Associação",
+      "founded": 2012,
+      "model": "Advocacy + Consultoria + Plataforma de doação",
+      "website": "https://zerodesperdicio.pt",
+      "description": "Associação focada em sensibilização, consultoria e facilitação de doação de excedentes",
+      "stats": {
+        "empresas_parceiras": 200,
+        "toneladas_reencaminhadas_ano": 1500,
+        "campanhas_sensibilizacao": 50
+      },
+      "key_insight": "Mudança sistémica começa pela consciência e pelo advocacy junto de decisores"
+    },
+    {
+      "id": "unidos_contra_desperdicio",
+      "name": "Unidos Contra o Desperdício",
+      "type": "Movimento / Coligação",
+      "founded": 2020,
+      "model": "Coligação de organizações para advocacy conjunto",
+      "description": "Movimento que reúne múltiplas organizações para influenciar políticas públicas",
+      "members": ["Fruta Feia", "Refood", "Zero Desperdício", "Banco Alimentar", "outros"],
+      "key_insight": "União da sociedade civil amplifica a voz perante o Estado"
+    }
+  ],
+  "combined_impact": {
+    "tonnes_saved_annually_estimate": 15000,
+    "meals_redistributed_annually_estimate": 6000000,
+    "families_reached_daily": 10000,
+    "volunteers_active": 7000,
+    "farmers_supported": 500
+  },
+  "comparison_to_government": {
+    "observation": "O impacto combinado da sociedade civil supera qualquer programa governamental específico",
+    "government_cncda_budget_eur": 500000,
+    "civil_society_economic_value_eur": 25000000,
+    "ratio": "50:1"
+  }
+}

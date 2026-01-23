@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "title": "Desperdício Alimentar na União Europeia",
+    "source": "Eurostat / Parlamento Europeu",
+    "source_url": "https://www.europarl.europa.eu/topics/pt/article/20240318STO19401/desperdicio-alimentar-na-europa-factos-politicas-da-ue-e-metas-para-2030",
+    "year": 2022,
+    "unit": "kg per capita / ano"
+  },
+  "eu_average": 131,
+  "eu_total_tonnes": 58500000,
+  "ranking": [
+    {"rank": 1, "country": "Chipre", "code": "CY", "value": 254, "vs_average": "+94%"},
+    {"rank": 2, "country": "Dinamarca", "code": "DK", "value": 221, "vs_average": "+69%"},
+    {"rank": 3, "country": "Grécia", "code": "GR", "value": 191, "vs_average": "+46%"},
+    {"rank": 4, "country": "Portugal", "code": "PT", "value": 184, "vs_average": "+40%", "highlight": true},
+    {"rank": 5, "country": "Bélgica", "code": "BE", "value": 155, "vs_average": "+18%"},
+    {"rank": 6, "country": "Luxemburgo", "code": "LU", "value": 153, "vs_average": "+17%"},
+    {"rank": 7, "country": "Irlanda", "code": "IE", "value": 149, "vs_average": "+14%"},
+    {"rank": 8, "country": "Espanha", "code": "ES", "value": 148, "vs_average": "+13%"},
+    {"rank": 9, "country": "Polónia", "code": "PL", "value": 138, "vs_average": "+5%"},
+    {"rank": 10, "country": "Itália", "code": "IT", "value": 135, "vs_average": "+3%"},
+    {"rank": 11, "country": "Média UE", "code": "EU", "value": 131, "vs_average": "0%", "baseline": true},
+    {"rank": 12, "country": "França", "code": "FR", "value": 129, "vs_average": "-2%"},
+    {"rank": 13, "country": "Alemanha", "code": "DE", "value": 127, "vs_average": "-3%"},
+    {"rank": 14, "country": "Países Baixos", "code": "NL", "value": 123, "vs_average": "-6%"},
+    {"rank": 15, "country": "Áustria", "code": "AT", "value": 117, "vs_average": "-11%"},
+    {"rank": 16, "country": "Suécia", "code": "SE", "value": 98, "vs_average": "-25%"},
+    {"rank": 17, "country": "Eslovénia", "code": "SI", "value": 89, "vs_average": "-32%"},
+    {"rank": 18, "country": "Croácia", "code": "HR", "value": 71, "vs_average": "-46%"}
+  ],
+  "portugal_detail": {
+    "total_tonnes": 1932893,
+    "per_capita_kg": 184,
+    "rank_in_eu": 4,
+    "economic_loss_per_household_eur": 28,
+    "economic_loss_per_household_period": "mês",
+    "trend": "increasing",
+    "trend_note": "De 1.80Mt (2020) para 1.93Mt (2023)"
+  },
+  "context_quotes": [
+    {
+      "quote": "Se o desperdício alimentar fosse um Estado-membro, seria o quinto maior emissor de gases com efeito de estufa da UE.",
+      "source": "Frans Timmermans, Vice-Presidente da Comissão Europeia, 2023"
+    }
+  ],
+  "emissions_equivalent": {
+    "if_food_waste_were_country": {
+      "rank": 5,
+      "after": ["Alemanha", "França", "Itália", "Polónia"],
+      "before": ["Espanha", "Países Baixos", "Bélgica"]
+    }
+  }
+}

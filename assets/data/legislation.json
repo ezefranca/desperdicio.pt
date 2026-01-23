@@ -1,0 +1,204 @@
+{
+  "legislation": [
+    {
+      "jurisdiction": "Portugal",
+      "title": "Decreto-Lei n.º 74/99, de 16 de março (Estatuto do Mecenato)",
+      "type": "Decreto-Lei",
+      "identifier": "n.º 74/99",
+      "date_enacted": "1999-03-16",
+      "official_link": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/74-1999-144987",
+      "summary": "Define o regime de incentivos fiscais ao mecenato, enquadrando donativos no âmbito social e outros. Indiretamente, pode suportar mecanismos de doação (incluindo géneros alimentícios, quando enquadrados como donativo para fins sociais), reduzindo barreiras económicas à redistribuição de excedentes em vez do descarte.",
+      "scope": "indirect"
+    },
+    {
+      "jurisdiction": "EU",
+      "title": "Diretiva 1999/31/CE do Conselho, de 26 de abril de 1999, relativa à deposição de resíduos em aterros",
+      "type": "Diretiva",
+      "identifier": "1999/31/CE",
+      "date_enacted": "1999-04-26",
+      "official_link": "https://eur-lex.europa.eu/eli/dir/1999/31/oj?locale=pt",
+      "summary": "Estabelece requisitos e metas para reduzir a deposição de resíduos biodegradáveis em aterro, o que inclui resíduos orgânicos e alimentares. Indiretamente, incentiva a prevenção e o desvio de biorresíduos (incluindo desperdício alimentar) para opções como reutilização, valorização e tratamento, pressionando políticas nacionais de redução na origem.",
+      "scope": "indirect"
+    },
+    {
+      "jurisdiction": "EU",
+      "title": "Regulamento (CE) n.º 178/2002 do Parlamento Europeu e do Conselho, de 28 de janeiro de 2002, que estabelece os princípios gerais da legislação alimentar",
+      "type": "Regulamento",
+      "identifier": "178/2002",
+      "date_enacted": "2002-01-28",
+      "official_link": "https://eur-lex.europa.eu/eli/reg/2002/178/oj/eng",
+      "summary": "Define princípios gerais da legislação alimentar e regras de segurança alimentar, incluindo obrigações de retirada/recall e rastreabilidade. Embora centrado em segurança, afeta diretamente a gestão de excedentes e a redistribuição, ao clarificar responsabilidades dos operadores e condições para colocar alimentos seguros no mercado ou redirecioná-los, reduzindo descarte por incerteza regulatória.",
+      "scope": "indirect"
+    },
+    {
+      "jurisdiction": "EU",
+      "title": "Regulamento (CE) n.º 852/2004 do Parlamento Europeu e do Conselho, de 29 de abril de 2004, relativo à higiene dos géneros alimentícios",
+      "type": "Regulamento",
+      "identifier": "852/2004",
+      "date_enacted": "2004-04-29",
+      "official_link": "https://eur-lex.europa.eu/legal-content/PT/ALL/?uri=CELEX:32004R0852",
+      "summary": "Estabelece requisitos de higiene para operadores do setor alimentar ao longo da cadeia. Indiretamente influencia o desperdício alimentar ao moldar condições de manuseamento, armazenamento e redistribuição (incluindo doação), ajudando a evitar perdas por deterioração e a permitir a circulação segura de excedentes.",
+      "scope": "indirect"
+    },
+    {
+      "jurisdiction": "Portugal",
+      "title": "Decreto-Lei n.º 178/2006, de 5 de setembro (Regime geral da gestão de resíduos)",
+      "type": "Decreto-Lei",
+      "identifier": "n.º 178/2006",
+      "date_enacted": "2006-09-05",
+      "official_link": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/178-2006-540016",
+      "summary": "Estabelece o regime geral da gestão de resíduos em Portugal, estruturando obrigações, responsabilidades e princípios de prevenção e valorização. Embora não seja exclusivo de resíduos alimentares, cria a base normativa para políticas e planos setoriais que visam reduzir a fração orgânica dos resíduos urbanos e promover prevenção na origem e valorização de biorresíduos.",
+      "scope": "indirect"
+    },
+    {
+      "jurisdiction": "EU",
+      "title": "Diretiva 2008/98/CE do Parlamento Europeu e do Conselho, de 19 de novembro de 2008, relativa aos resíduos (Diretiva-Quadro dos Resíduos)",
+      "type": "Diretiva",
+      "identifier": "2008/98/CE",
+      "date_enacted": "2008-11-19",
+      "official_link": "https://eur-lex.europa.eu/eli/dir/2008/98/oj/eng",
+      "summary": "Cria o quadro legal europeu para a gestão de resíduos e introduz a hierarquia de resíduos, colocando a prevenção como prioridade. É base normativa para medidas nacionais de prevenção de biorresíduos e para políticas de economia circular que visam reduzir a geração de resíduos orgânicos e alimentares na origem.",
+      "scope": "indirect"
+    },
+    {
+      "jurisdiction": "EU",
+      "title": "Regulamento (UE) n.º 1169/2011 do Parlamento Europeu e do Conselho, de 25 de outubro de 2011, relativo à prestação de informação aos consumidores sobre géneros alimentícios",
+      "type": "Regulamento",
+      "identifier": "1169/2011",
+      "date_enacted": "2011-10-25",
+      "official_link": "http://data.europa.eu/eli/reg/2011/1169/oj",
+      "summary": "Harmoniza regras de rotulagem e informação ao consumidor, incluindo disposições sobre marcação de datas (ex.: “consumir de preferência antes de”). Indiretamente, é um instrumento central para reduzir desperdício por confusão entre tipos de data e para apoiar políticas e orientações que diferenciam segurança (data-limite) de qualidade (preferência).",
+      "scope": "indirect"
+    },
+    {
+      "jurisdiction": "Portugal",
+      "title": "Portaria n.º 187-A/2014, de 17 de setembro (Plano Estratégico para os Resíduos Urbanos – PERSU 2020)",
+      "type": "Portaria",
+      "identifier": "n.º 187-A/2014",
+      "date_enacted": "2014-09-17",
+      "official_link": "https://diariodarepublica.pt/dr/detalhe/portaria/187-a-2014-56928479",
+      "summary": "Aprova o PERSU 2020 para Portugal Continental, definindo orientações estratégicas para a gestão de resíduos urbanos no período 2014–2020. Indiretamente, enquadra medidas para reduzir a fração biodegradável nos resíduos urbanos, criando condições para ações e investimentos que também incidem sobre desperdício alimentar e recolha/tratamento de biorresíduos.",
+      "scope": "indirect"
+    },
+    {
+      "jurisdiction": "Portugal",
+      "title": "Resolução da Assembleia da República n.º 65/2015",
+      "type": "Resolução (Assembleia da República)",
+      "identifier": "n.º 65/2015",
+      "date_enacted": "2015-06-17",
+      "official_link": "https://diariodarepublica.pt/dr/detalhe/resolucao-assembleia-republica/65-2015-67507922",
+      "summary": "Declara 2016 como Ano Nacional do Combate ao Desperdício Alimentar e recomenda ao Governo a adoção de medidas para quantificar e reduzir o desperdício de alimentos. Esta resolução impulsionou a criação de uma estratégia nacional, instando à definição de metas de redução, à sensibilização de produtores, distribuidores e consumidores e à promoção de iniciativas de doação e consumo responsável para diminuir as perdas alimentares.",
+      "scope": "direct"
+    },
+    {
+      "jurisdiction": "Portugal",
+      "title": "Resolução do Conselho de Ministros n.º 190-A/2017",
+      "type": "Estratégia/Plano",
+      "identifier": "n.º 190-A/2017",
+      "date_enacted": "2017-12-11",
+      "official_link": "https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/190-a-2017-114337039",
+      "summary": "Aprova o Plano de Ação para a Economia Circular (PAEC) em Portugal, estabelecendo medidas transversais e setoriais para transitar para uma economia mais circular. Inclui ações específicas relativas ao desperdício alimentar, nomeadamente a iniciativa \"Alimentar sem Sobrar\" dirigida ao setor agroalimentar, visando fomentar a reutilização de excedentes alimentares, reduzir as perdas ao longo da cadeia de produção e consumo e incentivar a doação de alimentos seguros em vez de os descartar como resíduos.",
+      "scope": "indirect"
+    },
+    {
+      "jurisdiction": "Portugal",
+      "title": "Resolução do Conselho de Ministros n.º 46/2018",
+      "type": "Estratégia/Plano",
+      "identifier": "n.º 46/2018",
+      "date_enacted": "2018-04-27",
+      "official_link": "https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/46-2018-115191272",
+      "summary": "Aprova a Estratégia Nacional e Plano de Ação de Combate ao Desperdício Alimentar (ENCDA). Define uma visão de \"Desperdício Alimentar Zero\" através de três objetivos estratégicos — prevenção, redução e monitorização — desdobrados em nove objetivos operacionais e 14 medidas concretas. A Estratégia envolve diversos ministérios e parceiros (sob coordenação da Comissão Nacional de Combate ao Desperdício Alimentar) para promover campanhas de sensibilização, inovação tecnológica, melhoria do enquadramento legal e mecanismos de medição do desperdício ao longo da cadeia agroalimentar.",
+      "scope": "direct"
+    },
+    {
+      "jurisdiction": "EU",
+      "title": "Diretiva (EU) 2018/851",
+      "type": "Diretiva",
+      "identifier": "2018/851",
+      "date_enacted": "2018-05-30",
+      "official_link": "http://data.europa.eu/eli/dir/2018/851/oj",
+      "summary": "Altera a Diretiva-Quadro dos Resíduos (2008/98/CE) para reforçar a prevenção de resíduos e promover a economia circular na UE. Introduz pela primeira vez a definição de \"resíduos alimentares\" e exige que os Estados-Membros adotem medidas específicas para prevenir e reduzir o desperdício alimentar ao longo da cadeia de abastecimento. Passa a ser obrigatória a monitorização anual dos resíduos alimentares (com metodologia comum definida pela Comissão) e incentiva-se a doação segura de excedentes alimentares e a melhoria da rotulagem de datas de validade, em alinhamento com o Objetivo de Desenvolvimento Sustentável de reduzir para metade o desperdício alimentar até 2030.",
+      "scope": "direct"
+    },
+    {
+      "jurisdiction": "EU",
+      "title": "Decisão Delegada (UE) 2019/1597 da Comissão",
+      "type": "Decisão Delegada",
+      "identifier": "2019/1597",
+      "date_enacted": "2019-09-27",
+      "official_link": "http://data.europa.eu/eli/dec_del/2019/1597/oj",
+      "summary": "Complementa a Diretiva 2008/98/CE estabelecendo uma metodologia comum e requisitos mínimos de qualidade para a medição uniforme do desperdício alimentar nos Estados-Membros. Esta decisão delegada da Comissão define como cada país deve quantificar os níveis de resíduos alimentares nas várias etapas da cadeia (produção, transformação, distribuição, consumo), assegurando dados fiáveis e comparáveis que permitam acompanhar os progressos na redução do desperdício alimentar e orientar políticas públicas baseadas em evidências.",
+      "scope": "direct"
+    },
+    {
+      "jurisdiction": "EU",
+      "title": "Decisão de Execução (UE) 2019/2000 da Comissão",
+      "type": "Decisão de Execução",
+      "identifier": "2019/2000",
+      "date_enacted": "2019-11-28",
+      "official_link": "http://data.europa.eu/eli/dec_impl/2019/2000/oj",
+      "summary": "Estabelece o formato e as especificações para a comunicação dos dados sobre resíduos alimentares por parte dos Estados-Membros, em conformidade com a Diretiva 2008/98/CE. Esta decisão de execução da Comissão define o modelo de reporte anual das quantidades de desperdício alimentar e do relatório de controlo de qualidade, garantindo que todos os países da UE reportem os indicadores de desperdício alimentar de forma consistente e transparente, facilitando a avaliação do cumprimento das metas de redução e a comparação de resultados entre Estados-Membros.",
+      "scope": "direct"
+    },
+    {
+      "jurisdiction": "EU",
+      "title": "Estratégia do Prado ao Prato (Farm to Fork)",
+      "type": "Estratégia/Plano",
+      "identifier": "COM(2020) 381 final",
+      "date_enacted": "2020-05-20",
+      "official_link": "https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:52020DC0381",
+      "summary": "Comunicação estratégica da Comissão Europeia que estabelece um plano abrangente para tornar os sistemas alimentares da UE mais sustentáveis, incluindo uma forte ênfase na redução do desperdício alimentar. A Estratégia do Prado ao Prato fixa o objetivo de reduzir para metade o desperdício alimentar per capita na UE até 2030 e anuncia a intenção de definir metas juridicamente vinculativas de redução do desperdício alimentar a nível da UE. Também prevê medidas de incentivo à redistribuição de excedentes (por exemplo, doações alimentares), campanhas de sensibilização ao consumidor sobre o valor dos alimentos e alterações legislativas para melhorar a informação sobre validade dos produtos, integrando o combate ao desperdício alimentar nos esforços de construção de uma economia circular.",
+      "scope": "direct"
+    },
+    {
+      "jurisdiction": "Portugal",
+      "title": "Decreto-Lei n.º 102-D/2020",
+      "type": "Decreto-Lei",
+      "identifier": "n.º 102-D/2020",
+      "date_enacted": "2020-12-10",
+      "official_link": "https://diariodarepublica.pt/dr/detalhe/decreto-lei/102-d-2020-150908012",
+      "summary": "Transpõe para a ordem interna as Diretivas (UE) de 2018 sobre resíduos, aprovando o novo Regime Geral da Gestão de Resíduos (RGGR). Entre outras medidas de economia circular, estabelece metas nacionais de prevenção do desperdício alimentar (redução de 25% até 2025 e 50% até 2030, em relação a 2020, nos setores de restauração coletiva, distribuição e agroindústria) e impõe obrigações para combater o desperdício de alimentos, como a adoção de planos pelas empresas geradoras de grandes quantidades de biorresíduos e, a partir de 2024, a proibição de descartar alimentos próprios para consumo sempre que existam meios seguros de redistribuição (por exemplo, doação a instituições de solidariedade).",
+      "scope": "direct"
+    },
+    {
+      "jurisdiction": "EU",
+      "title": "Regulamento (UE) 2021/382 da Comissão",
+      "type": "Regulamento",
+      "identifier": "2021/382",
+      "date_enacted": "2021-03-03",
+      "official_link": "http://data.europa.eu/eli/reg/2021/382/oj",
+      "summary": "Introduz alterações ao Regulamento (CE) n.º 852/2004 (regras de higiene dos géneros alimentícios) para facilitar a doação segura de alimentos e, assim, prevenir o desperdício alimentar. Este regulamento incorpora nos anexos de higiene requisitos para que os operadores do setor alimentar possam redistribuir excedentes alimentares para consumo humano de forma segura, incluindo orientações sobre boas práticas de higiene na doação de alimentos. Ao garantir que a segurança dos alimentos doados seja mantida, a medida remove barreiras legais à doação e assegura que alimentos próprios para consumo, mas não vendidos, possam ser canalizados para instituições de caridade e consumidores em vez de serem desperdiçados.",
+      "scope": "indirect"
+    },
+    {
+      "jurisdiction": "Portugal",
+      "title": "Lei n.º 62/2021",
+      "type": "Lei",
+      "identifier": "n.º 62/2021",
+      "date_enacted": "2021-08-19",
+      "official_link": "https://diariodarepublica.pt/dr/detalhe/lei/62-2021-169832469",
+      "summary": "Estabelece o regime jurídico aplicável à doação de géneros alimentícios para fins de solidariedade social e define medidas de combate ao desperdício alimentar. A lei incentiva as empresas do setor agroalimentar a doarem os excedentes alimentares seguros para consumo a instituições habilitadas, vedando cláusulas contratuais que impeçam essas doações. Prevê ainda a integração da educação sobre redução do desperdício alimentar nas escolas e vincula o Estado a adotar todas as diligências para alcançar as metas nacionais de redução do desperdício alimentar (em consonância com o Objetivo de Desenvolvimento Sustentável 12.3 e o RGGR), promovendo a articulação com a Comissão Nacional de Combate ao Desperdício Alimentar.",
+      "scope": "direct"
+    },
+    {
+      "jurisdiction": "Portugal",
+      "title": "Resolução do Conselho de Ministros n.º 31/2023",
+      "type": "Estratégia/Plano",
+      "identifier": "n.º 31/2023",
+      "date_enacted": "2023-03-24",
+      "official_link": "https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/31-2023-210923319",
+      "summary": "Aprova o Plano Nacional de Gestão de Resíduos (PNGR 2030), definindo orientações e metas para a prevenção e gestão de resíduos na década. Embora abrangente a todos os tipos de resíduos, o plano destaca a necessidade de reduzir a fração orgânica nos resíduos urbanos, nomeadamente através da melhoria da recolha seletiva de biorresíduos e da diminuição do desperdício alimentar na origem. O PNGR 2030 alinha-se com as metas europeias e nacionais, integrando o combate ao desperdício de alimentos como parte da estratégia para desviar resíduos biodegradáveis de aterro e promover a economia circular.",
+      "scope": "indirect"
+    },
+    {
+      "jurisdiction": "EU",
+      "title": "Diretiva (UE) 2025/1892",
+      "type": "Diretiva",
+      "identifier": "2025/1892",
+      "date_enacted": "2025-09-10",
+      "official_link": "http://data.europa.eu/eli/dir/2025/1892/oj",
+      "summary": "Altera a Diretiva-Quadro dos Resíduos para introduzir metas obrigatórias de redução do desperdício alimentar nos Estados-Membros. Estabelece que, até 31 de dezembro de 2030, cada país deve alcançar uma redução de pelo menos 10% na quantidade de resíduos alimentares gerados nas fases de transformação e fabrico de alimentos, e uma redução de 30% per capita dos resíduos alimentares produzidos no retalho, na restauração e nos agregados familiares, tomando como referência a média de 2021–2023. Estas metas nacionais vinculativas visam acelerar e uniformizar os esforços de todos os países da UE na prevenção do desperdício de alimentos, contribuindo para um sistema alimentar mais sustentável.",
+      "scope": "direct"
+    }
+  ]
+}

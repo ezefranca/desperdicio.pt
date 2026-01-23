@@ -1,0 +1,125 @@
+{
+  "metadata": {
+    "title": "Arquivo Profundo: 1999-2010",
+    "description": "Enquanto a legislação avançava silenciosamente, a cobertura mediática ainda não existia. Esta secção cruza o arquivo do Público com os diplomas legais da época, revelando um desfasamento revelador entre política e atenção pública.",
+    "source": "Arquivo.pt - Levantamento de domínios e subdomínios do Público (1996-2019)",
+    "source_url": "https://arquivo.pt/wayback/publico.pt"
+  },
+  "insight": "Entre 1999 e 2010, a Europa e Portugal criaram a base legal para gerir resíduos alimentares — mas o Público ainda não tinha cobertura dedicada ao tema. Este contraste mostra que o problema existia nas instituições antes de existir na consciência pública. O jornalismo do Público viria, na década seguinte, a tornar visível o que a lei já reconhecia.",
+  "items": [
+    {
+      "year": 1999,
+      "title": "Expo 98 - Desperdício de energia",
+      "classification": "noise",
+      "archive_url": "https://arquivo.pt/wayback/19991014023636/http://www.publico.pt/dossiers/expo98/expo9806045.html",
+      "quote": "DESPERDÍCIO DE ENERGIA — Ninguém consegue perceber porque razão os candeeiros permanecem acesos durante todo o dia.",
+      "note": "O termo 'desperdício' refere-se a energia, não a comida.",
+      "legislation_context": {
+        "same_year": ["Decreto-Lei n.º 74/99 (Estatuto do Mecenato)", "Diretiva 1999/31/CE (deposição de resíduos em aterros)"],
+        "insight": "Enquanto o arquivo mostra ruído, em 1999 já existia legislação europeia sobre aterros que afectaria resíduos orgânicos."
+      }
+    },
+    {
+      "year": 2000,
+      "title": "Expo 98 - Dossier",
+      "classification": "noise",
+      "archive_url": "https://arquivo.pt/wayback/20001101055306/http://www.publico.pt/dossiers/expo98/expo9806045.html",
+      "quote": "DESPERDÍCIO DE ENERGIA — Ninguém consegue perceber porque razão os candeeiros permanecem acesos.",
+      "note": "Repetição do dossier da Expo 98 — ainda sem cobertura alimentar.",
+      "legislation_context": {
+        "same_year": [],
+        "insight": "Ano de transição. A Diretiva 1999/31/CE estava em fase de transposição pelos Estados-Membros."
+      }
+    },
+    {
+      "year": 2001,
+      "title": "Programa do I Governo Constitucional",
+      "classification": "food-adjacent",
+      "archive_url": "https://arquivo.pt/wayback/20010714043148/http://www.publico.pt/servico/proggov/governo1/prog/prog1iiid3.html",
+      "quote": "Garantia de abastecimento público, em particular dos produtos alimentares e outros bens de primeira necessidade.",
+      "note": "Menção política a 'produtos alimentares', mas sem foco em desperdício.",
+      "legislation_context": {
+        "same_year": [],
+        "insight": "O discurso político focava abastecimento, não desperdício."
+      }
+    },
+    {
+      "year": 2002,
+      "title": "Regulamento Europeu de Legislação Alimentar",
+      "classification": "food-adjacent",
+      "archive_url": null,
+      "quote": null,
+      "note": "Sem cobertura no Público, mas legislação europeia significativa.",
+      "legislation_context": {
+        "same_year": ["Regulamento (CE) n.º 178/2002 — princípios gerais da legislação alimentar"],
+        "insight": "A Europa estabeleceu os princípios de segurança alimentar que mais tarde facilitariam a redistribuição de excedentes. O Público ainda não cobria o tema."
+      }
+    },
+    {
+      "year": 2003,
+      "title": "Programa Eleitoral PSD",
+      "classification": "food-adjacent",
+      "archive_url": "https://arquivo.pt/wayback/20030309134047/http://www.publico.pt/docs/progGov2002/progEleitoralPSD.pdf",
+      "quote": "Por isso vou atacar o desperdício, eliminar o despesismo e combater a corrupção, com rigor e com autoridade.",
+      "note": "Uso de 'desperdício' em sentido financeiro/político, não alimentar.",
+      "legislation_context": {
+        "same_year": [],
+        "insight": "O léxico político apropriou-se de 'desperdício', mas para falar de orçamento — não de comida."
+      }
+    },
+    {
+      "year": 2004,
+      "title": "Regulamento Europeu de Higiene Alimentar",
+      "classification": "food-adjacent",
+      "archive_url": "https://arquivo.pt/wayback/20041001023339/http://www.publico.pt/docs/economia/oe_plei_2002.pdf",
+      "quote": "Gorduras e óleos comestíveis: Óleos directamente comestíveis e suas misturas (óleos alimentares).",
+      "note": "Contexto regulatório sobre óleos, sem menção a desperdício.",
+      "legislation_context": {
+        "same_year": ["Regulamento (CE) n.º 852/2004 — higiene dos géneros alimentícios"],
+        "insight": "A Europa criou regras de higiene que moldariam futuras doações alimentares. O arquivo do Público mostra apenas menções técnicas."
+      }
+    },
+    {
+      "year": 2006,
+      "title": "Regime Geral de Gestão de Resíduos",
+      "classification": "food-adjacent",
+      "archive_url": null,
+      "quote": null,
+      "note": "Marco legislativo português sem reflexo imediato no arquivo.",
+      "legislation_context": {
+        "same_year": ["Decreto-Lei n.º 178/2006 — Regime geral da gestão de resíduos"],
+        "insight": "Portugal criou a base normativa para gerir resíduos. O desperdício alimentar ainda era 'invisível' na cobertura jornalística."
+      }
+    },
+    {
+      "year": 2008,
+      "title": "Diretiva-Quadro dos Resíduos",
+      "classification": "food-adjacent",
+      "archive_url": null,
+      "quote": null,
+      "note": "Marco europeu fundamental, mas sem cobertura dedicada no Público.",
+      "legislation_context": {
+        "same_year": ["Diretiva 2008/98/CE — Diretiva-Quadro dos Resíduos"],
+        "insight": "A hierarquia de resíduos (prevenção primeiro) foi estabelecida. Esta directiva seria a base para as metas de 2030. O Público só cobriria o tema anos depois."
+      }
+    },
+    {
+      "year": 2010,
+      "title": "Aproveitamento de sobras pode 'aumentar risco de erro'",
+      "classification": "noise",
+      "archive_url": "https://arquivo.pt/wayback/20100524142438/http://www.publico.pt/Sociedade/aproveitamento-de-sobras-pode-aumentar-risco-de-erro_1438588",
+      "quote": "O reaproveitamento existe em Portugal… como forma de combater o desperdício. Assim, ou são gastos no mesmo dia ou vão para o lixo.",
+      "note": "O termo 'sobras' refere-se a medicação hospitalar, não a comida.",
+      "legislation_context": {
+        "same_year": [],
+        "insight": "Mesmo em 2010, a pesquisa por 'desperdício' no arquivo retorna ruído. A cobertura dedicada ao desperdício alimentar só arrancaria em 2011."
+      }
+    }
+  ],
+  "classification_legend": {
+    "noise": "Menção ao termo 'desperdício' sem relação com comida",
+    "food-adjacent": "Menção a 'alimentar' ou legislação relevante, mas sem foco em desperdício",
+    "food-focused": "Cobertura dedicada ao desperdício alimentar"
+  },
+  "key_insight": "O arquivo 1999-2010 revela um desfasamento: enquanto a Europa e Portugal construíam o enquadramento legal, o tema não tinha presença mediática. A cobertura dedicada ao desperdício alimentar só arrancaria em 2011, quando o Público começou a tornar público o que era apenas institucional."
+}
