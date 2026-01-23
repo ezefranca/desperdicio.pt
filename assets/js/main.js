@@ -171,6 +171,7 @@ function renderYearChart(timeline) {
           `;
         }).join('')}
       </div>
+      <p class="chart-source">Fonte: <a href="https://arquivo.pt" target="_blank">Corpus desperdicio.pt</a> — 127 artigos do Público preservados no Arquivo.pt</p>
     </div>
   `;
 }
@@ -202,6 +203,7 @@ function renderMonthChart(timeline, focusMonth) {
           `;
         }).join('')}
       </div>
+      <p class="chart-source">Fonte: <a href="https://arquivo.pt" target="_blank">Corpus desperdicio.pt</a> — artigos do Público preservados no Arquivo.pt</p>
     </div>
   `;
 }
@@ -228,6 +230,7 @@ function renderTargets() {
         <span class="target-card-badge">Meta Vinculativa UE</span>
       </div>
     </div>
+    <p class="chart-source">Fonte: <a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024L1438" target="_blank">Directiva (UE) 2024/1438</a></p>
   `;
 }
 
@@ -241,6 +244,7 @@ function renderODSBadge() {
       <div class="ods-content">
         <div class="ods-title">ODS 12.3 - Meta Global 2030</div>
         <div class="ods-desc">Reduzir para metade o desperdício alimentar per capita a nível do retalho e do consumidor, e reduzir as perdas de alimentos ao longo das cadeias de produção e abastecimento.</div>
+        <div class="ods-source"><a href="https://sdgs.un.org/goals/goal12" target="_blank">Nações Unidas — Objectivo 12</a></div>
       </div>
     </div>
   `;
@@ -427,31 +431,14 @@ function renderComparisonChart(data) {
   const euAverage = data.eu_average || 131;
   const baselinePosition = (euAverage / maxValue) * 100;
 
-  // Flag colors - Cyprus has white background with copper/orange island shape
-  const flagColors = {
-    CY: 'linear-gradient(to bottom, #fff 0%, #fff 100%)', // White with copper border
-    DK: 'linear-gradient(to right, #c8102e 0%, #c8102e 100%)',
-    PT: 'linear-gradient(to right, #006600 40%, #ff0000 40%)',
-    GR: 'linear-gradient(to bottom, #0d5eaf 20%, #fff 20%, #fff 40%, #0d5eaf 40%, #0d5eaf 60%, #fff 60%, #fff 80%, #0d5eaf 80%)',
-    BE: 'linear-gradient(to right, #000 33%, #ffd90c 33%, #ffd90c 66%, #f31830 66%)',
-    LU: 'linear-gradient(to bottom, #ed2939 33%, #fff 33%, #fff 66%, #00a1de 66%)',
-    IE: 'linear-gradient(to right, #169b62 33%, #fff 33%, #fff 66%, #ff883e 66%)',
-    ES: 'linear-gradient(to bottom, #c60b1e 25%, #ffc400 25%, #ffc400 75%, #c60b1e 75%)',
-    PL: 'linear-gradient(to bottom, #fff 50%, #dc143c 50%)',
-    IT: 'linear-gradient(to right, #009246 33%, #fff 33%, #fff 66%, #ce2b37 66%)',
-    FR: 'linear-gradient(to right, #002395 33%, #fff 33%, #fff 66%, #ed2939 66%)',
-    DE: 'linear-gradient(to bottom, #000 33%, #dd0000 33%, #dd0000 66%, #ffcc00 66%)',
-    NL: 'linear-gradient(to bottom, #ae1c28 33%, #fff 33%, #fff 66%, #21468b 66%)',
-    AT: 'linear-gradient(to bottom, #ed2939 33%, #fff 33%, #fff 66%, #ed2939 66%)',
-    SE: 'linear-gradient(135deg, #006aa7 0%, #006aa7 100%)',
-    SI: 'linear-gradient(to bottom, #fff 33%, #0051ba 33%, #0051ba 66%, #ed1c24 66%)',
-    HR: 'linear-gradient(to bottom, #ff0000 33%, #fff 33%, #fff 66%, #171796 66%)',
-    EU: 'linear-gradient(135deg, #003399 0%, #003399 100%)'
-  };
-
-  // Special flag styling (Cyprus needs border)
-  const flagStyles = {
-    CY: 'border: 1px solid #d4a84b;' // Copper/gold border for Cyprus
+  // Flag emojis by country code
+  const flagEmojis = {
+    CY: '🇨🇾', DK: '🇩🇰', PT: '🇵🇹', GR: '🇬🇷', BE: '🇧🇪',
+    LU: '🇱🇺', IE: '🇮🇪', ES: '🇪🇸', PL: '🇵🇱', IT: '🇮🇹',
+    FR: '🇫🇷', DE: '🇩🇪', NL: '🇳🇱', AT: '🇦🇹', SE: '🇸🇪',
+    SI: '🇸🇮', HR: '🇭🇷', FI: '🇫🇮', SK: '🇸🇰', CZ: '🇨🇿',
+    HU: '🇭🇺', RO: '🇷🇴', BG: '🇧🇬', EE: '🇪🇪', LV: '🇱🇻',
+    LT: '🇱🇹', MT: '🇲🇹', EU: '🇪🇺'
   };
 
   return `
@@ -465,11 +452,11 @@ function renderComparisonChart(data) {
           const width = (country.value / maxValue) * 100;
           const isHighlight = country.highlight;
           const isBaseline = country.baseline;
-          const extraFlagStyle = flagStyles[country.code] || '';
+          const flagEmoji = flagEmojis[country.code] || '🏳️';
           return `
             <div class="comparison-bar-row ${isHighlight ? 'highlight' : ''} ${isBaseline ? 'baseline' : ''}" style="--delay: ${idx * 0.1}s">
               <div class="comparison-bar-label">
-                <div class="comparison-bar-flag" style="background: ${flagColors[country.code] || 'var(--white-15)'}; ${extraFlagStyle}"></div>
+                <span class="comparison-bar-flag-emoji">${flagEmoji}</span>
                 <span>${esc(country.country)}</span>
               </div>
               <div class="comparison-bar-track">
@@ -754,6 +741,7 @@ function renderScenarios(data) {
         `;
       }).join('')}
     </div>
+    <p class="chart-source">Fonte: Projecções editoriais baseadas em <a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024L1438" target="_blank">Directiva (UE) 2024/1438</a> e dados do <a href="https://arquivo.pt" target="_blank">corpus Público/Arquivo.pt</a></p>
   `;
 }
 
@@ -1370,10 +1358,10 @@ function renderNavLinks(chapters) {
 
   // Single-word labels for nav based on chapter_id
   const navLabels = {
-    'ch-prologue': 'Início',
+    'ch-prologo': 'Início',
     'ch-portugal-estado': 'Portugal',
     'ch-bruxelas-metodo': 'Europa',
-    'ch-epilogue': 'Fecho'
+    'ch-epilogo': 'Fecho'
   };
 
   return mainChapters.map(ch => {
@@ -1607,3 +1595,116 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+
+// ==================== SHARE FUNCTIONALITY ====================
+
+(function initShare() {
+  const shareData = {
+    title: 'desperdicio.pt - Deitar comida fora nem sempre é descuido. Às vezes é hábito.',
+    text: 'Portugal desperdiça 184 kg de comida por pessoa, por ano — somos o 4.º país da UE que mais desperdiça. Uma investigação baseada em 15 anos de jornalismo do Público.',
+    url: window.location.href
+  };
+
+  const shareUrls = {
+    x: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareData.text)}&url=${encodeURIComponent(shareData.url)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareData.url)}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareData.url)}`,
+    whatsapp: `https://api.whatsapp.com/send?text=${encodeURIComponent(shareData.title + ' ' + shareData.url)}`,
+    telegram: `https://t.me/share/url?url=${encodeURIComponent(shareData.url)}&text=${encodeURIComponent(shareData.title)}`,
+    email: `mailto:?subject=${encodeURIComponent(shareData.title)}&body=${encodeURIComponent(shareData.text + '\n\n' + shareData.url)}`
+  };
+
+  function showToast(message) {
+    let toast = document.querySelector('.share-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'share-toast';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('visible');
+    setTimeout(() => toast.classList.remove('visible'), 2500);
+  }
+
+  function copyToClipboard() {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(shareData.url).then(() => {
+        showToast('Link copiado!');
+      }).catch(() => {
+        fallbackCopy();
+      });
+    } else {
+      fallbackCopy();
+    }
+  }
+
+  function fallbackCopy() {
+    const textarea = document.createElement('textarea');
+    textarea.value = shareData.url;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      document.execCommand('copy');
+      showToast('Link copiado!');
+    } catch (e) {
+      showToast('Não foi possível copiar');
+    }
+    document.body.removeChild(textarea);
+  }
+
+  function handleShare(e) {
+    const btn = e.target.closest('.share-btn');
+    if (!btn) return;
+
+    e.preventDefault();
+    const network = btn.dataset.network;
+
+    if (network === 'copy') {
+      copyToClipboard();
+      btn.classList.add('copied');
+      setTimeout(() => btn.classList.remove('copied'), 1500);
+      return;
+    }
+
+    if (shareUrls[network]) {
+      window.open(shareUrls[network], '_blank', 'width=600,height=400,menubar=no,toolbar=no');
+    }
+  }
+
+  // Show share sidebar after scrolling past hero
+  function initShareSidebar() {
+    const sidebar = document.getElementById('shareSidebar');
+    if (!sidebar) return;
+
+    let ticking = false;
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          const heroHeight = document.querySelector('.hero')?.offsetHeight || 600;
+
+          if (scrollY > heroHeight * 0.5) {
+            sidebar.classList.add('visible');
+          } else {
+            sidebar.classList.remove('visible');
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }, { passive: true });
+
+    // Event delegation for share buttons
+    sidebar.addEventListener('click', handleShare);
+  }
+
+  // Init when DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initShareSidebar);
+  } else {
+    initShareSidebar();
+  }
+})();

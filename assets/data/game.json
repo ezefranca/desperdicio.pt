@@ -1,0 +1,274 @@
+{
+  "metadata": {
+    "title": "Desafio Desperdício Zero",
+    "version": "1.0",
+    "total_points": 1000
+  },
+  "quiz": {
+    "title": "Quanto sabes sobre desperdício alimentar?",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "Quantos quilos de comida desperdiça cada português por ano?",
+        "options": ["96 kg", "131 kg", "184 kg", "220 kg"],
+        "correct": 2,
+        "points": 50,
+        "explanation": "Portugal desperdiça 184 kg per capita por ano, 40% acima da média europeia (131 kg).",
+        "source": "Eurostat/Parlamento Europeu, 2022"
+      },
+      {
+        "id": "q2",
+        "question": "Que percentagem do desperdício alimentar acontece em casa?",
+        "options": ["32%", "47%", "67%", "85%"],
+        "correct": 2,
+        "points": 50,
+        "explanation": "67% do desperdício acontece nos lares. O problema não está só nas empresas — está nas nossas cozinhas.",
+        "source": "Parlamento Europeu, 2022"
+      },
+      {
+        "id": "q3",
+        "question": "Qual é a posição de Portugal no ranking europeu de desperdício?",
+        "options": ["2.º lugar", "4.º lugar", "8.º lugar", "12.º lugar"],
+        "correct": 1,
+        "points": 50,
+        "explanation": "Portugal é o 4.º país da UE que mais desperdiça alimentos, atrás de Chipre, Dinamarca e Grécia.",
+        "source": "Eurostat, 2022"
+      },
+      {
+        "id": "q4",
+        "question": "Qual a meta europeia de redução do desperdício até 2030?",
+        "options": ["-10%", "-20%", "-30%", "-50%"],
+        "correct": 2,
+        "points": 50,
+        "explanation": "A Directiva UE 2024/1438 estabelece uma redução obrigatória de 30% no retalho e consumo até 2030.",
+        "source": "Directiva (UE) 2024/1438"
+      },
+      {
+        "id": "q5",
+        "question": "Em que ano a Fruta Feia foi fundada em Portugal?",
+        "options": ["2011", "2013", "2015", "2017"],
+        "correct": 1,
+        "points": 50,
+        "explanation": "A Fruta Feia foi fundada em 2013 e já salvou mais de 6.000 toneladas de alimentos.",
+        "source": "Fruta Feia"
+      },
+      {
+        "id": "q6",
+        "question": "Quantas toneladas de alimentos desperdiça Portugal por ano?",
+        "options": ["500 mil", "1 milhão", "1,9 milhões", "3 milhões"],
+        "correct": 2,
+        "points": 50,
+        "explanation": "Portugal desperdiça cerca de 1,9 milhões de toneladas de alimentos por ano.",
+        "source": "Público, 2023"
+      },
+      {
+        "id": "q7",
+        "question": "O que significa 'consumir de preferência antes de' num rótulo?",
+        "options": [
+          "O alimento está estragado após essa data",
+          "É uma indicação de qualidade, não de segurança",
+          "O alimento deve ser deitado fora",
+          "É ilegal vender após essa data"
+        ],
+        "correct": 1,
+        "points": 75,
+        "explanation": "'Consumir de preferência antes de' indica qualidade óptima, não segurança. O alimento pode ser consumido após essa data se bem conservado.",
+        "source": "Regulamento UE 1169/2011"
+      },
+      {
+        "id": "q8",
+        "question": "Qual a diferença entre a média europeia e portuguesa de desperdício?",
+        "options": ["10 kg", "25 kg", "53 kg", "80 kg"],
+        "correct": 2,
+        "points": 75,
+        "explanation": "Portugal (184 kg) desperdiça 53 kg mais que a média europeia (131 kg) — cerca de 40% acima.",
+        "source": "Eurostat, 2022"
+      },
+      {
+        "id": "q9",
+        "question": "Em que mês de 2023 houve mais artigos sobre desperdício no Público?",
+        "options": ["Março", "Setembro", "Outubro", "Dezembro"],
+        "correct": 3,
+        "points": 75,
+        "explanation": "Dezembro de 2023 teve 7 artigos — o maior pico de cobertura da nossa análise de 15 anos.",
+        "source": "Corpus desperdicio.pt"
+      },
+      {
+        "id": "q10",
+        "question": "Qual destas iniciativas NÃO é portuguesa?",
+        "options": ["Fruta Feia", "Too Good To Go", "Refood", "CNCDA"],
+        "correct": 1,
+        "points": 75,
+        "explanation": "A Too Good To Go é uma startup dinamarquesa fundada em 2015. Chegou a Portugal em 2020.",
+        "source": "Too Good To Go"
+      }
+    ]
+  },
+  "calculator": {
+    "title": "Calcula o teu desperdício",
+    "categories": [
+      {
+        "id": "bread",
+        "name": "Pão",
+        "icon": "🍞",
+        "unit": "unidades/semana",
+        "kg_per_unit": 0.2,
+        "average_waste_pct": 0.25,
+        "tip": "Congela o pão que não vais comer em 2 dias."
+      },
+      {
+        "id": "fruits",
+        "name": "Frutas e Legumes",
+        "icon": "🥬",
+        "unit": "kg/semana",
+        "kg_per_unit": 1,
+        "average_waste_pct": 0.30,
+        "tip": "Compra mais vezes, em menores quantidades."
+      },
+      {
+        "id": "dairy",
+        "name": "Lacticínios",
+        "icon": "🥛",
+        "unit": "embalagens/semana",
+        "kg_per_unit": 0.5,
+        "average_waste_pct": 0.15,
+        "tip": "Verifica a data antes de comprar mais."
+      },
+      {
+        "id": "meat",
+        "name": "Carne e Peixe",
+        "icon": "🥩",
+        "unit": "porções/semana",
+        "kg_per_unit": 0.25,
+        "average_waste_pct": 0.10,
+        "tip": "Congela porções individuais assim que compras."
+      },
+      {
+        "id": "leftovers",
+        "name": "Sobras de Refeições",
+        "icon": "🍲",
+        "unit": "refeições/semana",
+        "kg_per_unit": 0.3,
+        "average_waste_pct": 0.20,
+        "tip": "Transforma sobras no almoço do dia seguinte."
+      }
+    ],
+    "comparison": {
+      "portugal_avg_kg_year": 184,
+      "eu_avg_kg_year": 131,
+      "target_2030_kg_year": 129
+    }
+  },
+  "challenges": {
+    "title": "Desafios Semanais",
+    "items": [
+      {
+        "id": "ch1",
+        "title": "Inventário do Frigorífico",
+        "description": "Tira uma foto do interior do teu frigorífico e identifica o que precisa de ser consumido primeiro.",
+        "points": 25,
+        "category": "awareness"
+      },
+      {
+        "id": "ch2",
+        "title": "Semana Sem Desperdício",
+        "description": "Durante 7 dias, regista tudo o que deitaste fora. Quanto consegues reduzir?",
+        "points": 100,
+        "category": "tracking"
+      },
+      {
+        "id": "ch3",
+        "title": "Refeição de Sobras",
+        "description": "Cria uma refeição usando apenas ingredientes que já tinhas em casa.",
+        "points": 50,
+        "category": "action"
+      },
+      {
+        "id": "ch4",
+        "title": "Lista de Compras",
+        "description": "Faz uma lista antes de ir às compras e segue-a rigorosamente.",
+        "points": 25,
+        "category": "planning"
+      },
+      {
+        "id": "ch5",
+        "title": "Descobre uma App",
+        "description": "Instala a Too Good To Go ou outra app anti-desperdício e salva uma refeição.",
+        "points": 75,
+        "category": "action"
+      },
+      {
+        "id": "ch6",
+        "title": "Partilha com Vizinhos",
+        "description": "Oferece comida que não vais conseguir consumir a um vizinho ou amigo.",
+        "points": 50,
+        "category": "community"
+      }
+    ]
+  },
+  "achievements": [
+    {
+      "id": "ach_quiz_starter",
+      "title": "Curioso",
+      "description": "Respondeste à primeira pergunta do quiz",
+      "icon": "🎯",
+      "points_required": 50
+    },
+    {
+      "id": "ach_quiz_half",
+      "title": "Estudante",
+      "description": "Completaste metade do quiz",
+      "icon": "📚",
+      "points_required": 250
+    },
+    {
+      "id": "ach_quiz_master",
+      "title": "Especialista",
+      "description": "Completaste o quiz com 80%+ de acertos",
+      "icon": "🏆",
+      "condition": "quiz_score_pct >= 80"
+    },
+    {
+      "id": "ach_calculator",
+      "title": "Auto-consciente",
+      "description": "Calculaste o teu desperdício pessoal",
+      "icon": "🔍",
+      "condition": "calculator_completed"
+    },
+    {
+      "id": "ach_below_average",
+      "title": "Abaixo da Média",
+      "description": "O teu desperdício está abaixo da média portuguesa",
+      "icon": "⭐",
+      "condition": "waste_below_pt_avg"
+    },
+    {
+      "id": "ach_challenge_first",
+      "title": "Agente de Mudança",
+      "description": "Completaste o primeiro desafio",
+      "icon": "✅",
+      "condition": "challenges_completed >= 1"
+    },
+    {
+      "id": "ach_challenge_master",
+      "title": "Herói Zero Waste",
+      "description": "Completaste todos os desafios",
+      "icon": "🦸",
+      "condition": "challenges_completed >= 6"
+    },
+    {
+      "id": "ach_reader",
+      "title": "Leitor Informado",
+      "description": "Leste o editorial até ao fim",
+      "icon": "📖",
+      "condition": "scroll_complete"
+    }
+  ],
+  "levels": [
+    { "level": 1, "name": "Iniciante", "min_points": 0, "max_points": 99 },
+    { "level": 2, "name": "Consciente", "min_points": 100, "max_points": 249 },
+    { "level": 3, "name": "Praticante", "min_points": 250, "max_points": 499 },
+    { "level": 4, "name": "Activista", "min_points": 500, "max_points": 749 },
+    { "level": 5, "name": "Embaixador", "min_points": 750, "max_points": 1000 }
+  ]
+}
