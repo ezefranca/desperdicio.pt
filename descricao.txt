@@ -1,0 +1,224 @@
+PRÉMIO ARQUIVO.PT 2026
+Descrição Sumária do Trabalho
+
+================================================================================
+IDENTIFICAÇÃO
+================================================================================
+
+Título: desperdicio.pt — Um Editorial Documental sobre Desperdício Alimentar
+
+Área temática: Jornalismo de Dados / Preservação Digital / Sustentabilidade
+
+Candidato: [NOME DO CANDIDATO]
+
+Email: [EMAIL]
+
+================================================================================
+DESCRIÇÃO DO TRABALHO
+================================================================================
+
+O desperdicio.pt é um editorial documental interactivo que investiga 15 anos de cobertura jornalística sobre desperdício alimentar em Portugal, construído inteiramente a partir de artigos do jornal Público preservados no Arquivo.pt.
+
+O projecto cruza um corpus de 127 artigos (2011-2026) com 20 diplomas legais portugueses e europeus, criando uma narrativa visual que demonstra como o desperdício alimentar passou de tema invisível a preocupação pública — e o que ainda falta fazer.
+
+A plataforma inclui:
+- Editorial navegável organizado em capítulos temáticos
+- Visualizações de dados interactivas (gráficos de evolução, comparações europeias, projecções 2030)
+- Arquivo profundo 1999-2010 que contextualiza a ausência de cobertura pré-2011
+- Sistema de gamificação educativa com quiz, calculadora pessoal e desafios
+- Timeline legislativa que cruza leis com cobertura mediática
+
+================================================================================
+OBJETIVOS
+================================================================================
+
+1. PRESERVAÇÃO E VALORIZAÇÃO: Demonstrar o valor único do Arquivo.pt como fonte para investigação longitudinal, transformando artigos arquivados em narrativa coerente.
+
+2. EDUCAÇÃO PÚBLICA: Sensibilizar cidadãos para o problema do desperdício alimentar em Portugal (184 kg/pessoa/ano — 4.º lugar na UE).
+
+3. LITERACIA MEDIÁTICA: Mostrar como a cobertura jornalística evolui ao longo do tempo e como temas ganham ou perdem relevância na agenda pública.
+
+4. METODOLOGIA REPLICÁVEL: Criar um modelo de jornalismo de dados baseado em arquivos web que possa ser aplicado a outros temas.
+
+================================================================================
+RESULTADOS ATINGIDOS
+================================================================================
+
+CORPUS DOCUMENTAL:
+- 337 artigos identificados através da API do Arquivo.pt
+- 127 artigos classificados como "core" após filtragem de relevância
+- Cobertura temporal: 2011-2026 (15 anos)
+- Picos identificados: Dezembro 2023 (7 artigos), Setembro 2025 (6 artigos)
+
+ENQUADRAMENTO LEGAL:
+- 20 diplomas mapeados (PT + UE)
+- Correlação entre legislação e picos de cobertura mediática
+
+PLATAFORMA FUNCIONAL:
+- Website responsivo em https://desperdicio.pt
+- Código aberto no GitHub
+- Zero recolha de dados pessoais
+- Gamificação com persistência local
+
+INSIGHTS EDITORIAIS:
+- Identificação da mudança de linguagem: de "sobras" para "desperdício alimentar"
+- Documentação do papel das iniciativas civis (Fruta Feia, Refood, Too Good To Go)
+- Análise do gap entre legislação e implementação
+
+================================================================================
+ORIGINALIDADE E CARÁTER INOVADOR
+================================================================================
+
+1. JORNALISMO BASEADO EM ARQUIVO WEB
+Ao contrário de investigações tradicionais que usam arquivos físicos ou bases de dados proprietárias, o desperdicio.pt usa exclusivamente o Arquivo.pt como fonte primária, demonstrando que a preservação web permite investigação jornalística rigorosa.
+
+2. NARRATIVA TEMPORAL LONGITUDINAL
+A análise de 15 anos de cobertura permite identificar padrões impossíveis de detectar em análises pontuais: mudanças de linguagem, ciclos de atenção mediática, correlações com eventos legislativos.
+
+3. CRUZAMENTO SISTEMÁTICO LEI-MÉDIA
+O projecto sobrepõe timeline legislativa (20 diplomas) com timeline mediática (127 artigos), revelando desfasamentos entre acção política e consciência pública.
+
+4. GAMIFICAÇÃO EDUCATIVA SEM RASTREAMENTO
+O sistema de quiz, calculadora e desafios usa apenas localStorage, provando que é possível criar experiências interactivas educativas sem recolher dados pessoais.
+
+5. ARQUIVO PROFUNDO PRÉ-COBERTURA
+A secção 1999-2010 documenta a ausência — mostrando que pesquisas por "desperdício" nesse período retornam ruído (energia, orçamento), não comida.
+
+================================================================================
+IMPACTO SOCIAL (APLICAÇÃO E UTILIDADE SOCIAL)
+================================================================================
+
+PARA CIDADÃOS:
+- Consciencialização: Dados concretos sobre o problema (Portugal desperdiça 184 kg/pessoa/ano)
+- Acção individual: Calculadora pessoal que compara comportamento com médias nacionais
+- Dicas práticas: Desafios semanais com acções concretas para reduzir desperdício
+- Literacia: Compreensão de como temas entram na agenda pública
+
+PARA EDUCADORES:
+- Recurso pedagógico sobre sustentabilidade alimentar
+- Exemplo de jornalismo de dados para ensino
+- Material para discussão sobre ciclos mediáticos
+
+PARA DECISORES:
+- Evidência do gap entre legislação e implementação
+- Documentação do papel das iniciativas civis
+- Benchmark com outros países europeus
+
+META 2030:
+O projecto contextualiza a meta europeia de -30% de desperdício até 2030, com countdown interactivo que torna tangível a urgência da acção.
+
+================================================================================
+IMPACTO CIENTÍFICO (APLICAÇÃO E UTILIDADE CIENTÍFICA)
+================================================================================
+
+PARA INVESTIGADORES DE MÉDIA:
+- Metodologia documentada para análise longitudinal de cobertura jornalística usando Arquivo.pt
+- Pipeline de dados replicável (Python + APIs Arquivo.pt)
+- Corpus classificado disponível em formato JSON
+
+PARA ESTUDOS DE SUSTENTABILIDADE:
+- Dataset de 15 anos de cobertura sobre desperdício alimentar em Portugal
+- Correlações documentadas entre eventos legislativos e cobertura mediática
+- Análise de evolução terminológica ("sobras" → "desperdício alimentar")
+
+PARA CIÊNCIAS DA INFORMAÇÃO:
+- Caso de estudo sobre valor de arquivos web para investigação
+- Demonstração de técnicas de enriquecimento de metadados a partir de HTML arquivado
+- Análise de cobertura de "buracos" temporais em arquivos
+
+METODOLOGIA ABERTA:
+Todo o código e dados estão disponíveis em acesso aberto, permitindo replicação e extensão por outros investigadores.
+
+================================================================================
+RELEVÂNCIA DA UTILIZAÇÃO DO ARQUIVO.PT
+================================================================================
+
+O Arquivo.pt foi ESSENCIAL e INSUBSTITUÍVEL para este projecto. Sem ele, seria impossível:
+
+1. ACEDER A ARTIGOS ANTIGOS
+Muitos artigos do Público de 2011-2019 já não estão acessíveis no site original ou foram alterados. O Arquivo.pt preserva versões originais com timestamps.
+
+EXEMPLO: https://arquivo.pt/wayback/20140511140009/http://www.publico.pt/ecosfera/noticia/ja-ha-supermercados-na-europa-a-vender-fruta-e-legumes-feios-1608785
+Artigo de 2013 sobre supermercados a vender "fruta feia" — marco inicial do movimento em Portugal.
+
+2. DOCUMENTAR AUSÊNCIAS
+A secção "Arquivo Profundo 1999-2010" só foi possível porque o Arquivo.pt preserva páginas dessa época, permitindo demonstrar que o tema não existia na cobertura mediática.
+
+EXEMPLO: https://arquivo.pt/wayback/19991014023636/http://www.publico.pt/dossiers/expo98/expo9806045.html
+Pesquisa por "desperdício" em 1999 retorna apenas referências a energia — prova da inexistência do tema alimentar.
+
+3. USAR APIS PROGRAMÁTICAS
+A Text Search API do Arquivo.pt permitiu pesquisa sistemática:
+- Query: "desperdício alimentar" site:publico.pt
+- Retorno: metadados estruturados (URL, título, data, snippet)
+- Enriquecimento: acesso ao HTML arquivado para extracção de texto completo
+
+4. GARANTIR CITABILIDADE
+Cada afirmação no editorial tem link para versão arquivada, garantindo que fontes permanecem verificáveis mesmo que originais desapareçam.
+
+ESTATÍSTICAS DE USO:
+- 337 URLs do Arquivo.pt processadas
+- 127 artigos core extraídos e analisados
+- 12 anos de cobertura preservada (2011-2023 via arquivo + 2024-2026 via site live)
+
+================================================================================
+COMENTÁRIOS ADICIONAIS
+================================================================================
+
+ALINHAMENTO COM PARCEIROS DO PRÉMIO:
+
+1. PÚBLICO (Parceiro de Comunicação)
+O projecto foca-se exclusivamente no arquivo do Público, demonstrando o valor da preservação do jornalismo de referência português. Tratamos o Público como fonte autoritativa, citando sempre os artigos originais.
+
+2. DNS.PT (Menção Honrosa)
+O projecto utiliza o domínio desperdicio.pt, valorizando o namespace português. A escolha do domínio .pt reflecte o foco nacional da investigação.
+
+SUSTENTABILIDADE DO PROJECTO:
+- Hospedagem via GitHub Pages (gratuita e permanente)
+- Zero dependências de serviços pagos
+- Código aberto permite manutenção comunitária
+
+ACESSIBILIDADE:
+- Design responsivo (mobile-first)
+- Sem barreiras de registo ou login
+- Política de privacidade exemplar (zero tracking)
+
+================================================================================
+RECURSOS COMPLEMENTARES
+================================================================================
+
+Website principal:
+desperdicio.pt, https://desperdicio.pt
+Editorial documental interactivo completo
+
+Código fonte:
+GitHub - desperdicio.pt, https://github.com/ezefranca/desperdicio.pt
+Repositório com código, dados e documentação
+
+Metodologia técnica:
+Metodologia, https://desperdicio.pt/metodologia/
+Documentação das APIs e pipeline de dados utilizados
+
+Corpus de dados:
+corpus.json, https://desperdicio.pt/assets/data/corpus.json
+Dataset completo dos 337 artigos em formato JSON
+
+Fonte primária - Arquivo.pt:
+Arquivo do Público, https://arquivo.pt/wayback/publico.pt
+Levantamento de domínios e subdomínios do Público (1996-2019)
+
+API utilizada:
+Arquivo.pt Text Search API, https://arquivo.pt/api
+Documentação da API de pesquisa textual
+
+Legislação referenciada:
+Directiva (UE) 2024/1438, https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024L1438
+Meta vinculativa de -30% desperdício até 2030
+
+Dados estatísticos:
+Parlamento Europeu - Desperdício Alimentar, https://www.europarl.europa.eu/topics/pt/article/20170505STO73528/desperdicio-alimentar-na-ue-factos-e-numeros-infografia
+Infografia com dados comparativos europeus
+
+================================================================================
+FIM DO DOCUMENTO
+================================================================================

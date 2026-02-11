@@ -1,0 +1,141 @@
+================================================================================
+GUIÃO DE VÍDEO — PRÉMIO ARQUIVO.PT 2026
+================================================================================
+
+Projecto: desperdicio.pt
+Duração: 3 minutos (máximo)
+Formato: Narração em português + demonstração visual
+
+================================================================================
+INDICAÇÕES TÉCNICAS
+================================================================================
+
+- Resolução mínima: 768 x 576 (PAL) — recomendado 1920 x 1080
+- Formato: MP4, WMV, MOV ou AVI
+- Nome do ficheiro: [NomeCandidato]_desperdicio.pt.mp4
+- Tamanho máximo: 1 GB
+
+================================================================================
+GUIÃO DE NARRAÇÃO (~420 palavras / 3 minutos)
+================================================================================
+
+[00:00 - 00:15]
+ABERTURA
+Visual: Logo desperdicio.pt + título "Deitar comida fora nem sempre é descuido. Às vezes é hábito."
+
+NARRAÇÃO:
+"Portugal desperdiça cento e oitenta e quatro quilos de comida por pessoa, por ano. Somos o quarto país da União Europeia que mais desperdiça. Mas quando é que começámos a falar disto?"
+
+---
+
+[00:15 - 00:45]
+O PROBLEMA
+Visual: Scroll pelo editorial, mostrar gráfico de evolução temporal
+
+NARRAÇÃO:
+"O desperdicio.pt é um editorial documental que investiga quinze anos de cobertura do jornal Público sobre desperdício alimentar. Usámos o Arquivo.pt para aceder a artigos que já não existem no site original — e descobrimos algo surpreendente."
+
+Visual: Mostrar secção "Arquivo Profundo 1999-2010"
+
+"Entre mil novecentos e noventa e nove e dois mil e dez, a palavra 'desperdício' aparecia no Público associada a energia, a orçamentos, a política — mas nunca a comida. O tema simplesmente não existia na consciência pública."
+
+---
+
+[00:45 - 01:15]
+A METODOLOGIA
+Visual: Mostrar API do Arquivo.pt, código, pipeline de dados
+
+NARRAÇÃO:
+"Através da API de pesquisa textual do Arquivo.pt, recolhemos trezentos e trinta e sete artigos. Depois de filtragem manual, identificámos cento e vinte e sete artigos relevantes — o nosso corpus documental."
+
+Visual: Mostrar timeline com legislação
+
+"Cruzámos esta cobertura mediática com vinte diplomas legais, portugueses e europeus. O resultado? Uma narrativa que mostra como o jornalismo tornou visível aquilo que a lei já reconhecia."
+
+---
+
+[01:15 - 01:50]
+A PLATAFORMA
+Visual: Demo do website — scroll, interacção com gráficos
+
+NARRAÇÃO:
+"O desperdicio.pt apresenta esta investigação de forma interactiva. Gráficos animados mostram a evolução da cobertura. Comparações com outros países europeus contextualizam a nossa posição."
+
+Visual: Mostrar gráfico donut "67% em casa"
+
+"Sessenta e sete por cento do desperdício acontece nos lares. O problema não está só nas empresas — está nas nossas cozinhas."
+
+Visual: Mostrar countdown para 2030
+
+"E temos um prazo: a União Europeia exige uma redução de trinta por cento até dois mil e trinta."
+
+---
+
+[01:50 - 02:25]
+GAMIFICAÇÃO E IMPACTO
+Visual: Demo do jogo — quiz, calculadora, desafios
+
+NARRAÇÃO:
+"Para além de informar, o desperdicio.pt convida à acção. Um quiz testa o conhecimento sobre o tema. Uma calculadora permite estimar o desperdício pessoal. Desafios semanais propõem mudanças concretas de comportamento."
+
+Visual: Mostrar política de privacidade
+
+"E fizemos tudo isto sem recolher dados pessoais. O progresso do jogo fica guardado apenas no navegador do utilizador."
+
+---
+
+[02:25 - 02:50]
+O VALOR DO ARQUIVO.PT
+Visual: Mostrar exemplos de URLs arquivadas, artigos antigos
+
+NARRAÇÃO:
+"Este projecto só foi possível graças ao Arquivo.pt. Artigos de dois mil e treze sobre a Fruta Feia. Reportagens de dois mil e catorze sobre o desperdício nas fábricas. Sem preservação, esta memória estaria perdida."
+
+Visual: Mostrar citações com links para arquivo
+
+"Cada afirmação no editorial tem um link para a versão arquivada. As fontes permanecem verificáveis, mesmo que os originais desapareçam."
+
+---
+
+[02:50 - 03:00]
+ENCERRAMENTO
+Visual: Logo + URL + chamada à acção
+
+NARRAÇÃO:
+"O desperdicio.pt está disponível em acesso aberto. O código é livre. Os dados são públicos. Porque acreditamos que preservar a memória da web é preservar a nossa capacidade de aprender com o passado."
+
+Visual: desperdicio.pt | Construído com Arquivo.pt
+
+---
+
+================================================================================
+NOTAS DE PRODUÇÃO
+================================================================================
+
+SUGESTÕES VISUAIS:
+- Usar screen recording do website com cursor visível
+- Highlights/zoom em elementos importantes
+- Transições suaves entre secções
+- Música de fundo subtil (royalty-free)
+
+ELEMENTOS A DESTACAR:
+1. Gráfico de evolução temporal (mostra crescimento da cobertura)
+2. Comparação europeia com bandeiras emoji
+3. Gráfico donut "67% em casa"
+4. Countdown para 2030
+5. Interface do jogo (quiz + calculadora)
+6. URLs do Arquivo.pt nos artigos
+
+TOM:
+- Informativo mas acessível
+- Urgente mas não alarmista
+- Demonstrativo — mostrar, não apenas contar
+
+RITMO:
+- Pausas naturais entre secções
+- ~150 palavras por minuto
+- Enfatizar números-chave (184 kg, 67%, 4.º lugar, 2030)
+
+================================================================================
+FIM DO GUIÃO
+================================================================================
