@@ -12,6 +12,7 @@
 
   <!-- Canonical URL -->
   <link rel="canonical" href="https://desperdicio.pt/termos.html">
+  <link rel="alternate" type="text/plain" href="https://desperdicio.pt/llms.txt" title="LLM-readable site guide">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
@@ -29,11 +30,27 @@
 
   <!-- Theme -->
   <meta name="theme-color" content="#0a0a0b">
+  <meta name="color-scheme" content="dark">
   <link rel="icon" type="image/png" href="assets/img/desperdicio.pt.png">
+  <link rel="preload" href="assets/fonts/inter-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/playfair-display-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Termos de Uso - desperdicio.pt",
+    "url": "https://desperdicio.pt/termos.html",
+    "description": "Termos de uso do desperdicio.pt, projecto editorial e documental sobre desperdício alimentar em Portugal.",
+    "inLanguage": "pt-PT",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "desperdicio.pt",
+      "url": "https://desperdicio.pt/"
+    }
+  }
+  </script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/styles.css">
   <style>
     .legal-page {
@@ -118,9 +135,10 @@
   </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Saltar para o conteúdo</a>
   <!-- Navigation -->
-  <nav class="nav" id="nav" style="background: var(--dark);">
-    <a href="/" class="nav-brand">
+  <nav class="nav" id="nav" style="background: var(--dark);" aria-label="Navegação principal">
+    <a href="/" class="nav-brand" aria-label="Voltar ao início">
       <div class="nav-logo">
         <img src="assets/img/desperdicio.pt.png" alt="desperdicio.pt" height="28">
       </div>
@@ -128,7 +146,7 @@
     </a>
     <div class="nav-badges">
       <a href="/" class="nav-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
           <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
         </svg>
         Início
@@ -136,9 +154,9 @@
     </div>
   </nav>
 
-  <main class="legal-page">
+  <main class="legal-page" id="main-content" tabindex="-1">
     <a href="/" class="back-link">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
         <path d="M19 12H5M12 19l-7-7 7-7"/>
       </svg>
       Voltar ao início
@@ -146,7 +164,7 @@
 
     <header class="legal-header">
       <h1 class="legal-title">Termos de Uso</h1>
-      <p class="legal-updated">Última actualização: 23 de Janeiro de 2026</p>
+      <p class="legal-updated">Última actualização: 26 de Março de 2026</p>
     </header>
 
     <div class="legal-content">
@@ -155,11 +173,11 @@
       </div>
 
       <h2>Sobre o projecto</h2>
-      <p>O <strong>desperdicio.pt</strong> é um projecto de jornalismo de dados e editorial documental sobre desperdício alimentar em Portugal e na Europa. Foi construído a partir de 15 anos de cobertura do Público — um jornal de referência em Portugal — preservados no Arquivo.pt, complementados com legislação europeia e portuguesa, e dados do Eurostat.</p>
+      <p>O <strong>desperdicio.pt</strong> é um projecto de jornalismo de dados e editorial documental sobre desperdício alimentar em Portugal e na Europa. Foi construído a partir de 127 artigos do Público publicados entre 2011 e 2026 e preservados no Arquivo.pt, complementados com legislação europeia e portuguesa, e dados do Eurostat.</p>
       <p>O projecto é <strong>gratuito, aberto e educativo</strong>. Não tem fins comerciais.</p>
 
       <h2>Licença de uso</h2>
-      <p>O código-fonte do projecto está disponível no <a href="https://github.com/ezefranca/desperdicio.pt" target="_blank">GitHub</a> sob a licença MIT. Isto significa que podes:</p>
+      <p>O código-fonte do projecto está disponível no <a href="https://github.com/ezefranca/desperdicio.pt" target="_blank" rel="noopener noreferrer">GitHub</a> sob a licença MIT. Isto significa que podes:</p>
       <ul>
         <li>Usar o código para qualquer finalidade</li>
         <li>Modificar e adaptar o código</li>
@@ -175,7 +193,7 @@
         <li>Partilhar nas redes sociais</li>
         <li>Usar para fins educativos</li>
       </ul>
-      <p>Se quiseres reproduzir uma parte substancial do conteúdo, <a href="https://github.com/ezefranca/desperdicio.pt/issues" target="_blank">contacta-nos primeiro</a>.</p>
+      <p>Se quiseres reproduzir uma parte substancial do conteúdo, <a href="https://github.com/ezefranca/desperdicio.pt/issues" target="_blank" rel="noopener noreferrer">contacta-nos primeiro</a>.</p>
 
       <h2>Fontes e atribuições</h2>
       <p>Este projecto utiliza e atribui correctamente conteúdo de terceiros:</p>
@@ -195,11 +213,12 @@
         <li>A legislação pode ser alterada ou revogada</li>
         <li>Os links externos podem deixar de funcionar</li>
       </ul>
-      <p>Se encontrares um erro, <a href="https://github.com/ezefranca/desperdicio.pt/issues" target="_blank">reporta-o no GitHub</a>.</p>
+      <p>Se encontrares um erro, <a href="https://github.com/ezefranca/desperdicio.pt/issues" target="_blank" rel="noopener noreferrer">reporta-o no GitHub</a>.</p>
 
       <h2>O jogo interactivo</h2>
       <p>O jogo incluído no site ("Desafio Desperdício Zero") é uma ferramenta educativa. Os pontos, níveis e conquistas existem apenas para motivar a aprendizagem — não têm valor real nem podem ser trocados por prémios.</p>
       <p>O progresso do jogo é armazenado apenas no teu navegador (localStorage). Consulta a nossa <a href="privacidade.html">Política de Privacidade</a> para mais detalhes.</p>
+      <p>O jogo não envia automaticamente as tuas respostas para a infraestrutura do projecto. Foi desenhado para funcionar localmente no navegador.</p>
 
       <h2>Isenção de responsabilidade</h2>
       <p>O desperdicio.pt é fornecido "tal como está". Não garantimos que:</p>
@@ -219,11 +238,11 @@
       <h2>Contacto</h2>
       <p>Para questões sobre estes termos ou sobre o projecto em geral:</p>
       <ul>
-        <li>GitHub: <a href="https://github.com/ezefranca/desperdicio.pt/issues" target="_blank">github.com/ezefranca/desperdicio.pt</a></li>
+        <li>GitHub: <a href="https://github.com/ezefranca/desperdicio.pt/issues" target="_blank" rel="noopener noreferrer">github.com/ezefranca/desperdicio.pt</a></li>
       </ul>
 
       <div class="highlight-box" style="margin-top: 40px;">
-        <p>🌱 O desperdicio.pt foi criado com um objectivo simples: ajudar-te a perceber o impacto do desperdício alimentar e inspirar-te a agir. Obrigado por fazeres parte desta mudança.</p>
+        <p>O desperdicio.pt foi criado com um objectivo simples: ajudar-te a perceber o impacto do desperdício alimentar e inspirar-te a agir. O site quer ser útil, claro e tecnicamente sóbrio.</p>
       </div>
     </div>
   </main>
@@ -234,23 +253,23 @@
       <div class="site-footer-brand">
         <img src="assets/img/desperdicio.pt.png" alt="desperdicio.pt" class="site-footer-logo">
         <p>Um projecto de jornalismo de dados sobre desperdício alimentar em Portugal.</p>
-        <nav class="site-footer-nav">
+        <nav class="site-footer-nav" aria-label="Navegação de rodapé">
           <a href="metodologia/">Metodologia</a>
-          <a href="https://github.com/ezefranca/desperdicio.pt" target="_blank">GitHub</a>
+          <a href="https://github.com/ezefranca/desperdicio.pt" target="_blank" rel="noopener noreferrer">GitHub</a>
         </nav>
       </div>
       <div class="site-footer-credits">
         <div class="site-footer-row">
           <span class="site-footer-label">Parceiros</span>
-          <a href="https://arquivo.pt" target="_blank"><img src="assets/img/logo_arquivo.png" alt="Arquivo.pt"></a>
-          <a href="https://publico.pt" target="_blank"><img src="assets/img/logo_publico.svg" alt="Público"></a>
+          <a href="https://arquivo.pt" target="_blank" rel="noopener noreferrer"><img src="assets/img/logo_arquivo.png" alt="Arquivo.pt"></a>
+          <a href="https://publico.pt" target="_blank" rel="noopener noreferrer"><img src="assets/img/logo_publico.svg" alt="Público"></a>
         </div>
         <div class="site-footer-row">
           <span class="site-footer-label">Fontes</span>
-          <a href="https://www.europarl.europa.eu" target="_blank"><img src="assets/img/flag_eu.svg" alt="UE" class="site-footer-flag"></a>
-          <a href="https://www.parlamento.pt" target="_blank"><img src="assets/img/flag_pt.svg" alt="PT" class="site-footer-flag"></a>
-          <a href="https://ec.europa.eu/eurostat" target="_blank"><img src="assets/img/logo_eurostat.png" alt="Eurostat" class="site-footer-logo-sm"></a>
-          <a href="https://dre.pt" target="_blank"><img src="assets/img/logo_dre.png" alt="DRE" class="site-footer-logo-sm"></a>
+          <a href="https://www.europarl.europa.eu" target="_blank" rel="noopener noreferrer"><img src="assets/img/flag_eu.svg" alt="UE" class="site-footer-flag"></a>
+          <a href="https://www.parlamento.pt" target="_blank" rel="noopener noreferrer"><img src="assets/img/flag_pt.svg" alt="PT" class="site-footer-flag"></a>
+          <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener noreferrer"><img src="assets/img/logo_eurostat.png" alt="Eurostat" class="site-footer-logo-sm"></a>
+          <a href="https://dre.pt" target="_blank" rel="noopener noreferrer"><img src="assets/img/logo_dre.png" alt="DRE" class="site-footer-logo-sm"></a>
         </div>
         <div class="site-footer-row">
           <span class="site-footer-label">Legal</span>
@@ -261,7 +280,7 @@
     </div>
     <div class="site-footer-bottom">
       <span>© 2026 desperdicio.pt</span>
-      <a href="https://www.dns.pt" target="_blank">Orgulhosamente <strong>.pt</strong></a>
+      <a href="https://www.dns.pt" target="_blank" rel="noopener noreferrer">Orgulhosamente <strong>.pt</strong></a>
     </div>
   </footer>
 </body>

@@ -11,7 +11,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-DEFAULT_OUT_DIR = Path("out_site")
+DEFAULT_OUT_DIR = Path("assets/data")
 
 def now_utc_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
@@ -31,6 +31,27 @@ def write_json(p: Path, obj: Any) -> None:
 
 def read_bytes(p: Path) -> bytes:
     return p.read_bytes()
+
+
+def normalize_evidence_items(evidence: Dict[str, Any]) -> List[Dict[str, Any]]:
+    if isinstance(evidence.get("items"), list):
+        return [it for it in evidence["items"] if isinstance(it, dict)]
+
+    if isinstance(evidence.get("featured"), list):
+        items: List[Dict[str, Any]] = []
+        for it in evidence["featured"]:
+            if not isinstance(it, dict):
+                continue
+            items.append({
+                "title": it.get("title"),
+                "date": it.get("date"),
+                "url": it.get("url"),
+                "score": (it.get("editorial_recommendation") or {}).get("priority"),
+                "word_count": None,
+            })
+        return items
+
+    return []
 
 def normalize_url(url: str) -> str:
     if not url:
@@ -319,17 +340,21 @@ def build_provenance(inputs: List[Path], outputs: List[Path], step: str) -> Dict
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--out-dir", type=str, default=str(DEFAULT_OUT_DIR), help="Pasta out_site")
+    ap.add_argument("--out-dir", type=str, default=str(DEFAULT_OUT_DIR), help="Pasta de saída (default: assets/data)")
     ap.add_argument("--corpus", type=str, default="", help="Path corpus.json (default: out-dir/corpus.json)")
     ap.add_argument("--timeline", type=str, default="", help="Path timeline.json (default: out-dir/timeline.json)")
-    ap.add_argument("--evidence", type=str, default="", help="Path evidence.json (default: out-dir/evidence.json)")
+    ap.add_argument("--evidence", type=str, default="", help="Path evidence.json ou featured.json (default: out-dir/featured.json se existir)")
     ap.add_argument("--legislation", type=str, default="", help="Path legislation.json (default: out-dir/legislation.json)")
     args = ap.parse_args()
 
     out_dir = Path(args.out_dir)
     corpus_p = Path(args.corpus) if args.corpus else (out_dir / "corpus.json")
     timeline_p = Path(args.timeline) if args.timeline else (out_dir / "timeline.json")
-    evidence_p = Path(args.evidence) if args.evidence else (out_dir / "evidence.json")
+    if args.evidence:
+        evidence_p = Path(args.evidence)
+    else:
+        featured_p = out_dir / "featured.json"
+        evidence_p = featured_p if featured_p.exists() else (out_dir / "evidence.json")
     legislation_p = Path(args.legislation) if args.legislation else (out_dir / "legislation.json")
 
     for p in [corpus_p, timeline_p, evidence_p, legislation_p]:
@@ -345,7 +370,7 @@ def main() -> None:
     url_to_id = index_corpus_by_url(corpus)
 
     # normalizar evidências (garantir que têm id e apontam pro corpus)
-    ev_items = evidence.get("items") or evidence.get("items", [])
+    ev_items = normalize_evidence_items(evidence)
     # evidence.json no seu caso é {"count":..,"items":[...]} (ok)
     for it in ev_items:
         u = normalize_url(it.get("url") or "")
@@ -375,7 +400,7 @@ def main() -> None:
                     "score": it.get("score"),
                     "word_count": it.get("word_count"),
                 }
-                for it in (evidence.get("items") or [])
+                for it in ev_items
             ],
             "law_index": [
                 {

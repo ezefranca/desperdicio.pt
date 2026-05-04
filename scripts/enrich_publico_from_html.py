@@ -12,9 +12,9 @@ from datetime import datetime
 from typing import Optional, Tuple
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, FeatureNotFound
 
-DB = "out_desperdico/publico_live.sqlite"
+DB = "data-sources/publico_live.sqlite"
 
 HTTP_TIMEOUT = 25
 MAX_RETRIES = 6
@@ -24,6 +24,15 @@ SLEEP_BETWEEN = 0.6
 BATCH_LIMIT = 2000  # por corrida
 
 UA = "DesPerdicoResearchBot/1.0 (+contact: you@example.com)"
+
+
+def build_soup(html: str) -> BeautifulSoup:
+    for parser in ("lxml", "html.parser"):
+        try:
+            return BeautifulSoup(html, parser)
+        except FeatureNotFound:
+            continue
+    return BeautifulSoup(html, "html.parser")
 
 
 def backoff_sleep(attempt: int) -> None:
@@ -237,7 +246,7 @@ def main():
                 time.sleep(SLEEP_BETWEEN)
                 continue
 
-            soup = BeautifulSoup(html, "lxml")
+            soup = build_soup(html)
 
             title = get_meta(soup, prop="og:title") or soup.title.get_text(strip=True) if soup.title else ""
             published_at = extract_published_at(soup)

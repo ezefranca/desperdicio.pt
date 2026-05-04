@@ -1,0 +1,246 @@
+{
+  "generated_at": "2026-03-26T16:14:52Z",
+  "description": "Locally mirrored third-party runtime images used by desperdicio.pt, with provenance for editorial and production use.",
+  "items": [
+    {
+      "id": "2025-desperdicio-evitar",
+      "usage": "historical_carousel",
+      "title": "Desperdício alimentar: o que fazer para o evitar",
+      "local_path": "assets/img/publico/featured/2025-desperdicio-evitar.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/2032993?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://arquivo.pt/save/now/20260326010538/https://www.publico.pt/2025/09/29/impar/noticia/desperdicio-alimentar-evitar-2148846",
+      "caption": "Em Portugal, é em casa que mais se desperdiça alimentos"
+    },
+    {
+      "id": "2023-calcanhar-aquiles",
+      "usage": "historical_carousel",
+      "title": "Desperdício alimentar: o nosso calcanhar de Aquiles está em casa",
+      "local_path": "assets/img/publico/featured/2023-calcanhar-aquiles.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1846147?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://arquivo.pt/save/now/20260326011010/https://www.publico.pt/2023/09/29/impar/opiniao/desperdicio-alimentar-calcanhar-aquiles-casa-2064951",
+      "caption": "Em pleno ano de 2023, o cidadão português perde em média 28€ mensais"
+    },
+    {
+      "id": "2023-quinto-emissor",
+      "usage": "historical_carousel",
+      "title": "Se o desperdício alimentar fosse um Estado-membro, seria o quinto emissor de gases da UE",
+      "local_path": "assets/img/publico/featured/2023-quinto-emissor.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1822928?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://arquivo.pt/save/now/20260326011009/https://www.publico.pt/2023/07/05/azul/noticia/desperdicio-alimentar-estadomembro-quinto-emissor-gases-ue-2055791",
+      "caption": "Projectos como o Fruta Feia ajudam a combater o desperdicio alimentar"
+    },
+    {
+      "id": "2023-184kg",
+      "usage": "historical_carousel",
+      "title": "Cada português deita fora 184kg de comida por ano. O que propõem para mudar isso?",
+      "local_path": "assets/img/publico/featured/2023-184kg.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1780819?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://arquivo.pt/wayback/20230504170615/https://www.publico.pt/2023/02/19/azul/noticia/portugues-deita-184-kg-comida-ano-propoem-mudar-2039370",
+      "caption": "Cerca de 57 milhões de toneladas de comida são desperdiçados na UE"
+    },
+    {
+      "id": "2019-anna-dumpster-diving",
+      "usage": "historical_carousel",
+      "title": "Anna mergulha no lixo para combater o desperdício alimentar",
+      "local_path": "assets/img/publico/featured/2019-anna-dumpster-diving.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1352862?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://arquivo.pt/wayback/20221025190356/https://www.publico.pt/2019/04/10/p3/noticia/anna-resgata-comida-lixo-combater-desperdicio-1868420",
+      "caption": "Anna resgata comida do lixo em Lisboa"
+    },
+    {
+      "id": "2022-familias-crise",
+      "usage": "historical_carousel",
+      "title": "Como as famílias podem enfrentar a crise climática desperdiçando menos comida",
+      "local_path": "assets/img/publico/featured/2022-familias-crise.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1719030?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://arquivo.pt/wayback/20220909172633/https://www.publico.pt/2022/07/27/azul/noticia/familias-podem-enfrentar-crise-climatica-desperdicando-menos-comida-2015140",
+      "caption": "Um dos espaços da Fruta Feia"
+    },
+    {
+      "id": "2022-fruta-feia-15-postos",
+      "usage": "historical_carousel",
+      "title": "Fruta Feia são já 15 postos de venda",
+      "local_path": "assets/img/publico/featured/2022-fruta-feia-15-postos.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1245446?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://arquivo.pt/wayback/20220505035202/https://www.publico.pt/2022/05/03/azul/fotogaleria/fruta-feia-sao-ja-15-postos-venda-cooperativa-combate-desperdicio-alimentar-407910",
+      "caption": "Fotogaleria da expansão da Fruta Feia"
+    },
+    {
+      "id": "2020-life-award",
+      "usage": "historical_carousel",
+      "title": "Fruta Feia vence prémio europeu Life. É a prova que 'funciona'",
+      "local_path": "assets/img/publico/featured/2020-life-award.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1517729?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://www.publico.pt/2020/10/22/p3/noticia/fruta-feia-distinguida-premio-europeu-life-prova-funciona-1936266",
+      "caption": "Fruta Feia wins EU Life Award"
+    },
+    {
+      "id": "2020-too-good-to-go-porto",
+      "usage": "historical_carousel",
+      "title": "Too Good To Go chegou ao Porto",
+      "local_path": "assets/img/publico/featured/2020-too-good-to-go-porto.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1436615?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://arquivo.pt/wayback/20200206192031/https://www.publico.pt/2020/02/04/p3/noticia/too-good-to-go-app-quer-evitar-desperdicio-comida-chegou-porto-1902843",
+      "caption": "App de combate ao desperdício"
+    },
+    {
+      "id": "2020-fruta-feia-2000-tons",
+      "usage": "historical_carousel",
+      "title": "Fruta Feia evita duas mil toneladas de desperdício e paga um milhão de euros a agricultores",
+      "local_path": "assets/img/publico/featured/2020-fruta-feia-2000-tons.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1432216?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://arquivo.pt/wayback/20200305021822/https://www.publico.pt/2020/01/21/economia/noticia/fruta-feia-evita-duas-mil-toneladas-desperdicio-alimentar-paga-milhao-euros-agricultores-1901179",
+      "caption": "Projecto já leva seis anos. Emprega 11 pessoas"
+    },
+    {
+      "id": "2017-plataforma-nacional",
+      "usage": "historical_carousel",
+      "title": "Combate ao desperdício alimentar terá plataforma e regime de doação mais simples",
+      "local_path": "assets/img/publico/featured/2017-plataforma-nacional.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1175428?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://www.publico.pt/2017/11/08/sociedade/noticia/combate-ao-desperdicio-alimentar-tera-plataforma-e-regime-de-doacao-mais-simples-1791876",
+      "caption": "Estratégia Nacional de Combate ao Desperdício Alimentar"
+    },
+    {
+      "id": "2016-matosinhos",
+      "usage": "historical_carousel",
+      "title": "Fruta Feia vai salvar 1,5 toneladas de frutas e legumes em Matosinhos",
+      "local_path": "assets/img/publico/featured/2016-matosinhos.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1245446?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://www.publico.pt/2016/11/24/p3/noticia/fruta-feia-vai-salvar-15-toneladas-de-frutas-e-legumes-em-matosinhos-1826983",
+      "caption": "Expansão para Matosinhos"
+    },
+    {
+      "id": "2015-porto-expansion",
+      "usage": "historical_carousel",
+      "title": "Fruta Feia expande-se para o Porto depois de evitar 200 toneladas de desperdício",
+      "local_path": "assets/img/publico/featured/2015-porto-expansion.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1017698?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://www.publico.pt/2015/12/19/local/noticia/fruta-feia-expandese-para-o-porto-depois-de-evitar-200-toneladas-de-desperdicio-1717922",
+      "caption": "Expansão para Porto"
+    },
+    {
+      "id": "2014-campo-fabrica",
+      "usage": "historical_carousel",
+      "title": "Desperdício de comida no campo e na fábrica dá para encher todos os caixotes do lixo do país",
+      "local_path": "assets/img/publico/featured/2014-campo-fabrica.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/889940?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://www.publico.pt/2014/12/07/sociedade/noticia/desperdicio-de-comida-no-campo-e-na-fabrica-da-para-encher-todos-os-caixotes-do-lixo-do-pais-1678521",
+      "caption": "Desperdício na cadeia de produção"
+    },
+    {
+      "id": "2014-fao-interview",
+      "usage": "historical_carousel",
+      "title": "Quando deitamos comida fora, isso faz subir os preços",
+      "local_path": "assets/img/publico/featured/2014-fao-interview.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/881980?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://www.publico.pt/2014/10/27/economia/entrevista/quando-deitamos-comida-fora-isso-faz-subir-os-precos-1674211",
+      "caption": "Hélder Muteia, FAO"
+    },
+    {
+      "id": "2014-50-toneladas",
+      "usage": "historical_carousel",
+      "title": "Cooperativa já impediu desperdício de mais de 50 toneladas de fruta feia",
+      "local_path": "assets/img/publico/featured/2014-50-toneladas.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/837438?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://www.publico.pt/2014/10/11/economia/noticia/cooperativa-ja-impediu-desperdicio-de-mais-de-50-toneladas-de-fruta-feia-1672596",
+      "caption": "Fruta Feia milestone"
+    },
+    {
+      "id": "2014-cenoura-feia",
+      "usage": "historical_carousel",
+      "title": "Quando uma cenoura feia é uma sopa feliz",
+      "local_path": "assets/img/publico/featured/2014-cenoura-feia.png",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/1233993?tp=UH&db=IMAGENS&type=PNG",
+      "credit": "Público",
+      "credit_url": "https://www.publico.pt/2014/05/23/p3/noticia/quando-uma-cenoura-feia-e-uma-sopa-feliz-1820227",
+      "caption": "Intermarché ugly vegetables campaign"
+    },
+    {
+      "id": "2013-supermercados-europa",
+      "usage": "historical_carousel",
+      "title": "Já há supermercados na Europa a vender fruta e legumes feios",
+      "local_path": "assets/img/publico/featured/2013-supermercados-europa.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/803555?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público",
+      "credit_url": "https://www.publico.pt/2013/10/11/economia/noticia/ja-ha-supermercados-na-europa-a-vender-fruta-e-legumes-feios-1608785",
+      "caption": "European supermarkets selling ugly produce"
+    },
+    {
+      "id": "2013-fruta-feia-launch",
+      "usage": "historical_carousel",
+      "title": "Estamos dispostos a comer fruta feia para reduzir o desperdício?",
+      "local_path": "assets/img/publico/featured/2013-fruta-feia-launch.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/canal_videos/videoPortal/Images/201306/fazfoto.jpg?tp=VIDEOS",
+      "credit": "Público",
+      "credit_url": "https://www.publico.pt/2013/06/07/ecosfera/noticia/estamos-dispostos-a-comer-fruta-feia-para-reduzir-o-desperdicio-1596760",
+      "caption": "Isabel Soares, founder"
+    },
+    {
+      "id": "domestic-fridge-family",
+      "usage": "domestic_feature",
+      "title": "Infografia: como arrumar o frigorífico para evitar o desperdício alimentar?",
+      "local_path": "assets/img/publico/editorial/domestic-fridge-family.jpg",
+      "source_image_url": "https://imagens.publico.pt/imagens.aspx/2030284?tp=UH&db=IMAGENS&type=JPG",
+      "credit": "Público / Estúdio P",
+      "credit_url": "https://arquivo.pt/save/now/20260326011042/https://www.publico.pt/2025/09/29/estudiop/noticia/infografia-arrumar-frigorifico-evitar-desperdicio-alimentar-2147490",
+      "caption": "Mais de metade do desperdício alimentar europeu nasce em contexto doméstico. A escolha continua a acontecer em casa."
+    },
+    {
+      "id": "eu-waste-rules-2025",
+      "usage": "eu_process_card",
+      "title": "Council and Parliament agree to reduce food waste and introduce new rules on waste textile",
+      "local_path": "assets/img/editorial/eu-waste-rules-2025.jpg",
+      "source_image_url": "https://www.europeaninterest.eu/wp-content/uploads/2025/02/NEW-Waste.jpg",
+      "credit": "European Interest",
+      "credit_url": "https://arquivo.pt/save/now/20260326150248/https://www.europeaninterest.eu/council-and-parliament-agree-to-reduce-food-waste-and-introduce-new-rules-on-waste-textile/",
+      "caption": "O acordo político entre Conselho e Parlamento em 2025 antecedeu a fixação de metas vinculativas para a redução do desperdício alimentar."
+    },
+    {
+      "id": "anna-video-poster",
+      "usage": "video_poster",
+      "title": "Anna mergulha no lixo para combater o desperdício alimentar",
+      "local_path": "assets/img/publico/editorial/anna-video-poster.jpg",
+      "source_image_url": "https://i.ytimg.com/vi/1TNPzSRzTt4/maxresdefault.jpg",
+      "credit": "Público P3 / YouTube",
+      "credit_url": "https://www.youtube.com/watch?v=1TNPzSRzTt4",
+      "caption": "Poster local do vídeo Anna mergulha no lixo para combater o desperdício alimentar."
+    },
+    {
+      "id": "brussels-sprout-closeup",
+      "usage": "prologue_wink",
+      "title": "Brussels sprout closeup",
+      "local_path": "assets/img/editorial/brussels-sprout-closeup.jpg",
+      "source_image_url": "https://commons.wikimedia.org/wiki/Special:Redirect/file/Brussels_sprout_closeup.jpg",
+      "credit": "Eric Hunt / Wikimedia Commons",
+      "credit_url": "https://arquivo.pt/save/now/20260326153518/https://commons.wikimedia.org/wiki/File:Brussels_sprout_closeup.jpg",
+      "caption": "Sim, é couve-de-Bruxelas. A obrigação, essa, é nossa."
+    },
+    {
+      "id": "epilogue-portuguese-table",
+      "usage": "epilogue_closure",
+      "title": "What do Portuguese people eat at home?",
+      "local_path": "assets/img/editorial/epilogue-portuguese-table.webp",
+      "source_image_url": "https://www.tasteoflisboa.com/wp-content/uploads/sites/2712/2022/11/02.Portuguese-home-food_portuguese-around-the-table.png",
+      "credit": "Taste of Lisboa",
+      "credit_url": "https://arquivo.pt/save/now/20260326161231/https://www.tasteoflisboa.com/blog/what-do-portuguese-people-eat-at-home/",
+      "caption": "A mesa portuguesa continua a ser lugar de partilha antes de ser excesso."
+    }
+  ]
+}

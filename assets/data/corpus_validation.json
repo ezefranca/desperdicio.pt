@@ -1,0 +1,221 @@
+{
+  "schema": "desperdico.corpus_validation.v1",
+  "created_at": "2026-03-24T17:52:11Z",
+  "inputs": {
+    "corpus": "assets/data/corpus.json",
+    "curation": "assets/data/corpus_curation.json"
+  },
+  "summary": {
+    "total_items": 337,
+    "core_total": 127,
+    "years_with_coverage": 14,
+    "coverage_span": [
+      "2011",
+      "2026"
+    ],
+    "normalized_dates": 0,
+    "missing_core_dates": 0
+  },
+  "manual_review": {
+    "exclude_from_core": [
+      {
+        "article_id": "d8a3db6189d600eed93ecf788fde49c30665f03c",
+        "title": "Aarav Sharma tem 15 anos e desenvolve interfaces cérebro-computador para ajudar pessoas tetraplégicas",
+        "reason": "Peça sobre Web Summit e interfaces cérebro-computador; a referência a desperdício alimentar é marginal."
+      },
+      {
+        "article_id": "474d6cf418ca4a26d61843274d6d6deb979a5c95",
+        "title": "Quack Shack abre em Alvalade: Rodrigo Castelo estreia os seus hambúrgueres de pato em Lisboa",
+        "reason": "Abertura de restaurante sem foco editorial em desperdício alimentar."
+      },
+      {
+        "article_id": "68b3f3b86b9bbdbfe77423a93fd48c777158a7dd",
+        "title": "Caça ao lobo volta a ser permitida em Espanha a norte do rio Douro",
+        "reason": "Notícia sobre caça ao lobo; a alimentação não é eixo do texto."
+      },
+      {
+        "article_id": "a7010fba8df3bebb762ec1038336e7a43b6b1834",
+        "title": "USAID: juiz ordena restabelecimento temporário da ajuda humanitária suspensa por Trump",
+        "reason": "Notícia sobre ajuda humanitária internacional; o desperdício alimentar não é o tema principal."
+      },
+      {
+        "article_id": "415d76fb501b04938a64b92dcb01fac5f12f2dda",
+        "title": "A família que construiu uma microcasa (quase) 100% sustentável nos pastos açorianos",
+        "reason": "Peça sobre microcasa sustentável; a referência ao desperdício é lateral e não alimentar."
+      },
+      {
+        "article_id": "bb6decbc206f6fc8a01a8af86300f1953dc35464",
+        "title": "Notícias | Economia | 02 de julho de 2024",
+        "reason": "Registo malformado com título genérico, URL truncada e sem data utilizável."
+      }
+    ],
+    "promote_to_core": [
+      {
+        "article_id": "0fa794a4551dc1061b475438d48518ba90b0c4f9",
+        "title": "Manifesto Wasteless: jovens criam petição contra desperdício",
+        "reason": "Manifesto juvenil explicitamente centrado no combate ao desperdício.",
+        "score": 15
+      },
+      {
+        "article_id": "b2fb27b20e01d60be6ffd5143e90982132760eb4",
+        "title": "Cada português desperdiça por ano 182,7 quilos de alimentos, indica INE",
+        "reason": "Peça factual com dados do INE sobre desperdício alimentar per capita em Portugal.",
+        "score": 15
+      },
+      {
+        "article_id": "6254721bd4beaf06bacc9eea313f4098d578c1b8",
+        "title": "Em 2024, Guimarães e Seixal foram os municípios que mais recolheram lixo alimentar por habitante",
+        "reason": "Cobertura municipal sobre recolha de bioresíduos alimentares e desempenho local.",
+        "score": 15
+      },
+      {
+        "article_id": "f8f51ae635100d228bf172a5495260d1ccc4a7d2",
+        "title": "N’A Cozinha está o primeiro restaurante europeu com certificado “zero desperdício”",
+        "reason": "Exemplo concreto de restauração com certificação zero desperdício.",
+        "score": 15
+      },
+      {
+        "article_id": "c48a691df4727ee80c90d01f7691705e87a989b2",
+        "title": "Ana Milhazes: sete dicas para viver sem desperdícios",
+        "reason": "Peça de 2019 com foco explícito em práticas de vida sem desperdício.",
+        "score": 15
+      },
+      {
+        "article_id": "9d609d21b487699a89bf46c140f882de4676c19d",
+        "title": "Bananika, a sidra da Terceira que quer combater o desperdício, uma banana de cada vez",
+        "reason": "Reportagem de economia circular focada em evitar desperdício de bananas.",
+        "score": 15
+      }
+    ],
+    "notes": [
+      "A curadoria final privilegia foco temático explícito sobre amplitude superficial.",
+      "Foram removidos falsos positivos evidentes e promovidas peças claramente relevantes que tinham ficado subavaliadas pela heurística.",
+      "A contagem final mantém-se em 127 artigos core, com 14 anos de cobertura publicada entre 2011 e 2026."
+    ]
+  },
+  "residual_risk": {
+    "low_score_core_remaining": [
+      {
+        "article_id": "42a91ce6a7a5728f944c8c73f5c149a9c6c8385e",
+        "title": "Papa diz que comida deitada ao lixo é “alimento roubado aos pobres”",
+        "published_at": "2013-06-07T12:47:03Z",
+        "relevance_score": 9
+      },
+      {
+        "article_id": "8c7174afb7d68fe79386d1f77489e330344ff183",
+        "title": "“Wasted Waste”, um documentário sobre o desperdício que é o lixo",
+        "published_at": "2018-12-11T16:12:30Z",
+        "relevance_score": 9
+      },
+      {
+        "article_id": "f0e99a0ae701489f72ab48d0db09f6eacd708c5e",
+        "title": "“Posso repetir a comida?”",
+        "published_at": "2019-02-06T11:42:29Z",
+        "relevance_score": 9
+      },
+      {
+        "article_id": "511dcca42f39fa4b1ebf42f3417580b6d7e17591",
+        "title": "O futuro das embalagens reutilizáveis está em jogo",
+        "published_at": "2023-10-18T09:25:00Z",
+        "relevance_score": 9
+      },
+      {
+        "article_id": "c64280f86ca1ff3a000da26d854799d619da2ee1",
+        "title": "O meu reino por um cavalo? Ou será um bife? Ou um morango fora de época?",
+        "published_at": "2024-05-04T19:27:00Z",
+        "relevance_score": 9
+      },
+      {
+        "article_id": "a88b50f6a1ce021b57a574542a3b9ae04eee6d68",
+        "title": "OCDE alerta que políticas fragmentadas prejudicam combate à “tripla crise” planetária",
+        "published_at": "2025-11-26T10:02:14Z",
+        "relevance_score": 9
+      },
+      {
+        "article_id": "c879b938c118963122fd18e68afe06c9ab6082bc",
+        "title": "Em Lisboa, a comida que sobrar do Natal vai dar a este bar: irá “para quem mais precisa”",
+        "published_at": "2025-12-22T16:17:09Z",
+        "relevance_score": 9
+      },
+      {
+        "article_id": "7985f7474d9f86f02be99b3528e1c4171dd894c2",
+        "title": "Cidade Azul: andar a pé, moda sustentável e lixo como matéria-prima",
+        "published_at": "2023-05-11T22:03:55Z",
+        "relevance_score": 10
+      },
+      {
+        "article_id": "08e407f9efd1e2eff6fe209dbe1b6ec1baf4ed62",
+        "title": "Comer bem muda o mundo",
+        "published_at": "2025-10-17T06:00:00Z",
+        "relevance_score": 10
+      },
+      {
+        "article_id": "01f30cbdec8ca2b71a95a8fa78c95b4971c63880",
+        "title": "Da sustentabilidade à regeneração: o que muda?",
+        "published_at": "2023-03-11T11:30:00Z",
+        "relevance_score": 11
+      },
+      {
+        "article_id": "37ba0f8644ed69f05dcb430135644d673024c09d",
+        "title": "Os ratos são mais empáticos do que pensas e gostam de estar perto de pessoas",
+        "published_at": "2023-12-14T15:18:07Z",
+        "relevance_score": 11
+      },
+      {
+        "article_id": "0ffba9286a2235554272838afb8b58c894b34604",
+        "title": "Agricultura Moderna: um cenário em que a Europa não pode ficar para trás",
+        "published_at": "2025-02-04T15:10:04Z",
+        "relevance_score": 11
+      },
+      {
+        "article_id": "36d3f424f039a289a1b54fb0228f74695e443525",
+        "title": "Britânico que luta contra desperdício de comida vence prémio de Sustentabilidade",
+        "published_at": "2011-04-05T12:11:00Z",
+        "relevance_score": 12
+      },
+      {
+        "article_id": "4e194e25cc4c480b8188619952aef34c4486874d",
+        "title": "Separar o lixo não chega. Claire mostra como vive numa casa (quase) sem desperdício",
+        "published_at": "2019-04-30T12:37:51Z",
+        "relevance_score": 12
+      },
+      {
+        "article_id": "476183a9ac59e5380da3c2f7178264730af9f63d",
+        "title": "Produzir insectos para alimentos: “É tudo 100% aproveitado”",
+        "published_at": "2022-05-16T06:15:00Z",
+        "relevance_score": 12
+      },
+      {
+        "article_id": "14879e8d32ed9d18d5b21744f29b2701b3ca70c9",
+        "title": "Restaurantes com “estrela verde” têm impacto real na sociedade",
+        "published_at": "2022-11-27T14:12:06Z",
+        "relevance_score": 12
+      },
+      {
+        "article_id": "d1e2dd4379ad2f397b85382d670f53c15b8d0fd1",
+        "title": "Por cada paciente internado geram-se até oito quilos de resíduos por dia",
+        "published_at": "2023-09-26T12:02:00Z",
+        "relevance_score": 12
+      },
+      {
+        "article_id": "04697ac6f10e1f0a53403d0f1eb36bc075e04fbf",
+        "title": "Estas tampas mudam de cor quando os alimentos se estragam",
+        "published_at": "2024-01-06T10:04:00Z",
+        "relevance_score": 12
+      },
+      {
+        "article_id": "a7760062c86b6ce715dd85cfae77f559cde06227",
+        "title": "Banco Alimentar começa este sábado uma nova campanha de recolha de alimentos",
+        "published_at": "2024-05-25T11:59:49Z",
+        "relevance_score": 12
+      },
+      {
+        "article_id": "a741361d59ef49dd46c2588fe08e48e154c5ad74",
+        "title": "A humanidade esgota o “saldo” de recursos naturais da Terra nesta quinta-feira",
+        "published_at": "2024-08-01T06:25:00Z",
+        "relevance_score": 12
+      }
+    ],
+    "missing_core_dates": []
+  }
+}

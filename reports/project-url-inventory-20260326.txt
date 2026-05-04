@@ -1,0 +1,606 @@
+generated_at	2026-03-26T02:25:51Z
+publico_live	352
+arquivo	142
+internal	21
+external	78
+
+[publico_live]
+https://publico.pt	index.html, metodologia/index.html, privacidade.html, termos.html
+https://www.publico.pt	metodologia/index.html
+https://www.publico.pt/	metodologia/index.html
+https://www.publico.pt/2011/04/05/ciencia/noticia/britanico-que-luta-contra-desperdicio-de-comida-vence-premio-de-sustentabilidade-1488363	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2012/06/04/sociedade/noticia/a-maior-lixeira-brasileira-a-ceu-aberto-foi-finalmente-encerrada-1548843	assets/data/corpus.json
+https://www.publico.pt/2013/01/10/ecosfera/noticia/metade-da-comida-produzida-todos-os-anos-vai-para-o-lixo-1580254	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2013/06/07/ecosfera/noticia/estamos-dispostos-a-comer-fruta-feia-para-reduzir-o-desperdicio-1596760	assets/data/featured.json
+https://www.publico.pt/2013/06/07/mundo/noticia/papa-diz-que-comida-deitada-ao-lixo-e-alimento-roubado-aos-pobres-1596748	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2013/10/11/economia/noticia/ja-ha-supermercados-na-europa-a-vender-fruta-e-legumes-feios-1608785	assets/data/featured.json
+https://www.publico.pt/2014/04/14/p3/fotogaleria/a-arte-de-rua-esta-do-lado-de-escif-384163	assets/data/corpus.json
+https://www.publico.pt/2014/05/23/p3/noticia/quando-uma-cenoura-feia-e-uma-sopa-feliz-1820227	assets/data/featured.json
+https://www.publico.pt/2014/10/11/economia/noticia/cooperativa-ja-impediu-desperdicio-de-mais-de-50-toneladas-de-fruta-feia-1672596	assets/data/featured.json
+https://www.publico.pt/2014/10/27/economia/entrevista/quando-deitamos-comida-fora-isso-faz-subir-os-precos-1674211	assets/data/featured.json
+https://www.publico.pt/2014/12/07/sociedade/noticia/desperdicio-de-comida-no-campo-e-na-fabrica-da-para-encher-todos-os-caixotes-do-lixo-do-pais-1678521	assets/data/featured.json
+https://www.publico.pt/2014/12/14/sociedade/noticia/ha-comida-que-so-nao-vai-para-o-lixo-porque-e-doada-1679069	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2014/12/21/sociedade/noticia/o-que-ha-no-fundo-do-nosso-frigorifico-1679718	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2015/12/19/local/noticia/fruta-feia-expandese-para-o-porto-depois-de-evitar-200-toneladas-de-desperdicio-1717922	assets/data/featured.json
+https://www.publico.pt/2016/01/18/p3/cronica/o-amor-e-mais-forte-que-o-tempo-1825128	assets/data/corpus.json
+https://www.publico.pt/2016/11/24/p3/noticia/fruta-feia-vai-salvar-15-toneladas-de-frutas-e-legumes-em-matosinhos-1826983	assets/data/featured.json
+https://www.publico.pt/2016/11/28/p3/noticia/compostagem-em-apenas-24-horas-sim-e-possivel-1826995	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2017/05/26/sociedade/entrevista/num-mundo-de-abundancia-infinita-nao-teria-importancia-rejeitar-cenouras-tortas-1773472	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2017/11/08/sociedade/noticia/combate-ao-desperdicio-alimentar-tera-plataforma-e-regime-de-doacao-mais-simples-1791876	assets/data/featured.json
+https://www.publico.pt/2018/02/02/p3/noticia/boicote-as-palhinhas-projectos-e-ideias-para-ver-e-copiar-1831572	assets/data/corpus.json
+https://www.publico.pt/2018/04/13/fotogaleria/os-vencedores-do-world-press-photo-2018-381833	assets/data/corpus.json
+https://www.publico.pt/2018/06/15/ecosfera/noticia/mcdonalds-vai-deixar-de-usar-palhinhas-de-plastico-no-reino-unido-1834516	assets/data/corpus.json
+https://www.publico.pt/2018/07/09/ecosfera/noticia/starbucks-anuncia-fim-das-palhinhas-de-plastico-ate-2020-1837436	assets/data/corpus.json
+https://www.publico.pt/2018/08/12/mundo/noticia/franca-plastico-reciclado-1840873	assets/data/corpus.json
+https://www.publico.pt/2018/11/02/p3/noticia/lista-compras-livre-plastico-1849634	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2018/11/14/sociedade/noticia/faltam-dados-consenso-desperdicio-alimentar-preciso-comecar-actuar-ja-1850696	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2018/11/16/sociedade/noticia/galinha-vai-ministerio-lembrar-podemos-reciclar-lixo-organico-1851247	assets/data/corpus.json
+https://www.publico.pt/2018/12/11/p3/video/wasted-waste-um-documentario-sobre-o-desperdicio-que-e-o-lixo-20181210-105257	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2018/12/22/fugas/noticia/brasil-dizse-sim-mandioca-1855017	assets/data/corpus.json
+https://www.publico.pt/2019/02/03/p3/noticia/plastico-nunca-mais-agora-ha-palhinhas-de-massa-e-sao-portuguesas-1860304	assets/data/corpus.json
+https://www.publico.pt/2019/02/04/p3/noticia/saber-ler-a-data-de-validade-ajuda-a-combater-o-desperdicio-alimentar-1860587	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2019/02/06/p3/noticia/repetir-comida-1860832	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2019/02/20/p3/noticia/startup-porto-ajuda-restaurantes-combaterem-desperdicio-alimentar-1862755	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2019/03/22/sociedade/opiniao/atualidade-futuro-estrategia-alimentar-nacional-1866341	assets/data/corpus.json
+https://www.publico.pt/2019/04/10/p3/noticia/anna-resgata-comida-lixo-combater-desperdicio-1868420	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://www.publico.pt/2019/04/30/p3/noticia/separar-o-lixo-nao-chega-claire-mostra-como-vive-numa-casa-quase-sem-desperdicio-1870964	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2019/05/05/p3/video/ana-milhazes-sete-dicas-para-viver-sem-desperdicio-20190504-181303	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2019/06/10/p3/noticia/mesa-ambiente-dias-alimentacao-sustentavel-estao-volta-lisboa-1875569	assets/data/corpus.json
+https://www.publico.pt/2019/07/26/impar/noticia/poupar-agua-cozinha-chef-chakall-dicas-1881399	assets/data/corpus.json
+https://www.publico.pt/2019/08/03/p3/noticia/emprego-vitor-sara-verde-cores-alimentos-biologicos-1877643	assets/data/corpus.json
+https://www.publico.pt/2019/08/13/p3/noticia/familia-construiu-microcasa-quase-100-sustentavel-pastos-acorianos-1883173	assets/data/corpus.json
+https://www.publico.pt/2019/08/19/sociedade/opiniao/trinta-anos-engenharia-alimentar-portugal-desafiante-futuro-sustentavel-1883756	assets/data/corpus.json
+https://www.publico.pt/2019/09/02/p3/noticia/um-restaurante-um-frigorifico-e-dois-portugueses-na-finlandia-contra-o-desperdicio-alimentar-1885189	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2019/09/19/p3/noticia/desperdicio-mobilidade-reciclagem-o-que-fazem-as-universidades-para-serem-mais-verdes-1887134	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2019/09/20/fugas/noticia/kind-kitchen-cozinha-vegana-nao-ha-rei-prato-1887015	assets/data/corpus.json
+https://www.publico.pt/2019/10/08/local/noticia/bipzip-tao-importante-derrubar-muros-bairros-lisboetas-1889326	assets/data/corpus.json
+https://www.publico.pt/2019/10/30/local/noticia/shopping-brasilia-porto-vai-renovado-ate-2021-convida-lojistas-lumiere-1891953	assets/data/corpus.json
+https://www.publico.pt/2019/11/27/p3/noticia/phenix-esta-aplicacao-quer-evitar-desperdicio-da-comida-as-flores-1895340	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2019/11/29/infografia/pegada-roupa-391	assets/data/corpus.json
+https://www.publico.pt/2020/01/21/economia/noticia/fruta-feia-evita-duas-mil-toneladas-desperdicio-alimentar-paga-milhao-euros-agricultores-1901179	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://www.publico.pt/2020/01/23/impar/opiniao/menos-nutrientes-alimentos-troca-justa-sustentavel-1901237	assets/data/corpus.json
+https://www.publico.pt/2020/02/04/p3/noticia/empresas-associacoes-governo-assinam-pacto-acabar-plasticos-uso-unico-portugal-1902724	assets/data/corpus.json
+https://www.publico.pt/2020/02/04/p3/noticia/too-good-to-go-app-quer-evitar-desperdicio-comida-chegou-porto-1902843	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://www.publico.pt/2020/02/04/sociedade/noticia/reciclagem-plastico-numeros-zero-nao-reflectem-esforco-ministerio-1902790	assets/data/corpus.json
+https://www.publico.pt/2020/02/07/fugas/noticia/viver-diferente-menos-desperdicio-1902963	assets/data/corpus.json
+https://www.publico.pt/2020/04/01/opiniao/noticia/ecossocialismo-ideia-cujo-tempo-chegou-1910429	assets/data/corpus.json
+https://www.publico.pt/2020/05/14/estudiop/noticia/42-mil-toneladas-plastico-nao-sao-so-numero-1916460	assets/data/corpus.json
+https://www.publico.pt/2020/06/23/sociedade/noticia/vale-banana-estudo-mostra-retalho-reduzir-desperdicio-alimentar-terco-1921609	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2020/08/05/p3/noticia/video-posnos-falar-desperdicio-alimentar-problema-nao-novo-ha-combata-1927217	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2020/08/07/p3/noticia/embalagens-biodegradaveis-mao-portuguesa-distinguidas-comissao-europeia-1927451	assets/data/corpus.json
+https://www.publico.pt/2020/09/29/sociedade/noticia/unidos-desperdicio-junta-lutam-comida-nao-acabe-lixo-1933288	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2020/10/22/p3/noticia/fruta-feia-distinguida-premio-europeu-life-prova-funciona-1936266	assets/data/featured.json
+https://www.publico.pt/2020/11/10/p3/fotogaleria/abate-milhoes-visons-dinamarca-comecou-decisao-pode-sido-ilegal-403467	assets/data/corpus.json
+https://www.publico.pt/2020/11/19/local/noticia/restaurantes-vao-evitar-mandar-tantos-restos-lixo-1939893	assets/data/corpus.json
+https://www.publico.pt/2020/11/24/impar/noticia/ha-16-portugueses-corrida-oscares-livros-cozinha-1940435	assets/data/corpus.json
+https://www.publico.pt/2021/02/02/ciencia/noticia/pesca-comercial-reduzir-diferenciacao-genetica-peixes-nivel-mundial-1948897	assets/data/corpus.json
+https://www.publico.pt/2021/02/19/impar/noticia/68-anos-atras-grades-jovem-condenado-prisao-perpetua-ha-tempo-eua-abraca-liberdade-1951443	assets/data/corpus.json
+https://www.publico.pt/2021/04/14/p3/noticia/replay-dar-nova-vida-brinquedos-usados-1958304	assets/data/corpus.json
+https://www.publico.pt/2021/04/22/p3/noticia/nigeria-jovens-criam-moda-partir-lixo-combater-poluicao-1959577	assets/data/corpus.json
+https://www.publico.pt/2021/04/24/mundo/noticia/familia-norteamericana-acusada-vender-lixivia-tratar-covid19-condenada-prisao-perpetua-1959868	assets/data/corpus.json
+https://www.publico.pt/2021/05/03/economia/noticia/vai-futuro-verde-europa-1960853	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2021/05/19/local/noticia/borras-cafe-natan-faz-nascer-tonelada-cogumelos-mes-1963257	assets/data/corpus.json
+https://www.publico.pt/2021/07/21/p3/noticia/desperdicio-cerca-40-alimentos-cultivados-nao-sao-consumidos-1971264	assets/data/corpus.json
+https://www.publico.pt/2021/08/30/impar/noticia/quer-aprender-compostagem-ha-nova-escola-gratuita-acessivel-1975677	assets/data/corpus.json
+https://www.publico.pt/2021/09/05/impar/opiniao/bufetes-escolares-indignados-costume-1976142	assets/data/corpus.json
+https://www.publico.pt/2021/09/15/impar/opiniao/longo-caminho-aproximarmos-dieta-planetaria-1977391	assets/data/corpus.json
+https://www.publico.pt/2021/10/22/impar/noticia/saber-comer-pequenoalmoco-tres-granolas-portuguesas-sao-boa-opcao-1980814	assets/data/corpus.json
+https://www.publico.pt/2021/11/03/mundo/noticia/china-pede-familias-armazenem-alimentos-face-obstaculos-abastecimento-1983455	assets/data/corpus.json
+https://www.publico.pt/2021/11/23/fugas/noticia/livros-tv-maria-oliveira-dias-quer-mostrar-comida-vegana-facil-divertida-super-saborosa-1986063	assets/data/corpus.json
+https://www.publico.pt/2021/12/22/impar/noticia/movimento-unidos-desperdicio-propoe-receitas-sobras-natal-chefs-1989461	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2021/12/23/impar/noticia/sobreviver-natal-limitar-estragos-1988390	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2021/12/29/p3/noticia/venn-date-precisas-cozinhar-prato-vegan-kit-sustentavel-entregue-casa-1989421	assets/data/corpus.json
+https://www.publico.pt/2022/03/04/ciencia/noticia/reciclar-bom-reutilizar-melhor-1996882	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2022/03/04/culturaipsilon/noticia/artes-lugar-experimentacao-ambiental-1997299	assets/data/corpus.json
+https://www.publico.pt/2022/03/09/ciencia/noticia/algas-acores-poderao-alimentar-aquacultura-2024-1998163	assets/data/corpus.json
+https://www.publico.pt/2022/04/17/mundo/noticia/missil-atinge-missao-humanitaria-world-central-kitchen-faz-morto-quatro-feridos-2002808	assets/data/corpus.json
+https://www.publico.pt/2022/04/22/impar/noticia/preocupado-ambiente-20-dicas-tornar-cozinha-verde-2002916	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2022/04/27/p3/noticia/futuro-desperdicio-alimentar-comecar-cantina-escola-2002438	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2022/05/03/azul/fotogaleria/fruta-feia-sao-ja-15-postos-venda-cooperativa-combate-desperdicio-alimentar-407910	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://www.publico.pt/2022/05/14/azul/noticia/duvida-comer-alimentos-fim-prazo-validade-2006133	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2022/05/16/azul/noticia/produzir-insectos-alimentos-100-aproveitado-2004293	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2022/06/24/estudiop/noticia/decisao-simples-ajuda-planeta-2010666	assets/data/corpus.json
+https://www.publico.pt/2022/06/26/azul/noticia/flatlantic-empresa-produz-pregados-mar-casa-2011411	assets/data/corpus.json
+https://www.publico.pt/2022/07/06/azul/noticia/pavilhao-conhecimento-alberga-cidade-sustentavel-inclusiva-partir-sextafeira-2012665	assets/data/corpus.json
+https://www.publico.pt/2022/07/27/azul/noticia/familias-podem-enfrentar-crise-climatica-desperdicando-menos-comida-2015140	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://www.publico.pt/2022/08/18/estudiop/noticia/ciencia-tras-melhores-escolhas-alimentares-2012018	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2022/09/01/fugas/fotogaleria/tomatina-tradicao-espectacular-desperdicio-monumental-408738	assets/data/corpus.json
+https://www.publico.pt/2022/09/01/local/noticia/pedidos-apoio-alimentar-algarve-aumentam-final-verao-embate-vira-2019029	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2022/09/29/p3/noticia/queres-dizer-nao-desperdicio-alimentar-cinco-apps-sites-podem-ajudar-2021983	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2022/10/15/fugas/reportagem/suica-melhor-pais-mundo-vegetarianismo-preparase-revolucao-2023465	assets/data/corpus.json
+https://www.publico.pt/2022/10/21/azul/opiniao/aqui-ha-peixe-2024865	assets/data/corpus.json
+https://www.publico.pt/2022/10/24/impar/cronica/sintonia-2025153	assets/data/corpus.json
+https://www.publico.pt/2022/10/31/impar/noticia/dicas-chef-hotel-cinco-estrelas-poupar-cozinha-casa-2025466	assets/data/corpus.json
+https://www.publico.pt/2022/11/27/azul/noticia/restaurantes-estrela-verde-impacto-real-sociedade-2029395	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2022/11/28/impar/noticia/quanta-agua-beber-dia-novo-estudo-oito-copos-ja-sao-2029447	assets/data/corpus.json
+https://www.publico.pt/2022/12/11/azul/opiniao/acelerar-transicao-agroecologica-2030984	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2022/12/23/azul/noticia/prenda-mae-natureza-cinco-dicas-natal-sustentavel-2032452	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2022/12/24/azul/noticia/opcao-vegetariana-cantinas-escolares-cinco-anos-lei-realidade-2032140	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2022/12/25/azul/reportagem/reparadores-solidaridos-salvam-electronicos-lixo-daonos-precisa-2032574	assets/data/corpus.json
+https://www.publico.pt/2023/01/06/fugas/reportagem/minimeu-ja-nao-mini-abriu-maria-luisa-braga-2032991	assets/data/corpus.json
+https://www.publico.pt/2023/02/11/azul/noticia/vou-separar-lixo-pago-20-euros-residuos-mes-2038261	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/02/19/azul/noticia/portugues-deita-184-kg-comida-ano-propoem-mudar-2039370	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://www.publico.pt/2023/02/27/azul/entrevista/portugal-gigante-area-marinha-europa-so-25-proteccao-2040171	assets/data/corpus.json
+https://www.publico.pt/2023/03/11/azul/opiniao/sustentabilidade-regeneracao-muda-2041976	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/03/23/p3/reportagem/possivel-boicotar-supermercados-tentam-dias-nao-facil-2042786	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/04/01/opiniao/opiniao/politica-iva-saudavel-sustentavel-apenas-medida-2044594	assets/data/corpus.json
+https://www.publico.pt/2023/04/05/estudiop/noticia/importancia-embalagens-assepticas-reducao-desperdicio-alimentar-2043117	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/04/26/azul/noticia/sopa-pesticidas-corpo-vai-dificil-acabar-2047510	assets/data/corpus.json
+https://www.publico.pt/2023/04/30/azul/noticia/cozinha-restaurante-europeu-certificado-zero-desperdicio-2047798	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/05/11/azul/noticia/cidade-azul-andar-pe-moda-sustentavel-lixo-materiaprima-2049374	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/05/11/estudiop/noticia/reciclagem-embalagens-contributo-portugal-2049150	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/05/29/culturaipsilon/noticia/terca-tv-miss-marx-freeganismo-prisioneiros-guerra-2051446	assets/data/corpus.json
+https://www.publico.pt/2023/05/30/azul/noticia/reciclagem-nao-solucao-plastico-preciso-mudar-descartavel-reutilizavel-2051525	assets/data/corpus.json
+https://www.publico.pt/2023/06/01/azul/noticia/terco-pais-seca-severa-extrema-agua-solo-niveis-criticos-2051899	assets/data/corpus.json
+https://www.publico.pt/2023/06/07/azul/noticia/alimentos-mau-estado-afectam-10-pessoas-causam-200-doencas-2052507	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/06/14/azul/noticia/ementas-sustentaveis-ha-criancas-viram-brocolos-primeira-escola-2050696	assets/data/corpus.json
+https://www.publico.pt/2023/07/05/azul/noticia/desperdicio-alimentar-estadomembro-quinto-emissor-gases-ue-2055791	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://www.publico.pt/2023/07/07/azul/noticia/podcast-proprio-consumo-repensar-sistema-alimentar-crise-climatica-2055977	assets/data/corpus.json
+https://www.publico.pt/2023/07/10/fugas/noticia/lisboa-avenida-sushicafe-propoe-jantar-sabor-japones-vinho-portugues-2056084	assets/data/corpus.json
+https://www.publico.pt/2023/07/31/azul/noticia/proprio-consumo-bom-pao-nasce-2058711	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/08/02/azul/noticia/duvida-podemos-comer-alimento-cortamos-parte-bolor-2058105	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/08/12/azul/noticia/portugueses-desperdicam-comida-verao-especialmente-fruta-2059917	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/08/20/azul/noticia/guia-compostagem-casa-2060028	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/08/30/azul/noticia/duvida-desperdicio-alimentar-contribui-crise-climatica-2061547	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/08/31/terroir/noticia/cremes-infusoes-bolachas-dao-nova-vida-engaco-subprodutos-vinha-2061795	assets/data/corpus.json
+https://www.publico.pt/2023/09/19/azul/noticia/precisa-talheres-simples-pergunta-fez-diferenca-china-2063789	assets/data/corpus.json
+https://www.publico.pt/2023/09/20/impar/noticia/cozinhar-desperdicio-chef-kiko-tia-catia-joana-barrios-ajudam-fazem-festa-2064007	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/09/25/estudiop/noticia/compras-sustentaveis-2063943	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/09/26/azul/noticia/paciente-internado-geramse-ate-oito-quilos-residuos-dia-2064609	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/09/29/impar/opiniao/desperdicio-alimentar-calcanhar-aquiles-casa-2064951	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://www.publico.pt/2023/10/04/estudiop/noticia/tetra-pak-refood-lancam-campanha-reciclar-alimenta-2065048	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/10/13/fugas/perfil/mostrar-respeito-dar-residentes-capacidade-decidirem-turismo-querem-2066419	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/10/16/politica/noticia/desperdicio-ps-quer-obrigar-supermercados-doar-alimentos-fim-prazo-ipss-2066777	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/10/18/azul/opiniao/futuro-embalagens-reutilizaveis-jogo-2066879	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/10/29/ciencia/noticia/comer-folhas-cenoura-talos-couve-prol-planeta-2067279	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/11/07/p3/cronica/natal-tempo-2069258	assets/data/corpus.json
+https://www.publico.pt/2023/11/09/local/noticia/hortee-mercados-biologicos-porto-estao-online-2069638	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/11/14/impar/noticia/carlos-iii-faz-75-anos-celebra-lancamento-projecto-fome-desperdicio-2070189	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/11/18/p3/noticia/dietas-cereais-sao-melhores-piores-caes-2068595	assets/data/corpus.json
+https://www.publico.pt/2023/11/21/impar/noticia/feng-shui-frigorifico-evitar-desperdicio-2071024	assets/data/corpus.json
+https://www.publico.pt/2023/12/02/azul/noticia/agricultura-dura-tarefa-alimentar-mundo-destruir-2072249	assets/data/corpus.json
+https://www.publico.pt/2023/12/02/azul/noticia/arrotos-vaca-desperdicio-alimentar-destaque-dia-agricultura-cop28-2072290	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/12/03/azul/noticia/cop28-quer-mundo-falar-comemos-2072144	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/12/14/p3/noticia/ratos-sao-empaticos-pensas-gostam-estar-perto-pessoas-2073695	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/12/22/impar/opiniao/voce-nao-caixote-lixo-2074446	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/12/23/azul/noticia/associacoes-alertam-excessos-consumo-natal-pedem-contencao-desperdicio-2074624	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/12/26/azul/noticia/senhor-moscas-encontrou-larvas-solucao-desperdicio-alimentar-2073653	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2023/12/28/azul/noticia/prado-prato-estrategia-onu-reduzir-emissoes-sistemas-alimentares-2074921	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/01/02/impar/cronica/sao-maes-avos-gostariamos-companheiras-2075420	assets/data/corpus.json
+https://www.publico.pt/2024/01/06/p3/noticia/tampas-mudam-cor-alimentos-estragam-2075491	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/01/31/economia/noticia/tribunal-anula-premio-abismal-56-mil-milhoes-tesla-musk-2078795	assets/data/corpus.json
+https://www.publico.pt/2024/01/31/mundo/noticia/tribunal-onu-rejeita-maioria-queixas-kiev-apoio-russo-separatistas-2078819	assets/data/corpus.json
+https://www.publico.pt/2024/02/03/azul/noticia/gigantesco-espelho-plastico-estufas-almeria-vese-espaco-2078452	assets/data/corpus.json
+https://www.publico.pt/2024/02/19/azul/noticia/eleicoes-tempo-assumir-combate-desperdicio-alimentar-lei-2080783	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/02/26/impar/noticia/simples-ferramenta-manter-frescos-frutas-legumes-2081638	assets/data/corpus.json
+https://www.publico.pt/2024/02/28/azul/noticia/alteracoes-climaticas-associadas-perda-peso-peixes-pacifico-2081865	assets/data/corpus.json
+https://www.publico.pt/2024/03/05/azul/noticia/ue-chega-acordo-provisorio-legislacao-reduzir-plastico-embalagens-2082653	assets/data/corpus.json
+https://www.publico.pt/2024/03/19/azul/noticia/estado-clima-2023-ha-recordes-terra-ha-recordes-mar-2084099	assets/data/corpus.json
+https://www.publico.pt/2024/03/21/fugas/noticia/congresso-acordas-saboreiase-15-dias-alentejo-2084388	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/03/23/azul/entrevista/sian-sutherland-alimentamnos-forca-plastico-dias-2083812	assets/data/corpus.json
+https://www.publico.pt/2024/03/28/impar/noticia/8-alimentos-congelador-estragar-nao-cuidado-2085015	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/04/05/mundo/noticia/panfleto-mcdonalds-congratula-exercito-israelita-nao-autentico-2086009	assets/data/corpus.json
+https://www.publico.pt/2024/04/17/impar/noticia/menos-compras-cozinhar-desperdicar-comer-bem-2087162	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/04/22/azul/noticia/possivel-comer-melhor-proteger-planeta-ha-plano-alimentacao-mostra-sim-2087671	assets/data/corpus.json
+https://www.publico.pt/2024/04/24/azul/noticia/ha-56-empresas-sao-responsaveis-metade-poluicao-plastico-marca-2088126	assets/data/corpus.json
+https://www.publico.pt/2024/05/04/azul/opiniao/reino-cavalo-sera-bife-morango-epoca-2088999	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/05/25/azul/noticia/excesso-producao-espanha-deixa-400-milhoes-quilos-limoes-arvores-2091689	assets/data/corpus.json
+https://www.publico.pt/2024/05/25/sociedade/noticia/banco-alimentar-comeca-sabado-nova-campanha-recolha-alimentos-2091804	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/06/01/local/noticia/areal-praias-portuguesas-diminuiu-ultimos-meses-aconteceu-2092285	assets/data/corpus.json
+https://www.publico.pt/2024/06/02/impar/noticia/jejum-intermitente-eficaz-controlar-saude-intestinal-peso-2092607	assets/data/corpus.json
+https://www.publico.pt/2024/06/07/impar/opiniao/seguranca-alimentar-preparese-inesperado-2093043	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/06/15/mundo/noticia/cinco-milhoes-venezuelanos-sofrem-subnutricao-2094093	assets/data/corpus.json
+https://www.publico.pt/2024/06/19/azul/opiniao/better-together-biodiversidade-2094399	assets/data/corpus.json
+https://www.publico.pt/2024/07/02/economia/noticia	assets/data/corpus.json
+https://www.publico.pt/2024/07/02/economia/noticia/reduzir-desperdicio-alimentar-metade-tiraria-153-milhoes-pessoas-subnutricao-2096037	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/07/11/azul/noticia/fibra-vidro-encontrada-primeira-ostras-mexilhoes-2097212	assets/data/corpus.json
+https://www.publico.pt/2024/07/11/azul/noticia/premio-gulbenkian-humanidade-reconhece-importancia-agricultura-sustentavel-2097305	assets/data/corpus.json
+https://www.publico.pt/2024/07/27/opiniao/opiniao/banana-espera-2098912	assets/data/corpus.json
+https://www.publico.pt/2024/08/01/azul/noticia/humanidade-esgota-saldo-recursos-naturais-terra-quintafeira-2099424	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/08/01/impar/opiniao/aleitamento-materno-alimento-vida-2098625	assets/data/corpus.json
+https://www.publico.pt/2024/08/10/azul/noticia/alimentei-familia-durante-dias-comida-destinada-lixo-2100181	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/08/13/culturaipsilon/entrevista/vania-baldi-nao-podemos-pensar-perder-tempo-ocio-perda-tempo-2099061	assets/data/corpus.json
+https://www.publico.pt/2024/08/17/impar/noticia/receita-avo-carlos-teixeira-canja-avo-zulmira-2100981	assets/data/corpus.json
+https://www.publico.pt/2024/08/28/p3/cronica/festas-aldeia-adaptacao-necessaria-natural-2102073	assets/data/corpus.json
+https://www.publico.pt/2024/09/02/ciencia/noticia/covid19-associada-risco-acrescido-perda-audicao-jovens-adultos-2102613	assets/data/corpus.json
+https://www.publico.pt/2024/09/19/terroir/noticia/sector-vitivinicola-quer-fiscalizacao-informacao-consumidor-2104760	assets/data/corpus.json
+https://www.publico.pt/2024/09/23/azul/noticia/portugues-gasta-350-euros-ano-alimentos-acabam-lixo-alerta-empresa-2105115	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/09/26/edicoes-publico/noticia/sustentabilidade-inovacao-transformacao-industrias-consumo-2105498	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/09/28/azul/noticia/possivel-viver-plastico-diaadia-ha-tente-fazelo-2105342	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/09/30/sociedade/noticia/distribuicao-quer-fim-obstaculos-fiscais-recolha-doacao-alimentos-2105943	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/10/04/publico-brasil/opiniao/voce-nao-culpa-2106570	assets/data/corpus.json
+https://www.publico.pt/2024/10/11/estudiop/noticia/52-milhoes-programa-promove-valorizar-interior-2105707	assets/data/corpus.json
+https://www.publico.pt/2024/10/21/azul/noticia/seca-portugal-esgotar-solucoes-transvases-regioes-2108789	assets/data/corpus.json
+https://www.publico.pt/2024/10/26/publico-brasil/entrevista/arte-mudar-sociedade-afirma-atriz-ursula-corona-2109527	assets/data/corpus.json
+https://www.publico.pt/2024/10/29/azul/noticia/zero-embalagens-nao-recicladas-nao-pagas-consumidor-coloca-mercado-2109853	assets/data/corpus.json
+https://www.publico.pt/2024/10/29/estudiop/noticia/retalho-referencia-descarbonizacao-2109052	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/10/30/azul/noticia/curar-doenca-inaccao-climatica-seca-afectou-metade-solos-2023-2109918	assets/data/corpus.json
+https://www.publico.pt/2024/10/30/azul/noticia/ha-substancias-quimicas-plasticos-estao-escapar-podem-perigosas-2109902	assets/data/corpus.json
+https://www.publico.pt/2024/10/30/impar/noticia/musculacao-efetiva-exercicios-aerobicos-emagrecer-2109986	assets/data/corpus.json
+https://www.publico.pt/2024/11/07/p3/cronica/voluntario-apoio-alimentar-2110738	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/11/07/sociedade/noticia/cartao-social-nao-abrange-pessoas-recebem-cabaz-alimentar-2110887	assets/data/corpus.json
+https://www.publico.pt/2024/11/14/impar/noticia/carlos-celebra-76-aniversario-abertura-centros-alimentares-2111883	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/11/17/azul/noticia/50-anos-perdemos-90-elefantes-floresta-futuro-restantes-sombrio-2111377	assets/data/corpus.json
+https://www.publico.pt/2024/11/20/sociedade/noticia/nacionalidade-portuguesa-alvaro-sobrinho-nega-estar-fugido-nao-quis-sair-portugal-2112727	assets/data/corpus.json
+https://www.publico.pt/2024/11/28/terroir/noticia/candidatos-casa-douro-defendem-producao-aguardente-reduzir-excedentes-2113681	assets/data/corpus.json
+https://www.publico.pt/2024/11/29/estudiop/noticia/descarbonizacao-novo-mix-energetico-dieta-emissoes-2113684	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/12/04/azul/noticia/monstro-lixo-cozinha-viagens-florestas-fizeram-algo-planeta-portugal-2114242	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/12/12/azul/noticia/dia-fim-cimeira-desertificacao-mantem-duvidas-financiamento-2115337	assets/data/corpus.json
+https://www.publico.pt/2024/12/12/p3/cronica/voluntario-banco-alimentar-2115404	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/12/17/azul/noticia/perdas-biodiversidade-custamnos-anos-valor-igual-pib-eua-2115988	assets/data/corpus.json
+https://www.publico.pt/2024/12/17/azul/noticia/precisamos-papel-embrulho-nao-ha-alternativas-2115439	assets/data/corpus.json
+https://www.publico.pt/2024/12/18/azul/noticia/reduzir-lixo-reaproveitar-embrulhos-enfeites-dicas-natal-sustentavel-2116209	assets/data/corpus.json
+https://www.publico.pt/2024/12/19/azul/noticia/prenda-natal-ultima-hora-adopta-panda-urso-lince-lobo-2116013	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/12/24/azul/noticia/mudancas-podem-trazer-mesa-natal-ecologico-2116489	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2024/12/29/impar/noticia/desperdicar-menos-comida-epoca-festiva-comprometer-seguranca-2116981	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/01/02/sociedade/noticia/emigrantes-consulta-ha-cinco-anos-deverao-perder-medico-familia-atribuido-2117437	assets/data/corpus.json
+https://www.publico.pt/2025/01/03/azul/noticia/desviar-milhao-toneladas-lixo-urbano-aterros-zero-apresenta-propostas-2117489	assets/data/corpus.json
+https://www.publico.pt/2025/01/06/fugas/noticia/aeroporto-perdeu-mala-sao-30-anos-excelencia-osaka-2117549	assets/data/corpus.json
+https://www.publico.pt/2025/01/09/azul/noticia/sistema-saude-precisa-prepararse-efeitos-crise-climatica-relatorio-2118079	assets/data/corpus.json
+https://www.publico.pt/2025/01/23/azul/noticia/portugal-confirma-autorizacao-uso-po-larvas-alimentos-2119897	assets/data/corpus.json
+https://www.publico.pt/2025/01/28/fugas/noticia/compras-lixo-supermercados-truque-dinamarquesa-viajar-2120330	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/02/04/estudiop/noticia/agricultura-moderna-cenario-europa-nao-ficar-tras-2120327	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/02/12/azul/noticia/sao-novas-regras-ue-embalagens-residuos-embalagens-2122224	assets/data/corpus.json
+https://www.publico.pt/2025/02/14/mundo/noticia/caos-ajuda-humanitaria-alimentos-medicamentos-risco-processos-tribunal-2122482	assets/data/corpus.json
+https://www.publico.pt/2025/02/17/impar/cronica/coracao-bate-perda-tempo-2122786	assets/data/corpus.json
+https://www.publico.pt/2025/02/28/ciencia/noticia/doenca-desconhecida-detectada-rd-congo-sera-malaria-intoxicacao-alimentar-2124288	assets/data/corpus.json
+https://www.publico.pt/2025/03/13/azul/noticia/galinhas-reformadas-revitalizam-aumentam-rendimento-olivais-chipre-2123634	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/03/20/azul/noticia/caca-lobo-volta-permitida-espanha-norte-rio-douro-2126708	assets/data/corpus.json
+https://www.publico.pt/2025/03/20/local/noticia/2024-guimaraes-seixal-municipios-recolheram-lixo-alimentar-habitante-2126608	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/03/21/azul/noticia/restaurantes-espanha-obrigados-caixas-levar-restos-2126854	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2025/03/21/azul/reportagem/tempestades-marco-tiram-albufeiras-vermelho-ha-nao-via-2126871	assets/data/corpus.json
+https://www.publico.pt/2025/03/23/azul/opiniao/essencial-garantir-nenhuma-refeicao-descartada-2126998	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/03/27/culturaipsilon/noticia/portuguesa-maria-abranches-premiados-world-press-photo-2025-2127514	assets/data/corpus.json
+https://www.publico.pt/2025/04/03/economia/noticia/wall-street-forte-queda-nasdaq-perder-45-s500-3-2128426	assets/data/corpus.json
+https://www.publico.pt/2025/04/04/impar/noticia/olhos-barriga-2128519	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/04/11/politica/noticia/tap-habitacao-referencia-elon-musk-factos-quarto-dia-debates-2129405	assets/data/corpus.json
+https://www.publico.pt/2025/04/15/azul/noticia/nao-enxotem-moscas-insectos-incomodos-sao-vitais-planeta-estudo-2129833	assets/data/corpus.json
+https://www.publico.pt/2025/04/16/sociedade/noticia/infarmed-denuncia-igas-ma-pratica-clinica-prescricao-medicamento-antidiabetico-2129941	assets/data/corpus.json
+https://www.publico.pt/2025/04/24/azul/noticia/comissao-quer-proteger-biodiversidade-integrando-tratado-altomar-direito-ue-2130850	assets/data/corpus.json
+https://www.publico.pt/2025/04/24/azul/noticia/improprio-consumo-maioria-consumidores-admite-nao-confiar-sentidos-avaliar-alimento-bom-2130692	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/04/24/fugas/reportagem/bananika-sidra-terceira-quer-combater-desperdicio-banana-2130515	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/04/29/economia/noticia/reabastecimento-bens-alimentares-caminho-normalizacao-aped-2131290	assets/data/corpus.json
+https://www.publico.pt/2025/04/29/local/noticia/apagao-razao-falhou-agua-zonas-porto-2131302	assets/data/corpus.json
+https://www.publico.pt/2025/05/02/culturaipsilon/entrevista/gabor-mate-ocidente-ha-vazio-profundo-vem-falta-pertenca-perda-ligacao-2131116	assets/data/corpus.json
+https://www.publico.pt/2025/05/07/p3/noticia/astronautas-usam-copo-menstrual-descobrem-sangue-fertilizar-plantas-marte-2132271	assets/data/corpus.json
+https://www.publico.pt/2025/05/12/sociedade/noticia/constitucional-confirma-perda-mandato-presidente-gaia-eduardo-vitor-rodrigues-2132820	assets/data/corpus.json
+https://www.publico.pt/2025/05/14/azul/noticia/oceanos-nova-esperanca-mar-historias-aprender-cuidar-oceano-sustenta-2132953	assets/data/corpus.json
+https://www.publico.pt/2025/05/14/economia/noticia/perdas-energia-apagao-ocorreram-sevilha-granada-badajoz-2132998	assets/data/corpus.json
+https://www.publico.pt/2025/05/16/politica/noticia/pensam-partidos-reconhecer-estado-palestina-2132936	assets/data/corpus.json
+https://www.publico.pt/2025/05/20/local/noticia/estalagem-porto-barcas-navio-naufragar-ha-varias-decadas-2132052	assets/data/corpus.json
+https://www.publico.pt/2025/05/22/publico-brasil/noticia/longas-filas-aeroporto-lisboa-exigem-atencao-viajantes-conexoes-2134040	assets/data/corpus.json
+https://www.publico.pt/2025/05/28/mundo/noticia/organizacao-privada-suspende-ajuda-gaza-apos-47-feridos-durante-distribuicao-2134639	assets/data/corpus.json
+https://www.publico.pt/2025/06/04/politica/noticia/isaltino-morais-condenado-exercicio-funcoes-verdadeiro-2135533	assets/data/corpus.json
+https://www.publico.pt/2025/06/06/ciencia/noticia/nao-japonesa-ispace-perde-modulo-pousar-lua-2135842	assets/data/corpus.json
+https://www.publico.pt/2025/06/17/impar/noticia/julgamento-opoe-anjos-joana-marques-arranca-venho-descobrir-graves-passaram-2136914	assets/data/corpus.json
+https://www.publico.pt/2025/06/18/fugas/opiniao/gastronomia-sustentavel-onde-nutricao-cultura-sustentabilidade-encontram-2136354	assets/data/corpus.json
+https://www.publico.pt/2025/07/03/fugas/noticia/arte-cervejar-tambem-passa-aqui-2138424	assets/data/corpus.json
+https://www.publico.pt/2025/07/10/azul/noticia/recolha-embalagens-aumentou-apenas-2-faltam-alteracoes-estruturais-cumprir-metas-europeias-alerta-spv-2139538	assets/data/corpus.json
+https://www.publico.pt/2025/07/13/sociedade/noticia/amor-supera-mitos-legitimam-violencia-namoro-redes-sociais-nao-ajudam-2139051	assets/data/corpus.json
+https://www.publico.pt/2025/07/16/culturaipsilon/noticia/tba-perda-ausencia-alberto-cortes-sht-theatre-2140597	assets/data/corpus.json
+https://www.publico.pt/2025/07/16/impar/noticia/77-anos-menos-50kg-kathy-bates-continua-pesopesado-tv-2140549	assets/data/corpus.json
+https://www.publico.pt/2025/08/08/p3/fotogaleria/avioes-lancam-ajuda-humanitaria-insuficiente-face-fome-na-faixa-gaza-414072	assets/data/corpus.json
+https://www.publico.pt/2025/08/08/sociedade/noticia/app-sns-24-constrangimentos-estao-resolvidos-perda-dados-2143384	assets/data/corpus.json
+https://www.publico.pt/2025/08/10/mundo/noticia/demografia-faz-coreia-sul-perder-20-efectivos-militares-seis-anos-2143522	assets/data/corpus.json
+https://www.publico.pt/2025/08/11/publico-brasil/opiniao/lei-ignora-dor-fim-luto-gestacional-desrespeita-maes-perdas-precoces-2143543	assets/data/corpus.json
+https://www.publico.pt/2025/08/21/fugas/reportagem/receita-avo-miguel-peres-juntou-coracao-pasteis-avo-mercedes-2142238	assets/data/corpus.json
+https://www.publico.pt/2025/08/27/azul/noticia/tubaroes-podem-estar-perder-dentes-devido-acidificacao-oceano-2145083	assets/data/corpus.json
+https://www.publico.pt/2025/09/05/fugas/noticia/quack-shack-abre-alvalade-rodrigo-castelo-estreia-hamburgueres-pato-lisboa-2146089	assets/data/corpus.json
+https://www.publico.pt/2025/09/05/publico-brasil/opiniao/ferida-doi-2146085	assets/data/corpus.json
+https://www.publico.pt/2025/09/13/politica/noticia/perder-nacionalidade-praticado-crime-arriscase-nao-reavela-2146964	assets/data/corpus.json
+https://www.publico.pt/2025/09/16/azul/noticia/portugues-desperdica-ano-1827-quilos-alimentos-indica-ine-2147397	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/09/19/publico-brasil/opiniao/vamos-parar-jogar-dinheiro-lixo-2147751	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/09/23/azul/opiniao/desperdicio-comeca-casa-solucao-constroise-comunidade-2148087	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/09/23/mundo/noticia/fome-acaba-lixo-retrocessos-preocupantes-angola-2148260	assets/data/corpus.json
+https://www.publico.pt/2025/09/25/azul/noticia/maior-parte-desperdicio-alimentar-portugal-produzido-familias-2148461	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/09/29/azul/noticia/europeu-precisa-14-toneladas-recursos-naturais-anos-2148825	assets/data/corpus.json
+https://www.publico.pt/2025/09/29/azul/noticia/manifesto-wasteless-jovens-criam-peticao-desperdicio-2148867	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/09/29/estudiop/noticia/infografia-arrumar-frigorifico-evitar-desperdicio-alimentar-2147490	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/09/29/impar/noticia/desperdicio-alimentar-evitar-2148846	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://www.publico.pt/2025/09/30/azul/noticia/oceano-ficar-acido-quente-cheio-plastico-prognostico-nao-bom-2148997	assets/data/corpus.json
+https://www.publico.pt/2025/09/30/newsletter/despertador	assets/data/corpus.json
+https://www.publico.pt/2025/10/01/sociedade/noticia/estrategia-nacional-propoe-incentivos-fiscais-empresas-doacao-excedentes-alimentares-2149106	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/10/10/impar/noticia/acontece-corpo-resiste-perda-peso-luta-ingloria-2150222	assets/data/corpus.json
+https://www.publico.pt/2025/10/16/impar/noticia/alimentacao-saudavel-dieta-base-vegetal-propoe-escolhas-inves-restricoes-2151048	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/10/17/politica/noticia/fim-perda-nacionalidade-prazos-curtos-ps-pede-lei-moderada-psd-2151209	assets/data/corpus.json
+https://www.publico.pt/2025/10/17/publico-brasil/opiniao/comer-bem-muda-mundo-2151140	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/10/20/azul/noticia/25-anos-banco-sementes-milenio-recruta-cate-blanchet-lutar-futuro-2151451	assets/data/corpus.json
+https://www.publico.pt/2025/10/23/local/noticia/camara-lisboa-remove-refeicoes-vegetarianas-opcao-pontual-escolas-2151938	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/10/24/politica/noticia/lei-nacionalidade-passa-especialidade-votacao-final-global-incognita-2151997	assets/data/corpus.json
+https://www.publico.pt/2025/10/25/azul/opiniao/fezse-luz-eficiencia-energetica-tambem-vantagem-competitiva-empresas-2152050	assets/data/corpus.json
+https://www.publico.pt/2025/10/27/local/noticia/camara-lisboa-volta-atras-menus-vegetarianos-sao-opcao-escolas-2152307	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/10/29/azul/noticia/calor-feznos-perder-639-mil-milhoes-horas-trabalho-mundo-2024-2152473	assets/data/corpus.json
+https://www.publico.pt/2025/10/29/terroir/reportagem/papel-silicone-andre-samuel-pinto-solucao-lado-negro-rotulagem-2151284	assets/data/corpus.json
+https://www.publico.pt/2025/10/31/azul/noticia/terra-aproximase-caos-climatico-possivel-limitar-aquecimento-2152684	assets/data/corpus.json
+https://www.publico.pt/2025/11/12/enter/noticia/aarav-sharma-15-anos-desenvolve-interfaces-cerebrocomputador-2154293	assets/data/corpus.json
+https://www.publico.pt/2025/11/13/politica/noticia/ps-vai-levar-lei-nacionalidade-tribunal-constitucional-2154547	assets/data/corpus.json
+https://www.publico.pt/2025/11/17/culturaipsilon/noticia/festivais-cinema-associamse-momento-certa-crise-perda-publico-2154931	assets/data/corpus.json
+https://www.publico.pt/2025/11/18/politica/noticia/marcelo-so-comenta-decretos-nacionalidade-apos-analise-equipa-juridica-2155083	assets/data/corpus.json
+https://www.publico.pt/2025/11/19/mundo/noticia/plano-paz-eua-ucrania-implica-perda-territorio-armamento-2155284	assets/data/corpus.json
+https://www.publico.pt/2025/11/21/mundo/noticia/plano-paz-norteamericano-promete-ucrania-escolha-dificil-2155558	assets/data/corpus.json
+https://www.publico.pt/2025/11/23/impar/opiniao/pai-natal-ano-quero-caneta-emagrecer-2155540	assets/data/corpus.json
+https://www.publico.pt/2025/11/24/politica/noticia/frase-falsa-atribuida-ps-redes-sociais-criar-ideia-defende-imigrantes-criminosos-2155741	assets/data/corpus.json
+https://www.publico.pt/2025/11/24/sociedade/noticia/comer-mal-mata-tabaco-chile-aviso-evite-consumir-obrigatorio-2155709	assets/data/corpus.json
+https://www.publico.pt/2025/11/26/azul/noticia/ocde-alerta-politicas-fragmentadas-prejudicam-combate-tripla-crise-planetaria-2155986	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/11/26/economia/noticia/caixa-geral-depositos-prestes-deixar-dona-maior-banco-cabo-verde-2155913	assets/data/corpus.json
+https://www.publico.pt/2025/11/26/politica/noticia/portugal-caminho-exigentes-leis-nacionalidade-ue-2155912	assets/data/corpus.json
+https://www.publico.pt/2025/11/29/sociedade/noticia/banco-alimentar-comeca-nova-campanha-recolha-alimentos-2156490	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/12/02/ciencia/noticia/oms-recomenda-uso-medicamentos-diabetes-tratar-obesidade-2156755	assets/data/corpus.json
+https://www.publico.pt/2025/12/02/p3/noticia/temendo-perdas-emprego-devido-ia-jovens-britanicos-viramse-profissoes-tecnicas-2156719	assets/data/corpus.json
+https://www.publico.pt/2025/12/08/impar/noticia/pele-estica-ja-nao-encolhe-2154369	assets/data/corpus.json
+https://www.publico.pt/2025/12/09/azul/noticia/levar-planeta-revisao-custa-apenas-7-bilioes-euros-ano-implica-mexer-sistema-2157166	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/12/15/politica/noticia/juizes-palacio-ratton-temse-dividido-temas-fracturantes-diferente-2158214	assets/data/corpus.json
+https://www.publico.pt/2025/12/15/politica/noticia/tribunal-constitucional-chumba-dois-diplomas-governo-nacionalidade-2158138	assets/data/corpus.json
+https://www.publico.pt/2025/12/19/economia/noticia/linha-alentejo-perde-60-milhoes-fundos-comunitarios-falta-maturidade-modernizacao-2158562	assets/data/corpus.json
+https://www.publico.pt/2025/12/19/politica/noticia/ataque-mendes-debate-cotrimventura-acusacao-acusacao-2158798	assets/data/corpus.json
+https://www.publico.pt/2025/12/19/sociedade/noticia/4400-doadores-contribuiram-ultima-campanha-online-banco-alimentar-2158679	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/12/22/fugas/noticia/lisboa-comida-sobrar-natal-vai-dar-bar-ira-precisa-2158998	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2025/12/23/ciencia/noticia/novo-nordisk-obtem-aprovacao-eua-comprimido-oral-perda-peso-2159076	assets/data/corpus.json
+https://www.publico.pt/2025/12/23/p3/fotogaleria/ano-visto-ceu-drones-2025-414790	assets/data/corpus.json
+https://www.publico.pt/2025/12/28/mundo/noticia/angola-aceita-receber-emigrantes-expulsos-reino-unido-2159477	assets/data/corpus.json
+https://www.publico.pt/2025/12/30/ciencia/noticia/novos-comprimidos-perder-peso-vao-acelerar-mudancas-industria-alimentar-2159666	assets/data/corpus.json
+https://www.publico.pt/2026/01/02/politica/noticia/pcp-pede-choque-salarial-2026-responder-subida-custo-vida-2159927	assets/data/corpus.json
+https://www.publico.pt/2026/01/09/culturaipsilon/entrevista/gueorgui-gospodinov-nao-vendam-vossas-nostalgias-2160266	assets/data/corpus.json
+https://www.publico.pt/2026/01/11/azul/noticia/conheca-chefs-estao-menus-gourmet-desperdicios-comida-2160635	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2026/01/13/economia/noticia/alteracao-certificados-aforro-series-b-d-marcacao-ctt-2160625	assets/data/corpus.json
+https://www.publico.pt/2026/01/13/fugas/noticia/porto-covo-tornase-destino-turistico-sustentavel-alentejo-seguese-mertola-2161095	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2026/01/13/sociedade/noticia/portugal-paga-844-milhoes-nao-receber-refugiados-estadosmembros-2161019	assets/data/corpus.json
+https://www.publico.pt/2026/01/13/terroir/opiniao/sociologia-vinho-imigracao-pais-cuida-cuida-vinha-2161077	assets/data/corpus.json
+https://www.publico.pt/2026/01/14/azul/noticia/portugal-finalmente-novo-plano-accao-economia-circular-2161024	assets/data/corpus.json, assets/data/corpus_core.json
+https://www.publico.pt/2026/01/14/newsletter/relaxar	assets/data/corpus.json
+https://www.publico.pt/2026/01/14/sociedade/entrevista/combate-pobreza-responsabilidade-directa-primeiroministro-2161134	assets/data/corpus.json
+https://www.publico.pt/2026/01/15/enter/noticia/bateria-sustentavel-portuguesa-conquista-patente-europeia-2161366	assets/data/corpus.json
+https://www.publico.pt/2026/01/15/estudiop/noticia/trazer-natureza-dentro-cidades-2158388	assets/data/corpus.json
+https://www.publico.pt/2026/01/15/fugas/noticia/sexta-dia-entrar-polemicas-treinar-dragoes-2161299	assets/data/corpus.json
+https://www.publico.pt/2026/01/15/opiniao/opiniao/golpes-estado-fracasso-governacao-africa-2161270	assets/data/corpus.json
+https://www.publico.pt/2026/01/15/politica/noticia/jorge-pinto-nao-desistiu-entende-votar-util-seguro-2161336	assets/data/corpus.json
+https://www.publico.pt/2026/01/16/fugas/noticia/neste-fimdesemana-abrir-janelas-pedrada-reflectir-titus-2161449	assets/data/corpus.json
+https://www.publico.pt/aovivo	assets/data/featured.json
+https://www.publico.pt/desperdicio-alimentar	assets/js/main.js, descricao.txt
+
+[arquivo]
+https://arquivo.pt	assets/js/main.js, index.html, metodologia/index.html, privacidade.html, termos.html
+https://arquivo.pt/save/now/20260326010538/https://www.publico.pt/2025/09/29/impar/noticia/desperdicio-alimentar-evitar-2148846	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/save/now/20260326010946/https://www.publico.pt/2013/01/10/ecosfera/noticia/metade-da-comida-produzida-todos-os-anos-vai-para-o-lixo-1580254	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/save/now/20260326010948/https://www.publico.pt/2013/06/07/mundo/noticia/papa-diz-que-comida-deitada-ao-lixo-e-alimento-roubado-aos-pobres-1596748	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326010950/https://www.publico.pt/2017/05/26/sociedade/entrevista/num-mundo-de-abundancia-infinita-nao-teria-importancia-rejeitar-cenouras-tortas-1773472	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/save/now/20260326010951/https://www.publico.pt/2019/02/06/p3/noticia/repetir-comida-1860832	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326010952/https://www.publico.pt/2021/12/23/impar/noticia/sobreviver-natal-limitar-estragos-1988390	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326010953/https://www.publico.pt/2022/03/04/ciencia/noticia/reciclar-bom-reutilizar-melhor-1996882	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326010955/https://www.publico.pt/2022/11/27/azul/noticia/restaurantes-estrela-verde-impacto-real-sociedade-2029395	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326010958/https://www.publico.pt/2022/12/11/azul/opiniao/acelerar-transicao-agroecologica-2030984	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326010959/https://www.publico.pt/2022/12/23/azul/noticia/prenda-mae-natureza-cinco-dicas-natal-sustentavel-2032452	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011000/https://www.publico.pt/2022/12/24/azul/noticia/opcao-vegetariana-cantinas-escolares-cinco-anos-lei-realidade-2032140	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011001/https://www.publico.pt/2023/03/11/azul/opiniao/sustentabilidade-regeneracao-muda-2041976	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011003/https://www.publico.pt/2023/05/11/azul/noticia/cidade-azul-andar-pe-moda-sustentavel-lixo-materiaprima-2049374	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011006/https://www.publico.pt/2023/06/07/azul/noticia/alimentos-mau-estado-afectam-10-pessoas-causam-200-doencas-2052507	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011009/https://www.publico.pt/2023/07/05/azul/noticia/desperdicio-alimentar-estadomembro-quinto-emissor-gases-ue-2055791	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://arquivo.pt/save/now/20260326011010/https://www.publico.pt/2023/09/29/impar/opiniao/desperdicio-alimentar-calcanhar-aquiles-casa-2064951	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://arquivo.pt/save/now/20260326011012/https://www.publico.pt/2023/10/18/azul/opiniao/futuro-embalagens-reutilizaveis-jogo-2066879	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011014/https://www.publico.pt/2023/12/02/azul/noticia/arrotos-vaca-desperdicio-alimentar-destaque-dia-agricultura-cop28-2072290	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011015/https://www.publico.pt/2024/02/19/azul/noticia/eleicoes-tempo-assumir-combate-desperdicio-alimentar-lei-2080783	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011016/https://www.publico.pt/2024/05/04/azul/opiniao/reino-cavalo-sera-bife-morango-epoca-2088999	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011017/https://www.publico.pt/2024/09/26/edicoes-publico/noticia/sustentabilidade-inovacao-transformacao-industrias-consumo-2105498	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011019/https://www.publico.pt/2024/09/30/sociedade/noticia/distribuicao-quer-fim-obstaculos-fiscais-recolha-doacao-alimentos-2105943	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011020/https://www.publico.pt/2025/01/28/fugas/noticia/compras-lixo-supermercados-truque-dinamarquesa-viajar-2120330	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011021/https://www.publico.pt/2025/02/04/estudiop/noticia/agricultura-moderna-cenario-europa-nao-ficar-tras-2120327	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011022/https://www.publico.pt/2025/03/13/azul/noticia/galinhas-reformadas-revitalizam-aumentam-rendimento-olivais-chipre-2123634	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011024/https://www.publico.pt/2025/03/20/local/noticia/2024-guimaraes-seixal-municipios-recolheram-lixo-alimentar-habitante-2126608	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011025/https://www.publico.pt/2025/03/21/azul/noticia/restaurantes-espanha-obrigados-caixas-levar-restos-2126854	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/save/now/20260326011026/https://www.publico.pt/2025/03/23/azul/opiniao/essencial-garantir-nenhuma-refeicao-descartada-2126998	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011028/https://www.publico.pt/2025/04/04/impar/noticia/olhos-barriga-2128519	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011029/https://www.publico.pt/2025/04/24/azul/noticia/improprio-consumo-maioria-consumidores-admite-nao-confiar-sentidos-avaliar-alimento-bom-2130692	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011032/https://www.publico.pt/2025/04/24/fugas/reportagem/bananika-sidra-terceira-quer-combater-desperdicio-banana-2130515	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011034/https://www.publico.pt/2025/09/16/azul/noticia/portugues-desperdica-ano-1827-quilos-alimentos-indica-ine-2147397	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011035/https://www.publico.pt/2025/09/19/publico-brasil/opiniao/vamos-parar-jogar-dinheiro-lixo-2147751	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011036/https://www.publico.pt/2025/09/23/azul/opiniao/desperdicio-comeca-casa-solucao-constroise-comunidade-2148087	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011038/https://www.publico.pt/2025/09/25/azul/noticia/maior-parte-desperdicio-alimentar-portugal-produzido-familias-2148461	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011039/https://www.publico.pt/2025/09/29/azul/noticia/manifesto-wasteless-jovens-criam-peticao-desperdicio-2148867	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011042/https://www.publico.pt/2025/09/29/estudiop/noticia/infografia-arrumar-frigorifico-evitar-desperdicio-alimentar-2147490	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011043/https://www.publico.pt/2025/10/01/sociedade/noticia/estrategia-nacional-propoe-incentivos-fiscais-empresas-doacao-excedentes-alimentares-2149106	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011044/https://www.publico.pt/2025/10/16/impar/noticia/alimentacao-saudavel-dieta-base-vegetal-propoe-escolhas-inves-restricoes-2151048	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011045/https://www.publico.pt/2025/10/17/publico-brasil/opiniao/comer-bem-muda-mundo-2151140	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011046/https://www.publico.pt/2025/10/23/local/noticia/camara-lisboa-remove-refeicoes-vegetarianas-opcao-pontual-escolas-2151938	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011047/https://www.publico.pt/2025/10/27/local/noticia/camara-lisboa-volta-atras-menus-vegetarianos-sao-opcao-escolas-2152307	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011048/https://www.publico.pt/2025/11/26/azul/noticia/ocde-alerta-politicas-fragmentadas-prejudicam-combate-tripla-crise-planetaria-2155986	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011050/https://www.publico.pt/2025/11/29/sociedade/noticia/banco-alimentar-comeca-nova-campanha-recolha-alimentos-2156490	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011051/https://www.publico.pt/2025/12/09/azul/noticia/levar-planeta-revisao-custa-apenas-7-bilioes-euros-ano-implica-mexer-sistema-2157166	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011054/https://www.publico.pt/2025/12/19/sociedade/noticia/4400-doadores-contribuiram-ultima-campanha-online-banco-alimentar-2158679	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011055/https://www.publico.pt/2025/12/22/fugas/noticia/lisboa-comida-sobrar-natal-vai-dar-bar-ira-precisa-2158998	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011056/https://www.publico.pt/2026/01/11/azul/noticia/conheca-chefs-estao-menus-gourmet-desperdicios-comida-2160635	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011100/https://www.publico.pt/2026/01/13/fugas/noticia/porto-covo-tornase-destino-turistico-sustentavel-alentejo-seguese-mertola-2161095	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011101/https://www.publico.pt/2026/01/14/azul/noticia/portugal-finalmente-novo-plano-accao-economia-circular-2161024	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/save/now/20260326011926/https://food.ec.europa.eu/food-safety/food-waste_en	assets/js/main.js
+https://arquivo.pt/save/now/20260326011947/https://www.unep.org/topics/food-systems/food-loss-and-waste	assets/js/main.js
+https://arquivo.pt/save/now/20260326012017/https://www.fao.org/energy/home/en	assets/js/main.js
+https://arquivo.pt/save/now/20260326012052/https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai	assets/js/main.js
+https://arquivo.pt/save/now/20260326012122/https://www.europarl.europa.eu/RegData/etudes/ATAG/2025/775925/EPRS_ATA%282025%29775925_EN.pdf	assets/js/main.js
+https://arquivo.pt/save/now/20260326015627/https://www.publico.pt/desperdicio-alimentar	assets/js/main.js
+https://arquivo.pt/wayback/	metodologia/index.html
+https://arquivo.pt/wayback/19991014023636/http://www.publico.pt/dossiers/expo98/expo9806045.html	assets/data/deep_archive.json
+https://arquivo.pt/wayback/20001101055306/http://www.publico.pt/dossiers/expo98/expo9806045.html	assets/data/deep_archive.json
+https://arquivo.pt/wayback/20010714043148/http://www.publico.pt/servico/proggov/governo1/prog/prog1iiid3.html	assets/data/deep_archive.json
+https://arquivo.pt/wayback/20030309134047/http://www.publico.pt/docs/progGov2002/progEleitoralPSD.pdf	assets/data/deep_archive.json
+https://arquivo.pt/wayback/20041001023339/http://www.publico.pt/docs/economia/oe_plei_2002.pdf	assets/data/deep_archive.json
+https://arquivo.pt/wayback/20100524142438/http://www.publico.pt/Sociedade/aproveitamento-de-sobras-pode-aumentar-risco-de-erro_1438588	assets/data/deep_archive.json
+https://arquivo.pt/wayback/20170302053920/https://www.publico.pt/2011/04/05/ciencia/noticia/britanico-que-luta-contra-desperdicio-de-comida-vence-premio-de-sustentabilidade-1488363	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/wayback/20180901034626/https://www.publico.pt/2014/12/21/sociedade/noticia/o-que-ha-no-fundo-do-nosso-frigorifico-1679718	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/wayback/20180901034811/https://www.publico.pt/2014/12/14/sociedade/noticia/ha-comida-que-so-nao-vai-para-o-lixo-porque-e-doada-1679069	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/wayback/20190101192300/https://www.publico.pt/2018/12/11/p3/video/wasted-waste-um-documentario-sobre-o-desperdicio-que-e-o-lixo-20181210-105257	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20190221204041/https://www.publico.pt/2019/02/20/p3/noticia/startup-porto-ajuda-restaurantes-combaterem-desperdicio-alimentar-1862755	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20190919190025/https://www.publico.pt/2019/09/19/p3/noticia/desperdicio-mobilidade-reciclagem-o-que-fazem-as-universidades-para-serem-mais-verdes-1887134?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+PublicoRSS+%28Publico.pt%29	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20190927104813/https://www.publico.pt/2019/09/02/p3/noticia/um-restaurante-um-frigorifico-e-dois-portugueses-na-finlandia-contra-o-desperdicio-alimentar-1885189	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20200206192031/https://www.publico.pt/2020/02/04/p3/noticia/too-good-to-go-app-quer-evitar-desperdicio-comida-chegou-porto-1902843	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://arquivo.pt/wayback/20200212193112/https://www.publico.pt/2019/11/27/p3/noticia/phenix-esta-aplicacao-quer-evitar-desperdicio-da-comida-as-flores-1895340	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20200212193149/https://www.publico.pt/2019/02/04/p3/noticia/saber-ler-a-data-de-validade-ajuda-a-combater-o-desperdicio-alimentar-1860587	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/wayback/20200212193506/https://www.publico.pt/2016/11/28/p3/noticia/compostagem-em-apenas-24-horas-sim-e-possivel-1826995	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/wayback/20200305021822/https://www.publico.pt/2020/01/21/economia/noticia/fruta-feia-evita-duas-mil-toneladas-desperdicio-alimentar-paga-milhao-euros-agricultores-1901179	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://arquivo.pt/wayback/20200312194702/https://www.publico.pt/2018/11/14/sociedade/noticia/faltam-dados-consenso-desperdicio-alimentar-preciso-comecar-actuar-ja-1850696	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20200624182355/https://www.publico.pt/2020/06/23/sociedade/noticia/vale-banana-estudo-mostra-retalho-reduzir-desperdicio-alimentar-terco-1921609	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20200806234530/https://www.publico.pt/2020/08/05/p3/noticia/video-posnos-falar-desperdicio-alimentar-problema-nao-novo-ha-combata-1927217	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20200930000621/https://www.publico.pt/2020/09/29/sociedade/noticia/unidos-desperdicio-junta-lutam-comida-nao-acabe-lixo-1933288	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/wayback/20210513211455/https://www.publico.pt/2021/05/03/economia/noticia/vai-futuro-verde-europa-1960853	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20210929232350/https://www.publico.pt/2019/04/30/p3/noticia/separar-o-lixo-nao-chega-claire-mostra-como-vive-numa-casa-quase-sem-desperdicio-1870964	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20211222235544/https://www.publico.pt/2021/12/22/impar/noticia/movimento-unidos-desperdicio-propoe-receitas-sobras-natal-chefs-1989461	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20220505035202/https://www.publico.pt/2022/05/03/azul/fotogaleria/fruta-feia-sao-ja-15-postos-venda-cooperativa-combate-desperdicio-alimentar-407910	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://arquivo.pt/wayback/20220505134430/https://www.publico.pt/2022/04/22/impar/noticia/preocupado-ambiente-20-dicas-tornar-cozinha-verde-2002916	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20220516200051/https://www.publico.pt/2022/05/16/azul/noticia/produzir-insectos-alimentos-100-aproveitado-2004293	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20220722084809/https://www.publico.pt/2022/05/14/azul/noticia/duvida-comer-alimentos-fim-prazo-validade-2006133	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20220908191817/https://www.publico.pt/2019/05/05/p3/video/ana-milhazes-sete-dicas-para-viver-sem-desperdicio-20190504-181303	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20220909172633/https://www.publico.pt/2022/07/27/azul/noticia/familias-podem-enfrentar-crise-climatica-desperdicando-menos-comida-2015140	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://arquivo.pt/wayback/20220910225239/https://www.publico.pt/2022/08/18/estudiop/noticia/ciencia-tras-melhores-escolhas-alimentares-2012018	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20220911003400/https://www.publico.pt/2018/11/02/p3/noticia/lista-compras-livre-plastico-1849634	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/wayback/20220911084850/https://www.publico.pt/2022/09/01/local/noticia/pedidos-apoio-alimentar-algarve-aumentam-final-verao-embate-vira-2019029	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20220912211116/https://www.publico.pt/2022/04/27/p3/noticia/futuro-desperdicio-alimentar-comecar-cantina-escola-2002438	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20220929183553/https://www.publico.pt/2022/09/29/p3/noticia/queres-dizer-nao-desperdicio-alimentar-cinco-apps-sites-podem-ajudar-2021983	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://arquivo.pt/wayback/20221025190356/https://www.publico.pt/2019/04/10/p3/noticia/anna-resgata-comida-lixo-combater-desperdicio-1868420	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://arquivo.pt/wayback/20230319015329/https://www.publico.pt/2023/02/11/azul/noticia/vou-separar-lixo-pago-20-euros-residuos-mes-2038261	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230412013455/https://www.publico.pt/2023/04/05/estudiop/noticia/importancia-embalagens-assepticas-reducao-desperdicio-alimentar-2043117	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230413013511/https://www.publico.pt/2023/03/23/p3/reportagem/possivel-boicotar-supermercados-tentam-dias-nao-facil-2042786	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230430191831/https://www.publico.pt/2023/04/30/azul/noticia/cozinha-restaurante-europeu-certificado-zero-desperdicio-2047798	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230504170615/https://www.publico.pt/2023/02/19/azul/noticia/portugues-deita-184-kg-comida-ano-propoem-mudar-2039370	assets/data/corpus.json, assets/data/corpus_core.json, assets/data/featured.json
+https://arquivo.pt/wayback/20230522210031/https://www.publico.pt/2023/05/11/estudiop/noticia/reciclagem-embalagens-contributo-portugal-2049150	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230804031441/https://www.publico.pt/2023/07/31/azul/noticia/proprio-consumo-bom-pao-nasce-2058711	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230813055226/https://www.publico.pt/2023/08/12/azul/noticia/portugueses-desperdicam-comida-verao-especialmente-fruta-2059917	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230815065556/https://www.publico.pt/2023/08/02/azul/noticia/duvida-podemos-comer-alimento-cortamos-parte-bolor-2058105	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230821073803/https://www.publico.pt/2023/08/20/azul/noticia/guia-compostagem-casa-2060028	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230830174806/https://www.publico.pt/2023/08/30/azul/noticia/duvida-desperdicio-alimentar-contribui-crise-climatica-2061547	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230920175058/https://www.publico.pt/2023/09/20/impar/noticia/cozinhar-desperdicio-chef-kiko-tia-catia-joana-barrios-ajudam-fazem-festa-2064007	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230926172355/https://www.publico.pt/2023/09/26/azul/noticia/paciente-internado-geramse-ate-oito-quilos-residuos-dia-2064609	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20230928193433/https://www.publico.pt/2023/09/25/estudiop/noticia/compras-sustentaveis-2063943	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231008200306/https://www.publico.pt/2023/10/04/estudiop/noticia/tetra-pak-refood-lancam-campanha-reciclar-alimenta-2065048	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231013175136/https://www.publico.pt/2023/10/13/fugas/perfil/mostrar-respeito-dar-residentes-capacidade-decidirem-turismo-querem-2066419	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231016172737/https://www.publico.pt/2023/10/16/politica/noticia/desperdicio-ps-quer-obrigar-supermercados-doar-alimentos-fim-prazo-ipss-2066777	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231029232234/https://www.publico.pt/2023/10/29/ciencia/noticia/comer-folhas-cenoura-talos-couve-prol-planeta-2067279	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231110210723/https://www.publico.pt/2023/11/09/local/noticia/hortee-mercados-biologicos-porto-estao-online-2069638	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231114203918/https://www.publico.pt/2023/11/14/impar/noticia/carlos-iii-faz-75-anos-celebra-lancamento-projecto-fome-desperdicio-2070189	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231205224333/https://www.publico.pt/2023/12/03/azul/noticia/cop28-quer-mundo-falar-comemos-2072144	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231214200652/https://www.publico.pt/2023/12/14/p3/noticia/ratos-sao-empaticos-pensas-gostam-estar-perto-pessoas-2073695	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231223210448/https://www.publico.pt/2023/12/23/azul/noticia/associacoes-alertam-excessos-consumo-natal-pedem-contencao-desperdicio-2074624	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231225202131/https://www.publico.pt/2023/12/22/impar/opiniao/voce-nao-caixote-lixo-2074446	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231226203607/https://www.publico.pt/2023/12/26/azul/noticia/senhor-moscas-encontrou-larvas-solucao-desperdicio-alimentar-2073653	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20231228204425/https://www.publico.pt/2023/12/28/azul/noticia/prado-prato-estrategia-onu-reduzir-emissoes-sistemas-alimentares-2074921	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20240107211729/https://www.publico.pt/2024/01/06/p3/noticia/tampas-mudam-cor-alimentos-estragam-2075491	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20240321195829/https://www.publico.pt/2024/03/21/fugas/noticia/congresso-acordas-saboreiase-15-dias-alentejo-2084388	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20240328192311/https://www.publico.pt/2024/03/28/impar/noticia/8-alimentos-congelador-estragar-nao-cuidado-2085015	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20240417184558/https://www.publico.pt/2024/04/17/impar/noticia/menos-compras-cozinhar-desperdicar-comer-bem-2087162	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20240526002639/https://www.publico.pt/2024/05/25/sociedade/noticia/banco-alimentar-comeca-sabado-nova-campanha-recolha-alimentos-2091804	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20240608193946/https://www.publico.pt/2024/06/07/impar/opiniao/seguranca-alimentar-preparese-inesperado-2093043	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20240702185346/https://www.publico.pt/2024/07/02/economia/noticia/reduzir-desperdicio-alimentar-metade-tiraria-153-milhoes-pessoas-subnutricao-2096037	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20240811203152/https://www.publico.pt/2024/08/10/azul/noticia/alimentei-familia-durante-dias-comida-destinada-lixo-2100181	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20240813051627/https://www.publico.pt/2024/08/01/azul/noticia/humanidade-esgota-saldo-recursos-naturais-terra-quintafeira-2099424	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20240923191231/https://www.publico.pt/2024/09/23/azul/noticia/portugues-gasta-350-euros-ano-alimentos-acabam-lixo-alerta-empresa-2105115	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20240929204755/https://www.publico.pt/2024/09/28/azul/noticia/possivel-viver-plastico-diaadia-ha-tente-fazelo-2105342	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20241030231538/https://www.publico.pt/2024/10/29/estudiop/noticia/retalho-referencia-descarbonizacao-2109052	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20241107204316/https://www.publico.pt/2024/11/07/p3/cronica/voluntario-apoio-alimentar-2110738	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20241114202839/https://www.publico.pt/2024/11/14/impar/noticia/carlos-celebra-76-aniversario-abertura-centros-alimentares-2111883	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20241204204143/https://www.publico.pt/2024/12/04/azul/noticia/monstro-lixo-cozinha-viagens-florestas-fizeram-algo-planeta-portugal-2114242	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20241204223712/https://www.publico.pt/2024/11/29/estudiop/noticia/descarbonizacao-novo-mix-energetico-dieta-emissoes-2113684	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20241212210651/https://www.publico.pt/2024/12/12/p3/cronica/voluntario-banco-alimentar-2115404	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20241219202939/https://www.publico.pt/2024/12/19/azul/noticia/prenda-natal-ultima-hora-adopta-panda-urso-lince-lobo-2116013	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20241225202348/https://www.publico.pt/2024/12/24/azul/noticia/mudancas-podem-trazer-mesa-natal-ecologico-2116489	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/20241229214656/https://www.publico.pt/2024/12/29/impar/noticia/desperdicar-menos-comida-epoca-festiva-comprometer-seguranca-2116981	assets/data/corpus.json, assets/data/corpus_core.json
+https://arquivo.pt/wayback/publico.pt	assets/data/deep_archive.json
+
+[internal]
+https://desperdicio.pt	descricao.txt, index.html
+https://desperdicio.pt/	index.html, metodologia/index.html, privacidade.html, sitemap.xml, termos.html
+https://desperdicio.pt/)	llms.txt
+https://desperdicio.pt/assets/data/corpus.json	descricao.txt, index.html
+https://desperdicio.pt/assets/data/corpus.json)	llms.txt
+https://desperdicio.pt/assets/data/corpus_core.json	descricao.txt, index.html
+https://desperdicio.pt/assets/data/corpus_core.json)	llms.txt
+https://desperdicio.pt/assets/data/corpus_validation.json	descricao.txt
+https://desperdicio.pt/assets/data/legislation.json)	llms.txt
+https://desperdicio.pt/assets/data/storyline_bundled_full.json)	llms.txt
+https://desperdicio.pt/assets/data/timeline.json)	llms.txt
+https://desperdicio.pt/assets/img/desperdicio.pt.png	index.html, metodologia/index.html, privacidade.html, termos.html
+https://desperdicio.pt/assets/img/eu-food-waste-hero.jpg	index.html
+https://desperdicio.pt/llms.txt	index.html, metodologia/index.html, privacidade.html, termos.html
+https://desperdicio.pt/metodologia/	descricao.txt, metodologia/index.html, sitemap.xml
+https://desperdicio.pt/metodologia/)	llms.txt
+https://desperdicio.pt/privacidade.html	privacidade.html, sitemap.xml
+https://desperdicio.pt/privacidade.html)	llms.txt
+https://desperdicio.pt/sitemap.xml	robots.txt
+https://desperdicio.pt/termos.html	sitemap.xml, termos.html
+https://desperdicio.pt/termos.html)	llms.txt
+
+[external]
+http://127.0.0.1:4173/	DOCUMENTACAO-PT-PT.md, README.md, metodologia/index.html
+http://127.0.0.1:4173/metodologia/	DOCUMENTACAO-PT-PT.md, README.md
+http://data.europa.eu/eli/dec_del/2019/1597/oj	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+http://data.europa.eu/eli/dec_impl/2019/2000/oj	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+http://data.europa.eu/eli/dir/2018/851/oj	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+http://data.europa.eu/eli/dir/2025/1892/oj	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+http://data.europa.eu/eli/reg/2011/1169/oj	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+http://data.europa.eu/eli/reg/2021/382/oj	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+http://www.sitemaps.org/schemas/sitemap/0.9	sitemap.xml
+http://www.w3.org/2000/svg	assets/js/main.js
+https://cncda.gov.pt/index.php/encda	assets/js/main.js
+https://diariodarepublica.pt/	metodologia/index.html
+https://diariodarepublica.pt/dr/detalhe/decreto-lei/102-d-2020-150908012	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json, assets/js/main.js
+https://diariodarepublica.pt/dr/detalhe/decreto-lei/178-2006-540016	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://diariodarepublica.pt/dr/detalhe/decreto-lei/74-1999-144987	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://diariodarepublica.pt/dr/detalhe/lei/62-2021-169832469	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://diariodarepublica.pt/dr/detalhe/lei/62-2021-169869772	assets/js/main.js
+https://diariodarepublica.pt/dr/detalhe/portaria/187-a-2014-56928479	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://diariodarepublica.pt/dr/detalhe/resolucao-assembleia-republica/65-2015-67507922	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/190-a-2017-114337039	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/31-2023-210923319	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://diariodarepublica.pt/dr/detalhe/resolucao-conselho-ministros/46-2018-115191272	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement	privacidade.html
+https://dre.pt	index.html, metodologia/index.html, privacidade.html, termos.html
+https://ec.europa.eu/eurostat	index.html, metodologia/index.html, privacidade.html, termos.html
+https://en.wikipedia.org/wiki/Food_waste	index.html
+https://eur-lex.europa.eu/eli/dir/1999/31/oj?locale=pt	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://eur-lex.europa.eu/eli/dir/2008/98/oj/eng	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://eur-lex.europa.eu/eli/dir/2025/1892/oj	assets/js/main.js
+https://eur-lex.europa.eu/eli/reg/2002/178/oj/eng	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://eur-lex.europa.eu/legal-content/PT/ALL/?uri=CELEX:32004R0852	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32018L0851	assets/js/main.js
+https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:52020DC0381	assets/data/legislation.json, assets/data/storyline.json, assets/data/storyline_bundled.json, assets/data/storyline_bundled_full.json
+https://frutafeia.pt	assets/data/initiatives_impact.json
+https://frutafeia.pt/	assets/data/initiatives_impact.json
+https://github.com/ezefranca/desperdicio.pt	descricao.txt, index.html, metodologia/index.html, privacidade.html, termos.html
+https://github.com/ezefranca/desperdicio.pt)	llms.txt
+https://github.com/ezefranca/desperdicio.pt.git	metodologia/index.html
+https://github.com/ezefranca/desperdicio.pt/blob/main/KIT-DE-AVALIACAO.md	descricao.txt, metodologia/index.html
+https://github.com/ezefranca/desperdicio.pt/blob/main/VALIDACAO-FINAL-CORPUS.md	metodologia/index.html
+https://github.com/ezefranca/desperdicio.pt/issues	termos.html
+https://imagens.publico.pt/imagens.aspx/1017698?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/1175428?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/1233993?tp=UH&db=IMAGENS&type=PNG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/1245446?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/1352862?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/1432216?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/1436615?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/1517729?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/1719030?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/1780819?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/1822928?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/1846147?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/2032993?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/803555?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/837438?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/881980?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/889940?tp=UH&db=IMAGENS&type=JPG	assets/data/featured.json
+https://imagens.publico.pt/imagens.aspx/canal_videos/videoPortal/Images/201306/fazfoto.jpg?tp=VIDEOS	assets/data/featured.json
+https://opensource.org/licenses/MIT	index.html
+https://policies.google.com/privacy	privacidade.html
+https://re-food.org/	assets/data/initiatives_impact.json
+https://refood.pt	assets/data/initiatives_impact.json
+https://schema.org	index.html, metodologia/index.html, privacidade.html, termos.html
+https://sdgs.un.org/goals/goal12	assets/js/main.js
+https://toogoodtogo.pt	assets/data/initiatives_impact.json
+https://www.dns.pt	index.html, metodologia/index.html, privacidade.html, termos.html
+https://www.europarl.europa.eu	index.html, metodologia/index.html, privacidade.html, termos.html
+https://www.europarl.europa.eu/topics/pt/article/20240318STO19401/desperdicio-alimentar-na-europa-factos-politicas-da-ue-e-metas-para-2030	assets/data/eu_comparison.json, assets/js/main.js
+https://www.futurefoodsystem.com/	assets/data/featured.json
+https://www.parlamento.pt	index.html, metodologia/index.html, privacidade.html, termos.html
+https://www.parlamento.pt/ActividadeParlamentar/Paginas/DetalheIniciativa.aspx?BID=39802	assets/js/main.js
+https://www.toogoodtogo.com/pt/press/too-good-to-go-lanca-next-gen-um-projeto-educativo-para-inspirar-as-novas-geracoes-na-luta-contra-o-desperdicio-alimentar?page_listing_4knl3o=3	assets/data/initiatives_impact.json
+https://www.youtube-nocookie.com/embed/1TNPzSRzTt4?si=vv74TvnVzXrjQHxq	assets/js/main.js
+https://www.youtube.com/watch?v=1TNPzSRzTt4	assets/data/featured.json
+https://www.youtube.com/watch?v=DPvqbjLzlrw	assets/data/featured.json
+https://zerodesperdicio.pt	assets/data/initiatives_impact.json
+https://zerodesperdicio.pt/	assets/data/initiatives_impact.json

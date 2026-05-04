@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import email.utils
 import hashlib
 import json
 import os
@@ -12,8 +13,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-DEFAULT_DB = Path("out_desperdico/publico_live.sqlite")
-DEFAULT_OUT_DIR = Path("out_site")
+DEFAULT_DB = Path("data-sources/publico_live.sqlite")
+DEFAULT_OUT_DIR = Path("assets/data")
 DEFAULT_TABLE = "article_details"
 
 def now_utc_iso() -> str:
@@ -60,6 +61,30 @@ def safe_str(v: Any) -> Optional[str]:
     s = str(v).strip()
     return s if s != "" else None
 
+
+def normalize_date(v: Any) -> Optional[str]:
+    s = safe_str(v)
+    if not s:
+        return None
+
+    try:
+        dt = email.utils.parsedate_to_datetime(s)
+    except Exception:
+        dt = None
+
+    if dt is not None:
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+
+    if re.match(r"^\d{4}-\d{2}-\d{2}$", s):
+        return f"{s}T00:00:00Z"
+
+    if re.match(r"^\d{4}-\d{2}-\d{2}T", s):
+        return s
+
+    return s
+
 def get_cols(conn: sqlite3.Connection, table: str) -> List[str]:
     return [r[1] for r in conn.execute(f"PRAGMA table_info({table})").fetchall()]
 
@@ -74,7 +99,7 @@ def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--db", type=str, default=str(DEFAULT_DB), help="Path para sqlite")
     ap.add_argument("--table", type=str, default=DEFAULT_TABLE, help="Tabela (default: article_details)")
-    ap.add_argument("--out-dir", type=str, default=str(DEFAULT_OUT_DIR), help="Pasta de saída (default: out_site)")
+    ap.add_argument("--out-dir", type=str, default=str(DEFAULT_OUT_DIR), help="Pasta de saída (default: assets/data)")
     ap.add_argument("--limit", type=int, default=0, help="Limite de rows (0 = sem limite)")
     args = ap.parse_args()
 
@@ -139,7 +164,7 @@ def main() -> None:
                 "article_id": article_id,
                 "url": norm_url if norm_url else None,
                 "title": safe_str(r[col_title]) if col_title else None,
-                "published_at": safe_str(r[col_date]) if col_date else None,
+                "published_at": normalize_date(r[col_date]) if col_date else None,
                 "query": safe_str(r[col_query]) if col_query else None,
                 "relevance_label": safe_str(r[col_label]) if col_label else None,
                 "relevance_score": safe_int(r[col_score]) if col_score else None,

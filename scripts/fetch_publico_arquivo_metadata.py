@@ -55,7 +55,7 @@ BACKOFF_BASE_SEC = 1.2
 BACKOFF_MAX_SEC = 30.0
 
 # Output
-OUT_DIR = Path("out_desperdico")
+OUT_DIR = Path("data-sources")
 DB_PATH = OUT_DIR / "arquivo_publico_desperdico.sqlite"
 CHECKPOINT_PATH = OUT_DIR / "checkpoint.json"
 CSV_EXPORT_PATH = OUT_DIR / "metadata_export.csv"

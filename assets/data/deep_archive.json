@@ -1,11 +1,11 @@
 {
   "metadata": {
     "title": "Arquivo Profundo: 1999-2010",
-    "description": "Enquanto a legislação avançava silenciosamente, a cobertura mediática ainda não existia. Esta secção cruza o arquivo do Público com os diplomas legais da época, revelando um desfasamento revelador entre política e atenção pública.",
+    "description": "Enquanto a legislação avançava silenciosamente, o tema ainda surgia de forma dispersa. Esta secção cruza o arquivo do Público com os diplomas legais da época, revelando um desfasamento relevante entre política e atenção pública.",
     "source": "Arquivo.pt - Levantamento de domínios e subdomínios do Público (1996-2019)",
     "source_url": "https://arquivo.pt/wayback/publico.pt"
   },
-  "insight": "Entre 1999 e 2010, a Europa e Portugal criaram a base legal para gerir resíduos alimentares — mas o Público ainda não tinha cobertura dedicada ao tema. Este contraste mostra que o problema existia nas instituições antes de existir na consciência pública. O jornalismo do Público viria, na década seguinte, a tornar visível o que a lei já reconhecia.",
+  "insight": "Entre 1999 e 2010, a Europa e Portugal criaram a base legal para gerir resíduos alimentares, enquanto o tema ainda surgia de forma pontual e sem cobertura consistente dedicada. Este contraste mostra que o problema entrou primeiro no plano institucional e só mais tarde ganhou presença jornalística estável. Na década seguinte, o Público ajudaria a tornar essa agenda mais visível.",
   "items": [
     {
       "year": 1999,
@@ -16,7 +16,7 @@
       "note": "O termo 'desperdício' refere-se a energia, não a comida.",
       "legislation_context": {
         "same_year": ["Decreto-Lei n.º 74/99 (Estatuto do Mecenato)", "Diretiva 1999/31/CE (deposição de resíduos em aterros)"],
-        "insight": "Enquanto o arquivo mostra ruído, em 1999 já existia legislação europeia sobre aterros que afectaria resíduos orgânicos."
+        "insight": "Enquanto o arquivo mostra referências dispersas, em 1999 já existia legislação europeia sobre aterros que afectaria resíduos orgânicos."
       }
     },
     {
@@ -52,7 +52,7 @@
       "note": "Sem cobertura no Público, mas legislação europeia significativa.",
       "legislation_context": {
         "same_year": ["Regulamento (CE) n.º 178/2002 — princípios gerais da legislação alimentar"],
-        "insight": "A Europa estabeleceu os princípios de segurança alimentar que mais tarde facilitariam a redistribuição de excedentes. O Público ainda não cobria o tema."
+        "insight": "A Europa estabeleceu os princípios de segurança alimentar que mais tarde facilitariam a redistribuição de excedentes. O tema ainda não tinha presença jornalística consistente."
       }
     },
     {
@@ -88,7 +88,7 @@
       "note": "Marco legislativo português sem reflexo imediato no arquivo.",
       "legislation_context": {
         "same_year": ["Decreto-Lei n.º 178/2006 — Regime geral da gestão de resíduos"],
-        "insight": "Portugal criou a base normativa para gerir resíduos. O desperdício alimentar ainda era 'invisível' na cobertura jornalística."
+        "insight": "Portugal criou a base normativa para gerir resíduos. O desperdício alimentar ainda não tinha presença própria e consistente na cobertura jornalística."
       }
     },
     {
@@ -100,7 +100,7 @@
       "note": "Marco europeu fundamental, mas sem cobertura dedicada no Público.",
       "legislation_context": {
         "same_year": ["Diretiva 2008/98/CE — Diretiva-Quadro dos Resíduos"],
-        "insight": "A hierarquia de resíduos (prevenção primeiro) foi estabelecida. Esta directiva seria a base para as metas de 2030. O Público só cobriria o tema anos depois."
+        "insight": "A hierarquia de resíduos (prevenção primeiro) foi estabelecida. Esta directiva seria a base para as metas de 2030. A cobertura jornalística dedicada ao tema consolidar-se-ia apenas anos depois."
       }
     },
     {
@@ -112,7 +112,7 @@
       "note": "O termo 'sobras' refere-se a medicação hospitalar, não a comida.",
       "legislation_context": {
         "same_year": [],
-        "insight": "Mesmo em 2010, a pesquisa por 'desperdício' no arquivo retorna ruído. A cobertura dedicada ao desperdício alimentar só arrancaria em 2011."
+        "insight": "Mesmo em 2010, a pesquisa por 'desperdício' no arquivo devolve sobretudo referências dispersas. A cobertura dedicada ao desperdício alimentar só ganharia consistência a partir de 2011."
       }
     }
   ],
@@ -121,5 +121,5 @@
     "food-adjacent": "Menção a 'alimentar' ou legislação relevante, mas sem foco em desperdício",
     "food-focused": "Cobertura dedicada ao desperdício alimentar"
   },
-  "key_insight": "O arquivo 1999-2010 revela um desfasamento: enquanto a Europa e Portugal construíam o enquadramento legal, o tema não tinha presença mediática. A cobertura dedicada ao desperdício alimentar só arrancaria em 2011, quando o Público começou a tornar público o que era apenas institucional."
+  "key_insight": "O arquivo 1999-2010 revela um desfasamento: enquanto a Europa e Portugal construíam o enquadramento legal, o tema ainda não tinha presença mediática consistente. A cobertura dedicada ao desperdício alimentar ganharia escala a partir de 2011, quando o Público começou a acompanhar esse processo de forma mais visível."
 }

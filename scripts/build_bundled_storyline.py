@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Set, Tuple
 from collections import defaultdict
 
-BASE = Path(__file__).resolve().parent
+BASE = Path(__file__).resolve().parents[1] / "assets" / "data"
 
 CORPUS_P = BASE / "corpus.json"
 STORY_IN_P = BASE / "storyline_enriched.json"
@@ -156,13 +156,16 @@ def main() -> None:
 
     for ch in chapters:
         title = norm(ch.get("title"))
-        cid = norm(ch.get("id")).lower()
+        cid = norm(ch.get("chapter_id") or ch.get("id")).lower()
 
         # criar bundles preferenciais:
         bundles: List[Tuple[str, List[str], str]] = []  # (title, ids, method)
 
         # A) se capítulo tiver peak_month no conteúdo
         peak_months = []
+        meta_peak_month = norm((ch.get("meta") or {}).get("peak_month"))
+        if meta_peak_month:
+            peak_months.append(meta_peak_month)
         for b in (ch.get("blocks") or []):
             if b.get("type") == "peak_month":
                 pm = norm(b.get("month"))

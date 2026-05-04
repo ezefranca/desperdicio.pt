@@ -1,6 +1,7 @@
 // ==================== CONFIG ====================
 const FILES = {
   storyline: ["assets/data/storyline_bundled_full.json", "assets/data/storyline_bundled.json", "assets/data/storyline.json"],
+  corpusCore: ["assets/data/corpus_core.json", "assets/data/corpus.json"],
   timeline: "assets/data/timeline.json",
   legislation: "assets/data/legislation.json",
   wasteBreakdown: "assets/data/waste_breakdown.json",
@@ -11,14 +12,158 @@ const FILES = {
   deepArchive: "assets/data/deep_archive.json"
 };
 
+const REFERENCES = {
+  euWasteFacts: "https://www.europarl.europa.eu/topics/pt/article/20240318STO19401/desperdicio-alimentar-na-europa-factos-politicas-da-ue-e-metas-para-2030",
+  euWasteDirective: "https://eur-lex.europa.eu/eli/dir/2025/1892/oj"
+};
+
+const ARCHIVE_REFERENCES = {
+  euFoodWaste: "https://arquivo.pt/save/now/20260326011926/https://food.ec.europa.eu/food-safety/food-waste_en",
+  unepFoodWaste: "https://arquivo.pt/save/now/20260326011947/https://www.unep.org/topics/food-systems/food-loss-and-waste",
+  faoEnergy: "https://arquivo.pt/save/now/20260326012017/https://www.fao.org/energy/home/en",
+  ieaEnergyAI: "https://arquivo.pt/save/now/20260326012052/https://www.iea.org/reports/energy-and-ai/energy-demand-from-ai",
+  eprsFoodWaste2025: "https://arquivo.pt/save/now/20260326012122/https://www.europarl.europa.eu/RegData/etudes/ATAG/2025/775925/EPRS_ATA%282025%29775925_EN.pdf",
+  publicoThemeLanding: "https://arquivo.pt/save/now/20260326015627/https://www.publico.pt/desperdicio-alimentar",
+  publicoWaste2025Families: "https://arquivo.pt/save/now/20260326022253/https://www.publico.pt/2025/09/25/azul/noticia/maior-parte-desperdicio-alimentar-portugal-produzido-familias-2148461",
+  tasteOfLisboaHomeFood: "https://arquivo.pt/save/now/20260326161231/https://www.tasteoflisboa.com/blog/what-do-portuguese-people-eat-at-home/",
+  ovosMolesHistory: "https://arquivo.pt/save/now/20260326134627/https://www.ptpt.pt/pt/produtos/664",
+  lilianaMesaFarta: "https://arquivo.pt/save/now/20260326134628/https://www.unidoscontraodesperdicio.pt/post/liliana-sousa-em-portugal-o-desperd%C3%ADcio-decorre-da-tradi%C3%A7%C3%A3o-da-mesa-farta"
+};
+
 const EU_IMAGES = {
-  hero: "https://www.europarl.europa.eu/resources/library/images/20240319PHT19475/20240319PHT19475-cl.jpg",
-  wasteByCountry: "https://www.europarl.europa.eu/resources/library/images/20250910PHT30276/20250910PHT30276-cl.png"
+  hero: "assets/img/eu-food-waste-hero.jpg",
+  wasteByCountry: "assets/img/eu-food-waste-ranking.png"
+};
+
+const EDITORIAL_IMAGES = {
+  domestic: {
+    url: "assets/img/publico/editorial/domestic-fridge-family.jpg",
+    caption: "Mais de metade do desperdício alimentar europeu nasce em contexto doméstico. A escolha continua a acontecer em casa.",
+    credit: "Público / Estúdio P",
+    creditUrl: "https://arquivo.pt/save/now/20260326011042/https://www.publico.pt/2025/09/29/estudiop/noticia/infografia-arrumar-frigorifico-evitar-desperdicio-alimentar-2147490"
+  },
+  euProcess: {
+    url: "assets/img/editorial/eu-waste-rules-2025.jpg",
+    alt: "Representantes europeus numa sessão do Parlamento Europeu durante a negociação das novas regras sobre desperdício alimentar e resíduos têxteis.",
+    caption: "Em 2025, a negociação entre Conselho e Parlamento antecedeu a diretiva que passou a fixar metas vinculativas para o desperdício alimentar.",
+    credit: "European Interest",
+    creditUrl: "https://arquivo.pt/save/now/20260326150248/https://www.europeaninterest.eu/council-and-parliament-agree-to-reduce-food-waste-and-introduce-new-rules-on-waste-textile/"
+  },
+  annaVideoPoster: {
+    url: "assets/img/publico/editorial/anna-video-poster.jpg",
+    alt: "Poster local do vídeo Anna mergulha no lixo para combater o desperdício alimentar.",
+    credit: "Público P3 / YouTube",
+    creditUrl: "https://www.youtube.com/watch?v=1TNPzSRzTt4"
+  },
+  prologueWink: {
+    url: "assets/img/editorial/brussels-sprout-closeup.jpg",
+    alt: "Close-up de uma couve-de-Bruxelas.",
+    caption: "Sim, é couve-de-Bruxelas. A obrigação, essa, é nossa.",
+    credit: "Eric Hunt / Wikimedia Commons",
+    creditUrl: "https://arquivo.pt/save/now/20260326153518/https://commons.wikimedia.org/wiki/File:Brussels_sprout_closeup.jpg"
+  },
+  epilogueClosure: {
+    url: "assets/img/editorial/epilogue-portuguese-table.webp",
+    alt: "Mesa doméstica portuguesa, com várias pessoas reunidas à refeição.",
+    caption: "A mesa portuguesa continua a ser lugar de partilha antes de ser excesso.",
+    credit: "Taste of Lisboa",
+    creditUrl: ARCHIVE_REFERENCES.tasteOfLisboaHomeFood
+  }
+};
+
+const EVIDENCE_SETS = {
+  "ch-prologo": [
+    "e7a42ad6653f0d11a1805d5efa529932a0b5bd84",
+    "24ee1bdaa3abb886619c1015f0991e723271f7a9",
+    "ea288ea064ff6de004a6e666742b80946ad67779",
+    "fb8769bee0790e37aa01b599f26ae6e8c103798d",
+    "b2fb27b20e01d60be6ffd5143e90982132760eb4",
+    "0a0d5e87c76f2e441c58b0d6d3836f0b56d7bf6c"
+  ],
+  "ch-portugal-estado": [
+    "4fd5e7b28b364713e30f469eb9038a9e133a006b",
+    "bf1b9b4c37fe86ff5e38c33a7585e4406890303f",
+    "ea288ea064ff6de004a6e666742b80946ad67779",
+    "b2fb27b20e01d60be6ffd5143e90982132760eb4",
+    "0a0d5e87c76f2e441c58b0d6d3836f0b56d7bf6c",
+    "c9fe143f0c40a42e32ffb7f03051912678e783b3"
+  ],
+  "ch-bruxelas-metodo": [
+    "9f8e9ccb90c96b47b50a76a766c82d511021aff0",
+    "43ad54a624920f8714a1fda1bb6b6664054806df",
+    "d4a295c445e4c3b213886ba73303f7dba8f5b2f7",
+    "c7a5e73eb76cc102ee1a792e4431b27620108994",
+    "14950721615de42b92e4e7c9d18b43672eeccec3",
+    "0ffba9286a2235554272838afb8b58c894b34604"
+  ]
+};
+
+const PUBLICO_EDITORIAL = {
+  themePageLive: "https://www.publico.pt/desperdicio-alimentar",
+  themePageArchive: ARCHIVE_REFERENCES.publicoThemeLanding,
+  highlights: [
+    {
+      articleId: "b2fb27b20e01d60be6ffd5143e90982132760eb4",
+      label: "Dados nacionais",
+      text: "A cobertura recente trouxe para primeiro plano a medição mais actual do INE e voltou a quantificar o problema com dados oficiais."
+    },
+    {
+      articleId: "fb8769bee0790e37aa01b599f26ae6e8c103798d",
+      label: "Comportamento doméstico",
+      text: "O Público também entrou nos mecanismos concretos do descarte: rotulagem, confiança nos sentidos e alimentos ainda bons que acabam no lixo."
+    },
+    {
+      articleId: "0a0d5e87c76f2e441c58b0d6d3836f0b56d7bf6c",
+      label: "Escala do problema",
+      text: "A peça mais recente reforça o eixo central deste projecto: a maior parte do desperdício nasce nas famílias, nas compras, no armazenamento e na confecção."
+    }
+  ]
+};
+
+const DOMESTIC_EDITORIAL = {
+  featureImage: {
+    url: EDITORIAL_IMAGES.domestic.url,
+    caption: EDITORIAL_IMAGES.domestic.caption,
+    credit: EDITORIAL_IMAGES.domestic.credit,
+    creditUrl: EDITORIAL_IMAGES.domestic.creditUrl
+  },
+  items: [
+    {
+      url: "https://www.publico.pt/2014/12/21/sociedade/noticia/o-que-ha-no-fundo-do-nosso-frigorifico-1679718",
+      label: "Frigorífico",
+      text: "Uma peça precoce sobre o que fica esquecido no frio e acaba por sair de casa directamente para o lixo."
+    },
+    {
+      url: "https://www.publico.pt/2021/12/23/impar/noticia/sobreviver-natal-limitar-estragos-1988390",
+      label: "Natal",
+      text: "A abundância festiva aparece aqui como teste real à diferença entre hospitalidade, excesso e reaproveitamento."
+    },
+    {
+      url: "https://www.publico.pt/2023/09/20/impar/noticia/cozinhar-desperdicio-chef-kiko-tia-catia-joana-barrios-ajudam-fazem-festa-2064007",
+      label: "Cozinhar",
+      text: "A cozinha doméstica deixa de ser apenas origem do problema e passa a ser também lugar de técnica, partilha e solução."
+    },
+    {
+      url: "https://www.publico.pt/2024/04/17/impar/noticia/menos-compras-cozinhar-desperdicar-comer-bem-2087162",
+      label: "Planeamento",
+      text: "Antes da próxima compra, a peça manda parar, abrir armários, rever o frigorífico e decidir melhor o que já existe em casa."
+    },
+    {
+      url: "https://www.publico.pt/2024/12/24/azul/noticia/mudancas-podem-trazer-mesa-natal-ecologico-2116489",
+      label: "Mesa",
+      text: "Pequenas mudanças à mesa mostram que reduzir desperdício não precisa de empobrecer o ritual doméstico."
+    },
+    {
+      url: "https://www.publico.pt/2025/09/29/estudiop/noticia/infografia-arrumar-frigorifico-evitar-desperdicio-alimentar-2147490",
+      label: "Gestos simples",
+      text: "Arrumar melhor o frigorífico surge como gesto quase banal, mas com efeito directo na duração e no destino dos alimentos."
+    }
+  ]
 };
 
 // ==================== HELPERS ====================
 const $ = s => document.querySelector(s);
-const $$ = s => document.querySelectorAll(s);
+const $$ = s => Array.from(document.querySelectorAll(s));
 const esc = s => (s ?? "").toString().replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 const fmtDate = iso => {
@@ -32,6 +177,65 @@ const fmtYear = iso => {
   const d = new Date(iso);
   return isNaN(d) ? iso : d.getFullYear();
 };
+
+const fmtMonthLabel = month => {
+  if (!month || typeof month !== "string" || month.length < 7) return "";
+  const [year, mm] = month.split("-");
+  const monthNames = ["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+  const idx = parseInt(mm, 10) - 1;
+  return `${monthNames[idx] || mm} ${String(year || "").slice(2)}`;
+};
+
+const buildImageFallbackDataUri = label => {
+  const safeLabel = esc(label || "Arquivo");
+  const svg = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+      <defs>
+        <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+          <stop stop-color="#131315" offset="0%"/>
+          <stop stop-color="#1f2937" offset="100%"/>
+        </linearGradient>
+      </defs>
+      <rect width="640" height="360" fill="url(#g)"/>
+      <circle cx="92" cy="92" r="36" fill="#4ade80" fill-opacity="0.14"/>
+      <circle cx="560" cy="74" r="52" fill="#f59e0b" fill-opacity="0.10"/>
+      <text x="320" y="168" text-anchor="middle" fill="#e5e7eb" font-family="Inter, Arial, sans-serif" font-size="22">
+        Público / Arquivo.pt
+      </text>
+      <text x="320" y="204" text-anchor="middle" fill="#4ade80" font-family="Inter, Arial, sans-serif" font-size="18">
+        ${safeLabel}
+      </text>
+    </svg>
+  `.trim();
+  return `data:image/svg+xml;charset=UTF-8,${encodeURIComponent(svg)}`;
+};
+
+const renderSourceReference = (label, url, suffix = "") => {
+  const sourceLabel = esc(label || "");
+  const sourceUrl = esc(url || "");
+  const tail = suffix ? ` — ${esc(suffix)}` : "";
+  if (sourceUrl) {
+    return `<a href="${sourceUrl}" target="_blank" rel="noopener noreferrer">${sourceLabel}</a>${tail}`;
+  }
+  return `${sourceLabel}${tail}`;
+};
+
+const generateArquivoUrl = article => {
+  if (article?.arquivo_pt_url) return article.arquivo_pt_url;
+  if (article?.archive_url) return article.archive_url;
+
+  const url = article?.url || article?.article_url;
+  if (!url) return "";
+
+  const date = article?.date || article?.published_at || `${article?.year || "2013"}-01-01`;
+  const stamp = String(date).slice(0, 10).replace(/-/g, "");
+  return `https://arquivo.pt/wayback/${stamp}120000/${url}`;
+};
+
+const getEvidenceIds = (chapterId, fallbackIds = []) => EVIDENCE_SETS[chapterId] || fallbackIds;
+const normalizeChapters = chapters => Array.isArray(chapters)
+  ? chapters
+  : (chapters && typeof chapters === 'object' ? Object.values(chapters) : []);
 
 async function fetchJson(path) {
   const r = await fetch(path, { cache: "no-store" });
@@ -62,12 +266,12 @@ function renderMiniStats(timeline) {
       <div class="mini-stat-label">Anos</div>
     </div>
     <div class="mini-stat">
-      <div class="mini-stat-value">${topPeak.month?.split('-')[1] || '12'}</div>
-      <div class="mini-stat-label">Pico Mes</div>
+      <div class="mini-stat-value">${fmtMonthLabel(topPeak.month) || 'Dez 23'}</div>
+      <div class="mini-stat-label">Pico</div>
     </div>
     <div class="mini-stat">
       <div class="mini-stat-value">${topPeak.count || 7}</div>
-      <div class="mini-stat-label">Max/Mes</div>
+      <div class="mini-stat-label">Max/Mês</div>
     </div>
   `;
 }
@@ -82,9 +286,9 @@ function renderTimeline(laws) {
 
     return `
       <div class="tl-item ${isDirect ? 'direct' : ''}">
-        <a href="${esc(law.official_link || '#')}" target="_blank" rel="noopener">
+        <a href="${esc(law.official_link || '#')}" target="_blank" rel="noopener noreferrer">
           <div class="tl-header">
-            <img src="${flagSrc}" alt="${isPT ? 'PT' : 'UE'}" class="tl-flag-img">
+            <img src="${flagSrc}" alt="" aria-hidden="true" class="tl-flag-img">
             <span class="tl-year">${fmtYear(law.date_enacted)}</span>
           </div>
           <div class="tl-title">${esc(law.title)}</div>
@@ -102,8 +306,8 @@ function renderChapterHeader(chapter, idx) {
     <header class="chapter-header">
       <div class="chapter-eyebrow">
         <span class="num">${num}</span>
-        ${chapter.kind === 'prologue' ? 'Prologo' :
-          chapter.kind === 'epilogue' ? 'Epilogo' :
+        ${chapter.kind === 'prologue' ? 'Prólogo' :
+          chapter.kind === 'epilogue' ? 'Epílogo' :
           chapter.kind === 'peak_wave' ? 'Onda de Atenção' : 'Capitulo'}
       </div>
       <h2 class="chapter-title">${esc(chapter.title)}</h2>
@@ -113,7 +317,7 @@ function renderChapterHeader(chapter, idx) {
 
 function renderBigQuote(text, cite) {
   return `
-    <div class="big-quote">
+    <div class="big-quote" data-animate="true">
       <blockquote>${esc(text)}</blockquote>
       <cite>- ${esc(cite)}</cite>
     </div>
@@ -122,9 +326,9 @@ function renderBigQuote(text, cite) {
 
 function renderStatsGrid(stats) {
   return `
-    <div class="stats-grid">
-      ${stats.map(s => `
-        <div class="stat-card">
+    <div class="stats-grid" data-animate="true">
+      ${stats.map((s, idx) => `
+        <div class="stat-card" style="--item-delay: ${idx * 0.08}s">
           <div class="stat-card-value ${s.color || 'accent'}">${s.value}</div>
           <div class="stat-card-label">${esc(s.label)}</div>
           ${s.note ? `<div class="stat-card-note">${esc(s.note)}</div>` : ''}
@@ -138,13 +342,14 @@ function renderYearChart(timeline) {
   const years = timeline.by_year || [];
   const peaks = (timeline.peaks || []).map(p => p.month?.slice(0, 4));
   const maxCount = Math.max(...years.map(y => y.count), 1);
+  const coreTotal = timeline.stats?.core_total || 127;
 
   return `
-    <div class="chart-section">
+    <div class="chart-section bar-chart-section" data-animate="true">
       <div class="chart-header">
         <div>
           <div class="chart-title">Evolução da Cobertura Mediática</div>
-          <div class="chart-subtitle">Artigos publicados por ano no Publico (2011-2026)</div>
+          <div class="chart-subtitle">Artigos publicados por ano no Público (2011-2026)</div>
         </div>
         <div class="chart-legend">
           <div class="chart-legend-item">
@@ -158,11 +363,11 @@ function renderYearChart(timeline) {
         </div>
       </div>
       <div class="chart-bars">
-        ${years.map(y => {
+        ${years.map((y, idx) => {
           const height = (y.count / maxCount) * 160;
           const isPeak = peaks.includes(y.year) || y.count > 20;
           return `
-            <div class="chart-bar ${isPeak ? 'peak' : ''}">
+            <div class="chart-bar ${isPeak ? 'peak' : ''}" style="--bar-delay: ${idx * 0.05}s">
               <div class="bar" style="height: ${Math.max(height, 8)}px">
                 <span class="bar-value">${y.count}</span>
               </div>
@@ -171,7 +376,7 @@ function renderYearChart(timeline) {
           `;
         }).join('')}
       </div>
-      <p class="chart-source">Fonte: <a href="https://arquivo.pt" target="_blank">Corpus desperdicio.pt</a> — 127 artigos do Público preservados no Arquivo.pt</p>
+      <p class="chart-source">Fonte: <a href="https://arquivo.pt" target="_blank" rel="noopener noreferrer">Corpus desperdicio.pt</a> — ${coreTotal} artigos datados do Público preservados no Arquivo.pt</p>
     </div>
   `;
 }
@@ -182,19 +387,19 @@ function renderMonthChart(timeline, focusMonth) {
   const maxCount = Math.max(...recent.map(m => m.count), 1);
 
   return `
-    <div class="chart-section">
+    <div class="chart-section bar-chart-section" data-animate="true">
       <div class="chart-header">
         <div>
           <div class="chart-title">Cobertura Mensal Recente</div>
-          <div class="chart-subtitle">Artigos por mes (ultimos 24 meses)</div>
+          <div class="chart-subtitle">Artigos por mês nos últimos 24 meses</div>
         </div>
       </div>
       <div class="chart-bars">
-        ${recent.map(m => {
+        ${recent.map((m, idx) => {
           const height = (m.count / maxCount) * 140;
           const isFocus = m.month === focusMonth;
           return `
-            <div class="chart-bar ${isFocus ? 'peak' : ''}">
+            <div class="chart-bar ${isFocus ? 'peak' : ''}" style="--bar-delay: ${idx * 0.03}s">
               <div class="bar" style="height: ${Math.max(height, 4)}px">
                 <span class="bar-value">${m.count}</span>
               </div>
@@ -203,7 +408,7 @@ function renderMonthChart(timeline, focusMonth) {
           `;
         }).join('')}
       </div>
-      <p class="chart-source">Fonte: <a href="https://arquivo.pt" target="_blank">Corpus desperdicio.pt</a> — artigos do Público preservados no Arquivo.pt</p>
+      <p class="chart-source">Fonte: <a href="https://arquivo.pt" target="_blank" rel="noopener noreferrer">Corpus desperdicio.pt</a> — artigos do Público preservados no Arquivo.pt</p>
     </div>
   `;
 }
@@ -230,7 +435,7 @@ function renderTargets() {
         <span class="target-card-badge">Meta Vinculativa UE</span>
       </div>
     </div>
-    <p class="chart-source">Fonte: <a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024L1438" target="_blank">Directiva (UE) 2024/1438</a></p>
+    <p class="chart-source">Fonte: <a href="${REFERENCES.euWasteDirective}" target="_blank" rel="noopener noreferrer">Diretiva (UE) 2025/1892</a></p>
   `;
 }
 
@@ -244,7 +449,7 @@ function renderODSBadge() {
       <div class="ods-content">
         <div class="ods-title">ODS 12.3 - Meta Global 2030</div>
         <div class="ods-desc">Reduzir para metade o desperdício alimentar per capita a nível do retalho e do consumidor, e reduzir as perdas de alimentos ao longo das cadeias de produção e abastecimento.</div>
-        <div class="ods-source"><a href="https://sdgs.un.org/goals/goal12" target="_blank">Nações Unidas — Objectivo 12</a></div>
+        <div class="ods-source"><a href="https://sdgs.un.org/goals/goal12" target="_blank" rel="noopener noreferrer">Nações Unidas — Objectivo 12</a></div>
       </div>
     </div>
   `;
@@ -267,9 +472,9 @@ function renderLawCard(law, lawIndex) {
       <h4 class="law-card-title">${esc(fullLaw.title)}</h4>
       ${fullLaw.summary ? `<p class="law-card-summary">${esc(fullLaw.summary)}</p>` : ''}
       ${fullLaw.official_link ? `
-        <a href="${esc(fullLaw.official_link)}" target="_blank" rel="noopener" class="law-card-link">
+        <a href="${esc(fullLaw.official_link)}" target="_blank" rel="noopener noreferrer" class="law-card-link">
           Ver diploma oficial
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
             <path d="M7 17L17 7M17 7H7M17 7V17"/>
           </svg>
         </a>
@@ -289,32 +494,66 @@ function renderEvidenceCards(ids, corpusIndex, title = "Fontes e Evidências") {
         <span class="evidence-count">${items.length} artigos</span>
       </div>
       <div class="evidence-grid">
-        ${items.map(a => `
-          <a href="${esc(a.url || '')}" target="_blank" rel="noopener" class="evidence-card">
+        ${items.map(a => {
+          const arquivoUrl = generateArquivoUrl(a);
+          const liveUrl = a.url || '';
+          return `
+          <a href="${esc(arquivoUrl || liveUrl)}" target="_blank" rel="noopener noreferrer" class="evidence-card">
             <div class="evidence-card-content">
               <h4 class="evidence-card-title">${esc(a.title || 'Sem titulo')}</h4>
               <div class="evidence-card-meta">
                 <span>${fmtDate(a.date || a.published_at)}</span>
-                <span>Score ${a.score || 0}</span>
+                <span>Score ${a.relevance_score || a.score || 0}</span>
                 ${a.word_count ? `<span>${a.word_count} palavras</span>` : ''}
+                ${arquivoUrl ? `<span>Arquivo.pt</span>` : ''}
               </div>
+              ${liveUrl ? `<div class="evidence-card-links"><span class="evidence-card-link">${arquivoUrl ? 'Abrir versão preservada' : 'Abrir artigo'}</span>${arquivoUrl ? `<span class="evidence-card-link-secondary">Live disponível</span>` : ''}</div>` : ''}
             </div>
             <div class="evidence-card-arrow">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </div>
           </a>
-        `).join('')}
+        `;
+        }).join('')}
       </div>
     </div>
   `;
 }
 
-function renderInfographic(imgUrl, title, caption, source) {
+function renderEvidenceBundle(ids, corpusIndex, title = "Fontes adicionais", subtitle = "") {
+  const items = ids.map(id => corpusIndex.get(String(id))).filter(Boolean);
+  if (!items.length) return '';
+
+  return `
+    <details class="evidence-bundle">
+      <summary class="evidence-bundle-summary">
+        <div>
+          <div class="evidence-bundle-title">${esc(title)}</div>
+          <div class="evidence-bundle-subtitle">${esc(subtitle || `${items.length} artigos adicionais preservados no Arquivo.pt`)}</div>
+        </div>
+        <span class="evidence-bundle-toggle">${items.length} links</span>
+      </summary>
+      <div class="evidence-bundle-list">
+        ${items.map(item => {
+          const arquivoUrl = generateArquivoUrl(item);
+          return `
+            <a href="${esc(arquivoUrl || item.url || '')}" target="_blank" rel="noopener noreferrer" class="evidence-bundle-item">
+              <span class="evidence-bundle-item-title">${esc(item.title || 'Sem título')}</span>
+              <span class="evidence-bundle-item-meta">${fmtDate(item.published_at)} · Score ${item.relevance_score || 0}</span>
+            </a>
+          `;
+        }).join('')}
+      </div>
+    </details>
+  `;
+}
+
+function renderInfographic(imgUrl, title, caption, source, note = '') {
   return `
     <div class="infographic">
-      <div class="infographic-title">Dados da Uniao Europeia</div>
+      <div class="infographic-title">Dados da União Europeia</div>
       <div class="infographic-headline">${esc(title)}</div>
       <div class="infographic-image">
         <img src="${esc(imgUrl)}" alt="${esc(title)}" loading="lazy">
@@ -323,19 +562,145 @@ function renderInfographic(imgUrl, title, caption, source) {
         ${esc(caption)}
         <span class="infographic-source"> - ${esc(source)}</span>
       </div>
+      ${note ? `<p class="infographic-note">${note}</p>` : ''}
     </div>
   `;
 }
 
-function renderFullImage(imgUrl, caption, credit) {
+function renderFullImage(imgUrl, caption, credit, creditUrl = '') {
   return `
-    <figure class="full-image">
+    <figure class="full-image" data-animate="true">
       <img src="${esc(imgUrl)}" alt="${esc(caption)}" loading="lazy">
       <figcaption>
         ${esc(caption)}
-        ${credit ? `<span class="credit"> - ${esc(credit)}</span>` : ''}
+        ${credit ? `<span class="credit"> - ${creditUrl ? `<a href="${esc(creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(credit)}</a>` : esc(credit)}</span>` : ''}
       </figcaption>
     </figure>
+  `;
+}
+
+function renderDomesticEditorial(corpusData) {
+  const urlIndex = new Map((corpusData?.items || []).map(item => [item.url, item]));
+  const featureImage = DOMESTIC_EDITORIAL.featureImage;
+  const cards = DOMESTIC_EDITORIAL.items.map(entry => {
+    const item = urlIndex.get(entry.url);
+    if (!item) return null;
+    const archiveUrl = generateArquivoUrl(item) || item.arquivo_pt_url || item.url || '';
+    return {
+      label: entry.label,
+      title: item.title || 'Sem título',
+      text: entry.text,
+      note: `${fmtDate(item.published_at || item.date || '')} · Público`,
+      link: archiveUrl,
+      linkLabel: 'Abrir versão preservada'
+    };
+  }).filter(Boolean);
+
+  if (!cards.length) return '';
+
+  return `
+    <div class="archive-proof domestic-editorial">
+      <div class="archive-proof-header">
+        <span class="archive-proof-kicker">Em casa</span>
+        <h3 class="archive-proof-title">Frigorífico, sobras e mesa: o desperdício doméstico tem história própria</h3>
+        <p class="archive-proof-text">Estas seis peças do Público, preservadas no Arquivo.pt, olham para o mesmo ponto de pressão por ângulos diferentes: compras, arrumação, cozinha, Natal, restos e decisões pequenas que definem o destino da comida.</p>
+      </div>
+      <figure class="domestic-editorial-media">
+        <img src="${esc(featureImage.url)}" alt="${esc(featureImage.caption)}" loading="lazy">
+        <figcaption>
+          ${esc(featureImage.caption)}
+          <span class="credit"> - <a href="${esc(featureImage.creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(featureImage.credit)}</a></span>
+        </figcaption>
+      </figure>
+      <div class="archive-proof-grid">
+        ${cards.map(card => `
+          <article class="archive-proof-card">
+            <div class="archive-proof-label">${esc(card.label)}</div>
+            <h4 class="archive-proof-card-title">${esc(card.title)}</h4>
+            <p class="archive-proof-card-text">${esc(card.text)}</p>
+            <div class="archive-proof-note">${esc(card.note)}</div>
+            <a href="${esc(card.link)}" target="_blank" rel="noopener noreferrer" class="archive-proof-link">${esc(card.linkLabel)}</a>
+          </article>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderEUProcessCard() {
+  const image = EDITORIAL_IMAGES.euProcess;
+  return `
+    <aside class="editorial-image-card" data-animate="true">
+      <figure class="editorial-image-card-media">
+        <img src="${esc(image.url)}" alt="${esc(image.alt)}" loading="lazy">
+        <figcaption>
+          ${esc(image.caption)}
+          <span class="credit"> - <a href="${esc(image.creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(image.credit)}</a></span>
+        </figcaption>
+      </figure>
+      <div class="editorial-image-card-copy">
+        <span class="archive-proof-kicker">Viragem institucional</span>
+        <h3 class="archive-proof-title">Em 2025, o desperdício entrou no plano vinculativo</h3>
+        <p class="archive-proof-text">O acordo político entre Conselho e Parlamento abriu caminho à Diretiva (UE) 2025/1892, que fixou metas obrigatórias para os Estados-Membros. A escala do problema continua doméstica; o enquadramento passou a ser europeu.</p>
+        <div class="editorial-image-card-links">
+          <a href="${esc(REFERENCES.euWasteDirective)}" target="_blank" rel="noopener noreferrer" class="archive-proof-link">Ler a diretiva</a>
+          <a href="${esc(ARCHIVE_REFERENCES.eprsFoodWaste2025)}" target="_blank" rel="noopener noreferrer" class="archive-proof-link">Contexto legislativo</a>
+        </div>
+      </div>
+    </aside>
+  `;
+}
+
+function renderPrologueWink() {
+  const image = EDITORIAL_IMAGES.prologueWink;
+  return `
+    <aside class="prologue-wink" data-animate="true">
+      <img src="${esc(image.url)}" alt="${esc(image.alt)}" loading="lazy" class="prologue-wink-image">
+      <div class="prologue-wink-copy">
+        <div class="prologue-wink-kicker">A piada, visível</div>
+        <p class="prologue-wink-text">${esc(image.caption)}</p>
+        <p class="prologue-wink-credit"><a href="${esc(image.creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(image.credit)}</a></p>
+      </div>
+    </aside>
+  `;
+}
+
+function renderVideoFeature(featured) {
+  const article = (featured?.featured || []).find(item => item?.id === '2019-anna-dumpster-diving');
+  if (!article) return '';
+
+  const poster = EDITORIAL_IMAGES.annaVideoPoster.url;
+  const archiveUrl = generateArquivoUrl(article) || article.arquivo_pt_url || article.url || '';
+  const videoUrl = article.video_url || 'https://www.youtube.com/watch?v=1TNPzSRzTt4';
+  const embedUrl = 'https://www.youtube-nocookie.com/embed/1TNPzSRzTt4?si=vv74TvnVzXrjQHxq';
+
+  return `
+    <div class="video-section">
+      <div class="video-header">
+        <span class="video-year">2019</span>
+        <h4 class="video-title">Anna mergulha no lixo para combater o desperdício alimentar</h4>
+        <p class="video-source">Público P3</p>
+      </div>
+      <div class="video-embed" data-video-stage>
+        <button class="video-poster" type="button" data-video-src="${esc(embedUrl)}" aria-label="Reproduzir vídeo Anna mergulha no lixo para combater o desperdício alimentar">
+          <img src="${esc(poster)}" alt="${esc(EDITORIAL_IMAGES.annaVideoPoster.alt)}" loading="lazy">
+          <span class="video-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </span>
+          <span class="video-poster-copy">
+            <strong>Carregar vídeo</strong>
+            <span>O poster é local. O embed só é pedido se escolheres reproduzir.</span>
+          </span>
+        </button>
+      </div>
+      <p class="video-credit">Poster local com crédito <a href="${esc(EDITORIAL_IMAGES.annaVideoPoster.creditUrl)}" target="_blank" rel="noopener noreferrer">${esc(EDITORIAL_IMAGES.annaVideoPoster.credit)}</a>.</p>
+      <div class="video-links">
+        ${archiveUrl ? `<a href="${esc(archiveUrl)}" target="_blank" rel="noopener noreferrer" class="archive-proof-link">Abrir peça preservada</a>` : ''}
+        <a href="${esc(videoUrl)}" target="_blank" rel="noopener noreferrer" class="archive-proof-link">Ver no YouTube</a>
+      </div>
+    </div>
   `;
 }
 
@@ -378,7 +743,7 @@ function renderDonutChart(data) {
   const highlightIdx = phases.findIndex(p => p.id === 'households');
 
   return `
-    <div class="donut-chart-container" data-animate="true">
+    <div class="donut-chart-container" data-animate="true" data-default-value="${highlightPhase?.value || 67}%" data-default-label="${esc(highlightPhase?.label || 'Em Casa')}">
       <div class="donut-chart-header">
         <h3 class="donut-chart-title">Onde nasce o desperdício?</h3>
         <p class="donut-chart-subtitle">Distribuição por fase da cadeia alimentar em Portugal (${data.metadata?.year || 2023})</p>
@@ -406,7 +771,7 @@ function renderDonutChart(data) {
         </div>
         <div class="donut-legend">
           ${phases.map((phase, idx) => `
-            <div class="donut-legend-item ${phase.id === 'households' ? 'highlight' : ''}" data-index="${idx}" data-value="${phase.value}" data-label="${esc(phase.label)}">
+            <div class="donut-legend-item ${phase.id === 'households' ? 'highlight' : ''}" data-index="${idx}" data-value="${phase.value}" data-label="${esc(phase.label)}" role="button" tabindex="0" aria-label="Ver detalhe de ${esc(phase.label)}: ${phase.value}%">
               <div class="donut-legend-color" style="background: ${segments[idx].color}"></div>
               <div class="donut-legend-info">
                 <div class="donut-legend-label">${esc(phase.label)}</div>
@@ -418,7 +783,7 @@ function renderDonutChart(data) {
         </div>
       </div>
       <p class="donut-caption">Dois terços do desperdício acontecem depois de a comida chegar a casa. O problema não está nas prateleiras, está nos nossos frigoríficos.</p>
-      <p class="chart-source">Fonte: <a href="https://www.europarl.europa.eu/topics/pt/article/20170505STO73528/desperdicio-alimentar-na-ue-factos-e-numeros-infografia" target="_blank">Parlamento Europeu / Eurostat, 2022</a></p>
+      <p class="chart-source">Fonte: ${renderSourceReference(data.metadata?.source, data.metadata?.source_url || '', data.metadata?.year ? String(data.metadata.year) : '')}</p>
     </div>
   `;
 }
@@ -469,7 +834,7 @@ function renderComparisonChart(data) {
         }).join('')}
       </div>
       <p class="comparison-caption">Portugal desperdiça 41% mais que a média europeia. Estamos no pódio errado.</p>
-      <p class="chart-source">Fonte: <a href="https://www.europarl.europa.eu/topics/pt/article/20170505STO73528/desperdicio-alimentar-na-ue-factos-e-numeros-infografia" target="_blank">Eurostat / Parlamento Europeu, 2022</a></p>
+      <p class="chart-source">Fonte: ${renderSourceReference(data.metadata?.source, data.metadata?.source_url || REFERENCES.euWasteFacts, data.metadata?.year ? String(data.metadata.year) : '')}</p>
     </div>
   `;
 }
@@ -509,16 +874,26 @@ function renderDefinitionBlock(term, definition, source) {
 function renderInitiativesGrid(data) {
   if (!data || !data.initiatives) return '';
 
-  const initiatives = data.initiatives.slice(0, 4);
+  const initiatives = data.initiatives.filter(init => init.highlight_on_site !== false).slice(0, 4);
 
   return `
     <div class="initiatives-grid">
       ${initiatives.map(init => {
         const stats = init.current_stats || init.stats_portugal || init.stats || {};
-        const mainStat = stats.tonnes_saved_total || stats.meals_saved_total || stats.familias_apoiadas_diariamente || '—';
-        const mainLabel = stats.tonnes_saved_total ? 'Toneladas salvas' :
-                         stats.meals_saved_total ? 'Refeições salvas' :
-                         stats.familias_apoiadas_diariamente ? 'Famílias/dia' : 'Impacto';
+        const options = [
+          { value: stats.tonnes_saved_total, label: 'Toneladas salvas' },
+          { value: stats.tonnes_saved_weekly_kg, label: 'Kg/semana' },
+          { value: stats.surprise_bags_saved_total, label: 'Bags salvas' },
+          { value: stats.meals_saved_total, label: 'Refeições salvas' },
+          { value: stats.refeicoes_redistribuidas_mes, label: 'Refeições/mês' },
+          { value: stats.beneficiarios_activos, label: 'Beneficiários' },
+          { value: stats.familias_apoiadas_diariamente, label: 'Famílias/dia' }
+        ].filter(option => option.value !== undefined && option.value !== null && option.value !== '');
+        const mainMetric = options[0] || { value: '—', label: 'Impacto' };
+        const startYear = init.founded || init.arrived_portugal || '—';
+        const sourceMarkup = init.source
+          ? `<p class="initiative-source">Fonte: <a href="${esc(init.source.url)}" target="_blank" rel="noopener noreferrer">${esc(init.source.label)}</a>${init.source.accessed_at ? ` — verificado em ${esc(init.source.accessed_at)}` : ''}</p>`
+          : '';
 
         return `
           <div class="initiative-card">
@@ -528,20 +903,21 @@ function renderInitiativesGrid(data) {
             </div>
             <div class="initiative-stats">
               <div class="initiative-stat">
-                <div class="initiative-stat-value">${typeof mainStat === 'number' ? mainStat.toLocaleString('pt-PT') : mainStat}</div>
-                <div class="initiative-stat-label">${mainLabel}</div>
+                <div class="initiative-stat-value">${typeof mainMetric.value === 'number' ? mainMetric.value.toLocaleString('pt-PT') : mainMetric.value}</div>
+                <div class="initiative-stat-label">${mainMetric.label}</div>
               </div>
               <div class="initiative-stat">
-                <div class="initiative-stat-value">${init.founded || init.arrived_portugal || '—'}</div>
+                <div class="initiative-stat-value">${startYear}</div>
                 <div class="initiative-stat-label">Ano de início</div>
               </div>
             </div>
             <div class="initiative-insight">${esc(init.key_insight)}</div>
+            ${sourceMarkup}
           </div>
         `;
       }).join('')}
     </div>
-    <p class="chart-source">Fontes: <a href="https://frutafeia.pt" target="_blank">Fruta Feia</a>, <a href="https://toogoodtogo.pt" target="_blank">Too Good To Go</a>, <a href="https://www.re-food.org" target="_blank">Refood</a></p>
+    <p class="chart-source">${esc(data.metadata?.source_note || 'Fontes oficiais das próprias iniciativas.')}</p>
   `;
 }
 
@@ -638,7 +1014,7 @@ function renderProjectionChart(data) {
         Se nada mudar, em 2030 Portugal estará a desperdiçar <strong>mais</strong>, não menos. A linha vermelha não mente.
       </div>
       <p class="projection-caption">${esc(data.key_insight || '')}</p>
-      <p class="chart-source">Fonte: <a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024L1438" target="_blank">Directiva (UE) 2024/1438</a> e projecções editoriais</p>
+      <p class="chart-source">Fonte: <a href="${REFERENCES.euWasteDirective}" target="_blank" rel="noopener noreferrer">Diretiva (UE) 2025/1892</a> e projecções editoriais</p>
     </div>
   `;
 }
@@ -647,13 +1023,13 @@ function renderCountdown(targetDate, message, subtext) {
   const targetDateStr = targetDate || '2030-12-31';
 
   return `
-    <div class="countdown-block" data-target-date="${targetDateStr}" data-message="${esc(message)}">
+    <div class="countdown-block" data-animate="true" data-target-date="${targetDateStr}" data-message="${esc(message)}">
       <div class="countdown-value">
-        <span class="countdown-digits">0</span>
+        <span class="countdown-digits" aria-label="0"></span>
       </div>
       <div class="countdown-label">${esc(message)}</div>
       <div class="countdown-subtext">${esc(subtext)}</div>
-      <p class="chart-source">Meta: <a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024L1438" target="_blank">Directiva (UE) 2024/1438</a></p>
+      <p class="chart-source">Meta: <a href="${REFERENCES.euWasteDirective}" target="_blank" rel="noopener noreferrer">Diretiva (UE) 2025/1892</a></p>
     </div>
   `;
 }
@@ -670,27 +1046,56 @@ function initCountdowns() {
     const targetDate = new Date(targetDateStr);
     const digitsEl = container.querySelector('.countdown-digits');
     const labelEl = container.querySelector('.countdown-label');
+    let animationFrame = 0;
 
-    function animateValue(el, start, end, duration) {
-      const range = end - start;
-      const startTime = performance.now();
-
-      function update(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const easeOut = 1 - Math.pow(1 - progress, 3);
-        const current = Math.round(start + range * easeOut);
-        el.textContent = current.toLocaleString('pt-PT');
-
-        if (progress < 1) {
-          requestAnimationFrame(update);
-        }
+    function stopAnimation() {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+        animationFrame = 0;
       }
-
-      requestAnimationFrame(update);
+      digitsEl.classList.remove('countdown-animating');
     }
 
-    function updateCountdown() {
+    function setVisualDigits(value) {
+      const rounded = Math.max(0, Math.round(value));
+      digitsEl.style.setProperty('--countdown-num', rounded);
+      digitsEl.setAttribute('aria-label', rounded.toLocaleString('pt-PT'));
+    }
+
+    function setStaticDigits(value) {
+      stopAnimation();
+      setVisualDigits(value);
+    }
+
+    function easeOutExpo(progress) {
+      if (progress >= 1) return 1;
+      return 1 - Math.pow(2, -10 * progress);
+    }
+
+    function animateDigits(value) {
+      stopAnimation();
+      const finalValue = Math.max(0, value);
+      const duration = 1800;
+      digitsEl.classList.add('countdown-animating');
+      setVisualDigits(0);
+
+      const start = performance.now();
+      const step = (now) => {
+        const progress = Math.min(1, (now - start) / duration);
+        setVisualDigits(finalValue * easeOutExpo(progress));
+        if (progress < 1) {
+          animationFrame = requestAnimationFrame(step);
+          return;
+        }
+        animationFrame = 0;
+        digitsEl.classList.remove('countdown-animating');
+        setVisualDigits(finalValue);
+      };
+
+      animationFrame = requestAnimationFrame(step);
+    }
+
+    function updateCountdown(animate = false) {
       const now = new Date();
       const diff = targetDate - now;
       const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
@@ -705,16 +1110,27 @@ function initCountdowns() {
         container.classList.remove('countdown-passed');
       }
 
-      // Animate number rolling
-      const currentValue = parseInt(digitsEl.textContent.replace(/\./g, '')) || 0;
-      animateValue(digitsEl, currentValue, absDays, 1500);
+      if (animate) {
+        animateDigits(absDays);
+      } else if (container.dataset.countdownAnimated === 'true') {
+        setStaticDigits(absDays);
+      }
     }
 
-    // Initial update
-    updateCountdown();
+    container.__animateCountdown = () => {
+      if (container.dataset.countdownAnimated === 'true') return;
+      container.dataset.countdownAnimated = 'true';
+      updateCountdown(true);
+    };
+
+    updateCountdown(false);
+
+    if (container.classList.contains('in-view') || container.classList.contains('animated')) {
+      container.__animateCountdown();
+    }
 
     // Update every hour (in case page stays open)
-    setInterval(updateCountdown, 3600000);
+    setInterval(() => updateCountdown(false), 3600000);
   });
 }
 
@@ -741,28 +1157,303 @@ function renderScenarios(data) {
         `;
       }).join('')}
     </div>
-    <p class="chart-source">Fonte: Projecções editoriais baseadas em <a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024L1438" target="_blank">Directiva (UE) 2024/1438</a> e dados do <a href="https://arquivo.pt" target="_blank">corpus Público/Arquivo.pt</a></p>
+    <p class="chart-source">Fonte: Projecções editoriais baseadas em <a href="${REFERENCES.euWasteDirective}" target="_blank" rel="noopener noreferrer">Diretiva (UE) 2025/1892</a> e dados do <a href="https://arquivo.pt" target="_blank" rel="noopener noreferrer">corpus Público/Arquivo.pt</a></p>
   `;
 }
 
 function renderSummaryGrid(items) {
   const icons = {
-    chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-3 3"/></svg>',
-    alert: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
-    globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
-    target: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
-    home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>'
+    chart: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M3 3v18h18"/><path d="M18 9l-5 5-4-4-3 3"/></svg>',
+    alert: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>',
+    globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
+    target: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>',
+    home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>'
   };
 
   return `
-    <div class="summary-grid">
-      ${items.map(item => `
-        <div class="summary-item">
-          <div class="summary-item-icon">${icons[item.icon] || '<span>•</span>'}</div>
+    <div class="summary-grid" data-animate="true">
+      ${items.map((item, idx) => `
+        <div class="summary-item" style="--item-delay: ${idx * 0.08}s">
+          <div class="summary-item-icon" aria-hidden="true">${icons[item.icon] || '<span>•</span>'}</div>
           <div class="summary-item-title">${esc(item.title)}</div>
           <div class="summary-item-text">${esc(item.text)}</div>
         </div>
       `).join('')}
+    </div>
+  `;
+}
+
+function getCoverageSummary(timeline) {
+  const years = [...(timeline.by_year || [])];
+  const peaks = [...(timeline.peaks || [])];
+  const topYear = [...years].sort((a, b) => (b.count - a.count) || a.year.localeCompare(b.year))[0] || { year: '2023', count: 32 };
+  const topPeak = peaks[0] || { month: '2023-12', count: 7 };
+  const strongPeaks = peaks.filter(p => p.count >= 5).length;
+  return { topYear, topPeak, strongPeaks };
+}
+
+function renderArchiveDependence(featured, deepArchive) {
+  const featuredItems = [...(featured?.featured || [])]
+    .filter(article => article?.url && article?.date && ((article.year || parseInt(article.date, 10)) <= 2014))
+    .sort((a, b) => (a.year || 0) - (b.year || 0));
+
+  const earlyCoverage = featuredItems[0] || null;
+  const decisiveCoverage = featuredItems.find(article => /campo|f[aá]brica|fruta feia|caixotes/i.test(article.title || '')) || featuredItems[1] || null;
+  const absenceProof = (deepArchive?.items || []).find(item => item?.archive_url) || null;
+
+  const cards = [
+    earlyCoverage ? {
+      label: 'Recuperação',
+      title: earlyCoverage.title,
+      text: 'O Arquivo.pt permite recuperar cobertura antiga do Público que estrutura a cronologia do projecto e ancora a evolução do tema.',
+      link: generateArquivoUrl(earlyCoverage),
+      linkLabel: 'Ver versão preservada',
+      note: `${earlyCoverage.year} · Público`
+    } : null,
+    absenceProof ? {
+      label: 'Prova de ausência',
+      title: absenceProof.title,
+      text: 'A preservação histórica é metodologicamente decisiva porque permite mostrar que, antes de 2011, o tema surgia de forma dispersa e ainda sem cobertura consistente dedicada ao desperdício alimentar.',
+      link: absenceProof.archive_url,
+      linkLabel: 'Abrir prova no Arquivo.pt',
+      note: `${absenceProof.year} · ${absenceProof.classification === 'noise' ? 'contexto disperso' : 'contexto indirecto'}`
+    } : null,
+    decisiveCoverage ? {
+      label: 'Verificabilidade',
+      title: decisiveCoverage.title,
+      text: 'Cada afirmação central pode ser reaberta numa URL preservada, com data e contexto, reduzindo a dependência de memória, screenshots soltas ou links quebrados.',
+      link: generateArquivoUrl(decisiveCoverage),
+      linkLabel: 'Validar no Arquivo.pt',
+      note: `${decisiveCoverage.year} · Público`
+    } : null
+  ].filter(Boolean);
+
+  if (!cards.length) return '';
+
+  return `
+    <div class="archive-proof">
+      <div class="archive-proof-header">
+        <span class="archive-proof-kicker">Sem Arquivo.pt este trabalho não existia</span>
+        <h3 class="archive-proof-title">Porque este trabalho depende do Arquivo.pt</h3>
+        <p class="archive-proof-text">O arquivo não serviu apenas para ilustrar a narrativa. Serviu para recuperar cobertura antiga, provar ausências e manter cada evidência reabrível e verificável.</p>
+      </div>
+      <div class="archive-proof-grid">
+        ${cards.map(card => `
+          <article class="archive-proof-card">
+            <div class="archive-proof-label">${esc(card.label)}</div>
+            <h4 class="archive-proof-card-title">${esc(card.title)}</h4>
+            <p class="archive-proof-card-text">${esc(card.text)}</p>
+            <div class="archive-proof-note">${esc(card.note)}</div>
+            <a href="${esc(card.link)}" target="_blank" rel="noopener noreferrer" class="archive-proof-link">${esc(card.linkLabel)}</a>
+          </article>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderPublicoCommitment(corpusIndex) {
+  const cards = [
+    {
+      label: 'Página temática',
+      title: 'O Público mantém hoje uma frente dedicada ao desperdício alimentar',
+      text: 'A cobertura deixou de ser apenas episódica. Existe uma página temática própria que agrega peças recentes e torna o tema legível como continuidade editorial.',
+      link: PUBLICO_EDITORIAL.themePageArchive || PUBLICO_EDITORIAL.themePageLive,
+      linkLabel: 'Abrir página temática',
+      note: PUBLICO_EDITORIAL.themePageArchive ? 'Público · captura preservada no Arquivo.pt' : 'Público · página temática'
+    },
+    ...PUBLICO_EDITORIAL.highlights.map(item => {
+      const article = corpusIndex.get(String(item.articleId));
+      if (!article) return null;
+      const replayUrl = generateArquivoUrl(article);
+      const published = fmtDate(article.published_at || article.date || '');
+      return {
+        label: item.label,
+        title: article.title,
+        text: item.text,
+        link: replayUrl || article.url || '',
+        linkLabel: replayUrl ? 'Ler versão preservada' : 'Ler artigo',
+        note: `${published} · Público`
+      };
+    })
+  ].filter(Boolean);
+
+  if (!cards.length) return '';
+
+  return `
+    <div class="archive-proof publico-commitment">
+      <div class="archive-proof-header">
+        <span class="archive-proof-kicker">Compromisso editorial</span>
+        <h3 class="archive-proof-title">O Público tratou o tema como frente, não como episódio</h3>
+        <p class="archive-proof-text">A continuidade não aparece apenas nos 127 artigos curados para este projecto. Aparece também no presente: numa página temática própria e numa sequência recente de peças que liga medição, comportamento doméstico e soluções práticas.</p>
+      </div>
+      <div class="archive-proof-grid">
+        ${cards.map(card => `
+          <article class="archive-proof-card">
+            <div class="archive-proof-label">${esc(card.label)}</div>
+            <h4 class="archive-proof-card-title">${esc(card.title)}</h4>
+            <p class="archive-proof-card-text">${esc(card.text)}</p>
+            <div class="archive-proof-note">${esc(card.note)}</div>
+            <a href="${esc(card.link)}" target="_blank" rel="noopener noreferrer" class="archive-proof-link">${esc(card.linkLabel)}</a>
+          </article>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderUseCases() {
+  const useCases = [
+    {
+      audience: 'Professores',
+      title: 'Recurso para aulas de sustentabilidade e literacia mediática',
+      text: 'Usar a linha do tempo, os casos do Arquivo.pt e o jogo para discutir consumo, arquivo web e responsabilidade pública.'
+    },
+    {
+      audience: 'Jornalistas',
+      title: 'Modelo replicável de investigação com arquivo web',
+      text: 'Cruzar cobertura histórica, legislação e dados públicos para reconstruir agendas mediáticas e testar mudanças de linguagem.'
+    },
+    {
+      audience: 'Investigadores',
+      title: 'Corpus aberto para análise longitudinal',
+      text: 'O projecto expõe dados, critérios de curadoria e validação final, facilitando reutilização, crítica e extensão metodológica.'
+    },
+    {
+      audience: 'Cidadãos e ONG',
+      title: 'Ferramenta prática de utilidade pública',
+      text: 'Ajudar a perceber a escala do problema, localizar medidas concretas e transformar um arquivo jornalístico em serviço presente.'
+    }
+  ];
+
+  return `
+    <div class="use-cases">
+      <div class="archive-proof-header">
+        <span class="archive-proof-kicker">Utilidade pública</span>
+        <h3 class="archive-proof-title">Como usar este projecto</h3>
+      </div>
+      <div class="use-cases-grid">
+        ${useCases.map(card => `
+          <article class="use-case-card">
+            <div class="use-case-audience">${esc(card.audience)}</div>
+            <h4 class="use-case-title">${esc(card.title)}</h4>
+            <p class="use-case-text">${esc(card.text)}</p>
+          </article>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderCulturalContext() {
+  const cards = [
+    {
+      label: 'Reaproveitamento',
+      title: 'A nossa cozinha também nasceu de excedentes bem aproveitados.',
+      text: 'A história dos Ovos Moles de Aveiro é um bom lembrete cultural: as claras eram usadas para engomar os hábitos e as gemas, para não serem desperdiçadas, tornaram-se base de um doce conventual que hoje é património gastronómico.',
+      note: 'Produtos Tradicionais Portugueses · Ovos Moles de Aveiro - IGP',
+      sources: [
+        { label: 'História do produto', url: ARCHIVE_REFERENCES.ovosMolesHistory }
+      ]
+    },
+    {
+      label: 'Hospitalidade',
+      title: 'Mesa farta não precisa de significar comida a mais no lixo.',
+      text: 'Liliana Sousa lembra que parte do desperdício em Portugal nasce da tradição da mesa farta, da compra por impulso e da confeção em excesso. Mas a mesma entrevista insiste noutra ideia decisiva: reduzir o desperdício é sinal de evolução, não de escassez.',
+      note: 'Unidos Contra o Desperdício · entrevista com Liliana Sousa',
+      sources: [
+        { label: 'Entrevista preservada', url: ARCHIVE_REFERENCES.lilianaMesaFarta }
+      ]
+    }
+  ];
+
+  return `
+    <div class="cultural-context cultural-context-compact" data-animate="true">
+      <div class="archive-proof-header">
+        <span class="archive-proof-kicker">Cultura alimentar</span>
+        <h3 class="archive-proof-title">A hospitalidade portuguesa conhece abundância, engenho e aproveitamento.</h3>
+        <p class="archive-proof-text">A tradição da mesa portuguesa não é uma autorização para desperdiçar. É uma memória de partilha, invenção culinária e reaproveitamento que vale a pena recuperar.</p>
+      </div>
+      <div class="cultural-context-grid">
+        ${cards.map((card, idx) => `
+          <article class="cultural-context-card" style="--item-delay: ${idx * 0.08}s">
+            <div class="cultural-context-illustration" aria-hidden="true">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="archive-proof-label">${esc(card.label)}</div>
+            <h4 class="archive-proof-card-title">${esc(card.title)}</h4>
+            <p class="archive-proof-card-text">${esc(card.text)}</p>
+            <div class="archive-proof-note">${esc(card.note)}</div>
+            <div class="energy-reflection-sources">
+              ${card.sources.map(source => `
+                <a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer" class="energy-reflection-source">${esc(source.label)}</a>
+              `).join('')}
+            </div>
+          </article>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderEnergyReflection() {
+  const cards = [
+    {
+      label: 'Energia incorporada',
+      title: 'Quando a comida desaparece, o custo físico não desaparece com ela.',
+      text: 'O Parlamento Europeu sublinha que, quando um alimento é descartado, a energia e os recursos acumulados ao longo da cadeia continuam a existir sem qualquer benefício nutricional. No mesmo enquadramento, a UE associa o desperdício alimentar de 2022 a 254 milhões de toneladas de CO2 e a 342 mil milhões de metros cúbicos de água.',
+      sources: [
+        { label: 'Parlamento Europeu / EPRS, 2025', url: ARCHIVE_REFERENCES.eprsFoodWaste2025 },
+        { label: 'UNEP, 2024', url: ARCHIVE_REFERENCES.unepFoodWaste }
+      ]
+    },
+    {
+      label: 'Hierarquia europeia',
+      title: 'Compostar é melhor do que aterrar. Mas chega tarde.',
+      text: 'A hierarquia europeia põe primeiro a prevenção na origem e a redistribuição para consumo humano. Só depois aparecem alimentação animal, usos industriais, reciclagem e recuperação de nutrientes, onde entram compostagem e biogás. O sentido é claro: tratar bem o resíduo importa, mas evitar que a comida se torne resíduo vale mais.',
+      sources: [
+        { label: 'Parlamento Europeu / EPRS, 2025', url: ARCHIVE_REFERENCES.eprsFoodWaste2025 },
+        { label: 'Comissão Europeia', url: ARCHIVE_REFERENCES.euFoodWaste }
+      ]
+    },
+    {
+      label: 'O ponto decisivo',
+      title: 'A pergunta certa não é apenas o que fazemos ao resíduo.',
+      text: 'Se o desperdício alimentar é energia e recursos materializados, então a medida decisiva é o que evitamos perder antes do balde: comprar melhor, conservar melhor, redistribuir mais cedo e reduzir excedentes na origem. Tratar o resíduo conta. Evitar o resíduo conta mais.',
+      sources: [
+        { label: 'Parlamento Europeu / EPRS, 2025', url: ARCHIVE_REFERENCES.eprsFoodWaste2025 },
+        { label: 'Comissão Europeia', url: ARCHIVE_REFERENCES.euFoodWaste }
+      ]
+    }
+  ];
+
+  return `
+    <div class="energy-reflection" data-animate="true">
+      <div class="archive-proof-header">
+        <span class="archive-proof-kicker">Reflexão final</span>
+        <h3 class="archive-proof-title">No fim, tudo isto é energia</h3>
+        <p class="archive-proof-text">Comida deitada fora não é apenas comida perdida. É solo, água, refrigeração, transporte, processamento, trabalho e energia já gastos ao longo da cadeia.</p>
+      </div>
+      <div class="energy-reflection-grid">
+        ${cards.map((card, idx) => `
+          <article class="energy-reflection-card" style="--item-delay: ${idx * 0.08}s">
+            <div class="energy-reflection-label">${esc(card.label)}</div>
+            <h4 class="energy-reflection-title">${esc(card.title)}</h4>
+            <p class="energy-reflection-text">${esc(card.text)}</p>
+            <div class="energy-reflection-sources">
+              ${card.sources.map(source => `
+                <a href="${esc(source.url)}" target="_blank" rel="noopener noreferrer" class="energy-reflection-source">
+                  ${esc(source.label)}
+                </a>
+              `).join('')}
+            </div>
+          </article>
+        `).join('')}
+      </div>
+      <div class="energy-reflection-note">
+        <p>Há ainda uma segunda ironia material nesta história: até a camada digital nos obriga a lembrar que a infraestrutura nunca é abstracta. A IEA estima que os centros de dados consumiram cerca de 415 TWh de electricidade em 2024 e podem aproximar-se de 945 TWh em 2030. A lição não é atacar tecnologia. É mais simples: por trás de quase tudo o que desperdiçamos, há sempre energia já comprometida.</p>
+        <p class="chart-source">Fontes: ${renderSourceReference('IEA, 2025', ARCHIVE_REFERENCES.ieaEnergyAI, 'Arquivo.pt')} · ${renderSourceReference('FAO', ARCHIVE_REFERENCES.faoEnergy, 'Arquivo.pt')}</p>
+      </div>
     </div>
   `;
 }
@@ -778,15 +1469,15 @@ function renderDeepArchive(data) {
   };
 
   return `
-    <div class="deep-archive">
+    <div class="deep-archive" data-animate="true">
       <div class="deep-archive-header">
         <h3 class="deep-archive-title">Arquivo Profundo: 1999–2010</h3>
-        <p class="deep-archive-subtitle">Antes de existir tema, existia ruído. Os primeiros resultados do Arquivo.pt revelam uma ausência significativa.</p>
+        <p class="deep-archive-subtitle">Antes de existir um recorte jornalístico estável, existiam referências dispersas. Os primeiros resultados do Arquivo.pt mostram um tema ainda sem cobertura consistente.</p>
       </div>
       <div class="deep-archive-insight">${esc(data.insight)}</div>
       <div class="deep-archive-timeline">
-        ${data.items.map(item => `
-          <div class="deep-archive-item ${item.classification}">
+        ${data.items.map((item, idx) => `
+          <div class="deep-archive-item ${item.classification}" style="--item-delay: ${idx * 0.12}s">
             <div class="deep-archive-item-header">
               <span class="deep-archive-year">${item.year}</span>
               <span class="deep-archive-classification ${item.classification}">${classificationLabels[item.classification] || item.classification}</span>
@@ -794,8 +1485,8 @@ function renderDeepArchive(data) {
             <div class="deep-archive-item-title">${esc(item.title)}</div>
             <div class="deep-archive-quote">"${esc(item.quote)}"</div>
             <div class="deep-archive-note">${esc(item.note)}</div>
-            <a href="${item.archive_url}" target="_blank" class="deep-archive-link arquivo-badge">
-              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+            <a href="${item.archive_url}" target="_blank" rel="noopener noreferrer" class="deep-archive-link arquivo-badge">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true" focusable="false">
                 <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
                 <circle cx="12" cy="12" r="4" fill="currentColor"/>
               </svg>
@@ -819,57 +1510,51 @@ function renderHistoricalCarousel(articles) {
     return yearA - yearB;
   });
 
-  // Generate arquivo.pt URLs (format: arquivo.pt/wayback/YYYYMMDD120000/url)
-  const generateArquivoUrl = (article) => {
-    const date = article.date || `${article.year}-01-01`;
-    const timestamp = date.replace(/-/g, '') + '120000';
-    return `https://arquivo.pt/wayback/${timestamp}/${article.url}`;
-  };
-
   return `
     <div class="historical-carousel">
       <div class="carousel-header">
         <div>
           <h3 class="carousel-title">Linha do Tempo: Cobertura no Público</h3>
-          <p class="carousel-subtitle">15 anos de jornalismo sobre desperdício alimentar, preservados pelo Arquivo.pt</p>
+          <p class="carousel-subtitle">Uma seleção cronológica de peças do Público preservadas pelo Arquivo.pt</p>
         </div>
         <div class="carousel-controls">
-          <button class="carousel-btn" onclick="document.querySelector('.carousel-track').scrollBy({left: -340, behavior: 'smooth'})">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <button class="carousel-btn" type="button" data-carousel-dir="-1" aria-label="Deslocar para a esquerda">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
               <path d="M15 18l-6-6 6-6"/>
             </svg>
           </button>
-          <button class="carousel-btn" onclick="document.querySelector('.carousel-track').scrollBy({left: 340, behavior: 'smooth'})">
-            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <button class="carousel-btn" type="button" data-carousel-dir="1" aria-label="Deslocar para a direita">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
               <path d="M9 18l6-6-6-6"/>
             </svg>
           </button>
         </div>
       </div>
-      <div class="carousel-track">
+      <div class="carousel-track" data-carousel-track>
         ${sortedArticles.map(article => {
           const year = article.year || article.date?.slice(0, 4) || 'N/A';
-          const imageUrl = article.image?.url || 'https://imagens.publico.pt/imagens.aspx/1245446?tp=UH&db=IMAGENS&type=JPG';
+          const imageUrl = article.image?.url || buildImageFallbackDataUri(year);
           const arquivoUrl = generateArquivoUrl(article);
+          const fallbackImage = buildImageFallbackDataUri(year);
 
           return `
             <article class="carousel-card">
-              <img src="${imageUrl}" alt="${esc(article.title)}" class="carousel-card-image" loading="lazy" onerror="this.src='https://via.placeholder.com/320x180/1c1c1f/4ade80?text=${year}'">
+              <img src="${imageUrl}" alt="${esc(article.title)}" class="carousel-card-image" loading="lazy" data-fallback-src="${fallbackImage}">
               <div class="carousel-card-content">
                 <span class="carousel-card-year">${year}</span>
                 <h4 class="carousel-card-title">${esc(article.title)}</h4>
                 <p class="carousel-card-excerpt">${esc(article.key_narrative || article.key_quote || (article.key_stats ? article.key_stats.join(' • ') : ''))}</p>
                 <div class="carousel-card-links">
-                  <a href="${arquivoUrl}" target="_blank" class="arquivo-badge" title="Ver versão preservada no Arquivo.pt">
-                    <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+                  <a href="${arquivoUrl}" target="_blank" rel="noopener noreferrer" class="arquivo-badge" title="Ver versão preservada no Arquivo.pt">
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor" aria-hidden="true" focusable="false">
                       <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
                       <circle cx="12" cy="12" r="4" fill="currentColor"/>
                     </svg>
                     Arquivo.pt
                   </a>
-                  <a href="${article.url}" target="_blank" class="carousel-card-link">
+                  <a href="${article.url}" target="_blank" rel="noopener noreferrer" class="carousel-card-link">
                     Público
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
                       <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/>
                       <polyline points="15 3 21 3 21 9"/>
                       <line x1="10" y1="14" x2="21" y2="3"/>
@@ -886,55 +1571,47 @@ function renderHistoricalCarousel(articles) {
 }
 
 // ==================== LINGUISTIC ANALYSIS ====================
-function renderLinguisticAnalysis() {
-  // Data from editorial.txt: term presence per period (2011-2016 / 2017-2020 / 2021-2026)
-  const terms = [
-    { term: 'emissões', periods: [0, 6, 30], trend: 'up' },
-    { term: 'cadeia', periods: [1, 6, 15], trend: 'up' },
-    { term: 'circular', periods: [0, 2, 9], trend: 'up' },
-    { term: 'economia', periods: [0, 3, 13], trend: 'up' },
-    { term: 'validade', periods: [3, 4, 13], trend: 'up' },
-    { term: 'supermercados', periods: [3, 8, 13], trend: 'up' },
-    { term: 'doação', periods: [0, 3, 7], trend: 'up' },
-    { term: 'sobras', periods: [2, 2, 9], trend: 'stable' }
-  ];
+function renderLinguisticAnalysis(corpusData) {
+  const analysis = corpusData?.metadata?.linguistic_analysis;
+  const terms = analysis?.items || [];
+  if (!terms.length) return '';
 
-  const maxValue = Math.max(...terms.flatMap(t => t.periods));
+  const maxValue = Math.max(...terms.flatMap(term => (term.periods || []).map(period => period.count || 0)), 1);
+  const periods = analysis.periods || [];
 
   return `
-    <div class="linguistic-analysis">
+    <div class="linguistic-analysis" data-animate="true">
       <div class="linguistic-analysis-header">
         <h3 class="linguistic-analysis-title">A Linguagem Muda: Do Doméstico ao Sistémico</h3>
         <p class="linguistic-analysis-subtitle">Análise de termos em 127 artigos do Público sobre desperdício alimentar (2011-2026)</p>
       </div>
       <div class="linguistic-analysis-insight">
-        O vocabulário desloca-se de preocupações domésticas ("sobras", "validade") para conceitos sistémicos ("emissões", "cadeia", "economia circular"). Esta mudança reflecte a politização do tema e a pressão das metas europeias.
+        O vocabulário desloca-se de preocupações domésticas ("sobras", "validade") para conceitos sistémicos ("emissões", "cadeia", "economia circular"). Esta leitura é calculada automaticamente sobre o corpus final, sem depender de notas editoriais externas.
         <cite style="display: block; margin-top: 8px; font-style: normal; font-size: 11px;">
-          <a href="https://www.publico.pt/2023/02/19/azul/noticia/portugues-deita-184-kg-comida-ano-propoem-mudar-2039370" target="_blank" style="color: var(--accent);">Fonte: Corpus Público 2011-2026</a>
+          <a href="assets/data/corpus_core.json" target="_blank" rel="noopener noreferrer" style="color: var(--accent);">Fonte: corpus_core.json</a>
         </cite>
       </div>
       <div class="linguistic-grid">
-        ${terms.map(t => {
+        ${terms.map((t, termIdx) => {
           const trendLabel = t.trend === 'up' ? '↑' : '→';
           const trendClass = t.trend;
           return `
-            <div class="linguistic-term-card">
+            <div class="linguistic-term-card" style="--item-delay: ${termIdx * 0.07}s">
               <div class="linguistic-term-name">
                 "${t.term}"
                 <span class="linguistic-term-trend ${trendClass}">${trendLabel}</span>
               </div>
               <div class="linguistic-periods">
-                ${t.periods.map((val, i) => {
-                  const periodLabels = ['2011-16', '2017-20', '2021-26'];
+                ${(t.periods || []).map((period, i) => {
                   const periodClasses = ['p1', 'p2', 'p3'];
-                  const width = (val / maxValue) * 100;
+                  const width = ((period.count || 0) / maxValue) * 100;
                   return `
                     <div class="linguistic-period">
-                      <span class="linguistic-period-label">${periodLabels[i]}</span>
+                      <span class="linguistic-period-label">${period.label}</span>
                       <div class="linguistic-period-bar">
-                        <div class="linguistic-period-fill ${periodClasses[i]}" style="width: ${width}%"></div>
+                        <div class="linguistic-period-fill ${periodClasses[i]}" style="width: ${width}%; --period-delay: ${termIdx * 0.07 + i * 0.1}s"></div>
                       </div>
-                      <span class="linguistic-period-value">${val}</span>
+                      <span class="linguistic-period-value">${period.count || 0}</span>
                     </div>
                   `;
                 }).join('')}
@@ -944,18 +1621,12 @@ function renderLinguisticAnalysis() {
         }).join('')}
       </div>
       <div class="linguistic-legend">
-        <div class="linguistic-legend-item">
-          <span class="linguistic-legend-dot p1"></span>
-          2011-2016 (Emergência)
-        </div>
-        <div class="linguistic-legend-item">
-          <span class="linguistic-legend-dot p2"></span>
-          2017-2020 (Institucionalização)
-        </div>
-        <div class="linguistic-legend-item">
-          <span class="linguistic-legend-dot p3"></span>
-          2021-2026 (Politização)
-        </div>
+        ${periods.map((period, idx) => `
+          <div class="linguistic-legend-item">
+            <span class="linguistic-legend-dot p${idx + 1}"></span>
+            ${esc(period.label)}
+          </div>
+        `).join('')}
       </div>
     </div>
   `;
@@ -963,22 +1634,33 @@ function renderLinguisticAnalysis() {
 
 // ==================== RENDER FULL CHAPTER ====================
 function renderChapter(chapter, idx, data) {
-  const { corpusIndex, lawIndex, timeline, laws, wasteBreakdown, euComparison, initiatives, projections, featured, deepArchive } = data;
+  const { corpusData, corpusIndex, lawIndex, timeline, laws, wasteBreakdown, euComparison, initiatives, projections, featured, deepArchive } = data;
   const blocks = chapter.blocks || [];
   const kind = chapter.kind;
+  const coverage = getCoverageSummary(timeline);
+  const bundleBlocks = blocks.filter(block => block.type === 'evidence_bundle');
+  const renderBundles = () => bundleBlocks.map(block =>
+    renderEvidenceBundle(
+      block.source_article_ids || [],
+      corpusIndex,
+      block.title || 'Fontes adicionais',
+      block.subtitle || ''
+    )
+  ).join('');
 
   let html = renderChapterHeader(chapter, idx);
 
   // PROLOGUE
   if (kind === 'prologue') {
+    html += renderPrologueWink();
     html += renderBigQuote(
       "A cozinha é o palco onde o desperdício se disfarça de hábito. Bruxelas é o lugar onde a responsabilidade se disfarça de processo. Entre os dois, a comida desaparece.",
       "desperdicio.pt, 2026"
     );
 
     html += `<div class="prose">
-      <p>Ninguém admite desperdiçar comida. No entanto, em Portugal, <strong>mais de 1,9 milhões de toneladas de alimentos</strong> acabam no lixo todos os anos. É um número abstracto, difícil de visualizar, até percebermos que representa cerca de 184 quilos por pessoa, por ano. <cite><a href="https://www.publico.pt/2023/02/19/azul/noticia/portugues-deita-184-kg-comida-ano-propoem-mudar-2039370" target="_blank">Público, 2023</a></cite></p>
-      <p>Este editorial documenta 15 anos de cobertura jornalística sobre desperdício alimentar, cruzando <em>127 artigos do Público</em> arquivados com <em>20 diplomas legais</em> de Portugal e da União Europeia. O objectivo: mostrar como um problema de cozinha se transformou em problema de Estado, e porque ainda estamos longe de o resolver.</p>
+      <p>Quase ninguém se orgulha de desperdiçar comida. Mas a reprovação moral ainda não travou a escala do problema: em Portugal, <strong>cerca de 1,93 milhões de toneladas de alimentos</strong> acabam no lixo por ano. Na leitura europeia usada pelo Parlamento Europeu para 2022, isso correspondia a cerca de <strong>184 quilos por pessoa</strong>. <cite><a href="${ARCHIVE_REFERENCES.publicoWaste2025Families}" target="_blank" rel="noopener noreferrer">Público / dados de 2023</a> · <a href="${REFERENCES.euWasteFacts}" target="_blank" rel="noopener noreferrer">Parlamento Europeu / Eurostat, 2022</a></cite></p>
+      <p>Este editorial documenta <em>127 artigos do Público</em>, publicados entre 2011 e 2026 e preservados pelo Arquivo.pt, cruzando-os com <em>20 diplomas legais</em> de Portugal e da União Europeia. O objectivo: mostrar como um problema de cozinha se transformou em problema de Estado, e porque ainda estamos longe de o resolver.</p>
     </div>`;
 
     // Main stats grid
@@ -996,13 +1678,14 @@ function renderChapter(chapter, idx, data) {
         'O problema não está só nas empresas. Está nas nossas cozinhas.'
       );
       html += renderDonutChart(wasteBreakdown);
+      html += renderDomesticEditorial(corpusData);
     }
 
     // EU comparison chart
     if (euComparison) {
       html += `<div class="prose">
         <h3>Portugal no contexto europeu</h3>
-        <p>Com <strong>184 kg per capita</strong>, Portugal é o <em>4.º país da UE que mais desperdiça alimentos</em>, 40% acima da média europeia. Só Chipre, Dinamarca e Grécia apresentam valores mais elevados. <cite><a href="https://www.publico.pt/2023/02/19/azul/noticia/portugues-deita-184-kg-comida-ano-propoem-mudar-2039370" target="_blank">Público, 2023</a></cite></p>
+        <p>Com <strong>184 kg per capita</strong>, Portugal é o <em>4.º país da UE que mais desperdiça alimentos</em>, 40% acima da média europeia. Só Chipre, Dinamarca e Grécia apresentam valores mais elevados. <cite><a href="${REFERENCES.euWasteFacts}" target="_blank" rel="noopener noreferrer">Parlamento Europeu / Eurostat, 2022</a></cite></p>
       </div>`;
       html += renderComparisonChart(euComparison);
     }
@@ -1010,14 +1693,14 @@ function renderChapter(chapter, idx, data) {
     // Year chart - media coverage evolution
     html += `<div class="prose">
       <h3>A evolução da atenção mediática</h3>
-      <p>A cobertura jornalística do tema <strong>cresceu exponencialmente</strong>: de apenas 1 artigo em 2011 para <em>32 artigos em 2023</em>, o ano de maior atenção. Em 2025, registamos já 27 artigos — quase um por semana.</p>
+      <p>A cobertura jornalística do tema <strong>cresceu de forma estrutural</strong>: de apenas 1 artigo em 2011 para <em>${coverage.topYear.count} artigos em ${coverage.topYear.year}</em>, o ano de maior atenção. O desperdício alimentar ganhou peso progressivo e passou a ocupar um lugar estável na agenda pública.</p>
     </div>`;
 
     html += renderStatsGrid([
-      { value: '32', label: 'Artigos em 2023', color: 'warning', note: 'Ano recorde' },
-      { value: '7', label: 'Pico Mensal', color: 'danger', note: 'Dezembro 2023' },
-      { value: '6', label: 'Picos >5', color: 'accent', note: 'Meses de pico' },
-      { value: '15', label: 'Anos de Dados', color: 'eu', note: '2011-2026' }
+      { value: String(coverage.topYear.count), label: `Artigos em ${coverage.topYear.year}`, color: 'warning', note: 'Ano recorde' },
+      { value: String(coverage.topPeak.count || 7), label: 'Pico Mensal', color: 'danger', note: fmtMonthLabel(coverage.topPeak.month) || 'Dez 23' },
+      { value: String(coverage.strongPeaks || 0), label: 'Picos >=5', color: 'accent', note: 'Meses de pico' },
+      { value: String((timeline.by_year || []).length || 14), label: 'Anos com Cobertura', color: 'eu', note: '2011-2026' }
     ]);
 
     html += renderYearChart(timeline);
@@ -1026,8 +1709,9 @@ function renderChapter(chapter, idx, data) {
     if (projections) {
       html += `<div class="prose">
         <h3>Três cenários para 2030</h3>
-        <p>A União Europeia obriga Portugal a reduzir o desperdício em <strong>30% até 2030</strong>. A meta dos ODS é ainda mais ambiciosa: <em>50%</em>. Mas qual é o cenário mais provável? <cite><a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024L1438" target="_blank">Directiva (UE) 2024/1438</a></cite></p>
+        <p>A União Europeia obriga Portugal a reduzir o desperdício em <strong>30% até 2030</strong>. A meta dos ODS é ainda mais ambiciosa: <em>50%</em>. Mas qual é o cenário mais provável? <cite><a href="${REFERENCES.euWasteDirective}" target="_blank" rel="noopener noreferrer">Diretiva (UE) 2025/1892</a></cite></p>
       </div>`;
+      html += renderEUProcessCard();
       html += renderProjectionChart(projections);
       html += renderCountdown(
         projections.countdown?.target_date || '2030-12-31',
@@ -1041,47 +1725,26 @@ function renderChapter(chapter, idx, data) {
     if (initiatives) {
       html += `<div class="prose">
         <h3>A sociedade civil em acção</h3>
-        <p>Enquanto o Estado avança devagar, iniciativas civis já salvam <strong>15.000 toneladas por ano</strong>. A Fruta Feia, a Too Good To Go e a Refood mostram que a mudança é possível quando há vontade. <cite><a href="https://www.publico.pt/2020/10/22/p3/noticia/fruta-feia-distinguida-premio-europeu-life-prova-funciona-1936266" target="_blank">Público, 2020</a></cite></p>
+        <p>Enquanto o Estado avança devagar, iniciativas civis e plataformas de redistribuição já operam em escala. A Fruta Feia liga produtores a consumidores, a Too Good To Go reencaminha excedentes do retalho e da restauração, e a Refood redistribui refeições diariamente. O problema não está sem resposta: já existe infra-estrutura cívica para agir.</p>
       </div>`;
       html += renderInitiativesGrid(initiatives);
-
-      // Video: Anna mergulha no lixo (Público P3, 2020)
-      html += `
-        <div class="video-section">
-          <div class="video-header">
-            <span class="video-year">2020</span>
-            <h4 class="video-title">Anna mergulha no lixo para combater o desperdício alimentar</h4>
-            <p class="video-source">Público P3</p>
-          </div>
-          <div class="video-embed">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/1TNPzSRzTt4?si=vv74TvnVzXrjQHxq"
-              title="Anna mergulha no lixo para combater o desperdício alimentar"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen>
-            </iframe>
-          </div>
-        </div>
-      `;
+      html += renderVideoFeature(featured);
     }
 
     // Linguistic analysis - vocabulary shift over time
     html += `<div class="prose">
       <h3>Como Mudou o Discurso</h3>
-      <p>A análise de 127 artigos do Público revela uma transformação profunda: o vocabulário deslocou-se de preocupações domésticas ("sobras", "validade") para conceitos sistémicos ("emissões", "cadeia", "economia circular"). Esta mudança reflecte a politização do tema. <cite><a href="https://www.publico.pt/2023/02/19/azul/noticia/portugues-deita-184-kg-comida-ano-propoem-mudar-2039370" target="_blank">Público, 2023</a></cite></p>
+      <p>A análise do corpus final revela uma transformação profunda: o vocabulário deslocou-se de preocupações domésticas ("sobras", "validade") para conceitos sistémicos ("emissões", "cadeia", "economia circular"). Esta mudança reflecte a politização do tema e aparece directamente nos 127 artigos curados.</p>
     </div>`;
-    html += renderLinguisticAnalysis();
+    html += renderLinguisticAnalysis(corpusData);
 
     // Add the EU infographic
     html += renderInfographic(
       EU_IMAGES.wasteByCountry,
       "Portugal é o 4.º país da UE que mais desperdiça",
       "Desperdício alimentar por pessoa em cada país da UE em 2022. Portugal regista 184 kg per capita.",
-      "Parlamento Europeu / Eurostat, 2022"
+      "Parlamento Europeu / Eurostat, 2022",
+      `Na leitura do Parlamento Europeu para 2022, Espanha surge entre os países com menor desperdício alimentar por habitante. O contraste ibérico serve apenas para lembrar isto: o desperdício não é um destino cultural fixo.`
     );
 
     // Summary grid
@@ -1092,21 +1755,26 @@ function renderChapter(chapter, idx, data) {
       { icon: 'target', title: '-30%', text: 'Meta obrigatória para 2030' }
     ]);
 
+    html += renderArchiveDependence(featured, deepArchive);
+
     // Deep archive (1999-2010)
     if (deepArchive) {
       html += renderDeepArchive(deepArchive);
     }
 
-    // Historical carousel (2011-2026)
+    // Historical carousel
     if (featured?.featured) {
       html += renderHistoricalCarousel(featured.featured);
     }
 
+    html += renderPublicoCommitment(corpusIndex);
+
     // Evidence cards
     const evidenceBlock = blocks.find(b => b.type === 'evidence_cards');
     if (evidenceBlock) {
-      html += renderEvidenceCards(evidenceBlock.source_article_ids || [], corpusIndex, "Artigos Fundacionais");
+      html += renderEvidenceCards(getEvidenceIds(chapter.chapter_id, evidenceBlock.source_article_ids || []), corpusIndex, "Artigos Fundacionais");
     }
+    html += renderBundles();
   }
 
   // PEAK WAVE
@@ -1128,7 +1796,7 @@ function renderChapter(chapter, idx, data) {
 
     html += `
       <div class="peak-indicator">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
           <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
         </svg>
         ${count} artigos publicados em ${monthName} de ${year} • ${peakRank}º maior pico
@@ -1137,12 +1805,12 @@ function renderChapter(chapter, idx, data) {
 
     // Different context based on which peak wave this is
     const peakContexts = {
-      '2023-12': `<p>Dezembro de 2023 marcou o <strong>maior pico de cobertura</strong> de toda a nossa análise: 7 artigos num só mês. O que aconteceu? A combinação de vários factores: a época natalícia (quando o desperdício doméstico dispara), o balanço de fim de ano da estratégia nacional, e a pressão crescente das metas europeias para 2030.</p>
-      <p>Este pico representa <em>quase um quarto de toda a cobertura de 2023</em>. O tema deixou de ser sazonal. É agora permanente.</p>`,
-      '2025-09': `<p>Setembro de 2025 trouxe <strong>6 artigos num mês</strong> — o segundo maior pico. O gatilho: a aprovação da Directiva (UE) 2024/1438 no Parlamento Europeu, que introduziu pela primeira vez <em>metas obrigatórias de redução</em> para todos os Estados-Membros. <cite><a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024L1438" target="_blank">EUR-Lex</a></cite></p>
+      '2023-12': `<p>Dezembro de 2023 marcou o <strong>maior pico de cobertura</strong> de toda a nossa análise. O que aconteceu? A combinação de vários factores: a época natalícia, o balanço de fim de ano da estratégia nacional e a pressão crescente das metas europeias para 2030.</p>
+      <p>Foi um momento de concentração editorial raro: num só mês, o tema deixou de soar ocasional e passou a parecer estrutural.</p>`,
+      '2025-09': `<p>Setembro de 2025 trouxe um dos maiores picos do período. O gatilho: a aprovação da Diretiva (UE) 2025/1892, que introduziu pela primeira vez <em>metas obrigatórias de redução</em> para todos os Estados-Membros. <cite><a href="${REFERENCES.euWasteDirective}" target="_blank" rel="noopener noreferrer">EUR-Lex</a></cite></p>
       <p>Portugal terá de reduzir 30% do desperdício no retalho e consumo até 2030. A lei já não é recomendação. É obrigação.</p>`,
-      '2023-10': `<p>Outubro de 2023 registou <strong>5 artigos</strong>, antecipando o pico de dezembro. O Dia Mundial da Alimentação (16 de outubro) é um catalisador anual de atenção mediática, mas em 2023 coincidiu com novos dados sobre Portugal ser o 4.º país da UE que mais desperdiça.</p>
-      <p>A narrativa mudou: de "devemos fazer melhor" para "estamos a falhar".</p>`
+      '2023-10': `<p>Outubro de 2023 antecipou o pico de dezembro. O Dia Mundial da Alimentação é um catalisador anual de atenção mediática, mas em 2023 coincidiu com novos dados sobre Portugal ser o 4.º país da UE que mais desperdiça.</p>
+      <p>A narrativa mudou: de apelos genéricos a um diagnóstico mais exigente sobre a urgência do problema.</p>`
     };
 
     html += `<div class="prose">
@@ -1165,6 +1833,7 @@ function renderChapter(chapter, idx, data) {
     if (evidenceBlock) {
       html += renderEvidenceCards(evidenceBlock.source_article_ids || [], corpusIndex, `Artigos de ${monthName} ${year}`);
     }
+    html += renderBundles();
   }
 
   // INSTITUTIONAL - PORTUGAL
@@ -1175,9 +1844,9 @@ function renderChapter(chapter, idx, data) {
     );
 
     html += `<div class="prose">
-      <p>O desperdício alimentar deixou de ser apenas uma questão moral para se tornar <strong>obrigação legal</strong>. Em Portugal, o caminho começou em 2015 com uma resolução parlamentar que declarou 2016 o "Ano Nacional do Combate ao Desperdício Alimentar". Foi o primeiro passo de uma década de transformação legislativa. <cite><a href="https://www.parlamento.pt/ActividadeParlamentar/Paginas/DetalheIniciativa.aspx?BID=39802" target="_blank">Resolução 65/2015</a></cite></p>
-      <p>Em 2018, o Governo aprovou a <em>Estratégia Nacional e Plano de Acção de Combate ao Desperdício Alimentar (ENCDA)</em>, com uma visão ambiciosa: "Desperdício Alimentar Zero". A estratégia define três eixos — prevenção, redução e monitorização — desdobrados em 14 medidas concretas. <cite><a href="https://cncda.gov.pt/index.php/encda" target="_blank">CNCDA</a></cite></p>
-      <p>O salto qualitativo chegou em 2020 com o Decreto-Lei 102-D. Este diploma não se limita a recomendar: <strong>obriga</strong>. Estabelece metas de redução de 25% até 2025 e 50% até 2030. E, crucialmente, a partir de 2024, proíbe o descarte de alimentos próprios para consumo quando existam alternativas de redistribuição. <cite><a href="https://diariodarepublica.pt/dr/detalhe/decreto-lei/102-d-2020-150908012" target="_blank">DRE</a></cite></p>
+      <p>O desperdício alimentar deixou de ser apenas uma questão moral para se tornar <strong>obrigação legal</strong>. Em Portugal, o caminho começou em 2015 com uma resolução parlamentar que declarou 2016 o "Ano Nacional do Combate ao Desperdício Alimentar". Foi o primeiro passo de uma década de transformação legislativa. <cite><a href="https://www.parlamento.pt/ActividadeParlamentar/Paginas/DetalheIniciativa.aspx?BID=39802" target="_blank" rel="noopener noreferrer">Resolução 65/2015</a></cite></p>
+      <p>Em 2018, o Governo aprovou a <em>Estratégia Nacional e Plano de Acção de Combate ao Desperdício Alimentar (ENCDA)</em>, com uma visão ambiciosa: "Desperdício Alimentar Zero". A estratégia define três eixos — prevenção, redução e monitorização — desdobrados em 14 medidas concretas. <cite><a href="https://cncda.gov.pt/index.php/encda" target="_blank" rel="noopener noreferrer">CNCDA</a></cite></p>
+      <p>O salto qualitativo chegou em 2020 com o Decreto-Lei 102-D. Este diploma não se limita a recomendar: <strong>obriga</strong>. Estabelece metas de redução de 25% até 2025 e 50% até 2030. E, crucialmente, a partir de 2024, proíbe o descarte de alimentos próprios para consumo quando existam alternativas de redistribuição. <cite><a href="https://diariodarepublica.pt/dr/detalhe/decreto-lei/102-d-2020-150908012" target="_blank" rel="noopener noreferrer">DRE</a></cite></p>
     </div>`;
 
     html += renderStatsGrid([
@@ -1188,8 +1857,8 @@ function renderChapter(chapter, idx, data) {
     ]);
 
     html += `<div class="prose">
-      <p>A Lei 62/2021 completou o quadro: estabeleceu o regime jurídico da doação de géneros alimentícios, <em>vedando cláusulas contratuais que impeçam doações</em>. Integrou ainda a educação sobre desperdício alimentar nos currículos escolares. <cite><a href="https://diariodarepublica.pt/dr/detalhe/lei/62-2021-169869772" target="_blank">DRE</a></cite></p>
-      <p>O resultado: Portugal tem hoje um dos quadros legais mais completos da Europa para combater o desperdício. O problema não é a lei. É a execução.</p>
+      <p>A Lei 62/2021 completou o quadro: estabeleceu o regime jurídico da doação de géneros alimentícios, <em>vedando cláusulas contratuais que impeçam doações</em>. Integrou ainda a educação sobre desperdício alimentar nos currículos escolares. <cite><a href="https://diariodarepublica.pt/dr/detalhe/lei/62-2021-169869772" target="_blank" rel="noopener noreferrer">DRE</a></cite></p>
+      <p>O resultado: Portugal tem hoje um dos quadros legais mais completos da Europa para combater o desperdício. O desafio está agora em transformar esse enquadramento em execução continuada.</p>
     </div>`;
 
     // Render key Portuguese laws from the legislation data
@@ -1205,8 +1874,9 @@ function renderChapter(chapter, idx, data) {
     // Evidence
     const evidenceBlock = blocks.find(b => b.type === 'evidence_cards');
     if (evidenceBlock) {
-      html += renderEvidenceCards(evidenceBlock.source_article_ids || [], corpusIndex, "Cobertura Jornalística");
+      html += renderEvidenceCards(getEvidenceIds(chapter.chapter_id, evidenceBlock.source_article_ids || []), corpusIndex, "Cobertura em Portugal");
     }
+    html += renderBundles();
   }
 
   // INSTITUTIONAL - BRUSSELS
@@ -1217,8 +1887,8 @@ function renderChapter(chapter, idx, data) {
     );
 
     html += `<div class="prose">
-      <p>Foi este o percurso da União Europeia: primeiro harmonizar a forma de medir, depois estabelecer metas vinculativas. A jornada começou em 2018, quando a Directiva 2018/851 introduziu a <strong>primeira definição europeia de "resíduos alimentares"</strong> e obrigou todos os Estados-Membros a monitorizar anualmente. <cite><a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32018L0851" target="_blank">EUR-Lex</a></cite></p>
-      <p>Em 2019, a Comissão publicou a metodologia comum de medição. Em 2020, a Estratégia do Prado ao Prato anunciou a intenção de metas vinculativas. E em Setembro de 2024, a Directiva (UE) 2024/1438 consumou essa promessa: <em>metas obrigatórias de redução para todos os países da UE</em>. <cite><a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024L1438" target="_blank">EUR-Lex</a></cite></p>
+      <p>Foi este o percurso da União Europeia: primeiro harmonizar a forma de medir, depois estabelecer metas vinculativas. A jornada começou em 2018, quando a Directiva 2018/851 introduziu a <strong>primeira definição europeia de "resíduos alimentares"</strong> e obrigou todos os Estados-Membros a monitorizar anualmente. <cite><a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32018L0851" target="_blank" rel="noopener noreferrer">EUR-Lex</a></cite></p>
+      <p>Em 2019, a Comissão publicou a metodologia comum de medição. Em 2020, a Estratégia do Prado ao Prato anunciou a intenção de metas vinculativas. E em Setembro de 2025, a Diretiva (UE) 2025/1892 consumou essa promessa: <em>metas obrigatórias de redução para todos os países da UE</em>. <cite><a href="${REFERENCES.euWasteDirective}" target="_blank" rel="noopener noreferrer">EUR-Lex</a></cite></p>
     </div>`;
 
     html += renderFullImage(
@@ -1228,8 +1898,8 @@ function renderChapter(chapter, idx, data) {
     );
 
     html += `<div class="prose">
-      <p>Os números são brutais: a UE gera <strong>58 milhões de toneladas</strong> de resíduos alimentares por ano, representando 131 kg por pessoa. Portugal está acima da média europeia, ocupando a <em>4.ª posição entre os países que mais desperdiçam</em>. <cite><a href="https://www.publico.pt/2023/02/19/azul/noticia/portugues-deita-184-kg-comida-ano-propoem-mudar-2039370" target="_blank">Público, 2023</a></cite></p>
-      <p>As novas metas europeias são ambiciosas mas alcançáveis: redução de 10% no processamento industrial e 30% per capita no retalho e consumo até 2030. Quem não cumprir, enfrenta processos por incumprimento. <cite><a href="https://eur-lex.europa.eu/legal-content/PT/TXT/?uri=CELEX:32024L1438" target="_blank">EUR-Lex</a></cite></p>
+      <p>Os números são brutais: a UE gera dezenas de milhões de toneladas de resíduos alimentares por ano, com Portugal acima da média europeia e na <em>4.ª posição entre os países que mais desperdiçam</em>. <cite><a href="${REFERENCES.euWasteFacts}" target="_blank" rel="noopener noreferrer">Parlamento Europeu / Eurostat, 2022</a></cite></p>
+      <p>As novas metas europeias são ambiciosas mas exequíveis: redução de 10% no processamento industrial e 30% per capita no retalho e consumo até 2030. Quem não cumprir, enfrenta procedimentos por incumprimento. <cite><a href="${REFERENCES.euWasteDirective}" target="_blank" rel="noopener noreferrer">EUR-Lex</a></cite></p>
     </div>`;
 
     html += renderTargets();
@@ -1244,7 +1914,7 @@ function renderChapter(chapter, idx, data) {
     html += renderODSBadge();
 
     html += `<div class="prose">
-      <p>O ODS 12.3 é o farol: reduzir para metade o desperdício alimentar per capita até 2030. A Europa transformou esse objectivo global em lei — agora cabe aos Estados-Membros transformar a lei em prática. <cite><a href="https://sdgs.un.org/goals/goal12" target="_blank">ONU</a></cite></p>
+      <p>O ODS 12.3 é o farol: reduzir para metade o desperdício alimentar per capita até 2030. A Europa transformou esse objectivo global em lei — agora cabe aos Estados-Membros transformar a lei em prática. <cite><a href="https://sdgs.un.org/goals/goal12" target="_blank" rel="noopener noreferrer">ONU</a></cite></p>
     </div>`;
 
     // Render key EU laws from legislation data
@@ -1260,8 +1930,9 @@ function renderChapter(chapter, idx, data) {
     // Evidence
     const evidenceBlock = blocks.find(b => b.type === 'evidence_cards');
     if (evidenceBlock) {
-      html += renderEvidenceCards(evidenceBlock.source_article_ids || [], corpusIndex, "Impacto na Imprensa Portuguesa");
+      html += renderEvidenceCards(getEvidenceIds(chapter.chapter_id, evidenceBlock.source_article_ids || []), corpusIndex, "Contexto Europeu e Metas");
     }
+    html += renderBundles();
   }
 
   // EPILOGUE
@@ -1272,20 +1943,20 @@ function renderChapter(chapter, idx, data) {
     );
 
     html += `<div class="prose">
-      <p>Este editorial documenta <strong>15 anos de progresso real</strong>. Em 2011, o desperdício alimentar não existia como tema. Hoje, temos leis, metas vinculativas, e uma sociedade civil mobilizada. A Fruta Feia salvou mais de 6.000 toneladas. A Too Good To Go evitou milhões de refeições no lixo. A Refood alimenta milhares de famílias diariamente.</p>
-      <p>São 127 artigos do Público que documentam esta transformação, preservados pelo Arquivo.pt. São 20 diplomas legais que provam que o Estado ouviu. <strong>O problema entrou na agenda. Agora precisa de sair das manchetes e entrar nas cozinhas.</strong></p>
+      <p>Este editorial documenta uma transformação visível entre 2011 e 2026. Em 2011, o desperdício alimentar ainda tinha presença limitada como tema autónomo. Hoje, temos leis, metas vinculativas, e uma sociedade civil mobilizada. A Fruta Feia já opera em dezenas de toneladas por semana, a Too Good To Go salvou milhões de bolsas de comida em Portugal e a Refood apoia famílias diariamente.</p>
+      <p>São 127 artigos datados do Público que documentam esta mudança, preservados pelo Arquivo.pt. São 20 diplomas legais que provam que o Estado ouviu. <strong>O problema entrou na agenda. Agora precisa de sair das manchetes e entrar nas cozinhas.</strong></p>
     </div>`;
 
     html += renderStatsGrid([
-      { value: '6.000t', label: 'Fruta Feia', color: 'accent', note: 'Toneladas salvas' },
+      { value: '27 t/sem', label: 'Fruta Feia', color: 'accent', note: 'Escala semanal' },
       { value: '20', label: 'Leis', color: 'eu', note: 'PT + UE desde 2015' },
-      { value: '32', label: 'Artigos 2023', color: 'warning', note: 'Recorde de atenção' },
+      { value: String(coverage.topYear.count), label: `Artigos ${coverage.topYear.year}`, color: 'warning', note: 'Recorde de atenção' },
       { value: '2030', label: 'Meta', color: 'accent', note: '-30% obrigatório' }
     ]);
 
     html += `<div class="prose">
-      <p>O que mudou em 15 anos? <em>Muito.</em> Temos hoje um quadro legal que em 2011 não existia. Temos iniciativas que salvam milhares de toneladas. Temos consciência crescente, como provam os 32 artigos publicados só em 2023.</p>
-      <p>Mas ainda desperdiçamos 184 kg por pessoa, por ano. <strong>A infraestrutura está montada. Falta cada um de nós usá-la.</strong> <cite><a href="https://www.publico.pt/2023/02/19/azul/noticia/portugues-deita-184-kg-comida-ano-propoem-mudar-2039370" target="_blank">Público, 2023</a></cite></p>
+      <p>O que mudou neste período? <em>Muito.</em> Temos hoje um quadro legal que em 2011 não existia. Temos iniciativas que salvam milhares de toneladas. Temos consciência crescente, como prova o recorde de cobertura atingido em ${coverage.topYear.year}.</p>
+      <p>Mas ainda desperdiçamos 184 kg por pessoa, por ano. <strong>A infraestrutura está montada. Falta cada um de nós usá-la.</strong> <cite><a href="${REFERENCES.euWasteFacts}" target="_blank" rel="noopener noreferrer">Parlamento Europeu / Eurostat, 2022</a></cite></p>
     </div>`;
 
     html += renderBigQuote(
@@ -1293,41 +1964,24 @@ function renderChapter(chapter, idx, data) {
       "desperdicio.pt"
     );
 
-    // Timeline peaks summary
-    html += `
-      <div class="chart-section">
-        <div class="chart-header">
-          <div>
-            <div class="chart-title">A Atenção Está a Crescer</div>
-            <div class="chart-subtitle">Os 6 meses com maior cobertura jornalística sobre desperdício alimentar</div>
-          </div>
-        </div>
-        <div class="stats-grid" style="margin: 24px 0 0;">
-          ${(timeline.peaks || []).slice(0, 6).map((p, i) => {
-            const [year, month] = p.month.split('-');
-            const monthNames = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
-            const monthName = monthNames[parseInt(month) - 1];
-            return `
-            <div class="stat-card">
-              <div class="stat-card-value ${i === 0 ? 'warning' : 'accent'}">${p.count}</div>
-              <div class="stat-card-label">${monthName} ${year}</div>
-              ${i === 0 ? '<div class="stat-card-note">Maior pico</div>' : ''}
-            </div>
-          `}).join('')}
-        </div>
-      </div>
-    `;
+    html += renderEnergyReflection();
+    html += renderBigQuote(
+      'Numa casa portuguesa fica bem.',
+      'Amália Rodrigues'
+    );
+    html += renderFullImage(
+      EDITORIAL_IMAGES.epilogueClosure.url,
+      EDITORIAL_IMAGES.epilogueClosure.caption,
+      EDITORIAL_IMAGES.epilogueClosure.credit,
+      EDITORIAL_IMAGES.epilogueClosure.creditUrl
+    );
 
-    html += `<div class="prose">
-      <p>As metas de 2030 são ambiciosas, mas alcançáveis. Portugal tem as ferramentas. Temos apps para salvar refeições, cooperativas para fruta imperfeita, bancos alimentares em todo o país. <strong>A pergunta já não é "o que fazer?" mas "quando começamos?"</strong></p>
-      <p>A resposta é simples: <em>hoje, na próxima refeição.</em></p>
-    </div>`;
+    html += renderBigQuote(
+      "Hoje, na próxima refeição, antes de o alimento se transformar em resíduo e em energia perdida.",
+      "desperdicio.pt"
+    );
 
-    // Final evidence
-    const evidenceBlock = blocks.find(b => b.type === 'evidence_cards');
-    if (evidenceBlock) {
-      html += renderEvidenceCards(evidenceBlock.source_article_ids || [], corpusIndex, "Artigos que Contam Esta História");
-    }
+    html += renderBundles();
   }
 
   // Default handling for other chapter types
@@ -1342,6 +1996,9 @@ function renderChapter(chapter, idx, data) {
       if (block.type === 'evidence_cards') {
         html += renderEvidenceCards(block.source_article_ids || [], corpusIndex);
       }
+      if (block.type === 'evidence_bundle') {
+        html += renderEvidenceBundle(block.source_article_ids || [], corpusIndex, block.title || 'Fontes adicionais', block.subtitle || '');
+      }
     });
   }
 
@@ -1352,7 +2009,7 @@ function renderChapter(chapter, idx, data) {
 
 // ==================== NAVIGATION ====================
 function renderNavLinks(chapters) {
-  const mainChapters = chapters.filter(ch =>
+  const mainChapters = normalizeChapters(chapters).filter(ch =>
     ch.kind === 'prologue' || ch.kind === 'institutional' || ch.kind === 'epilogue'
   );
 
@@ -1366,12 +2023,12 @@ function renderNavLinks(chapters) {
 
   return mainChapters.map(ch => {
     const label = navLabels[ch.chapter_id] || ch.title.split(' ')[0];
-    return `<li><a href="#${esc(ch.chapter_id)}">${esc(label)}</a></li>`;
+    return `<li><a href="#${esc(ch.chapter_id)}" data-nav-target="${esc(ch.chapter_id)}">${esc(label)}</a></li>`;
   }).join('');
 }
 
 function renderFooterChapters(chapters) {
-  return chapters.slice(0, 6).map(ch => `
+  return normalizeChapters(chapters).slice(0, 6).map(ch => `
     <li><a href="#${esc(ch.chapter_id)}">${esc(ch.title)}</a></li>
   `).join('');
 }
@@ -1379,6 +2036,40 @@ function renderFooterChapters(chapters) {
 // ==================== SCROLL ANIMATIONS ====================
 function initAnimations() {
   const chapters = $$('.chapter');
+  const nav = $('#nav');
+  const navLinks = [...$$('#navLinks a[data-nav-target]')];
+  let navTicking = false;
+
+  function setActiveNavLink(chapterId) {
+    navLinks.forEach(link => {
+      const isActive = link.dataset.navTarget === chapterId;
+      link.classList.toggle('active', isActive);
+      if (isActive) link.setAttribute('aria-current', 'true');
+      else link.removeAttribute('aria-current');
+    });
+  }
+
+  function syncActiveChapter() {
+    if (!navLinks.length) return;
+
+    const visibleTrackedChapters = chapters
+      .filter(chapter => navLinks.some(link => link.dataset.navTarget === chapter.id))
+      .map(chapter => ({ chapter, top: chapter.getBoundingClientRect().top }))
+      .filter(item => item.top <= window.innerHeight * 0.4);
+
+    const candidate = (visibleTrackedChapters[visibleTrackedChapters.length - 1] || {}).chapter || chapters[0];
+    if (candidate?.id) {
+      setActiveNavLink(candidate.id);
+    }
+  }
+
+  function updateNavFrame() {
+    if (nav) {
+      nav.classList.toggle('scrolled', window.scrollY > 100);
+    }
+    syncActiveChapter();
+    navTicking = false;
+  }
 
   // Make first chapter visible immediately
   if (chapters.length > 0) {
@@ -1395,118 +2086,200 @@ function initAnimations() {
 
   chapters.forEach(el => observer.observe(el));
 
-  // Nav scroll
+  syncActiveChapter();
   window.addEventListener('scroll', () => {
-    $('#nav').classList.toggle('scrolled', window.scrollY > 100);
-  });
+    if (!navTicking) {
+      requestAnimationFrame(updateNavFrame);
+      navTicking = true;
+    }
+  }, { passive: true });
 
-  // Chart animations observer
+  function activateAnimatedBlock(target) {
+    if (!target || target.classList.contains('animated')) return;
+    target.classList.add('in-view', 'animated');
+
+    if (target.classList.contains('comparison-chart')) {
+      const bars = target.querySelectorAll('.comparison-bar-fill');
+      bars.forEach(bar => {
+        const targetWidth = bar.dataset.width;
+        bar.style.setProperty('--target-width', targetWidth + '%');
+        setTimeout(() => {
+          bar.style.width = targetWidth + '%';
+        }, 100);
+      });
+    }
+
+    if (target.classList.contains('donut-chart-container')) {
+      const segments = target.querySelectorAll('.donut-segment');
+      segments.forEach((seg, idx) => {
+        setTimeout(() => {
+          const targetDasharray = seg.dataset.targetDasharray;
+          const dashoffset = seg.dataset.dashoffset;
+          seg.style.strokeDasharray = targetDasharray;
+          seg.style.strokeDashoffset = dashoffset;
+        }, idx * 150);
+      });
+    }
+
+    if (target.classList.contains('projection-chart')) {
+      const lines = target.querySelectorAll('.animate-line');
+      lines.forEach((line, idx) => {
+        setTimeout(() => {
+          line.style.strokeDashoffset = '0';
+        }, idx * 300);
+      });
+
+      const points = target.querySelectorAll('.animate-point');
+      points.forEach(point => {
+        point.style.opacity = '1';
+      });
+    }
+
+    if (target.classList.contains('countdown-block') && typeof target.__animateCountdown === 'function') {
+      target.__animateCountdown();
+    }
+  }
+
   const chartObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view', 'animated');
+      if (!entry.isIntersecting) return;
+      activateAnimatedBlock(entry.target);
+      chartObserver.unobserve(entry.target);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -5% 0px' });
 
-        // Animate comparison bars
-        if (entry.target.classList.contains('comparison-chart')) {
-          const bars = entry.target.querySelectorAll('.comparison-bar-fill');
-          bars.forEach(bar => {
-            const targetWidth = bar.dataset.width;
-            bar.style.setProperty('--target-width', targetWidth + '%');
-            setTimeout(() => {
-              bar.style.width = targetWidth + '%';
-            }, 100);
-          });
-        }
+  const animatedBlocks = $$('[data-animate="true"]');
+  animatedBlocks.forEach(el => chartObserver.observe(el));
+  animatedBlocks.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 0;
+    if (rect.top < viewportHeight * 0.92 && rect.bottom > viewportHeight * 0.08) {
+      activateAnimatedBlock(el);
+      chartObserver.unobserve(el);
+    }
+  });
 
-        // Animate donut segments
-        if (entry.target.classList.contains('donut-chart-container')) {
-          const segments = entry.target.querySelectorAll('.donut-segment');
-          segments.forEach((seg, idx) => {
-            setTimeout(() => {
-              const targetDasharray = seg.dataset.targetDasharray;
-              const dashoffset = seg.dataset.dashoffset;
-              seg.style.strokeDasharray = targetDasharray;
-              seg.style.strokeDashoffset = dashoffset;
-            }, idx * 150);
-          });
-        }
+  function highlightDonutLegendItem(legendItem) {
+    const container = legendItem?.closest('.donut-chart-container');
+    if (!container) return;
 
-        // Animate projection lines
-        if (entry.target.classList.contains('projection-chart')) {
-          const lines = entry.target.querySelectorAll('.animate-line');
-          lines.forEach((line, idx) => {
-            setTimeout(() => {
-              line.style.strokeDashoffset = '0';
-            }, idx * 300);
-          });
+    const idx = legendItem.dataset.index;
+    const value = legendItem.dataset.value;
+    const label = legendItem.dataset.label;
 
-          const points = entry.target.querySelectorAll('.animate-point');
-          points.forEach(point => {
-            point.style.opacity = '1';
-          });
-        }
+    const centerValue = container.querySelector('#donutCenterValue');
+    const centerLabel = container.querySelector('#donutCenterLabel');
 
-        chartObserver.unobserve(entry.target);
+    if (centerValue) centerValue.textContent = `${value}%`;
+    if (centerLabel) centerLabel.textContent = label;
+
+    const segments = container.querySelectorAll('.donut-segment');
+    segments.forEach((seg, i) => {
+      seg.style.opacity = i == idx ? '1' : '0.4';
+      seg.style.strokeWidth = i == idx ? '38' : '32';
+    });
+  }
+
+  function resetDonutLegendItem(legendItem) {
+    const container = legendItem?.closest('.donut-chart-container');
+    if (!container) return;
+
+    const centerValue = container.querySelector('#donutCenterValue');
+    const centerLabel = container.querySelector('#donutCenterLabel');
+    const defaultValue = container.dataset.defaultValue || '67%';
+    const defaultLabel = container.dataset.defaultLabel || 'Em Casa';
+
+    if (centerValue) centerValue.textContent = defaultValue;
+    if (centerLabel) centerLabel.textContent = defaultLabel;
+
+    const segments = container.querySelectorAll('.donut-segment');
+    segments.forEach(seg => {
+      seg.style.opacity = '1';
+      seg.style.strokeWidth = '32';
+    });
+  }
+
+  ['mouseover', 'focusin'].forEach(eventName => {
+    document.addEventListener(eventName, (e) => {
+      const legendItem = e.target.closest('.donut-legend-item');
+      if (legendItem) {
+        highlightDonutLegendItem(legendItem);
       }
     });
-  }, { threshold: 0.3 });
-
-  // Observe all animated charts
-  $$('[data-animate="true"]').forEach(el => chartObserver.observe(el));
-
-  // Donut chart interactivity
-  document.addEventListener('mouseover', (e) => {
-    const legendItem = e.target.closest('.donut-legend-item');
-    if (legendItem) {
-      const container = legendItem.closest('.donut-chart-container');
-      if (!container) return;
-
-      const idx = legendItem.dataset.index;
-      const value = legendItem.dataset.value;
-      const label = legendItem.dataset.label;
-
-      const centerValue = container.querySelector('#donutCenterValue');
-      const centerLabel = container.querySelector('#donutCenterLabel');
-
-      if (centerValue) centerValue.textContent = value + '%';
-      if (centerLabel) centerLabel.textContent = label;
-
-      // Highlight segment
-      const segments = container.querySelectorAll('.donut-segment');
-      segments.forEach((seg, i) => {
-        seg.style.opacity = i == idx ? '1' : '0.4';
-        seg.style.strokeWidth = i == idx ? '38' : '32';
-      });
-    }
   });
 
-  document.addEventListener('mouseout', (e) => {
+  ['mouseout', 'focusout'].forEach(eventName => {
+    document.addEventListener(eventName, (e) => {
+      const legendItem = e.target.closest('.donut-legend-item');
+      if (legendItem) {
+        resetDonutLegendItem(legendItem);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', (e) => {
     const legendItem = e.target.closest('.donut-legend-item');
-    if (legendItem) {
-      const container = legendItem.closest('.donut-chart-container');
-      if (!container) return;
+    if (!legendItem) return;
 
-      // Reset to households (default)
-      const centerValue = container.querySelector('#donutCenterValue');
-      const centerLabel = container.querySelector('#donutCenterLabel');
-
-      if (centerValue) centerValue.textContent = '67%';
-      if (centerLabel) centerLabel.textContent = 'Em Casa';
-
-      const segments = container.querySelectorAll('.donut-segment');
-      segments.forEach(seg => {
-        seg.style.opacity = '1';
-        seg.style.strokeWidth = '32';
-      });
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      highlightDonutLegendItem(legendItem);
     }
   });
+}
+
+function initInteractiveMedia() {
+  document.addEventListener('click', (e) => {
+    const videoPoster = e.target.closest('.video-poster[data-video-src]');
+    if (videoPoster) {
+      const stage = videoPoster.closest('[data-video-stage]');
+      const videoSrc = videoPoster.dataset.videoSrc || '';
+      if (stage && videoSrc) {
+        stage.innerHTML = `
+          <iframe
+            width="560"
+            height="315"
+            src="${esc(videoSrc)}"
+            title="Anna mergulha no lixo para combater o desperdício alimentar"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+          </iframe>
+        `;
+      }
+      return;
+    }
+
+    const button = e.target.closest('.carousel-btn[data-carousel-dir]');
+    if (!button) return;
+
+    const carousel = button.closest('.historical-carousel');
+    const track = carousel?.querySelector('[data-carousel-track]');
+    if (!track) return;
+
+    const direction = parseInt(button.dataset.carouselDir || '0', 10) || 0;
+    track.scrollBy({ left: direction * 340, behavior: 'smooth' });
+  });
+
+  document.addEventListener('error', (e) => {
+    const img = e.target;
+    if (!(img instanceof HTMLImageElement) || !img.classList.contains('carousel-card-image')) return;
+
+    const fallbackSrc = img.dataset.fallbackSrc;
+    if (fallbackSrc && img.src !== fallbackSrc) {
+      img.src = fallbackSrc;
+    }
+  }, true);
 }
 
 // ==================== MAIN ====================
 async function init() {
   try {
-    const [storyline, timeline, legislation, wasteBreakdown, euComparison, initiatives, projections, featured, deepArchive] = await Promise.all([
+    const [storyline, corpusData, timeline, legislation, wasteBreakdown, euComparison, initiatives, projections, featured, deepArchive] = await Promise.all([
       fetchFirst(FILES.storyline),
+      fetchFirst(FILES.corpusCore).catch(() => ({ items: [] })),
       fetchJson(FILES.timeline),
       fetchJson(FILES.legislation),
       fetchJson(FILES.wasteBreakdown).catch(() => null),
@@ -1520,7 +2293,9 @@ async function init() {
     // Build indexes
     const corpusIndex = new Map();
     const appendix = storyline.appendix || {};
-    (appendix.evidence_index || []).forEach(a => corpusIndex.set(String(a.article_id), a));
+    (corpusData.items || []).forEach(item => {
+      if (item?.article_id) corpusIndex.set(String(item.article_id), item);
+    });
 
     const lawIndex = new Map();
     const laws = legislation.legislation || [];
@@ -1540,7 +2315,7 @@ async function init() {
     $('#timeline').innerHTML = renderTimeline(laws);
 
     // Filter and render main chapters
-    const chapters = storyline.chapters || [];
+    const chapters = normalizeChapters(storyline.chapters || []);
     const mainChapters = chapters.filter(ch =>
       ch.kind === 'prologue' ||
       ch.kind === 'institutional' ||
@@ -1558,14 +2333,12 @@ async function init() {
       ...otherChapters.filter(ch => ch.kind === 'epilogue')
     ];
 
-    const data = { corpusIndex, lawIndex, timeline, laws, wasteBreakdown, euComparison, initiatives, projections, featured, deepArchive };
-    console.log('Rendering chapters:', finalChapters.length);
+    const data = { corpusData, corpusIndex, lawIndex, timeline, laws, wasteBreakdown, euComparison, initiatives, projections, featured, deepArchive };
     const rendered = finalChapters.map((ch, i) => {
       try {
         return renderChapter(ch, i, data);
-      } catch (e) {
-        console.error('Error rendering chapter:', ch.chapter_id, e);
-        return `<section class="chapter visible"><div class="prose"><p>Erro no capítulo ${ch.chapter_id}: ${esc(e.message)}</p></div></section>`;
+      } catch (error) {
+        return `<section class="chapter visible"><div class="prose"><p>Erro no capítulo ${esc(ch.chapter_id || 'desconhecido')}: ${esc(error.message)}</p></div></section>`;
       }
     }).join('');
     $('#main').innerHTML = rendered;
@@ -1573,14 +2346,14 @@ async function init() {
     // Nav links
     $('#navLinks').innerHTML = renderNavLinks(finalChapters);
 
-    // Animations
-    initAnimations();
-
     // Initialize countdowns (after DOM is populated)
     initCountdowns();
 
+    // Animations
+    initAnimations();
+    initInteractiveMedia();
+
   } catch (err) {
-    console.error('Init error:', err);
     $('#main').innerHTML = `
       <div class="chapter visible">
         <div class="prose"><p>Erro ao carregar dados: ${esc(err.message)}</p></div>
@@ -1601,7 +2374,7 @@ if (document.readyState === 'loading') {
 (function initShare() {
   const shareData = {
     title: 'desperdicio.pt - Deitar comida fora nem sempre é descuido. Às vezes é hábito.',
-    text: 'Portugal desperdiça 184 kg de comida por pessoa, por ano — somos o 4.º país da UE que mais desperdiça. Uma investigação baseada em 15 anos de jornalismo do Público.',
+    text: 'Portugal desperdiça 184 kg de comida por pessoa, por ano — somos o 4.º país da UE que mais desperdiça. Uma investigação baseada na cobertura do Público entre 2011 e 2026.',
     url: window.location.href
   };
 
@@ -1619,6 +2392,8 @@ if (document.readyState === 'loading') {
     if (!toast) {
       toast = document.createElement('div');
       toast.className = 'share-toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
       document.body.appendChild(toast);
     }
     toast.textContent = message;
@@ -1643,8 +2418,11 @@ if (document.readyState === 'loading') {
     textarea.value = shareData.url;
     textarea.style.position = 'fixed';
     textarea.style.opacity = '0';
+    textarea.setAttribute('readonly', '');
+    textarea.setAttribute('aria-hidden', 'true');
     document.body.appendChild(textarea);
     textarea.select();
+    textarea.setSelectionRange(0, textarea.value.length);
     try {
       document.execCommand('copy');
       showToast('Link copiado!');
@@ -1669,7 +2447,8 @@ if (document.readyState === 'loading') {
     }
 
     if (shareUrls[network]) {
-      window.open(shareUrls[network], '_blank', 'width=600,height=400,menubar=no,toolbar=no');
+      const popup = window.open(shareUrls[network], '_blank', 'noopener,noreferrer,width=600,height=400,menubar=no,toolbar=no');
+      if (popup) popup.opener = null;
     }
   }
 

@@ -1,0 +1,67 @@
+{
+  "created_at": "2026-03-24",
+  "purpose": "Curadoria manual final do corpus usado na candidatura ao Prémio Arquivo.pt 2026.",
+  "exclude_from_core": [
+    {
+      "article_id": "bb6decbc206f6fc8a01a8af86300f1953dc35464",
+      "reason": "Registo malformado com título genérico, URL truncada e sem data utilizável."
+    },
+    {
+      "article_id": "a7010fba8df3bebb762ec1038336e7a43b6b1834",
+      "reason": "Notícia sobre ajuda humanitária internacional; o desperdício alimentar não é o tema principal."
+    },
+    {
+      "article_id": "d8a3db6189d600eed93ecf788fde49c30665f03c",
+      "reason": "Peça sobre Web Summit e interfaces cérebro-computador; a referência a desperdício alimentar é marginal."
+    },
+    {
+      "article_id": "474d6cf418ca4a26d61843274d6d6deb979a5c95",
+      "reason": "Abertura de restaurante sem foco editorial em desperdício alimentar."
+    },
+    {
+      "article_id": "68b3f3b86b9bbdbfe77423a93fd48c777158a7dd",
+      "reason": "Notícia sobre caça ao lobo; a alimentação não é eixo do texto."
+    },
+    {
+      "article_id": "415d76fb501b04938a64b92dcb01fac5f12f2dda",
+      "reason": "Peça sobre microcasa sustentável; a referência ao desperdício é lateral e não alimentar."
+    }
+  ],
+  "promote_to_core": [
+    {
+      "article_id": "0fa794a4551dc1061b475438d48518ba90b0c4f9",
+      "score": 15,
+      "reason": "Manifesto juvenil explicitamente centrado no combate ao desperdício."
+    },
+    {
+      "article_id": "b2fb27b20e01d60be6ffd5143e90982132760eb4",
+      "score": 15,
+      "reason": "Peça factual com dados do INE sobre desperdício alimentar per capita em Portugal."
+    },
+    {
+      "article_id": "6254721bd4beaf06bacc9eea313f4098d578c1b8",
+      "score": 15,
+      "reason": "Cobertura municipal sobre recolha de bioresíduos alimentares e desempenho local."
+    },
+    {
+      "article_id": "9d609d21b487699a89bf46c140f882de4676c19d",
+      "score": 15,
+      "reason": "Reportagem de economia circular focada em evitar desperdício de bananas."
+    },
+    {
+      "article_id": "f8f51ae635100d228bf172a5495260d1ccc4a7d2",
+      "score": 15,
+      "reason": "Exemplo concreto de restauração com certificação zero desperdício."
+    },
+    {
+      "article_id": "c48a691df4727ee80c90d01f7691705e87a989b2",
+      "score": 15,
+      "reason": "Peça de 2019 com foco explícito em práticas de vida sem desperdício."
+    }
+  ],
+  "notes": [
+    "A curadoria final privilegia foco temático explícito sobre amplitude superficial.",
+    "Foram removidos falsos positivos evidentes e promovidas peças claramente relevantes que tinham ficado subavaliadas pela heurística.",
+    "A contagem final mantém-se em 127 artigos core, com 14 anos de cobertura publicada entre 2011 e 2026."
+  ]
+}

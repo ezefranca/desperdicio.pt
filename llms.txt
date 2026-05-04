@@ -1,0 +1,40 @@
+# desperdicio.pt
+
+Editorial documental interactivo em pt-PT sobre desperdício alimentar em Portugal.
+O projecto cruza 127 artigos do Público preservados no Arquivo.pt com legislação, dados europeus e metodologia pública.
+
+## Factos-chave
+
+- País em foco: Portugal.
+- Tema principal: desperdício alimentar.
+- Corpus principal do site: 127 artigos do Público.
+- Período principal de cobertura: 2011-2026.
+- Fonte de preservação central: Arquivo.pt.
+- Fontes complementares: Eurostat, Parlamento Europeu, EUR-Lex, Diário da República.
+
+## Páginas principais
+
+- [Editorial principal](https://desperdicio.pt/) - narrativa pública principal.
+- [Metodologia](https://desperdicio.pt/metodologia/) - pipeline, critérios de curadoria, estrutura dos dados e ficheiros servidos.
+- [Privacidade](https://desperdicio.pt/privacidade.html) - política de privacidade.
+- [Termos](https://desperdicio.pt/termos.html) - termos de uso.
+
+## Dados públicos
+
+- [Corpus lean](https://desperdicio.pt/assets/data/corpus_core.json) - 127 artigos curados usados no runtime.
+- [Corpus completo](https://desperdicio.pt/assets/data/corpus.json) - export completo normalizado.
+- [Timeline](https://desperdicio.pt/assets/data/timeline.json) - agregações anuais e mensais.
+- [Legislação](https://desperdicio.pt/assets/data/legislation.json) - diplomas portugueses e europeus.
+- [Storyline](https://desperdicio.pt/assets/data/storyline_bundled_full.json) - estrutura narrativa servida na homepage.
+
+## Âmbito e leitura
+
+- Idioma principal: pt-PT.
+- O editorial é a peça pública principal.
+- A metodologia explica o processo e os limites.
+- Os dados devem ser interpretados com contexto editorial e legal, não como medição oficial autónoma.
+
+## Fonte e preservação
+
+- O repositório público está em [GitHub](https://github.com/ezefranca/desperdicio.pt).
+- As evidências centrais do corpus apontam para URLs preservadas no Arquivo.pt.

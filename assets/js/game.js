@@ -29,9 +29,7 @@
   function saveState() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
-    } catch (e) {
-      console.warn('Could not save game state:', e);
-    }
+    } catch (_) {}
   }
 
   function loadState() {
@@ -41,9 +39,7 @@
         const parsed = JSON.parse(saved);
         state = { ...state, ...parsed };
       }
-    } catch (e) {
-      console.warn('Could not load game state:', e);
-    }
+    } catch (_) {}
   }
 
   function getLevel() {
@@ -76,8 +72,10 @@
 
     const notif = document.createElement('div');
     notif.className = `game-notification ${type}`;
+    notif.setAttribute('role', 'status');
+    notif.setAttribute('aria-live', type === 'achievement' ? 'assertive' : 'polite');
     notif.innerHTML = `
-      <span class="game-notification-icon">${type === 'success' ? '🎉' : type === 'achievement' ? '🏆' : 'ℹ️'}</span>
+      <span class="game-notification-icon" aria-hidden="true">${type === 'success' ? '🎉' : type === 'achievement' ? '🏆' : 'ℹ️'}</span>
       <span class="game-notification-text">${esc(message)}</span>
     `;
     document.body.appendChild(notif);
@@ -116,11 +114,13 @@
           case 'calculator_completed':
             earned = state.calculatorCompleted;
             break;
-          case 'waste_below_pt_avg':
-            if (state.calculatorData?.yearlyKg < 184) {
+          case 'waste_below_pt_avg': {
+            const ptAverage = gameData?.calculator?.comparison?.portugal_avg_kg_year || 184;
+            if (state.calculatorData?.yearlyKg < ptAverage) {
               earned = true;
             }
             break;
+          }
           case 'challenges_completed >= 1':
             earned = state.challengesCompleted.length >= 1;
             break;
@@ -162,7 +162,7 @@
               percentage >= 50 ? 'Bom trabalho! Continua a aprender.' :
               'Há muito para descobrir. Lê o editorial para aprender mais!'}
           </p>
-          <button class="game-btn" onclick="window.desperdicioGame.resetQuiz()">Repetir Quiz</button>
+          <button class="game-btn" type="button" data-game-action="reset-quiz">Repetir Quiz</button>
         </div>
       `;
     }
@@ -191,6 +191,7 @@
             }
             return `
               <button class="${classes}"
+                      type="button"
                       data-question="${q.id}"
                       data-index="${idx}"
                       ${answered ? 'disabled' : ''}>
@@ -209,7 +210,7 @@
             <p>${esc(q.explanation)}</p>
             <cite>Fonte: ${esc(q.source)}</cite>
           </div>
-          <button class="game-btn primary" onclick="window.desperdicioGame.nextQuestion()">
+          <button class="game-btn primary" type="button" data-game-action="next-question">
             ${currentIdx < questions.length - 1 ? 'Próxima Pergunta' : 'Ver Resultado'}
           </button>
         ` : ''}
@@ -268,11 +269,11 @@
 
           <div class="calc-comparison">
             <div class="calc-comparison-item ${vsPortugal < 0 ? 'better' : 'worse'}">
-              <span class="calc-comparison-label">vs. Portugal (184 kg)</span>
+              <span class="calc-comparison-label">vs. Portugal (${comparison.portugal_avg_kg_year} kg)</span>
               <span class="calc-comparison-value">${vsPortugal >= 0 ? '+' : ''}${vsPortugal.toFixed(0)} kg</span>
             </div>
             <div class="calc-comparison-item ${vsEU < 0 ? 'better' : 'worse'}">
-              <span class="calc-comparison-label">vs. UE (131 kg)</span>
+              <span class="calc-comparison-label">vs. UE (${comparison.eu_avg_kg_year} kg)</span>
               <span class="calc-comparison-value">${vsEU >= 0 ? '+' : ''}${vsEU.toFixed(0)} kg</span>
             </div>
           </div>
@@ -284,7 +285,7 @@
             </ul>
           </div>
 
-          <button class="game-btn" onclick="window.desperdicioGame.resetCalculator()">Recalcular</button>
+          <button class="game-btn" type="button" data-game-action="reset-calculator">Recalcular</button>
         </div>
       `;
     }
@@ -306,6 +307,7 @@
               <input type="number"
                      name="${cat.id}_buy"
                      class="calc-input"
+                     aria-label="Compras semanais de ${esc(cat.name)}"
                      min="0"
                      step="0.5"
                      value="0"
@@ -316,6 +318,7 @@
               <input type="number"
                      name="${cat.id}_waste"
                      class="calc-input"
+                     aria-label="Percentagem semanal desperdiçada de ${esc(cat.name)}"
                      min="0"
                      max="100"
                      value="${Math.round(cat.average_waste_pct * 100)}"
@@ -403,7 +406,7 @@
               </div>
               ${isCompleted ?
                 '<div class="challenge-check">✓</div>' :
-                `<button class="challenge-btn" data-challenge="${ch.id}">Feito!</button>`
+                `<button class="challenge-btn" type="button" data-challenge="${ch.id}" aria-label="Marcar desafio ${esc(ch.title)} como concluído">Feito!</button>`
               }
             </div>
           `;
@@ -477,8 +480,17 @@
         </div>
       </div>
 
-      <button class="game-btn danger" onclick="window.desperdicioGame.resetAll()">Recomeçar Tudo</button>
+      <button class="game-btn danger" type="button" data-game-action="reset-all">Recomeçar Tudo</button>
     `;
+  }
+
+  function updateTabState() {
+    $$('.game-tab').forEach(tab => {
+      const isActive = tab.dataset.tab === state.activeTab;
+      tab.classList.toggle('active', isActive);
+      tab.setAttribute('aria-selected', String(isActive));
+      tab.setAttribute('tabindex', isActive ? '0' : '-1');
+    });
   }
 
   function resetAll() {
@@ -508,22 +520,22 @@
     widget.id = 'gameWidget';
     widget.className = 'game-widget';
     widget.innerHTML = `
-      <button class="game-widget-toggle" id="gameToggle">
-        <span class="game-widget-icon">🎮</span>
+      <button class="game-widget-toggle" id="gameToggle" type="button" aria-label="Abrir o jogo educativo Desafio Desperdício Zero" aria-expanded="false" aria-controls="gamePanel">
+        <span class="game-widget-icon" aria-hidden="true">🎮</span>
         <span class="game-widget-points" id="widgetPoints">${state.points}</span>
       </button>
-      <div class="game-widget-panel" id="gamePanel">
+      <div class="game-widget-panel" id="gamePanel" role="dialog" aria-modal="false" aria-labelledby="gameTitle" tabindex="-1">
         <div class="game-widget-header">
-          <h3>Desafio Desperdício Zero</h3>
-          <button class="game-widget-close" id="gameClose">&times;</button>
+          <h3 id="gameTitle">Desafio Desperdício Zero</h3>
+          <button class="game-widget-close" id="gameClose" type="button" aria-label="Fechar o jogo">&times;</button>
         </div>
-        <div class="game-widget-tabs">
-          <button class="game-tab active" data-tab="quiz">Quiz</button>
-          <button class="game-tab" data-tab="calculator">Calculadora</button>
-          <button class="game-tab" data-tab="challenges">Desafios</button>
-          <button class="game-tab" data-tab="progress">Progresso</button>
+        <div class="game-widget-tabs" role="tablist" aria-label="Secções do jogo">
+          <button class="game-tab active" type="button" data-tab="quiz" id="game-tab-quiz" role="tab" aria-selected="true" aria-controls="gameContent">Quiz</button>
+          <button class="game-tab" type="button" data-tab="calculator" id="game-tab-calculator" role="tab" aria-selected="false" aria-controls="gameContent" tabindex="-1">Calculadora</button>
+          <button class="game-tab" type="button" data-tab="challenges" id="game-tab-challenges" role="tab" aria-selected="false" aria-controls="gameContent" tabindex="-1">Desafios</button>
+          <button class="game-tab" type="button" data-tab="progress" id="game-tab-progress" role="tab" aria-selected="false" aria-controls="gameContent" tabindex="-1">Progresso</button>
         </div>
-        <div class="game-widget-content" id="gameContent">
+        <div class="game-widget-content" id="gameContent" role="tabpanel" aria-labelledby="game-tab-quiz" tabindex="0">
           <!-- Content rendered here -->
         </div>
       </div>
@@ -538,8 +550,7 @@
     $$('.game-tab').forEach(tab => {
       tab.addEventListener('click', () => {
         state.activeTab = tab.dataset.tab;
-        $$('.game-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
+        updateTabState();
         renderActiveTab();
       });
     });
@@ -547,8 +558,10 @@
     // Event delegation for quiz, calculator, challenges
     $('#gameContent').addEventListener('click', handleContentClick);
     $('#gameContent').addEventListener('submit', handleFormSubmit);
+    document.addEventListener('keydown', handleWidgetKeyboard);
 
     // Initial render
+    updateTabState();
     renderActiveTab();
   }
 
@@ -560,9 +573,13 @@
 
     panel.classList.toggle('open', state.widgetOpen);
     toggle.classList.toggle('active', state.widgetOpen);
+    toggle.setAttribute('aria-expanded', String(state.widgetOpen));
 
     if (state.widgetOpen) {
       renderActiveTab();
+      panel.focus();
+    } else {
+      toggle.focus();
     }
   }
 
@@ -593,9 +610,31 @@
         content.innerHTML = renderProgress();
         break;
     }
+
+    updateTabState();
+    const activeTab = $(`.game-tab[data-tab="${state.activeTab}"]`);
+    if (activeTab) {
+      content.setAttribute('aria-labelledby', activeTab.id);
+    }
+  }
+
+  function handleWidgetKeyboard(e) {
+    if (e.key === 'Escape' && state.widgetOpen) {
+      toggleWidget(false);
+    }
   }
 
   function handleContentClick(e) {
+    const actionButton = e.target.closest('[data-game-action]');
+    if (actionButton) {
+      const action = actionButton.dataset.gameAction;
+      if (action === 'next-question') nextQuestion();
+      if (action === 'reset-quiz') resetQuiz();
+      if (action === 'reset-calculator') resetCalculator();
+      if (action === 'reset-all') resetAll();
+      return;
+    }
+
     // Quiz option click
     const quizOption = e.target.closest('.quiz-option:not(.disabled)');
     if (quizOption) {
@@ -650,8 +689,7 @@
     try {
       const response = await fetch('assets/data/game.json');
       gameData = await response.json();
-    } catch (e) {
-      console.error('Could not load game data:', e);
+    } catch (_) {
       return;
     }
 
@@ -661,15 +699,6 @@
     // Track scroll progress
     initScrollTracking();
 
-    // Expose API for inline handlers
-    window.desperdicioGame = {
-      nextQuestion,
-      resetQuiz,
-      resetCalculator,
-      resetAll
-    };
-
-    console.log('Game module initialized');
   }
 
   // Start when DOM is ready

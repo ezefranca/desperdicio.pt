@@ -7,7 +7,7 @@ import sqlite3
 from pathlib import Path
 from typing import List, Tuple
 
-DB_PATH = Path("out_desperdico/publico_live.sqlite")
+DB_PATH = Path("data-sources/publico_live.sqlite")
 
 # Termos que indicam tema (PT + EN). Ajusta depois se quiser.
 POSITIVE = [

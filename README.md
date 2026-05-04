@@ -1,132 +1,271 @@
 # desperdicio.pt
 
-Um editorial documental sobre o desperdício alimentar em Portugal e na Europa, construído a partir do arquivo do Público preservado pelo Arquivo.pt.
+Editorial documental interactivo sobre desperdício alimentar em Portugal, construído a partir do arquivo do Público preservado pelo Arquivo.pt e complementado com dados legais e estatísticos.
 
-## Sobre o Projecto
+## Estado actual do projecto
 
-O **desperdicio.pt** é um projecto de jornalismo de dados que investiga 15 anos de cobertura do Público sobre desperdício alimentar (2011-2026), cruzando **337 artigos** com **20 diplomas legais** de Portugal e da União Europeia.
+- Site estático em `HTML + CSS + JavaScript`.
+- Dados finais servidos a partir de `assets/data/`.
+- Bases de dados de trabalho em `data-sources/`.
+- Snapshot editorial principal em `assets/data/storyline_bundled_full.json`.
 
-### Estatísticas do Corpus
+## Citação
+
+O repositório inclui [`CITATION.cff`](CITATION.cff) na raiz para o GitHub expor `Cite this repository` com metadados de citação em APA e BibTeX.
+
+## Métricas usadas no site
 
 | Métrica | Valor |
 |---------|-------|
-| Total de artigos | 337 |
-| Artigos core (relevantes) | 128 |
-| Anos de cobertura | 2011-2026 |
-| Diplomas legais | 20 (PT + EU) |
-| Picos de cobertura | Dez 2023 (7), Set 2025 (6) |
+| Artigos totais processados | 337 |
+| Artigos core usados no site | 127 |
+| Diplomas legais | 20 |
+| Anos com cobertura publicada | 14 |
+| Intervalo temporal da cobertura | 2011-2026 |
+| Pico de cobertura | Dezembro 2023 (7 artigos) |
 
-## Estrutura do Projecto
+## Estrutura
 
-```
+```text
 desperdicio.pt/
-├── index.html              # Página principal
+├── index.html
+├── robots.txt
+├── sitemap.xml
+├── llms.txt
 ├── metodologia/
-│   └── index.html          # Documentação técnica
+│   └── index.html
 ├── assets/
 │   ├── css/
-│   │   └── styles.css
-│   ├── img/                # Logos e imagens
+│   ├── js/
+│   ├── img/
 │   └── data/
 │       ├── corpus.json
+│       ├── corpus_core.json
+│       ├── storyline.json
 │       ├── storyline_bundled.json
+│       ├── storyline_bundled_full.json
 │       ├── timeline.json
 │       ├── legislation.json
 │       ├── featured.json
+│       ├── image_manifest.json
 │       ├── waste_breakdown.json
 │       ├── eu_comparison.json
 │       ├── initiatives_impact.json
 │       ├── projections.json
-│       └── deep_archive.json
-├── scripts/                # Pipeline de dados
-│   ├── fetch_publico_arquivo_metadata.py
-│   ├── fetch_publico_json_search.py
-│   ├── enrich_publico_from_html.py
-│   ├── relevance_filter.py
-│   ├── export_corpus.py
-│   ├── build_storyline.py
-│   ├── build_bundled_storyline.py
-│   └── enrich_storyline.py
-├── CNAME
-├── LICENSE
-└── README.md
+│       ├── deep_archive.json
+│       └── game.json
+├── data-sources/
+│   ├── arquivo_publico_desperdico.sqlite
+│   ├── publico_live.sqlite
+│   └── metadata_export.csv
+├── scripts/
+├── DOCUMENTACAO-PT-PT.md
+├── KIT-DE-AVALIACAO.md
+└── VALIDACAO-FINAL-CORPUS.md
 ```
 
-## Fontes de Dados
+## Como correr o site
 
-### Arquivo.pt Text Search API
-
-```
-GET https://arquivo.pt/textsearch?q={query}&siteSearch=www.publico.pt
-```
-
-Queries utilizadas:
-- "desperdício alimentar"
-- "desperdício de alimentos"
-- "perdas e desperdício alimentar"
-- "combate ao desperdício alimentar"
-- "sobras de comida"
-- "food waste"
-
-### Público.pt
-
-Artigos do arquivo vivo do Público (2020-2026) e histórico preservado no Arquivo.pt (1999-2019).
-
-Base de dados: [Levantamento de domínios e subdomínios do Público no Arquivo.pt (1996-2019)](https://arquivo.pt/wayback/publico.pt), enriquecido com cobertura até 2026.
-
-## Como Executar
-
-### Requisitos
-
-- Python 3.10+
-- requests
-- beautifulsoup4
-
-### Instalação
+### Opção recomendada
 
 ```bash
-git clone https://github.com/ezefranca/desperdicio.pt.git
-cd desperdicio.pt
+python3 -m http.server 4173
+```
 
-python -m venv venv
-source venv/bin/activate
+Depois abrir:
 
+- `http://127.0.0.1:4173/`
+- `http://127.0.0.1:4173/metodologia/`
+
+## Dependências dos scripts
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install requests beautifulsoup4
 ```
 
-### Execução do Pipeline
+`lxml` é opcional. O scraper faz fallback para `html.parser` se `lxml` não estiver disponível.
+
+## Pipeline de dados
+
+### 1. Metadados históricos via Arquivo.pt
 
 ```bash
-python scripts/fetch_publico_arquivo_metadata.py
-python scripts/enrich_publico_from_html.py
-python scripts/relevance_filter.py
-python scripts/export_corpus.py
-python scripts/build_storyline.py
+python3 scripts/fetch_publico_arquivo_metadata.py
 ```
 
-## Estrutura Editorial
+Output:
 
-O editorial está organizado em **5 movimentos argumentativos**:
+- `data-sources/arquivo_publico_desperdico.sqlite`
+- `data-sources/metadata_export.csv`
 
-1. **De invisível a inevitável** — Como o desperdício entrou na agenda mediática
-2. **O inimigo está em casa** — 67% do desperdício acontece nos lares
-3. **Leis que existem, implementação que falha** — O gap entre legislação e prática
-4. **Soluções que nasceram fora do Estado** — Fruta Feia, Too Good To Go, Refood
-5. **2030 é amanhã** — Metas europeias e cenários futuros
+### 2. Pesquisa no arquivo vivo do Público
 
-## Licença
+```bash
+python3 scripts/fetch_publico_json_search.py
+```
 
-Este projecto está licenciado sob a MIT License. Ver [LICENSE](LICENSE) para mais detalhes.
+Output:
 
-## Parceiros e Fontes
+- `data-sources/publico_live.sqlite`
 
-- **Arquivo.pt** — Preservação da Web Portuguesa
-- **Público.pt** — Jornalismo de Referência
-- **Parlamento Europeu** — Dados e estatísticas
-- **Assembleia da República** — Legislação portuguesa
-- **Eurostat** — Dados estatísticos europeus
-- **Diário da República Electrónico** — Legislação portuguesa
+### 3. Enriquecimento HTML
 
----
+```bash
+python3 scripts/enrich_publico_from_html.py
+```
 
-**desperdicio.pt** — *Deitar comida fora não é descuido. É hábito.*
+Adiciona metadados e texto extraído à tabela `article_details` dentro de `data-sources/publico_live.sqlite`.
+
+### 4. Classificação de relevância
+
+```bash
+python3 scripts/relevance_filter.py
+```
+
+Preenche `relevance_score` e `relevance_label` na tabela `article_details`.
+
+### 5. Export do corpus normalizado
+
+```bash
+python3 scripts/export_corpus.py
+```
+
+Output por omissão:
+
+- `assets/data/corpus.json`
+
+### 6. Curadoria final e rebuild da timeline
+
+```bash
+python3 scripts/curate_corpus.py
+```
+
+Outputs:
+
+- `assets/data/timeline.json`
+- `assets/data/corpus_validation.json`
+
+### 7. Construção da storyline
+
+```bash
+python3 scripts/build_storyline.py
+```
+
+Output por omissão:
+
+- `assets/data/storyline.json`
+
+Nota: este script usa `assets/data/featured.json` como fallback editorial quando não existe `evidence.json`.
+
+### 8. Enriquecimento da storyline
+
+```bash
+python3 scripts/enrich_storyline.py
+```
+
+Outputs:
+
+- `assets/data/storyline_enriched.json` (intermédio)
+- `assets/data/provenance_enrich_storyline.json` (intermédio)
+
+### 9. Bundling final
+
+```bash
+python3 scripts/build_bundled_storyline.py
+```
+
+Outputs:
+
+- `assets/data/storyline_bundled.json`
+- `assets/data/provenance_build_bundled_storyline.json` (intermédio)
+
+### 10. Actualizar o estado de preservação no Arquivo.pt
+
+```bash
+python3 scripts/refresh_arquivo_pt_archive_status.py
+```
+
+Output:
+
+- `reports/arquivo-pt-submissoes-YYYYMMDD.tsv`
+
+### 11. Anexar links verificados do Arquivo.pt
+
+```bash
+python3 scripts/attach_arquivo_pt_urls.py
+```
+
+Outputs actualizados:
+
+- `assets/data/corpus.json`
+- `assets/data/corpus_core.json`
+- `assets/data/featured.json`
+- `assets/data/storyline.json`
+- `assets/data/storyline_bundled.json`
+- `assets/data/storyline_bundled_full.json`
+
+Fonte:
+
+- `reports/arquivo-pt-submissoes-*.tsv` (o script usa automaticamente o relatório mais recente)
+
+### 12. Espelhar imagens editoriais remotas para uso local
+
+```bash
+python3 scripts/localize_runtime_images.py
+```
+
+Outputs actualizados:
+
+- `assets/data/featured.json`
+- `assets/data/image_manifest.json`
+- `assets/img/publico/featured/`
+- `assets/img/publico/editorial/`
+- `assets/img/editorial/`
+
+## Ordem prática recomendada
+
+Se queres apenas correr o site:
+
+```bash
+python3 -m http.server 4173
+```
+
+Se queres regenerar dados:
+
+```bash
+python3 scripts/fetch_publico_json_search.py
+python3 scripts/enrich_publico_from_html.py
+python3 scripts/relevance_filter.py
+python3 scripts/export_corpus.py
+python3 scripts/curate_corpus.py
+python3 scripts/build_storyline.py
+python3 scripts/enrich_storyline.py
+python3 scripts/build_bundled_storyline.py
+python3 scripts/refresh_arquivo_pt_archive_status.py
+python3 scripts/attach_arquivo_pt_urls.py
+```
+
+O fetch do Arquivo.pt pode ser corrido em paralelo como fonte histórica complementar:
+
+```bash
+python3 scripts/fetch_publico_arquivo_metadata.py
+```
+
+## Notas importantes
+
+- O site tenta carregar os dados por esta ordem: `storyline_bundled_full.json`, `storyline_bundled.json`, `storyline.json`.
+- `storyline_bundled_full.json` é o snapshot editorial mais completo actualmente versionado.
+- O frontend usa `corpus_core.json` sempre que existe, caindo em `corpus.json` apenas como fallback.
+- A classificação `core` é heurística. A revisão manual final fica documentada em `assets/data/corpus_curation.json` e `assets/data/corpus_validation.json`.
+- Os campos `arquivo_pt_url`, `arquivo_pt_status` e `arquivo_pt_url_source` são anexados a partir do relatório mais recente em `reports/arquivo-pt-submissoes-*.tsv`.
+- O runtime público usa imagens locais. `assets/data/featured.json` guarda o caminho local em `image.url` e a proveniência original em `image.source_url`.
+- `assets/data/image_manifest.json` documenta as imagens de terceiros espelhadas localmente para garantir robustez em produção.
+- `robots.txt`, `sitemap.xml` e `llms.txt` ajudam descoberta por motores de busca e leitura por agentes.
+
+## Documentação adicional
+
+- `DOCUMENTACAO-PT-PT.md`: guia operacional completo.
+- `KIT-DE-AVALIACAO.md`: links-chave e roteiro de demonstração para júri.
+- `VALIDACAO-FINAL-CORPUS.md`: nota curta sobre a validação manual do conjunto final.

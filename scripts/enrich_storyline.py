@@ -10,7 +10,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 from collections import defaultdict
 
-BASE = Path(__file__).resolve().parent
+BASE = Path(__file__).resolve().parents[1] / "assets" / "data"
 
 CORPUS_P = BASE / "corpus.json"
 STORY_P = BASE / "storyline.json"
@@ -180,13 +180,15 @@ def main() -> None:
     # enrich chapters
     chapters = story.get("chapters") or []
     for ch in chapters:
-        cid = norm(ch.get("id"))
+        cid = norm(ch.get("chapter_id") or ch.get("id"))
         title = norm(ch.get("title"))
         blocks = ch.get("blocks") or []
 
         # 1) se é capítulo-onda com peak_month
-        peak_month = None
+        peak_month = norm((ch.get("meta") or {}).get("peak_month"))
         for b in blocks:
+            if peak_month:
+                break
             if b.get("type") == "peak_month":
                 peak_month = norm(b.get("month"))
                 break

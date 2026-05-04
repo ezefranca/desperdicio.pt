@@ -1,11 +1,34 @@
 {
   "metadata": {
     "description": "Curated featured articles for desperdicio.pt editorial with visual treatment recommendations",
-    "created": "2026-01-23",
-    "total_articles": 20,
-    "coverage_years": "2013-2025"
+    "created": "2026-03-26",
+    "total_articles": 21,
+    "coverage_years": "2013-2026"
   },
   "featured": [
+    {
+      "year": 2026,
+      "id": "2026-chefs-desperdicios",
+      "url": "https://www.publico.pt/2026/01/11/azul/noticia/conheca-chefs-estao-menus-gourmet-desperdicios-comida-2160635",
+      "title": "Conheça os chefs que estão a fazer menus gourmet com desperdícios de comida",
+      "date": "2026-01-11",
+      "section": "Azul",
+      "key_narrative": "A cobertura de 2026 mostra um novo passo no discurso público: o desperdício já não aparece apenas como culpa doméstica ou falha logística, mas também como matéria de inovação gastronómica, reputação e valor económico.",
+      "editorial_recommendation": {
+        "treatment": "future-facing_case_study",
+        "rationale": "Useful closing marker for the timeline: the theme enters high-end gastronomy and signals that reuse and prevention can also be read as craft, technique and economic intelligence.",
+        "suggested_elements": [
+          "closing card",
+          "craft-oriented visual",
+          "bridge to present day"
+        ],
+        "placement": "timeline_closer",
+        "priority": 2
+      },
+      "arquivo_pt_url": "https://arquivo.pt/save/now/20260326011056/https://www.publico.pt/2026/01/11/azul/noticia/conheca-chefs-estao-menus-gourmet-desperdicios-comida-2160635",
+      "arquivo_pt_url_source": "report",
+      "arquivo_pt_status": "submitted_to_archivepagenow"
+    },
     {
       "year": 2025,
       "id": "2025-desperdicio-evitar",
@@ -15,8 +38,11 @@
       "author": "Rita Caetano",
       "section": "Ímpar",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/2032993?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Em Portugal, é em casa que mais se desperdiça alimentos"
+        "url": "assets/img/publico/featured/2025-desperdicio-evitar.jpg",
+        "caption": "Em Portugal, é em casa que mais se desperdiça alimentos",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/2032993?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://arquivo.pt/save/now/20260326010538/https://www.publico.pt/2025/09/29/impar/noticia/desperdicio-alimentar-evitar-2148846"
       },
       "key_stats": [
         "67% do desperdício acontece em casa",
@@ -26,10 +52,17 @@
       "editorial_recommendation": {
         "treatment": "hero_image_with_stats",
         "rationale": "Opening piece for contemporary state. Strong visual + infographic showing the '3 critical moments' (shopping, storage, preparation)",
-        "suggested_elements": ["full-bleed image", "stat callouts", "pullquote from Rui Catalão"],
+        "suggested_elements": [
+          "full-bleed image",
+          "stat callouts",
+          "pullquote from Rui Catalão"
+        ],
         "placement": "chapter_opener",
         "priority": 1
-      }
+      },
+      "arquivo_pt_url": "https://arquivo.pt/save/now/20260326010538/https://www.publico.pt/2025/09/29/impar/noticia/desperdicio-alimentar-evitar-2148846",
+      "arquivo_pt_url_source": "report",
+      "arquivo_pt_status": "already_archived_now"
     },
     {
       "year": 2023,
@@ -40,17 +73,27 @@
       "author": "Inês Herédia",
       "section": "Ímpar (Opinião)",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1846147?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Em pleno ano de 2023, o cidadão português perde em média 28€ mensais"
+        "url": "assets/img/publico/featured/2023-calcanhar-aquiles.jpg",
+        "caption": "Em pleno ano de 2023, o cidadão português perde em média 28€ mensais",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1846147?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://arquivo.pt/save/now/20260326011010/https://www.publico.pt/2023/09/29/impar/opiniao/desperdicio-alimentar-calcanhar-aquiles-casa-2064951"
       },
       "key_narrative": "Personal memoir: author recalls Alice, Dutch concentration camp survivor who licked plates clean after 4 years of food uncertainty",
       "editorial_recommendation": {
         "treatment": "text_pullquote",
         "rationale": "Emotional anchor. The Alice story is powerful - use as blockquote with subtle background, no competing image",
-        "suggested_elements": ["large pullquote", "minimal visual", "author portrait small"],
+        "suggested_elements": [
+          "large pullquote",
+          "minimal visual",
+          "author portrait small"
+        ],
         "placement": "emotional_interlude",
         "priority": 2
-      }
+      },
+      "arquivo_pt_url": "https://arquivo.pt/save/now/20260326011010/https://www.publico.pt/2023/09/29/impar/opiniao/desperdicio-alimentar-calcanhar-aquiles-casa-2064951",
+      "arquivo_pt_url_source": "report",
+      "arquivo_pt_status": "submitted_to_archivepagenow"
     },
     {
       "year": 2023,
@@ -61,8 +104,11 @@
       "author": "Aline Flor",
       "section": "Azul",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1822928?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Projectos como o Fruta Feia ajudam a combater o desperdicio alimentar"
+        "url": "assets/img/publico/featured/2023-quinto-emissor.jpg",
+        "caption": "Projectos como o Fruta Feia ajudam a combater o desperdicio alimentar",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1822928?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://arquivo.pt/save/now/20260326011009/https://www.publico.pt/2023/07/05/azul/noticia/desperdicio-alimentar-estadomembro-quinto-emissor-gases-ue-2055791"
       },
       "key_stats": [
         "59 milhões de toneladas/ano na UE",
@@ -73,10 +119,17 @@
       "editorial_recommendation": {
         "treatment": "chart_comparison",
         "rationale": "The 'if waste were a country' framing is perfect for a comparison chart showing EU emissions by country with waste as imaginary 5th",
-        "suggested_elements": ["bar chart", "EU flags visual", "Timmermans quote callout"],
+        "suggested_elements": [
+          "bar chart",
+          "EU flags visual",
+          "Timmermans quote callout"
+        ],
         "placement": "data_visualization_section",
         "priority": 1
-      }
+      },
+      "arquivo_pt_url": "https://arquivo.pt/save/now/20260326011009/https://www.publico.pt/2023/07/05/azul/noticia/desperdicio-alimentar-estadomembro-quinto-emissor-gases-ue-2055791",
+      "arquivo_pt_url_source": "report",
+      "arquivo_pt_status": "submitted_to_archivepagenow"
     },
     {
       "year": 2023,
@@ -87,8 +140,11 @@
       "author": "Ana La-Salete Silva",
       "section": "Azul",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1780819?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Cerca de 57 milhões de toneladas de comida são desperdiçados na UE"
+        "url": "assets/img/publico/featured/2023-184kg.jpg",
+        "caption": "Cerca de 57 milhões de toneladas de comida são desperdiçados na UE",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1780819?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://arquivo.pt/wayback/20230504170615/https://www.publico.pt/2023/02/19/azul/noticia/portugues-deita-184-kg-comida-ano-propoem-mudar-2039370"
       },
       "key_stats": [
         "184 kg per capita (Portugal)",
@@ -98,10 +154,16 @@
       "editorial_recommendation": {
         "treatment": "numbered_list",
         "rationale": "Citizen recommendations are actionable. Present as clean numbered list with icons",
-        "suggested_elements": ["recommendation cards", "citizen participation visual"],
+        "suggested_elements": [
+          "recommendation cards",
+          "citizen participation visual"
+        ],
         "placement": "solutions_section",
         "priority": 3
-      }
+      },
+      "arquivo_pt_url": "https://arquivo.pt/wayback/20230504170615/https://www.publico.pt/2023/02/19/azul/noticia/portugues-deita-184-kg-comida-ano-propoem-mudar-2039370",
+      "arquivo_pt_url_source": "report",
+      "arquivo_pt_status": "already_archived_global"
     },
     {
       "year": 2021,
@@ -113,17 +175,38 @@
       "author": "Alexandra Prado Coelho, Miguel Pires",
       "section": "Público ao Vivo",
       "format": "video_livestream",
-      "guests": ["Lara Espírito Santo", "George McLeod"],
+      "guests": [
+        "Lara Espírito Santo",
+        "George McLeod"
+      ],
       "key_narrative": "Restaurante que colabora com produções biológicas e práticas agrícolas regenerativas, priorizando produtos subavaliados e subutilizados. O produto dita a oferta — hoje há, amanhã não sabemos.",
       "recommendations_from_episode": [
-        {"type": "book", "title": "O Ovo", "author": "Madalena Lordelo", "includes_recipes_by": "Justa Nobre"},
-        {"type": "article", "title": "How protein became the great obsession of the food industry", "source": "The Guardian"},
-        {"type": "project", "title": "Future Food System", "url": "https://www.futurefoodsystem.com/", "description": "Casa auto-sustentável, sem resíduos e produtiva"}
+        {
+          "type": "book",
+          "title": "O Ovo",
+          "author": "Madalena Lordelo",
+          "includes_recipes_by": "Justa Nobre"
+        },
+        {
+          "type": "article",
+          "title": "How protein became the great obsession of the food industry",
+          "source": "The Guardian"
+        },
+        {
+          "type": "project",
+          "title": "Future Food System",
+          "url": "https://www.futurefoodsystem.com/",
+          "description": "Casa auto-sustentável, sem resíduos e produtiva"
+        }
       ],
       "editorial_recommendation": {
         "treatment": "video_embed_with_context",
         "rationale": "Pratos Limpos é uma rubrica recorrente do Público sobre alimentação sustentável. Mostra o papel do Público como plataforma de discussão, não apenas reportagem.",
-        "suggested_elements": ["video thumbnail", "guest portraits", "quote from Lara"],
+        "suggested_elements": [
+          "video thumbnail",
+          "guest portraits",
+          "quote from Lara"
+        ],
         "placement": "solutions_section",
         "priority": 4
       }
@@ -137,19 +220,29 @@
       "date": "2019-04-10",
       "section": "P3",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1352862?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Anna resgata comida do lixo em Lisboa"
+        "url": "assets/img/publico/featured/2019-anna-dumpster-diving.jpg",
+        "caption": "Anna resgata comida do lixo em Lisboa",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1352862?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://arquivo.pt/wayback/20221025190356/https://www.publico.pt/2019/04/10/p3/noticia/anna-resgata-comida-lixo-combater-desperdicio-1868420"
       },
       "key_narrative": "Anna pratica 'dumpster diving' — resgata comida em bom estado que supermercados e restaurantes descartam. Uma forma radical de activismo contra o desperdício.",
       "key_quote": "Não é sobre poupar dinheiro. É sobre não aceitar que comida boa vá para o lixo.",
       "editorial_recommendation": {
         "treatment": "hero_image_with_video",
         "rationale": "HISTÓRIA PODEROSA. Imagem forte de alguém literalmente a mergulhar no lixo para salvar comida. Contraste visual brutal entre desperdício e acção individual.",
-        "suggested_elements": ["full-bleed image", "video embed", "quote callout"],
+        "suggested_elements": [
+          "full-bleed image",
+          "video embed",
+          "quote callout"
+        ],
         "placement": "emotional_peak",
         "priority": 1,
         "note": "Esta história representa o extremo oposto do desperdício — alguém que age fisicamente contra o sistema. Usar como contraponto às soluções institucionais."
-      }
+      },
+      "arquivo_pt_url": "https://arquivo.pt/wayback/20221025190356/https://www.publico.pt/2019/04/10/p3/noticia/anna-resgata-comida-lixo-combater-desperdicio-1868420",
+      "arquivo_pt_url_source": "report",
+      "arquivo_pt_status": "already_archived_global"
     },
     {
       "year": 2022,
@@ -160,17 +253,26 @@
       "author": "LaVonne Roberts",
       "section": "Azul",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1719030?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Um dos espaços da Fruta Feia"
+        "url": "assets/img/publico/featured/2022-familias-crise.jpg",
+        "caption": "Um dos espaços da Fruta Feia",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1719030?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://arquivo.pt/wayback/20220909172633/https://www.publico.pt/2022/07/27/azul/noticia/familias-podem-enfrentar-crise-climatica-desperdicando-menos-comida-2015140"
       },
       "key_narrative": "Jenna Knauss, mother of twins, overcomes hesitation to reduce family waste",
       "editorial_recommendation": {
         "treatment": "personal_story_sidebar",
         "rationale": "Parent perspective humanizes abstract issue. Use as sidebar with family illustration",
-        "suggested_elements": ["sidebar box", "illustration of family kitchen"],
+        "suggested_elements": [
+          "sidebar box",
+          "illustration of family kitchen"
+        ],
         "placement": "human_interest_interlude",
         "priority": 4
-      }
+      },
+      "arquivo_pt_url": "https://arquivo.pt/wayback/20220909172633/https://www.publico.pt/2022/07/27/azul/noticia/familias-podem-enfrentar-crise-climatica-desperdicando-menos-comida-2015140",
+      "arquivo_pt_url_source": "report",
+      "arquivo_pt_status": "already_archived_global"
     },
     {
       "year": 2022,
@@ -180,16 +282,25 @@
       "date": "2022-05-03",
       "section": "Azul (Fotogaleria)",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1245446?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Fotogaleria da expansão da Fruta Feia"
+        "url": "assets/img/publico/featured/2022-fruta-feia-15-postos.jpg",
+        "caption": "Fotogaleria da expansão da Fruta Feia",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1245446?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://arquivo.pt/wayback/20220505035202/https://www.publico.pt/2022/05/03/azul/fotogaleria/fruta-feia-sao-ja-15-postos-venda-cooperativa-combate-desperdicio-alimentar-407910"
       },
       "editorial_recommendation": {
         "treatment": "photo_grid",
         "rationale": "Photo gallery content - use as visual showcase of cooperative's growth with location map",
-        "suggested_elements": ["photo mosaic", "Portugal map with 15 points"],
+        "suggested_elements": [
+          "photo mosaic",
+          "Portugal map with 15 points"
+        ],
         "placement": "visual_break",
         "priority": 2
-      }
+      },
+      "arquivo_pt_url": "https://arquivo.pt/wayback/20220505035202/https://www.publico.pt/2022/05/03/azul/fotogaleria/fruta-feia-sao-ja-15-postos-venda-cooperativa-combate-desperdicio-alimentar-407910",
+      "arquivo_pt_url_source": "report",
+      "arquivo_pt_status": "already_archived_global"
     },
     {
       "year": 2020,
@@ -200,14 +311,21 @@
       "author": "Hélio Carvalho",
       "section": "P3",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1517729?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Fruta Feia wins EU Life Award"
+        "url": "assets/img/publico/featured/2020-life-award.jpg",
+        "caption": "Fruta Feia wins EU Life Award",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1517729?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://www.publico.pt/2020/10/22/p3/noticia/fruta-feia-distinguida-premio-europeu-life-prova-funciona-1936266"
       },
       "key_achievement": "First initiative to win two Life awards in single edition",
       "editorial_recommendation": {
         "treatment": "achievement_highlight",
         "rationale": "Milestone moment. Use award badge visual with brief celebration card",
-        "suggested_elements": ["EU Life logo", "achievement badge", "timeline marker"],
+        "suggested_elements": [
+          "EU Life logo",
+          "achievement badge",
+          "timeline marker"
+        ],
         "placement": "milestone_marker",
         "priority": 2
       }
@@ -221,8 +339,11 @@
       "author": "Lusa/P3",
       "section": "P3",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1436615?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "App de combate ao desperdício"
+        "url": "assets/img/publico/featured/2020-too-good-to-go-porto.jpg",
+        "caption": "App de combate ao desperdício",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1436615?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://arquivo.pt/wayback/20200206192031/https://www.publico.pt/2020/02/04/p3/noticia/too-good-to-go-app-quer-evitar-desperdicio-comida-chegou-porto-1902843"
       },
       "key_stats": [
         "60+ estabelecimentos em Porto",
@@ -232,10 +353,17 @@
       "editorial_recommendation": {
         "treatment": "app_showcase",
         "rationale": "Tech angle. Show app interface mockup with key stats overlaid",
-        "suggested_elements": ["phone mockup", "app screenshot", "growth numbers"],
+        "suggested_elements": [
+          "phone mockup",
+          "app screenshot",
+          "growth numbers"
+        ],
         "placement": "tech_innovation_section",
         "priority": 3
-      }
+      },
+      "arquivo_pt_url": "https://arquivo.pt/wayback/20200206192031/https://www.publico.pt/2020/02/04/p3/noticia/too-good-to-go-app-quer-evitar-desperdicio-comida-chegou-porto-1902843",
+      "arquivo_pt_url_source": "report",
+      "arquivo_pt_status": "already_archived_global"
     },
     {
       "year": 2020,
@@ -246,8 +374,11 @@
       "author": "Lusa",
       "section": "Economia",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1432216?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Projecto já leva seis anos. Emprega 11 pessoas"
+        "url": "assets/img/publico/featured/2020-fruta-feia-2000-tons.jpg",
+        "caption": "Projecto já leva seis anos. Emprega 11 pessoas",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1432216?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://arquivo.pt/wayback/20200305021822/https://www.publico.pt/2020/01/21/economia/noticia/fruta-feia-evita-duas-mil-toneladas-desperdicio-alimentar-paga-milhao-euros-agricultores-1901179"
       },
       "key_stats": [
         "2.000 toneladas salvas",
@@ -259,10 +390,17 @@
       "editorial_recommendation": {
         "treatment": "milestone_infographic",
         "rationale": "Major milestone. Create visual showing 2000 tons = X trucks, 1M euros = X farmer salaries",
-        "suggested_elements": ["scale visualization", "truck icons", "money flow diagram"],
+        "suggested_elements": [
+          "scale visualization",
+          "truck icons",
+          "money flow diagram"
+        ],
         "placement": "impact_showcase",
         "priority": 1
-      }
+      },
+      "arquivo_pt_url": "https://arquivo.pt/wayback/20200305021822/https://www.publico.pt/2020/01/21/economia/noticia/fruta-feia-evita-duas-mil-toneladas-desperdicio-alimentar-paga-milhao-euros-agricultores-1901179",
+      "arquivo_pt_url_source": "report",
+      "arquivo_pt_status": "already_archived_global"
     },
     {
       "year": 2017,
@@ -273,8 +411,11 @@
       "author": "Lusa",
       "section": "Sociedade",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1175428?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Estratégia Nacional de Combate ao Desperdício Alimentar"
+        "url": "assets/img/publico/featured/2017-plataforma-nacional.jpg",
+        "caption": "Estratégia Nacional de Combate ao Desperdício Alimentar",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1175428?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://www.publico.pt/2017/11/08/sociedade/noticia/combate-ao-desperdicio-alimentar-tera-plataforma-e-regime-de-doacao-mais-simples-1791876"
       },
       "key_stats": [
         "1 milhão de toneladas desperdiçadas/ano",
@@ -284,7 +425,11 @@
       "editorial_recommendation": {
         "treatment": "policy_timeline",
         "rationale": "Policy moment. Add to legislation timeline with brief policy summary card",
-        "suggested_elements": ["timeline marker", "government seal", "target goals chart"],
+        "suggested_elements": [
+          "timeline marker",
+          "government seal",
+          "target goals chart"
+        ],
         "placement": "policy_section",
         "priority": 3
       }
@@ -298,8 +443,11 @@
       "author": "Lusa",
       "section": "P3",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1245446?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Expansão para Matosinhos"
+        "url": "assets/img/publico/featured/2016-matosinhos.jpg",
+        "caption": "Expansão para Matosinhos",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1245446?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://www.publico.pt/2016/11/24/p3/noticia/fruta-feia-vai-salvar-15-toneladas-de-frutas-e-legumes-em-matosinhos-1826983"
       },
       "key_stats": [
         "1.5 toneladas/semana",
@@ -309,7 +457,11 @@
       "editorial_recommendation": {
         "treatment": "expansion_map",
         "rationale": "Geographic expansion. Show on map of Portugal with growth indicators",
-        "suggested_elements": ["portugal map", "expansion arrows", "location pins"],
+        "suggested_elements": [
+          "portugal map",
+          "expansion arrows",
+          "location pins"
+        ],
         "placement": "growth_narrative",
         "priority": 4
       }
@@ -323,8 +475,11 @@
       "author": "Lusa",
       "section": "Local",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1017698?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Expansão para Porto"
+        "url": "assets/img/publico/featured/2015-porto-expansion.jpg",
+        "caption": "Expansão para Porto",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1017698?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://www.publico.pt/2015/12/19/local/noticia/fruta-feia-expandese-para-o-porto-depois-de-evitar-200-toneladas-de-desperdicio-1717922"
       },
       "key_stats": [
         "200 toneladas evitadas em 2 anos",
@@ -335,7 +490,10 @@
       "editorial_recommendation": {
         "treatment": "growth_chart",
         "rationale": "Progress marker. Line chart showing growth from 2013-2015",
-        "suggested_elements": ["line chart", "milestone markers"],
+        "suggested_elements": [
+          "line chart",
+          "milestone markers"
+        ],
         "placement": "growth_narrative",
         "priority": 4
       }
@@ -349,8 +507,11 @@
       "author": "Ana Rute Silva",
       "section": "Sociedade",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/889940?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Desperdício na cadeia de produção"
+        "url": "assets/img/publico/featured/2014-campo-fabrica.jpg",
+        "caption": "Desperdício na cadeia de produção",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/889940?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://www.publico.pt/2014/12/07/sociedade/noticia/desperdicio-de-comida-no-campo-e-na-fabrica-da-para-encher-todos-os-caixotes-do-lixo-do-pais-1678521"
       },
       "key_stats": [
         "17% da produção é desperdiçada",
@@ -362,7 +523,10 @@
       "editorial_recommendation": {
         "treatment": "visual_metaphor",
         "rationale": "Powerful metaphor. Create illustration of 320,000 trash bins covering Portugal",
-        "suggested_elements": ["trash bin illustration", "portugal silhouette filled with bins"],
+        "suggested_elements": [
+          "trash bin illustration",
+          "portugal silhouette filled with bins"
+        ],
         "placement": "opening_impact",
         "priority": 1
       }
@@ -377,14 +541,21 @@
       "section": "Economia (Entrevista)",
       "interviewee": "Hélder Muteia, Representante da FAO em Portugal",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/881980?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Hélder Muteia, FAO"
+        "url": "assets/img/publico/featured/2014-fao-interview.jpg",
+        "caption": "Hélder Muteia, FAO",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/881980?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://www.publico.pt/2014/10/27/economia/entrevista/quando-deitamos-comida-fora-isso-faz-subir-os-precos-1674211"
       },
       "key_quote": "Quando deitamos comida fora estamos a retirá-la do mercado e isso causa menos disponibilidade. A implicação? O preço sobe e os mais pobres sofrem.",
       "editorial_recommendation": {
         "treatment": "expert_pullquote",
         "rationale": "Authority voice. Large pullquote with FAO logo, minimal image",
-        "suggested_elements": ["large quote", "FAO logo", "small portrait"],
+        "suggested_elements": [
+          "large quote",
+          "FAO logo",
+          "small portrait"
+        ],
         "placement": "expert_voice_section",
         "priority": 2
       }
@@ -398,8 +569,11 @@
       "author": "Lusa",
       "section": "Economia",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/837438?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "Fruta Feia milestone"
+        "url": "assets/img/publico/featured/2014-50-toneladas.jpg",
+        "caption": "Fruta Feia milestone",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/837438?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://www.publico.pt/2014/10/11/economia/noticia/cooperativa-ja-impediu-desperdicio-de-mais-de-50-toneladas-de-fruta-feia-1672596"
       },
       "key_stats": [
         "50 toneladas evitadas",
@@ -410,7 +584,10 @@
       "editorial_recommendation": {
         "treatment": "milestone_marker",
         "rationale": "Early milestone. Brief timeline marker, no major visual needed",
-        "suggested_elements": ["timeline dot", "brief stat card"],
+        "suggested_elements": [
+          "timeline dot",
+          "brief stat card"
+        ],
         "placement": "timeline_marker",
         "priority": 5
       }
@@ -424,8 +601,11 @@
       "author": "Rita Salomé Esteves",
       "section": "P3",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/1233993?tp=UH&db=IMAGENS&type=PNG",
-        "caption": "Intermarché ugly vegetables campaign"
+        "url": "assets/img/publico/featured/2014-cenoura-feia.png",
+        "caption": "Intermarché ugly vegetables campaign",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/1233993?tp=UH&db=IMAGENS&type=PNG",
+        "credit": "Público",
+        "credit_url": "https://www.publico.pt/2014/05/23/p3/noticia/quando-uma-cenoura-feia-e-uma-sopa-feliz-1820227"
       },
       "key_stats": [
         "300 milhões toneladas desperdiçadas/ano na UE",
@@ -435,7 +615,11 @@
       "editorial_recommendation": {
         "treatment": "campaign_showcase",
         "rationale": "Marketing success story. Show Intermarché campaign visuals with impact stats",
-        "suggested_elements": ["campaign poster", "before/after stats", "ugly carrot illustration"],
+        "suggested_elements": [
+          "campaign poster",
+          "before/after stats",
+          "ugly carrot illustration"
+        ],
         "placement": "case_study_section",
         "priority": 2
       }
@@ -449,8 +633,11 @@
       "author": "Ana Rute Silva",
       "section": "Economia",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/803555?tp=UH&db=IMAGENS&type=JPG",
-        "caption": "European supermarkets selling ugly produce"
+        "url": "assets/img/publico/featured/2013-supermercados-europa.jpg",
+        "caption": "European supermarkets selling ugly produce",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/803555?tp=UH&db=IMAGENS&type=JPG",
+        "credit": "Público",
+        "credit_url": "https://www.publico.pt/2013/10/11/economia/noticia/ja-ha-supermercados-na-europa-a-vender-fruta-e-legumes-feios-1608785"
       },
       "key_examples": [
         "Edeka (Alemanha): 'Ninguém é perfeito'",
@@ -461,7 +648,11 @@
       "editorial_recommendation": {
         "treatment": "european_comparison",
         "rationale": "International context. Grid of European initiatives with country flags",
-        "suggested_elements": ["flag grid", "initiative logos", "price comparison"],
+        "suggested_elements": [
+          "flag grid",
+          "initiative logos",
+          "price comparison"
+        ],
         "placement": "international_context_section",
         "priority": 3
       }
@@ -475,8 +666,11 @@
       "author": "Hugo Torres",
       "section": "Ecosfera",
       "image": {
-        "url": "https://imagens.publico.pt/imagens.aspx/canal_videos/videoPortal/Images/201306/fazfoto.jpg?tp=VIDEOS",
-        "caption": "Isabel Soares, founder"
+        "url": "assets/img/publico/featured/2013-fruta-feia-launch.jpg",
+        "caption": "Isabel Soares, founder",
+        "source_url": "https://imagens.publico.pt/imagens.aspx/canal_videos/videoPortal/Images/201306/fazfoto.jpg?tp=VIDEOS",
+        "credit": "Público",
+        "credit_url": "https://www.publico.pt/2013/06/07/ecosfera/noticia/estamos-dispostos-a-comer-fruta-feia-para-reduzir-o-desperdicio-1596760"
       },
       "key_stats": [
         "30% da produção desperdiçada por normas estéticas",
@@ -487,7 +681,11 @@
       "editorial_recommendation": {
         "treatment": "origin_story",
         "rationale": "GENESIS MOMENT. Use as opening visual for Fruta Feia arc. Portrait of Isabel Soares, founding story",
-        "suggested_elements": ["founder portrait", "FAZ award visual", "Anjos neighborhood photo"],
+        "suggested_elements": [
+          "founder portrait",
+          "FAZ award visual",
+          "Anjos neighborhood photo"
+        ],
         "placement": "origin_story_opener",
         "priority": 1
       }
@@ -520,18 +718,53 @@
       "2021-pratos-limpos-sem"
     ],
     "narrative_arc": {
-      "opening": ["2013-fruta-feia-launch", "2014-campo-fabrica"],
-      "growth": ["2014-50-toneladas", "2015-porto-expansion", "2016-matosinhos", "2017-plataforma-nacional"],
-      "radical_action": ["2019-anna-dumpster-diving"],
-      "impact": ["2020-fruta-feia-2000-tons", "2020-life-award"],
-      "gastronomic_solutions": ["2021-pratos-limpos-sem"],
-      "contemporary": ["2023-quinto-emissor", "2023-184kg", "2025-desperdicio-evitar"],
-      "emotional_anchors": ["2023-calcanhar-aquiles", "2019-anna-dumpster-diving", "2014-fao-interview", "2022-familias-crise"]
+      "opening": [
+        "2013-fruta-feia-launch",
+        "2014-campo-fabrica"
+      ],
+      "growth": [
+        "2014-50-toneladas",
+        "2015-porto-expansion",
+        "2016-matosinhos",
+        "2017-plataforma-nacional"
+      ],
+      "radical_action": [
+        "2019-anna-dumpster-diving"
+      ],
+      "impact": [
+        "2020-fruta-feia-2000-tons",
+        "2020-life-award"
+      ],
+      "gastronomic_solutions": [
+        "2021-pratos-limpos-sem"
+      ],
+      "contemporary": [
+        "2023-quinto-emissor",
+        "2023-184kg",
+        "2025-desperdicio-evitar"
+      ],
+      "emotional_anchors": [
+        "2023-calcanhar-aquiles",
+        "2019-anna-dumpster-diving",
+        "2014-fao-interview",
+        "2022-familias-crise"
+      ]
     },
     "publico_multimedia": {
       "note": "O Público não é apenas reportagem escrita — tem vídeos, livestreams, e rubricas como 'Pratos Limpos'. Esta diversidade mostra a profundidade da cobertura.",
-      "rubricas": ["Pratos Limpos", "P3", "Azul"],
-      "formats": ["artigo", "opinião", "vídeo", "livestream", "fotogaleria", "entrevista"]
+      "rubricas": [
+        "Pratos Limpos",
+        "P3",
+        "Azul"
+      ],
+      "formats": [
+        "artigo",
+        "opinião",
+        "vídeo",
+        "livestream",
+        "fotogaleria",
+        "entrevista"
+      ]
     }
   }
 }

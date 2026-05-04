@@ -13,7 +13,7 @@ from typing import Any, Dict, List, Optional
 
 import requests
 
-OUT_DIR = Path("out_desperdico")
+OUT_DIR = Path("data-sources")
 DB_PATH = OUT_DIR / "publico_live.sqlite"
 CHECKPOINT_PATH = OUT_DIR / "publico_checkpoint.json"
 
