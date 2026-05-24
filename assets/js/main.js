@@ -316,9 +316,13 @@ function renderChapterHeader(chapter, idx) {
 }
 
 function renderBigQuote(text, cite) {
+  const quoteText = esc(text)
+    .replace(/&lt;br\s*\/?&gt;/gi, '<br>')
+    .replace(/\r?\n/g, '<br>');
+
   return `
     <div class="big-quote" data-animate="true">
-      <blockquote>${esc(text)}</blockquote>
+      <blockquote>${quoteText}</blockquote>
       <cite>- ${esc(cite)}</cite>
     </div>
   `;
