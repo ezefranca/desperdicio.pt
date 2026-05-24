@@ -1966,9 +1966,17 @@ function renderChapter(chapter, idx, data) {
 
     html += renderEnergyReflection();
     html += renderBigQuote(
-      'Numa casa portuguesa fica bem.',
-      'Amália Rodrigues'
-    );
+  'Numa casa portuguesa fica bem<br />\
+Pão e vinho sobre a mesa<br />\
+E se à porta humildemente bate alguém<br />\
+Senta-se à mesa com a gente<br />\
+Fica bem essa franqueza, fica bem<br />\
+Que o povo nunca a desmente<br />\
+A alegria da pobreza<br />\
+Está nesta grande riqueza<br />\
+De dar e ficar contente',
+  'Amália Rodrigues'
+);  
     html += renderFullImage(
       EDITORIAL_IMAGES.epilogueClosure.url,
       EDITORIAL_IMAGES.epilogueClosure.caption,
